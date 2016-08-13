@@ -2,6 +2,7 @@
   'use strict';
 
   var map;
+  var browserAPIKey = "AIzaSyBvLNxZkZ9Nn69-QSghPArPGgvHcrYDoS0";
 
   function initMap(){
   	//constructor creates a new map - only center and zoom are required
