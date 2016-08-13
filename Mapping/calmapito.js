@@ -1,7 +1,7 @@
 // (function() {
   'use strict';
 
-  var browserAPIKey = "AIzaSyBvLNxZkZ9Nn69-QSghPArPGgvHcrYDoS0";
+  var MYAPIKEY = "AIzaSyBvLNxZkZ9Nn69-QSghPArPGgvHcrYDoS0";
   var clientID = "1077954538494-n7adn1hemab92p21e2h86rusg9vhhtb7.apps.googleusercontent.com";
 
 
