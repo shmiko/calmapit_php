@@ -1,0 +1,1 @@
+{"name":"Launch Payload","id":"\/spaceflight\/launch_payload","type":"\/type\/type","group":"type","_id":"alGSjPQm","relation":"\/spaceflight","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

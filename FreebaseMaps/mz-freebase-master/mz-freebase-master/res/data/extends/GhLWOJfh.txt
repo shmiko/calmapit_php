@@ -1,0 +1,1 @@
+{"name":"Bassist","id":"\/music\/bassist","type":"\/type\/type","group":"type","_id":"GhLWOJfh","relation":"\/music","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

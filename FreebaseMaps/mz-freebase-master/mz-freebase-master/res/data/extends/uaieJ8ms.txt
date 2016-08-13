@@ -1,0 +1,1 @@
+{"name":"Guitarist","id":"\/music\/guitarist","type":"\/type\/type","group":"type","_id":"uaieJ8ms","relation":"\/music","properties":[{"name":"Guitars Played","id":"\/music\/guitarist\/guitars_played","expected_type":"\/music\/guitar","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

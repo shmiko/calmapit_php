@@ -1,0 +1,1 @@
+{"name":"Job title","id":"\/business\/job_title","type":"\/type\/type","group":"type","_id":"caJK72FE","relation":"\/business","properties":[{"name":"People With This Title","id":"\/business\/job_title\/people_with_this_title","expected_type":"\/business\/employment_tenure","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

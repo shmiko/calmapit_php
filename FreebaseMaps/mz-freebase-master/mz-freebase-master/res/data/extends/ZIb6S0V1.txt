@@ -1,0 +1,1 @@
+{"name":"Attribution Namespace","id":"\/dataworld\/attribution_namespace","type":"\/type\/type","group":"type","_id":"ZIb6S0V1","relation":"\/dataworld","properties":[{"name":"Attribution Template","id":"\/dataworld\/attribution_namespace\/attribution_template","expected_type":"\/dataworld\/attribution_template","description":""}],"included_types":[]}

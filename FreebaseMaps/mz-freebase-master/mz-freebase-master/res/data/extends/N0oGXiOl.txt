@@ -1,0 +1,1 @@
+{"name":"Songwriter","id":"\/music\/songwriter","type":"\/type\/type","group":"type","_id":"N0oGXiOl","relation":"\/music","properties":[],"included_types":[{"name":"Lyricist","id":"\/music\/lyricist"},{"name":"Composer","id":"\/music\/composer"},{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

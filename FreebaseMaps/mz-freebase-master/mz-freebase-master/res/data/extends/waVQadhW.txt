@@ -1,0 +1,1 @@
+{"name":"Cricket","id":"\/cricket","type":"\/type\/domain","group":"zone","_id":"waVQadhW","relation":"root","properties":[],"included_types":[]}

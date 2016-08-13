@@ -1,0 +1,1 @@
+{"name":"Tour operator","id":"\/travel\/tour_operator","type":"\/type\/type","group":"type","_id":"JY4ESaQD","relation":"\/travel","properties":[{"name":"Travel destinations","id":"\/travel\/tour_operator\/travel_destinations","expected_type":"\/travel\/travel_destination","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

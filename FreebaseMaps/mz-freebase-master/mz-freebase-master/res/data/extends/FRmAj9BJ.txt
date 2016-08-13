@@ -1,0 +1,1 @@
+{"name":"File Format Genre","id":"\/computer\/file_format_genre","type":"\/type\/type","group":"type","_id":"FRmAj9BJ","relation":"\/computer","properties":[{"name":"File Formats","id":"\/computer\/file_format_genre\/file_formats","expected_type":"\/computer\/file_format","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

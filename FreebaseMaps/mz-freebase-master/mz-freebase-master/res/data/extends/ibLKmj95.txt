@@ -1,0 +1,1 @@
+{"name":"Flag","id":"\/symbols\/flag","type":"\/type\/type","group":"type","_id":"ibLKmj95","relation":"\/symbols","properties":[{"name":"Used by","id":"\/symbols\/flag\/used_by","expected_type":"\/symbols\/flag_use","description":"The entity that uses (or used) this flag, or that this flag is used to represent."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Broadcast Artist","id":"\/broadcast\/artist","type":"\/type\/type","group":"type","_id":"GCM41qS4","relation":"\/broadcast","properties":[{"name":"Content","id":"\/broadcast\/artist\/content","expected_type":"\/broadcast\/content","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

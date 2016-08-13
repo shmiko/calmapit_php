@@ -1,0 +1,190 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+#search {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#itinerary-title {
+    padding-left: 10px;
+    font-size: 1.5em;
+    font-weight: normal;
+    position: fixed;
+    top: 11px;
+    right: 130px;
+}
+
+
+#itinerary {
+    position:absolute;
+    display:none;
+    min-height: 80%;
+    height: 100%;
+    width: 20%;
+    top: 56px;
+    right: 0px;
+    background-color: rgba(239, 239, 239, 0.8);
+    z-index: 11;
+}
+
+#place-list {
+    /*list-style-type: none;*/
+    padding-top: 15px;
+    float: left;
+    width: 80%;
+}
+
+.place-item {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-top: 1px;
+    list-style-position:inside;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.8);
+}
+
+.place-item:hover {
+    cursor: move;
+}
+
+li.ui-sortable-helper {
+    cursor: move;
+}
+
+/* numbered map markers */
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+
+.leaflet-marker-icon .number {
+    position: relative;
+    top: -42px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 31px;
+    height: 43px;
+    text-align: center;
+}
+
+
+.delete-button {
+    float: right;
+    margin-right 10px;
+    transition: color 0.5s ease;
+}
+
+.delete-button:hover {
+    color: #E62135;
+}
+
+#fork {
+    float: right;
+    /* text-align: center; */
+    /* margin-top: 0px; */
+}
+
+.fork-link {
+    padding-left: 5px !important;
+}
+
+#start {
+    display: none;
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: rgba(239, 239, 239, 0.8);
+    z-index: 11;
+}
+
+/* routing */
+.leaflet-routing-container {
+    position: fixed;
+    left: 5px !important;
+    bottom: 0px !important;
+    height: 40px;
+    background-color: rgba(239, 239, 239, 0.8) !important;
+    overflow: scroll;
+    /* display: none; */
+}
+
+.leaflet-routing-alt {
+    padding-top: 0px;
+    background-color: none;
+}
+
+.leaflet-marker-draggable {
+    display: none;
+}
+
+.leaflet-marker-shadow {
+    display: none;
+}
+
+/* fork text */
+#fork {
+    text-align: center;
+}
+
+.fork-link {
+    margin: auto;
+}
+#show-routing-container {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+/* pure css shit // pure */
+
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+#route-recommend {
+    position: absolute;
+    right: 10px;
+    bottom: 150px;
+}

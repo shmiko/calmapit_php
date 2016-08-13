@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>CalMapIt News Widget</title>
+<meta name="robots" content="noindex,nofollow">
+
+<script>
+    function get_your_news() {
+        var user_country;
+        var news_category;
+        user_country = document.getElementById('user_country').value;
+        news_category = document.getElementById('news_category').value;
+        document.getElementById('original_iframe').innerHTML = '<iframe src=http://www.google.com/uds/modules/elements/newsshow/iframe.html?rsz=large&format=300x250&ned=' + user_country + '&topic=' + news_category + '&element=true style="width:290px;height:250px;border:1px solid #888;padding:4px" marginwidth=0 marginheight=0 scrolling=no allowtransparency=true></iframe>';
+    }
+</script>
+<style>
+    #news_category {
+        width: 145px;
+        float: right
+    }
+    #original_iframe {
+        width: 300px;
+        
+    }
+    #user_country {
+        width: 140px;
+        float: left;
+        text-align: center
+    }
+    #container {
+        width: 300px;
+        height: 22px;
+        
+        text-align: center
+    }
+    #country_frame {
+        width: 290px;
+        height: 250px;
+        border: 1px solid #888;
+        padding: 4px
+		left:7px;
+    }
+	#cover {
+            border: 2 px solid #111;border-radius:7px;box-shadow:inset 0 0 13px # 888;padding: 7 px 0
+        }
+		
+	#outer {
+            width: 100 % ;background: #0174D6;text - align: center;overflow - x: hidden; top:5px;
+        }
+</style>
+<link rel="stylesheet" href="css/news_widget.css">
+<div id="outer">
+    <div id="cover">
+        <div id="container">
+            <select id="user_country" onchange="get_your_news();">
+                    <option value="au">Australia
+						<option value="es_ar">Argentina
+                            <option value="nl_be">Belgium
+                                <option value="pt_BR_br">Brazil
+                                    <option value="ca">Canada
+                                        <option value="fr_ca">Canada (French)
+                                            <option value="cn">China
+                                                <option value="es_co">Colombia
+                                                    <option value="ar-eg">Egypt
+                                                        <option value="fr">France
+                                                            <option value="de">Germany
+                                                                <option value="el-gr">Greece
+                                                                    <option value="in">India
+                                                                        <option value="en_ie">Ireland
+                                                                            <option value="it">Italy
+                                                                                <option value="kr">Korea
+                                                                                    <option value="jp">Japan
+                                                                                        <option value="en-my">Malaysia
+                                                                                            <option value="es-mx">Mexico
+                                                                                                <option value="nl_nl">Nederland
+                                                                                                    <option value="nz">New Zea Land
+                                                                                                        <option value="en_pk">Pakistan
+                                                                                                            <option value="PT_pt">Portugal
+                                                                                                                <option value="ru_ru">Russia
+                                                                                                                    <option value="en_sg">Singapore
+                                                                                                                        <option value="es">Spain
+                                                                                                                            <option value="en_za">South Africa
+                                                                                                                                <option value="ar_ae">UAE
+                                                                                                                                    <option value="uk">UK
+                                                                                                                                        <option value="us">United States
+            </select>
+            <select id="news_category" onchange="get_your_news();">
+				<option value="t">Science/Technology
+                <option value="h">Headlines
+                      <option value="w">World
+						<option value="s">Sports
+							<option value="e">Entertainment
+							 <option value="b">Business/Finance
+								 <option value="m">Health
+									<option value="p">Politics
+										<option value="el">Election
+											<option value="n">Nation
+												<option value="t">Science/Technology
+            </select>
+        </div>
+        <div id="original_iframe">
+            <iframe id="country_frame" src='http://www.google.com/uds/modules/elements/newsshow/iframe.html?rsz=large&format=300x250&ned=au&topic=t&element=true' marginwidth=0 marginheight=0 scrolling=no allowtransparency=true></iframe>
+        </div>
+    </div>
+   
+</div>

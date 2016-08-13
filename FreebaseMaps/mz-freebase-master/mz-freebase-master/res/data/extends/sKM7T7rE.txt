@@ -1,0 +1,1 @@
+{"name":"Particle spin","id":"\/chemistry\/particle_spin","type":"\/type\/type","group":"type","_id":"sKM7T7rE","relation":"\/chemistry","properties":[{"name":"Isotopes","id":"\/chemistry\/particle_spin\/isotopes","expected_type":"\/chemistry\/isotope","description":"Chemical isotopes that exhibit this spin."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

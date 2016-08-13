@@ -1,0 +1,1 @@
+{"name":"Zoo Animal","id":"\/zoos\/zoo_animal","type":"\/type\/type","group":"type","_id":"v2MWWGYc","relation":"\/zoos","properties":[{"name":"Zoos","id":"\/zoos\/zoo_animal\/zoos","expected_type":"\/zoos\/animal_captivity","description":""}],"included_types":[{"name":"Organism","id":"\/biology\/organism"},{"name":"Topic","id":"\/common\/topic"}]}

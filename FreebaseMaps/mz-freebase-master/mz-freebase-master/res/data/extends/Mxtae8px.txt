@@ -1,0 +1,1 @@
+{"name":"Video Game Region","id":"\/cvg\/computer_game_region","type":"\/type\/type","group":"type","_id":"Mxtae8px","relation":"\/cvg","properties":[{"name":"Versions released in this region","id":"\/cvg\/computer_game_region\/versions_released_in_this_region","expected_type":"\/cvg\/game_version","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

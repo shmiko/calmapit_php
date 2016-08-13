@@ -1,0 +1,1 @@
+{"name":"Chemical Series","id":"\/chemistry\/chemical_series","type":"\/type\/type","group":"type","_id":"bNT36LFF","relation":"\/chemistry","properties":[{"name":"Elements","id":"\/chemistry\/chemical_series\/elements","expected_type":"\/chemistry\/chemical_element","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

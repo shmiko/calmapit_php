@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gCalEvents</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="screen.css" />
+</head>
+
+<body>
+	<!-- The container for your events. -->
+	<div id="calendarEvents"></div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="jquery.gcal-events.js"></script>
+
+	<script language="JavaScript" type="text/javascript">	
+		$(document).ready(function () {
+			$("#calendarEvents").gCalEvents({
+				CalendarId: "15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com",
+				ShowTimes: true,
+				ShowDescription: true,
+				NoEventsLang: "There are currently no events scheduled.",
+				TimeZone: "America/New_York",
+				FutureEvents: true,
+				MaxEvents: 100,
+				DateFormat: "DayMonth"
+			});
+		});
+	</script>
+	<div class="entry">
+    <h3>April 5, 2014</h3>
+    <h2>Dinner with Andre</h2>
+    <h3>5:30 PM - 9:00 PM</h3>
+    <div class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+    <p class="location">
+        <span>Location: </span>
+        <span>Cosmo's Diner</span>
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"Music Festival","id":"\/music\/festival","type":"\/type\/type","group":"type","_id":"QTwmpCzU","relation":"\/music","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

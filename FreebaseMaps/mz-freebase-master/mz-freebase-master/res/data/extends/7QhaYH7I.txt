@@ -1,0 +1,1 @@
+{"name":"Top Level Domain Sponsor","id":"\/internet\/top_level_domain_sponsor","type":"\/type\/type","group":"type","_id":"7QhaYH7I","relation":"\/internet","properties":[{"name":"Sponsored Domains","id":"\/internet\/top_level_domain_sponsor\/domains","expected_type":"\/internet\/top_level_domain","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

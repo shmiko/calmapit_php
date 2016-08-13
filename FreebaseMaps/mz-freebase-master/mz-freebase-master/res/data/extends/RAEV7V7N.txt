@@ -1,0 +1,1 @@
+{"name":"Adaptation","id":"\/media_common\/adaptation","type":"\/type\/type","group":"type","_id":"RAEV7V7N","relation":"\/media_common","properties":[{"name":"Adapted From","id":"\/media_common\/adaptation\/adapted_from","expected_type":"\/media_common\/adapted_work","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

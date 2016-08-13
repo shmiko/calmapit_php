@@ -1,0 +1,1 @@
+{"name":"Friendship","id":"\/celebrities\/friendship","type":"\/type\/type","group":"type","_id":"2RmDUbBU","relation":"\/celebrities","properties":[{"name":"Friend","id":"\/celebrities\/friendship\/friend","expected_type":"\/celebrities\/celebrity","description":""}],"included_types":[]}

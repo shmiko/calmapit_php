@@ -1,0 +1,1 @@
+{"name":"Football world cup","id":"\/soccer\/football_world_cup","type":"\/type\/type","group":"type","_id":"r2vY4Zk2","relation":"\/soccer","properties":[],"included_types":[{"name":"Event","id":"\/time\/event"},{"name":"Topic","id":"\/common\/topic"},{"name":"Football Competition","id":"\/soccer\/football_award"}]}

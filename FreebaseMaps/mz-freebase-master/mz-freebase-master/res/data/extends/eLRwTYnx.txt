@@ -1,0 +1,1 @@
+{"name":"Common Dimension","id":"\/measurement_unit\/common_dimension","type":"\/type\/type","group":"type","_id":"eLRwTYnx","relation":"\/measurement_unit","properties":[],"included_types":[{"name":"Dimension","id":"\/measurement_unit\/dimension"},{"name":"Topic","id":"\/common\/topic"}]}

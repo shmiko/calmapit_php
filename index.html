@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<!-- Title here -->
+		<title>CalMapIt</title>
+		<!-- Description, Keywords and Author -->
+		<link rel="shortcut icon" href="http://calmapit.com/favicon.ico" type="image/vnd.microsoft.icon" />
+		<meta name="description" content="Calendar Map Itinerary" />
+		<meta name="keywords" content="Google Maps, calendar, itinerary, travel,travel planning, printable travel book" />
+		<meta name="author" content="Paul Jones - shmik.com" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="theme/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Animate CSS -->
+		<link href="theme/css/animate.min.css" rel="stylesheet">
+		<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+		<link href="theme/css/settings.css" rel="stylesheet">
+		<!--[if IE ]><link rel="stylesheet" href="css/settings-ie8.css"><![endif]-->
+		<!-- Portfolio CSS -->
+		<link href="theme/css/prettyPhoto.css" rel="stylesheet">
+		<!-- Countdown CSS -->
+		<link href="theme/css/jquery.countdown.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="theme/css/font-awesome.min.css" rel="stylesheet">		
+		<!-- Custom CSS -->
+		<link href="theme/css/style.css" rel="stylesheet">
+		<!--OneAll-->
+		<script type="text/javascript">
+		 var oa = document.createElement('script');
+		 oa.type = 'text/javascript'; oa.async = true;
+		 oa.src = '//calmapit.api.oneall.com/socialize/library.js'
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(oa, s)
+		</script>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="#">
+		<link href="css/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("jquery", "1.7.1");
+    </script>
+    <script>
+      _gCalFlow_debug = true;
+    </script>
+    <script type="text/javascript" src="js/jquery.gcal_flow.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   
+
+	</head>
+	
+	<body>
+		
+		<!-- Body Wrapper -->
+		<div class="wrapper white">
+		
+			<!-- Header Start -->
+			<div class="header">
+				<!-- Header Information -->
+				<div class="header-info">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<!-- Social Media -->
+								<div class="search">
+									<form>
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Text to search">
+											<span class="input-group-btn">
+												<button class="btn" type="button"><i class="fa fa-search"></i></button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<!-- Search Box -->
+								
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<!-- Contact Info -->
+								<div class="contact-info">
+									<div class="row-fluid" id="login">
+									  	<!-- The plugin will be embedded into this div //-->
+										<div id="oa_social_login_container"></div>
+
+										<script type="text/javascript">
+										 var _oneall = _oneall || [];
+										 _oneall.push(['social_login', 'set_callback_uri', 'http://calmapit.com']);
+										 _oneall.push(['social_login', 'set_providers', ['blogger', 'facebook', 'google', 'instagram', 'openid', 'twitter', 'wordpress', 'yahoo', 'youtube']]);
+										 _oneall.push(['social_login', 'do_render_ui', 'oa_social_login_container']);
+										</script>
+									  </div>  
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Header Navigation -->
+				<div class="header-navigation">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<!-- Logo -->
+								<div class="logo">
+									<!-- Heading -->
+									<h1><a href="http://calmapit.com"><img src="img/calmapit_color_55x_icon.png" alt="calmapit"/><img src="img/calmapit_logo1.png" alt="calmapit" /></a></h1>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<!-- Bootstrap Navbar -->
+								<nav class="navbar navbar-default" role="navigation">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle br-orange" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav navbar-right">
+											<!-- Cal -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-lemon" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-calendar link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Cal <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-sm">
+													<li class="br-light-orange">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<h4 class="br-orange-yellow"><i class="fa fa-calendar heading-icon"></i> Calendar</h4>
+																	</div>
+															
+																<style type="text/css">
+																#gcf-ticker .gcf-header-block {
+																  -webkit-border-bottom-left-radius: 4px;
+																  -moz-border-bottom-left-radius: 4px;
+																  border-bottom-left-radius: 4px;
+																  float: left;
+																  height: 100%;
+																  margin-bottom: 0;
+																}
+																#gcf-ticker .gcf-item-container-block {
+																  margin-top: 0.2em;
+																  overflow: hidden;
+																} 
+																#gcf-ticker .gcf-item-block .gcf-item-description {
+																  padding-left: 1em;
+																  color: #888;
+																  font-size: 78%;
+																}
+																#gcf-ticker .gcf-item-description:before { content: " -- "; color: #aaa; }
+																</style>
+																<div id="gcf-ticker" style="width: 95%; height: 135px; left:3px;">
+																  <div class="gcf-header-block br-lemon">
+																	<div class="gcf-title-block " style="width: 50px; height: 58px; color:black;">
+																		Upcoming</br> Events:
+																	</div>
+																  </div>
+																  <div class="gcf-item-container-block">
+																	<div class="gcf-item-block">
+																	  <div class="gcf-item-header-block">
+																		<div class="gcf-item-title-block">
+																		  (<span class="gcf-item-update-date">20/12</span>)</br>
+																		  <span class="gcf-item-title">Item Title of Your event</span>
+																		  
+																		</div>
+																	  </div>
+																	</div>
+																  </div>
+																</div></br></br></br>
+																<script type="text/javascript">
+																	$('#gcf-ticker').gCalFlow({
+																	  calid: '15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com',
+																	  maxitem: 25,
+																	  scroll_interval: 4 * 1000,
+																	   mode: 'upcoming',
+																		maxitem: 20,
+																		link_title:true,
+																		item_description_as_html: true,
+																		auto_scroll: true,
+																		date_formatter: function (date, allday_p) {
+																		function pad(n) { return n < 10 ? "0"+n : n; }
+																		return pad(date.getMonth()+1) + "/" + pad(date.getDate()) + "/" + date.getFullYear().toString().substr(-2);
+																	  }
+																	});
+																</script>
+																</div>
+														
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled" >
+																		<li><a href="gcal.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Integrated Google Calendar</a></li>
+																		<li><a href="mobile_cal/jqm-calc.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Mobile Calendar Test</a></li>
+																		<li><a href="feature.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> View Events Panel</a></li>
+																		<li><a href="calendar.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Print Calendar</a></li>
+																		<li><a href="login.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Share Calendar</a></li>
+																		
+																	</ul>
+																</div>
+																
+																	     
+																
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Map -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-purp" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-map-marker link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Map <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-sm">
+													<li class="br-purp">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<h4 class="br-orange"><i class="fa fa-share heading-icon"></i> Map Views</h4>
+																	<p style="color:#000000;">There are many map views available, street view, multi view - try them all here.</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="multiview.html"><i class="fa fa-arrow-right dd-link-icon"></i> Multi View</a></li>
+																		<li><a href="streetviewdirections.html"><i class="fa fa-arrow-right dd-link-icon"></i> Street View</a></li>
+																		<li><a href="MUID/advancerouteplanner.html"><i class="fa fa-arrow-right dd-link-icon"></i> Direction Drive View</a></li>
+																		<li><a href="MUID/waypoints.html"><i class="fa fa-arrow-right dd-link-icon"></i> Direction WayPoints View</a></li>
+																		<li><a href="mapsed-master/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Map Examples</a></li>
+																		<li><a href="pano/pano.html"><i class="fa fa-arrow-right dd-link-icon"></i> Panorama View</a></li>
+																		<li><a href="calmapit.html"><i class="fa fa-arrow-right dd-link-icon"></i> Custom Event View</a></li>
+																		<li><a href="Mapping/form/details.html"><i class="fa fa-arrow-right dd-link-icon"></i> Detailed Place View</a></li>
+																		<li><a href="rome2rio/itb-master/rome2rio-itb-master/src/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Play a Mapping Game?</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Itinerary -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-med-green" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-book  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Itinerary <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-default br-med-green">
+													<li><a href="flipbook/end.htm"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Travel Itinerary</a></li>
+													<li><a href="faq.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Print Itinerary</a></li>
+													<li><a href="landing-page.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Share Itinerary</a></li>
+													<li><a href="index-column.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Save Itinerary</a></li>
+													<li><a href="service.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Create Trip Book</a></li>
+													<li><a href="sitemap.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Create Photo Book</a></li>
+													<li><a href="time-line.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Upload to Blog</a></li>
+												</ul>
+											</li>
+											<!-- Bookings -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-yellow1" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-suitcase  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Bookings <b class="fa fa-angle-down"></b></span> 
+												</a>
+												
+												<ul class="dropdown-menu dropdown-sm br-yellow1">
+													
+													<li><a href="travel/index.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Travel Book Anything</a></li>
+													<li><a href="traveler_index-1.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Traveller Book Everything</a></li>
+													<li><a href="travelhub.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Hub</a></li>
+													<li><a href="hotel_reservation.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Restaurants Reserve</a></li>
+													<li><a href="index-column.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Theatre</a></li>
+													<li><a href="service.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Room Service</a></li>
+													<li><a href="sitemap.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> ThemeParks</a></li>
+													<li><a href="time-line.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Tours</a></li>
+																
+												</ul>
+											</li>
+											<!-- Trips -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-pink-purp" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-pencil-square-o  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Trips <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-pink-purp">
+													<li>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> View Trips.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">View your trips, get reminders, view on a map, get directions. Add event activities for more detailed planning on the day</p>
+																	<div class="view-button">
+																		<a href="trips.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-yellow"><i class="fa fa-ticket heading-icon"></i> Add/Edit/Delete Events.</h4>
+																	<!-- Image -->
+																	<img src="img/w2.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Make changes to events including event activities.</p>
+																	<!-- View Next Button -->
+																	<div class="view-button">
+																		<a href="#" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="navigator/blog.html"><i class="fa fa-arrow-right dd-link-icon"></i> View Events</a></li>
+																		<li><a href="navigator/blog_post.html"><i class="fa fa-arrow-right dd-link-icon"></i> Change Events</a></li>
+																		<li><a href="calmapit.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your current trips</a></li>
+																		<li><a href="travel/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your Bucket List</a></li>
+																		<li><a href="product.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your Visited Places</a></li>
+																		<li><a href="places.html"><i class="fa fa-arrow-right dd-link-icon"></i> Suggestions</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Ideas -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-aqua" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-globe link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Ideas <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-aqua">
+													<li>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> Need ideas? Search for Places,Events or Things to Do.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Search for new places to vist, add them to your trip, get reminders, view new places on a map, get directions.</p>
+																	<div class="view-button">
+																		<a href="places.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-yellow"><i class="fa fa-ticket heading-icon"></i> Find things to do.</h4>
+																	<!-- Image -->
+																	<img src="img/w2.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Find new things to do, local events and activities, add them to your trip, get reminders, view on a map, get directions..</p>
+																	<!-- View Next Button -->
+																	<div class="view-button">
+																		<a href="#" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="demo/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Voice Control</a></li>
+																		<li><a href="Parallax/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Parallax Me</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your trips</a></li>
+																		<li><a href="navigator/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Navigator</a></li>
+																		<li><a href="weather/fweather/demo.php"><i class="fa fa-arrow-right dd-link-icon"></i> Check Weather</a></li>
+																		<li><a href="weather/weather/accordion-weather.php"><i class="fa fa-arrow-right dd-link-icon"></i> Weather Map</a></li>
+																		<li><a href="twitterfeeds/twitter-oauth/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Twitter Feeds</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> Facebook Events</a></li>
+																		<li><a href="Mapping/birdseye/jquery-birdseye-gh-pages/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> AirBnB</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Gallery -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-maroon" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-road  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Gallery <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-maroon">
+													<li>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> View Photos.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">View some photos then see them on a map.</p>
+																	<div class="view-button">
+																		<a href="gallery.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="places.html"><i class="fa fa-arrow-right dd-link-icon"></i> View Suggested Drives</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> Reccommended</a></li>
+																		<li><a href="portfolio.html"><i class="fa fa-arrow-right dd-link-icon"></i> Reviews</a></li>
+																		<li><a href="pricing.html"><i class="fa fa-arrow-right dd-link-icon"></i> Add to bucket list</a></li>
+																		<li><a href="product.html"><i class="fa fa-arrow-right dd-link-icon"></i> Print list of drives</a></li>
+																		<li><a href="testimonial.html"><i class="fa fa-arrow-right dd-link-icon"></i> Add a Drive</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											
+										</ul>
+									</div><!-- /.navbar-collapse -->
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Header End -->
+			
+			<!-- Slider Start -->
+			
+			<div class="container">
+				<!--
+				#################################
+					- THEMEPUNCH BANNER -
+				#################################
+				-->
+				<div class="tp-banner-container">
+					<div class="tp-banner" >
+						<ul>
+							<!-- SLIDE  -->
+							<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
+								<!-- MAIN IMAGE -->
+								<img src="img/slider/slide1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<!-- LAYERS -->
+								<!-- LAYERS NR. 1 // -->
+								<div class="tp-caption lfl largegreenbg br-red"
+									data-x="50"
+									data-y="140"
+									data-speed="1500"
+									data-start="1200"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Panorama View
+								</div>	
+								<!-- LAYERS NR. 2 -->
+								<div class="tp-caption skewfromleft medium_text paragraph"
+									data-x="50"
+									data-y="240"
+									data-speed="800"
+									data-start="1800"
+									data-easing="Power4.easeOut"
+									data-endspeed="400"
+									data-endeasing="Power4.easeOut"
+									data-captionhidden="off">From street view to panorama view<br /> at the click of a button<br /> with directions that updates when the map view does.
+								</div>
+								<!-- LAYERS NR. 3 // Slide Button -->
+								<div class="tp-caption sfb"
+									data-x="50"
+									data-y="350"
+									data-speed="1500"
+									data-start="2600"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><a href="#" class="btn btn-info btn-lg btn-circle">Know More <i class="fa fa-angle-right"></i></a>
+								</div>
+								<!-- LAYERS NR. 1 // Logo Image -->
+								<div class="tp-caption skewfromright"
+									data-x="600"
+									data-y="bottom"
+									data-speed="800"
+									data-start="3600"
+									data-easing="Power4.easeOut"
+									data-endspeed="400"
+									data-endeasing="Power4.easeOut"
+									data-captionhidden="off"><img src="img/slider/s21.png" class="img-responsive" alt="" style="margin-right: 5px;margin-top: -8px; height:40%;width:40%;" />
+								</div>
+							</li>
+							<!-- SLIDE  -->
+							<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1500" >
+								<!-- MAIN IMAGE -->
+								<img src="img/slider/slide2.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<!-- LAYERS -->
+								<!-- LAYERS NR. 1 // Logo Image -->
+								<div class="tp-caption lfl"
+									data-x="130"
+									data-y="center"
+									data-speed="1500"
+									data-start="1200"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><img src="img/slider/calmapit_logo1.png" class="img-responsive" alt="" />
+								</div>
+								<!-- LAYERS NR. 2 -->
+								<div class="tp-caption lfr thinheadline_dark"
+									data-x="500"
+									data-y="120"
+									data-speed="1500"
+									data-start="2000"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Welcome To
+								</div>
+								<!-- LAYERS NR. 2.1 -->
+								<div class="tp-caption lfr very_large_text"
+									data-x="500"
+									data-y="150"
+									data-speed="1500"
+									data-start="2300"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">CalMapit
+								</div>
+								<!-- LAYERS NR. 3 -->
+								<div class="tp-caption lfr medium_text paragraph"
+									data-x="500"
+									data-y="220"
+									data-speed="1500"
+									data-start="3000"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Calendar, Map, Itinerary, Bookings, Insurance,</br>
+																			Blog, TripBook, Discovery, Reviews,</br>
+																			Photos/Videos, Social Sharing, Flight Tracking,</br>
+																			Rewards Tracking, RV Hire, Camping, Activities, Hostels</br>
+																			Tours, Cruises, Cycling, Expiditions, International Applications</br>
+																			Travel Tips, Travel Checklists, Traveling with Kids, Traveling Solo, Backpacking.</br>
+																			Before, During and After Travel Personal Assistant. 
+								</div>
+								<!-- LAYERS NR. 4 // Slide Button -->
+								<div class="tp-caption lfr medium_text paragraph"
+									data-x="500"
+									data-y="250"
+									data-speed="1500"
+									data-start="3400"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">
+								</div>
+								<!-- LAYERS NR. 4.1 // Slide Button -->
+								<div class="tp-caption sfb"
+									data-x="500"
+									data-y="425"
+									data-speed="1500"
+									data-start="4200"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><a href="#" class="btn btn-info btn-lg btn-circle">Join Now <i class="fa fa-angle-right"></i></a>
+								</div>
+							</li>
+							<!-- SLIDE  -->
+							<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1500" >
+								<!-- MAIN IMAGE -->
+								<img src="img/slider/slide3.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<!-- LAYERS NR. 1 -->
+								<div class="tp-caption lfl"
+									data-x="100"
+									data-y="130"
+									data-speed="800"
+									data-start="1500"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><img src="img/slider/s31.png" class="img-responsive" alt="" />
+								</div>
+								<!-- LAYERS NR. 2 -->
+								<div class="tp-caption lfl"
+									data-x="0"
+									data-y="252"
+									data-speed="800"
+									data-start="2100"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><img src="img/slider/s32.png" class="img-responsive" alt="" />
+								</div>
+								<!-- LAYERS NR. 3 -->
+								<div class="tp-caption lfl"
+									data-x="350"
+									data-y="290"
+									data-speed="800"
+									data-start="2700"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><img src="img/slider/s33.png" class="img-responsive" alt="" />
+								</div>
+								<!-- LAYERS NR. 4 -->
+								<div class="tp-caption lfl"
+									data-x="250"
+									data-y="309"
+									data-speed="800"
+									data-start="3300"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off"><img src="img/slider/s34.png" class="img-responsive" alt="" />
+								</div>
+								<!-- LAYERS NR. 5 // -->
+								<div class="tp-caption lfr largegreenbg br-orange"
+									data-x="right"
+									data-hoffset="-10"
+									data-y="140"
+									data-speed="1500"
+									data-start="4000"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">CalMapIt goes with you 
+								</div>	
+								<!-- LAYERS NR. 6 // -->
+								<div class="tp-caption lfr modern_big_redbg br-green"
+									data-x="right"
+									data-hoffset="-10"
+									data-y="220"
+									data-speed="1500"
+									data-start="4300"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">all the time.
+								</div>	
+								<!-- LAYERS NR. 7 // -->
+								<div class="tp-caption lfr modern_big_redbg br-yellow"
+									data-x="right"
+									data-hoffset="-10"
+									data-y="270"
+									data-speed="1500"
+									data-start="4600"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Laptop & Tablet
+								</div>
+								<!-- LAYERS NR. 8 // -->
+								<div class="tp-caption lfr modern_big_redbg br-blue"
+									data-x="right"
+									data-hoffset="-10"
+									data-y="320"
+									data-speed="1500"
+									data-start="4900"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Smartphone & i-pad
+								</div>
+								<!-- LAYERS NR. 9 // -->
+								<div class="tp-caption lfr modern_big_redbg br-purple"
+									data-x="right"
+									data-hoffset="-10"
+									data-y="370"
+									data-speed="1500"
+									data-start="5200"
+									data-easing="Power4.easeOut"
+									data-endspeed="300"
+									data-endeasing="Linear.easeNone"
+									data-captionhidden="off">Mobile Phone
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Slider End -->
+			
+			<!-- Box Wrapper -->
+			<div class="box-wrapper">
+				<div class="container">
+					<!-- Box First Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 1 ] -->
+									<div class="box box-md br-lemon animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="gcal.html">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-calendar link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title"> Itinerary</span>
+												<!-- Paragraph -->
+												<p>Automated Itineraries just by forwarding your travel confirmation emails</p>
+												<p>Or Create your own Itinerary from your Google Calendar?</p>
+												<!-- Box Service List -->
+												<ul class="list-unstyled">
+													<li><i class="fa fa-envelope on fa-square-o"></i> Email</li>
+													<li><i class="fa fa-file-word-o on fa-square-o"></i> Print</li>
+													<li><i class="fa fa-twitter on fa-square-o"></i> Share</li>
+													<li><i class="fa fa-file-text on fa-square-o"></i> Edit</li>
+													<li><i class="fa fa-save on fa-square-o"></i> Save</li>
+												</ul>
+												<!-- View Button -->
+												<div class="view-button">
+													<a href="tripnotes.htm" class="br-orange-yellow">View Example <i class="fa fa-angle-right"></i></a>
+												</div>
+												<div class="view-button">
+													<a href="#" class="br-lilac">Try Now <i class="fa fa-angle-right"></i></a>
+												</div>
+											</div>
+										</a>
+									</div>	
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 2 ] -->
+									<div class="box box-md br-purp animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link 
+										<a href="calmapit.html">-->
+											<!-- Box Link Content -->
+											<div class="box-content navigation" style="margin:0px; padding:5px!important;">
+												<!-- Box Icon 
+												<i class="fa fa-map-marker link-icon"></i>-->
+												<!-- Box Title 
+												<span class="box-title">Map</span>-->
+												<iframe src="map_widget.html" style="width:250px;height:250px;top:0px;margin:0;" frameBorder="0"></iframe>
+											</div>
+										<!--</a>-->
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 3 ] -->
+							<div class="box box-lg br-med-green animated" >
+								<div class="box-content box-service box-default" style="color:#000000 !important;margin:0px; padding:0px!important;">
+									<!-- Heading -->
+									<h4><i class="fa fa-book"></i><span class="box-title"> Australian Made!</span></h4>
+									<script id="halo_widget" style="margin-left:-15px !important;" type="text/javascript" src="http://www.tourism.australia.com/widget2/en/acw.js?layout=landscape&destination_1=1&destination_2=1&destination_3=1&destination_4=1&destination_5=1&destination_6=1&destination_7=1&destination_8=1"></script>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 4 ] -->
+							<div class="box box-md pull-up-sm animated">
+								<div class="box-content box-gallery padd-zero">
+									<div class="img-details box-hover-black">
+										<!-- Heading -->
+										<h3>San Fransisco Golden Gate Bridge</h3>
+										<!-- Paragraph -->
+										<p>An iconic landmark, lovely to drive over and awesome to take photos from vaious vantage point near-by.</p>
+										<!-- View Next Button -->
+										<div class="view-button">
+											<a href="gallery.html" class="br-maroon">View More <i class="fa fa-angle-right"></i></a>
+										</div>
+									</div>
+									<!-- Image -->
+									<img src="img/nav1.jpg" class="img-responsive box-gallery-img" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Second Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 5 ] -->
+							<div class="box box-md br-black pull-up animated">
+								<div class="pics" id="box-slider-one">
+									<!-- Images -->
+									<img src="img/w1.jpg" class="img-responsive" alt="" />
+									<img src="img/w2.jpg" class="img-responsive" alt="" />
+									<img src="img/w3.jpg" class="img-responsive" alt="" />
+								</div>
+							</div>
+						</div>
+						<!-- Offset for column gap -->
+						<div class="col-md-4 col-sm-6 col-md-offset-4">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+								<!-- Box Outer Layer [ Box 6 ] -->
+									<div class="box box-md br-aqua pull-up animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="trips.html">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-globe link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title">Trips</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+								<!-- Box Outer Layer [ Box 7 ] -->
+									<div class="box box-md br-pink-purp pull-up animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="places.html">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-pencil-square-o link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title">Ideas</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Third Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 8 ] -->
+									<div class="box box-md br-yellow1 animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="#">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-suitcase link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title">Drives</span>
+												<p>Have a look at some of the Drives which might inspire you to have your own road trip.</p>
+												<!-- View Next Button -->
+												<div class="view-button">
+													<a href="places.html" class="br-aqua">Try It Now <i class="fa fa-angle-right"></i></a>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 9 ] -->
+									<div class="box box-md animated">
+										<div class="box-content slide-up slide-down padd-zero box-team">
+											<!-- Image -->
+											<img src="img/user.jpg" class="img-responsive box-team-img" alt="" />
+											<!-- Team Details -->
+											<div class="box-team-details movetoup box-hover-black">
+												<!-- Heading -->
+												<h4>Lilia Jones</h4>
+												<span>Super Daughter and First Official CalMapIt User!</span>
+												<!-- Social Media -->
+												<div class="social">
+													<a href="#" class="my-tooltip" title="" data-placement="top" data-original-title="facebook"><i class="fa fa-facebook"></i></a>
+													<a href="#" class="my-tooltip" title="" data-placement="top" data-original-title="twitter"><i class="fa fa-twitter"></i></a>
+													<a href="#" class="my-tooltip" title="" data-placement="top" data-original-title="google-plus"><i class="fa fa-google-plus"></i></a>
+													<a href="#" class="my-tooltip" title="" data-placement="top" data-original-title="linkedin"><i class="fa fa-linkedin"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-6">
+							<!-- Box Outer Layer [ Box 10 ] -->
+							<div class="box box-md br-maroon animated">
+								<!-- Box CTA Block -->
+								<div class="box-content box-cta" style="margin:0px; padding:0px!important;left:0px;">
+									<!-- Flat Icon -->
+									<!--<img src="img/flat-icon/fi1.png" class="img-responsive" alt="" />-->
+									<!-- Box CTA Info -->
+									<div class="box-cta-info" style="color:#000000 !important;margin:0px; padding:0px!important;left:0px;">
+										<h4><i class="fa fa-road link-icon"></i><span class="box-title"> Live Tourist Updates</span></h4>
+										<div class="row br-purp">
+										<script type="text/javascript" src="js/rss.js"></script> 
+										<script type="text/javascript">(function() {var params = {rssmikle_url: "http://yosemiteblog.com/feed/|http://www.nps.gov/grca/planyourvisit/upload/grca-backcountry.xml|http://w1.weather.gov/xml/current_obs/KBCE.rss|http://www.nature.nps.gov/assets/rss/NRSS.xml",rssmikle_frame_width: "300",rssmikle_frame_height: "600",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "10",rssmikle_border: "off",responsive: "on",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "on",rssmikle_title_sentence: "Travel Info Live Feeds",rssmikle_title_link: "",rssmikle_title_bgcolor: "#9673FF",rssmikle_title_color: "#000000",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#00B3B3",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#000000",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "on",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#000000",rssmikle_item_date: "gl2",rssmikle_timezone: "Australia/Sydney",datetime_format: "%e.%m.%Y %l:%M:%S %p",rssmikle_item_description_tag: "on_html",rssmikle_item_description_image_scaling: "on",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>
+										<div style="font-size:10px; text-align:center; width:100%; margin:0; ">
+											<a href="http://feed.mikle.com/" target="_blank" >RSS Feed Widget</a>
+											<!--Please display the above link in your web page according to Terms of Service.-->
+											<!-- end feedwind code -->	
+										</div>
+									</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Fourth Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 11 ] -->
+							<div class="box box-lg br-orange animated">
+								<div class="box-content box-service-counter box-default" style="color:#000000 !important;">
+									<!-- Heading -->
+									<h4><i class="fa fa-gears"></i> Bookings</h4>
+									<div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 14 ] -->
+							<div class="box box-md br-light-blue animated">
+								<div class="box-content box-feature box-default" style="color:#000000 !important;">
+									<!-- Heading -->
+									<h4><i class="fa fa-rocket link-icon"></i> Full Responsive</h4>
+									<!-- Paragraph -->
+									<p>Take CalMapIt with you, it compatible on every device. It will work with you and can track your whereabouts</p>
+									<!-- View Next Button -->
+									<div class="view-button">
+										<a href="#" class="br-dark-blue">Try It Now <i class="fa fa-angle-right"></i></a>&nbsp;
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 13 ] -->
+									<div class="box box-md br-brown animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="pricing.html">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-th-list link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title">Reviews</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 12 ] -->
+									<div class="box box-md animated">
+										<div class="box-content slide-up box-gallery padd-zero">
+											<!-- Image -->
+											<img src="img/c1.jpg" class="img-responsive box-gallery-img" alt="" />
+											<!-- Image Gallery Caption -->
+											<div class="image-gallery-caption movetoup box-hover-black">
+												<!-- Image Title / Heading -->
+												<h4>USA RV Road Trip</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Fifth Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-md-offset-4">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 16 ] -->
+									<div class="box box-md pull-up animated">
+										<div class="box-content slide-down box-gallery padd-zero">
+											<!-- Image -->
+											<img src="img/c2.jpg" class="img-responsive box-gallery-img" alt="" />
+											<!-- Image Gallery Caption -->
+											<div class="image-gallery-caption movetodown box-hover-black">
+												<!-- Image Title / Heading -->
+												<h4>Hoover Dam</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Box Outer Layer [ Box 17 ] -->
+									<div class="box box-md br-purple pull-up animated">
+										<!-- Box Hover Effect -->
+										<div class="box-hover box-hover-black">
+											<!-- Hover Icon -->
+											<span class="hover-icon">GO</span>
+										</div>
+										<!-- Box Link -->
+										<a href="gallery.html">
+											<!-- Box Link Content -->
+											<div class="box-content navigation">
+												<!-- Box Icon -->
+												<i class="fa fa-camera link-icon"></i>
+												<!-- Box Title -->
+												<span class="box-title">Gallery</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 15 ] -->
+							<div class="box box-md br-green pull-up animated" style="color:#000000 !important;">
+								<div class="box-content box-login">
+									<!-- Heading -->
+									<h4><i class="fa fa-sign-in link-icon"></i> User Login</h4>
+									<!-- Sign in Form Start -->
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<input type="text" class="form-control" id="username" placeholder="Username">
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" id="password" placeholder="Password">
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-danger">Login</button>&nbsp;
+											<button type="reset" class="btn btn-default">Reset</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Sixth Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 18 ] -->
+							<div class="box box-lg br-blue animated" style="color:#000000 !important;">
+								
+								<!-- Heading -->
+								<h4></i> Latest World News</h4>
+								<div class="box-content" >
+									<!-- Box Icon 
+									<i class="fa fa-map-marker link-icon"></i>-->
+									<!-- Box Title 
+									<span class="box-title">Map</span>-->
+									<iframe src="news_widget.html" style="width:450px;height:400px;top:10px;left:10px;margin:0;" frameBorder="0"></iframe>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 19 ] -->
+							<div class="box box-md br-yellow animated" style="color:#000000 !important;">
+								<div class="box-content padd-zero box-testimonial">
+									<div id="carousel-example-generic-testimonial" class="carousel testimonial slide" data-ride="carousel">
+
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner" style="color:#000000 !important;">
+											<div class="item active">
+												<img src="img/transparent-md.png" class="img-responsive item-back" alt="" />
+												<div class="carousel-caption">
+													<!-- Image -->
+													<!-- Heading -->
+													<h3 style="color:#000000 !important;"><img src="img/user.jpg" class="img-responsive" alt="" />Lilia Jones</h3>
+													<blockquote>
+														<p style="color:#000000 !important;">The most awesome Daughter in the world.</p>
+													</blockquote>
+												</div>
+											</div>
+											<div class="item">
+												<img src="img/transparent-md.png" class="img-responsive item-back" alt="" />
+												<div class="carousel-caption">
+													<!-- Image -->
+													<!-- Heading -->
+													<h3 style="color:#000000 !important;"><img src="img/user2.jpg" class="img-responsive" alt="" />Jack Jones</h3>
+													<blockquote>
+														<p style="color:#000000 !important;">The coolest Son in the world.</p>
+													</blockquote>
+												</div>
+											</div>
+											<div class="item">
+												<img src="img/transparent-md.png" class="img-responsive item-back" alt="" />
+												<div class="carousel-caption">
+													<!-- Image -->
+													<!-- Heading -->
+													<h3><img src="img/user3.jpg" class="img-responsive" alt="" />Wendy Jones</h3>
+													<blockquote>
+														<p>The best Wife in the world.</p>
+													</blockquote>
+												</div>
+											</div>
+										</div>
+
+										<!-- Controls -->	
+										<a class="left c-control" href="#carousel-example-generic-testimonial" data-slide="prev">
+											<span class="fa fa-angle-left"></span>
+										</a>
+										<a class="right c-control" href="#carousel-example-generic-testimonial" data-slide="next">
+											<span class="fa fa-angle-right"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 20 ] -->
+							<div class="box box-lg animated">
+								<div class="box-content slide-up box-gallery padd-zero">
+									<!-- Image -->
+									<img src="img/c3.jpg" class="img-responsive box-gallery-img" alt="" />
+									<!-- Image Gallery Caption -->
+									<div class="image-gallery-caption movetoup box-hover-black">
+										<!-- Image Title / Heading -->
+										<h4>Cadillac Rancg Texas USA</h4>
+										<p>Walk up and add to the decorated cars by picking up left over spray cans in every color.</p>
+										<a href="portfolio.html" class="btn btn-danger">View more <i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Seventh Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-md-offset-4">
+							<!-- Box Outer Layer [ Box 21 ] -->
+							<div class="box box-md br-green pull-up pull-up-sm animated" style="color:#000000 !important;">
+								<div class="box-content box-subscribe box-default">
+									<!-- Heading -->
+									<h4><i class="fa fa-bullhorn"></i> Join Us Today</h4>
+									<!-- Paragraph -->
+									<p>Join CalMapit for free.</p>
+									<!-- Subscribe Form -->
+									<form>
+										<div class="input-group">
+											<!-- form input -->
+											<input type="text" class="form-control" placeholder="Type your email">
+											<span class="input-group-btn">
+												<!-- join button -->
+												<button class="btn btn-danger" type="button"><i class="fa fa-envelope"></i></button>
+											</span>
+										</div>
+									</form>
+									<!-- Social Media -->
+									<div class="social">
+										<a href="#" class="my-tooltip" data-placement="right" data-original-title="facebook" ><i class="fa fa-facebook"></i></a>
+										<a href="#" class="my-tooltip" data-placement="right" data-original-title="twitter" ><i class="fa fa-twitter"></i></a>
+										<a href="#" class="my-tooltip" data-placement="right" data-original-title="google-plus" ><i class="fa fa-google-plus"></i></a>
+										<a href="#" class="my-tooltip" data-placement="right" data-original-title="linkedin"><i class="fa fa-linkedin"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Box Eight Row -->
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 22 ] -->
+							<div class="box box-md br-purple animated" style="color:#000000 !important;">
+								<div class="box-content box-pricing box-default">
+									<!-- Heading -->
+									<h4><i class="fa fa-tags"></i> User Profile <span class="price">shmiko</span></h4>
+									<!-- Plan Details -->
+									<div class="pricing-details">
+										<div class="row">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<ul class="list-unstyled">
+													<li><i class="fa fa-check"></i> Travel Badge</li>
+													<li><i class="fa fa-check"></i> Explorer Badge</li>
+												</ul>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<ul class="list-unstyled">
+													<li><i class="fa fa-check"></i> Reviewer Badge</li>
+													<li><i class="fa fa-check"></i> Post Badge</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- View Button -->
+									<div class="view-button">
+										<a href="#" class="btn btn-danger">View <i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 22 ] -->
+							<div class="box box-md br-orange animated" style="color:#000000 !important;">
+								<div class="box-content box-pricing box-default">
+									<!-- Heading -->
+									<h4><i class="fa fa-tags"></i> Who's Is Where? <span class="price">Find Friends</span></h4>
+									<!-- Plan Details -->
+									<div class="pricing-details">
+										<div class="row">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<ul class="list-unstyled">
+													<li><i class="fa fa-check"></i> Find Friends on the Map</li>
+													<li><i class="fa fa-check"></i> See who is close by</li>
+												</ul>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<ul class="list-unstyled">
+													<li><i class="fa fa-check"></i> See other users in the same areas.</li>
+													<li><i class="fa fa-check"></i> See what other trips are being planned</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- View Button -->
+									<div class="view-button">
+										<a href="#" class="btn btn-black">Go <i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<!-- Box Outer Layer [ Box 23 ] -->
+							<div class="box box-md br-aqua animated" style="color:#000000 !important;">
+								<div class="box-content box-quote">
+									<!-- Quotes -->
+									<span class="box-quote-icon">&#8220;</span>
+									<!-- Paragraph -->
+									<p>I have to say the concept and functionality makes this a must see one-stop travel site, once you use it you'll get hooked.</p>
+									<span class="box-quote-icon pull-right" style="margin-right:150px;margin-top:-45px;">&#8221;</span>
+									<span class="meta pull-left" style="margin-left:10px;">SHMIK.COM - Paul Jones</span>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- Footer Start -->
+			
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<div id="disqus_thread"></div>
+								<script type="text/javascript">
+								/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+									var disqus_shortname = 'calmapit'; // required: replace example with your forum shortname
+
+								/* * * DON'T EDIT BELOW THIS LINE * * */
+								(function() {
+								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+								})();
+								</script>
+								<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+								<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Logo Icon -->
+								<!-- Heading -->
+								<h2><a href="index.html"><img src="img/calmapit_color_55x_icon.png"style="margin-right: 5px;margin-top: -8px; height:10%;width:10%;" /><img src="img/calmapit_logo1.png" alt="" style="margin-right: 5px;margin-top: -8px; height:30%;width:30%;" /></a></h2>
+								<!-- Paragraph -->
+								<p>Keep you eye and ears opened as CalMapIt will become as popular as Google, get Ready To CalMapIt!</p>
+								<!-- Social Media -->
+								<div class="social">
+									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+									<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+									<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+									<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								</div>
+								
+								<div class="row">
+									<!-- Button trigger modal -->
+									<button class="btn btn-primary btn-lg"  title="Share this content" data-toggle="modal" data-target="#myModal">
+									  <i class="fa fa-share-alt"></i> Share
+									</button>
+
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+													<h4 class="modal-title" id="myModalLabel"><i class="fa fa-share-alt"></i> Share</h4>
+												</div>
+												<div class="modal-body">
+													<p>	
+														<a title="Facebook" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> 
+														<a title="Twitter" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a> 
+														<a title="Google+" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x"></i></span></a> 
+														<a title="Linkedin" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a> 
+														<a title="Reddit" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-reddit fa-stack-1x"></i></span></a> 
+														<a title="WordPress" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-wordpress fa-stack-1x"></i></span></a> 
+														<a title="Digg" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-digg fa-stack-1x"></i></span></a>  
+														<a title="Stumbleupon" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-stumbleupon fa-stack-1x"></i></span></a>
+														<a title="E-mail" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x"></i></span></a>  
+														<a title="Print" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-print fa-stack-1x"></i></span></a>
+													</p>
+													<h2><i class="fa fa-envelope"></i> Newsletter</h2>
+													<p>Subscribe to our weekly Newsletter and stay tuned.</p>
+													<form action="" method="post">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+															<input type="email" class="form-control" placeholder="your@email.com">
+														</div>
+														<br />
+														<button type="submit" value="sub" name="sub" class="btn btn-primary"><i class="fa fa-share"></i> Subscribe Now!</button>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-plus br-maroon"></i> Navigation Menu</h5>
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<!-- Menu Icons link -->
+										<ul class="list-unstyled">
+											<li><a href="gcal.html"><i class="fa fa-calendar br-lemon" style="color:#000000 !important;"></i> Cal</a></li>
+											<li><a href="calmapit.html"><i class="fa fa-map-marker br-purp" style="color:#000000 !important;"></i> Map</a></li>
+											<li><a href="tripnotes.htm"><i class="fa fa-book br-med-green" style="color:#000000 !important;"></i> Itinerary</a></li>
+											<li><a href="places.html"><i class="fa fa-globe br-aqua" style="color:#000000 !important;"></i> Places</a></li>
+											<li><a href="calmapit.html"><i class="fa fa-pencil-square-o br-hot-pink" style="color:#000000 !important;"></i> Events</a></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<!-- Menu Icons link -->
+										<ul class="list-unstyled">
+											<li><a href="places.html"><i class="fa fa-road br-maroon" style="color:#000000 !important;"></i> Drives</a></li>
+											<li><a href="#"><i class="fa fa-search br-pink" style="color:#000000 !important;"></i> Testimonials</a></li>
+											<li><a href="navigator/about.html"><i class="fa fa-user br-orange" style="color:#000000 !important;"></i> About Us</a></li>
+											<li><a href="#"><i class="fa fa-sign-in br-green" style="color:#000000 !important;"></i> Register</a></li>
+											<li><a href="#"><i class="fa fa-file br-brown" style="color:#000000 !important;"></i> Reviews</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-map-marker br-yellow"></i> Contact Us</h5>
+								<address>
+									<i class="fa fa-home br-green"></i> # Castlereagh Street <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; Riverstone,  <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; New South Walesn <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; Australia 2765<br />
+									<span><i class="fa fa-phone br-orange"></i> +61 123-456-2345</span>
+									<span><i class="fa fa-envelope-o br-blue"></i> <a href="#">pjones@calmapit.com</a></span>
+								</address>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-location-arrow br-aqua"></i> Location</h5>
+								<!-- Google Map -->
+								<div class="map">
+									<!-- Image -->
+									<img src="img/map.png" class="img-responsive" alt="" />
+									<!-- Map Marker -->
+									<i class="fa fa-map-marker marker india aqua"></i>
+									<i class="fa fa-map-marker marker usa orange"></i>
+									<i class="fa fa-map-marker marker africa green"></i>
+								</div>
+								<span class="location-name">
+									<i class="fa fa-map-marker br-aqua"></i> India &nbsp;&nbsp;
+									<i class="fa fa-map-marker br-orange"></i> USA &nbsp;&nbsp;
+									<i class="fa fa-map-marker br-green"></i> Africa
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- Footer Copyright -->
+					<div class="footer-copyright">
+						<p>&copy; Copyright 2014 <a href="#">CalMapit</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Footer End -->
+			
+		</div>
+		<!-- Footer End -->
+		
+		<!-- Scroll to top -->
+		<span class="totop"><a href="#"><i class="fa fa-angle-up"></i></a></span>
+		
+
+		
+		
+		
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+		<script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
+		<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+		<!-- Masonry JS -->
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<!-- Cycle JS -->
+		<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+		<!-- jQuery flot -->
+		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+		<script src="js/jquery.flot.min.js"></script>     
+		<script src="js/jquery.flot.resize.min.js"></script>
+		<!-- Count To JS  -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- jQuery way points -->
+		<script src="js/waypoints.min.js"></script>
+		<!-- jQuery prettyPhoto & Isotope -->
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/isotope.js"></script>
+		<!-- Jquery for Countdown  -->
+		<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="js/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="js/custom.js"></script>
+		<!-- Google Calendar login OUAUTH -->
+		<script src="js/main2.js"></script>
+
+		<!-- This Page JavaScript -->
+		<script type="text/javascript" >
+		
+			// SLIDER REVOLUTION Java Script
+				jQuery(document).ready(function() {
+					   jQuery('.tp-banner').revolution(
+						{
+							delay:9000,
+							startheight:500,
+							
+							hideThumbs:10,
+							
+							navigationType:"none",	
+							
+							
+							hideArrowsOnMobile:"on",
+							
+							touchenabled:"on",
+							onHoverStop:"on",
+							
+							navOffsetHorizontal:0,
+							navOffsetVertical:20,
+							
+							stopAtSlide:-1,
+							stopAfterLoops:-1,
+
+							shadow:0,
+							
+							fullWidth:"on",
+							fullScreen:"off"
+						});
+				});
+			
+			// Cycle Slide Js 
+			
+				$('#box-slider-one').cycle({ 
+					fx:    'uncover',  
+					speed:    200, 
+					timeout:  2500 
+				});
+			
+			/* ******************************************** */
+			/* plot js */
+			/* *************************************** */  
+					
+				$(function() {
+					/* Chart data #1 */
+					var d1 = [[0, 0], [1, 1.5], [2, 3.2], [3, 4.1],[4, 5.1], [5, 5], [6, 5.3], [7, 6],[8, 6.3], [9, 7], [10, 7.5], [11, 8]];
+
+					var options = {
+						series: {
+						  lines: {
+							 show: true, fill: false, lineWidth:1
+						  },
+						  points: {
+							 show: true, fill: true, lineWidth:2, radius:3, fillColor: "#fff"
+						  },
+						  shadowSize: 0
+					   },
+						colors :["#fff"],
+					   grid: {
+						  hoverable: true, color: "#fff", backgroundColor:null ,borderWidth:0, borderColor:"#fff", labelMargin:10
+					   },
+					   xaxis: {
+						  ticks: 10,
+						  font: {
+								size: 12,
+								color: ["#fff"]
+							}
+					   },
+					   yaxis: {
+						  ticks: 5,
+						  font: {
+								size: 12,
+								color: ["#fff"]
+							}
+					   }, 
+					   legend: {
+						  backgroundOpacity:0,
+						  noColumns:2,
+						  labelBoxBorderColor: null
+					   }
+					};
+					
+					$("<div id='tooltip'></div>").css({
+						position: "absolute",
+						display: "none",
+						"border-radius":"1px",
+						padding: "4px 5px",
+						color:"#999",
+						"font-size":"11px",
+						"background-color": "#fff",
+						"border":"1px solid #ccc",
+						"z-index": "20"
+					}).appendTo("body");
+
+					$(".plot-chart").bind("plothover", function (event, pos, item) {
+							if (item) {
+								var x = item.datapoint[0].toFixed(2),
+									y = item.datapoint[1].toFixed(2);
+
+								$("#tooltip").html(x + ", " + y)
+									.css({top: item.pageY+5, left: item.pageX+5})
+									.fadeIn(200);
+							} else {
+								$("#tooltip").hide();
+							}
+					});
+
+					$.plot(".plot-chart", [ {data: d1,  label: "Revenue"} ], options);
+				});
+				
+			// Type your codde here
+		</script>
+		<script type="text/javascript" src="//api.skyscanner.net/api.ashx?key=df8d3a3b-a685-4608-9dc3-dab9c16a9278"></script>
+	<script type="text/javascript">
+	   skyscanner.load("snippets","2");
+	   function main(){
+		   var snippet = new skyscanner.snippets.SearchPanelControl();
+		   snippet.setShape("box400x400");
+		   snippet.setCulture("en-GB");
+		   snippet.setCurrency("AUD");
+		   snippet.setMarket("AU");
+		   snippet.setColourScheme("classicbluedark");
+		   snippet.setProduct("flights","1");
+		   snippet.setProduct("hotels","2");
+		   snippet.setProduct("carhire","3");
+
+		   snippet.draw(document.getElementById("snippet_searchpanel"));
+	   }
+	   skyscanner.setOnLoadCallback(main);
+	</script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76818971-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>	
+</html>

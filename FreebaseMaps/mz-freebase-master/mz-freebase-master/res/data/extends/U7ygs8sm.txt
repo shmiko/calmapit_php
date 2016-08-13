@@ -1,0 +1,1 @@
+{"name":"Top Level Domain Registry","id":"\/internet\/top_level_domain_registry","type":"\/type\/type","group":"type","_id":"U7ygs8sm","relation":"\/internet","properties":[{"name":"Domains Registered","id":"\/internet\/top_level_domain_registry\/domains","expected_type":"\/internet\/top_level_domain","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

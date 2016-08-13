@@ -1,0 +1,111 @@
+/* removes the top and left whitespace */
+* { margin:0; padding:0; }
+
+/* ensure full screen */
+
+
+/* remove the scrollbars */
+canvas {
+    display:block;
+}
+
+#menuCtrl {
+    position: absolute;
+    
+}
+
+#menuInfo {
+    position: absolute;
+    width:100%;
+	
+}
+
+.menuWrapper {
+	width:100%;
+	
+}
+
+.menuForm {
+    width:99.5%;
+    height:900px;
+	float: left;
+    margin-top: 22px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    box-shadow: 3px 3px 5px #333;
+	margin-left:3px;
+	
+}
+
+.menuForm table {
+    width:98%;
+    height:100%;
+	padding-top: 3px;
+}
+.menuForm td, th {
+    white-space: nowrap;
+}
+.menuForm th {
+    text-align: left;
+}
+
+.menuTabs {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+}
+
+.menuTabs div.tab {
+    float: left;
+    height: 20px;
+    min-width: 20px;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.menuTabs div.secondary {
+    border-left: 0px;
+}
+.menuTabs div.active {
+    opacity: 1;
+    border-bottom: 2px solid white;
+}
+.menuTabs div.active.showHide {
+    border-bottom: 2px solid black;
+}
+.menuTabs div.inActive {
+    opacity: .75;
+    border-bottom: 2px solid black;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.visible {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.invisible {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.hidden {
+    display: none;
+}
+#menuInfoWrapper.hidden {
+    display: block;
+}
+#menuInfoWrapper.hidden #menuInfoTabs {
+    top: auto;
+    bottom: 0;
+    right: 0;
+	height:100%;
+
+    
+}

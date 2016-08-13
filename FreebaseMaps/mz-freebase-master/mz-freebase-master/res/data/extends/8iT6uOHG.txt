@@ -1,0 +1,1 @@
+{"name":"Film genre","id":"\/film\/film_genre","type":"\/type\/type","group":"type","_id":"8iT6uOHG","relation":"\/film","properties":[{"name":"Films of this genre","id":"\/film\/film_genre\/films_in_this_genre","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Media genre","id":"\/media_common\/media_genre"},{"name":"Topic","id":"\/common\/topic"}]}

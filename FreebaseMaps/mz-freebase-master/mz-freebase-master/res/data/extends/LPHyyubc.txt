@@ -1,0 +1,1 @@
+{"name":"Film subject","id":"\/film\/film_subject","type":"\/type\/type","group":"type","_id":"LPHyyubc","relation":"\/film","properties":[{"name":"Films On This Subject","id":"\/film\/film_subject\/films","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

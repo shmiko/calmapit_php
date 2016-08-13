@@ -1,0 +1,1 @@
+{"name":"Query","id":"\/freebase\/query","type":"\/type\/type","group":"type","_id":"vaoyEzjo","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Document","id":"\/common\/document"}]}

@@ -1,0 +1,1 @@
+{"name":"Holiday Category","id":"\/time\/holiday_category","type":"\/type\/type","group":"type","_id":"bULMEBg6","relation":"\/time","properties":[{"name":"Holidays","id":"\/time\/holiday_category\/holidays","expected_type":"\/time\/holiday","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

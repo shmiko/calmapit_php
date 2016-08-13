@@ -1,0 +1,206 @@
+blue = #accecd
+pink = #bc6367
+off-white = #fafffc
+
+@import 'reset.css'
+@import url(http://fonts.googleapis.com/css?family=Josefin\+Sans:400,700)
+
+body
+  height: 100%
+  width: 100%
+
+#LayoutDiv1
+  height:100%
+  display:block
+
+text
+  clear: both
+
+h1
+  margin: 0px
+
+.mapPage
+  background: #e0e0e0
+
+#mapHeader
+  width: 100%
+  height: 40px
+  z-index:2
+  font-size: 25px
+  color: #191919
+  box-shadow: 0px 3px 3px #888888
+  background: #e0e0e0
+
+#mapHeaderBottom
+  width: 100%
+  height: 3px
+  z-index:2
+  background: transparent
+
+#headerRight
+  float: right
+  padding: 0px 0px
+  margin: 14px 10px 0px 10px
+  font-size: 16px
+  color: #333
+  
+#headerLeft
+  float: left
+  font-size: 20px
+  padding: 0px 0px
+  margin: 12px 10px 0px 0px
+
+#carrier-date-battery
+  width: 100%
+  height: 20px
+
+#centerMarker
+  position: absolute
+  top:190px
+  left:160px
+  z-index: 1
+
+#mapAndDay 
+  height: 100%
+  padding: 0
+  margin: 0
+
+#mapCanvas
+  float: right
+  overlow: hidden
+  width: 100%
+  min-width: 220px
+  min-height: 250px
+  z-index: 0
+  height: 100%
+
+#dateTimeText
+  font-size: 16px
+  width: 300px
+  height: 40px
+  position: absolute
+  z-index: 1
+  right: 0
+  margin-right: 10px
+  display: block
+  text-align: right
+  padding-top: 5px
+  color: #303030
+  font-family: helvetica
+  text-shadow: 1px 1px 3px #909090
+
+#daySlider
+  width: 85%
+  height: 40px
+  position: absolute
+  z-index: 2
+  overflow: hidden
+  margin: 0
+  padding: 0 0 0 0
+  right: 0
+  bottom: 0px
+  color: black
+
+.daySliderText
+  color: white
+  z-index: 2
+  line-height: 40px
+  margin-left: auto
+  margin-right: auto
+  width: 140px
+  font-weight: bold
+  font-size: 14px
+
+#hourSlider, #daySlider
+  background: black
+  overflow: hidden
+  opacity: 0.25
+
+#hourSlider 
+  float: left
+  margin-left: 0
+  width: 15%
+  height: 100%
+  z-index:1
+  vertical-allign: middle
+  color: off-white
+
+#hourSliderText
+  font-weight: bold
+  margin-left: 1px
+  margin-top: 10px
+  color: #F0F0F0
+  font-size: 12px
+  text-align: center
+  opacity: 0.8
+
+.focus
+  color: off-white
+
+.blur 
+   color: transparent
+   text-shadow: 0 0 5px rgba(0,0,0,0.5)
+
+.slider
+  overflow: auto
+  -webkit-overflow-scrolling:touch
+  position: absolute
+  
+.stitched 
+   padding: 20px
+   margin: 10px
+   background: #ff0030
+   color: #fff
+   font-size: 21px
+   font-weight: bold
+   line-height: 1.3em
+   border: 2px dashed #fff
+   border-radius: 10px
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
+   text-shadow: -1px -1px #aa3030
+   font-weight: normal
+
+#infoWindow
+  position: relative
+  overflow: hidden
+  width: 200px
+  z-index: 2
+
+
+#description
+  margin: auto
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 20px
+  font-weight: 700
+
+a
+  float: right
+  right: 5px
+
+div img
+  width: 200px
+
+text
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 13
+
+#centerMarker
+  position:fixed
+  width: 40px
+  top: 50%
+  left: 50%
+  margin-top: 10 
+  margin-left: -10px
+  z-index:1
+
+.radarLogo
+  width: 29px
+  height: 29px
+  float: left
+  padding: 0px 0px
+  margin: 6px 8px 0px 8px
+
+.chevron
+  padding: 0px 5px 0px 5px
+  margin: 0
+  color: white

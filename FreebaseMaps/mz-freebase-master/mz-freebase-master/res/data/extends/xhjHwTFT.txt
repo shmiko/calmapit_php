@@ -1,0 +1,1 @@
+{"name":"Collector","id":"\/interests\/collector","type":"\/type\/type","group":"type","_id":"xhjHwTFT","relation":"\/interests","properties":[{"name":"Collections","id":"\/interests\/collector\/collections","expected_type":"\/interests\/collection","description":""}],"included_types":[{"name":"Person","id":"\/people\/person"},{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Hotel Brand Owner","id":"\/travel\/hotel_brand_owner","type":"\/type\/type","group":"type","_id":"D0s3oNBy","relation":"\/travel","properties":[{"name":"Hotel Brands Owned","id":"\/travel\/hotel_brand_owner\/hotel_brands_owned","expected_type":"\/travel\/hotel_brand","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Fashion, Clothing and Textiles","id":"\/fashion","type":"\/type\/domain","group":"zone","_id":"Vbbdg2cU","relation":"root","properties":[],"included_types":[]}

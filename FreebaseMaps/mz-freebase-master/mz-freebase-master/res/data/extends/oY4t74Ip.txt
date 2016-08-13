@@ -1,0 +1,1 @@
+{"name":"US Census Designated Place","id":"\/location\/census_designated_place","type":"\/type\/type","group":"type","_id":"oY4t74Ip","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"}]}

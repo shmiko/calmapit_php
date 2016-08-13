@@ -1,0 +1,1 @@
+{"name":"Issue Type","id":"\/business\/issue_type","type":"\/type\/type","group":"type","_id":"mmCLj4xY","relation":"\/business","properties":[{"name":"Issues of this type","id":"\/business\/issue_type\/issues_of_this_type","expected_type":"\/business\/issue","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Transmission Classification","id":"\/automotive\/transmission_type","type":"\/type\/type","group":"type","_id":"IHJIKfkH","relation":"\/automotive","properties":[{"name":"Transmissions","id":"\/automotive\/transmission_type\/transmissions","expected_type":"\/automotive\/transmission","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

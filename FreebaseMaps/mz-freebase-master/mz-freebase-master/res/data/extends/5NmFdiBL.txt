@@ -1,0 +1,1 @@
+{"name":"Vaccine Developer","id":"\/medicine\/vaccine_developer","type":"\/type\/type","group":"type","_id":"5NmFdiBL","relation":"\/medicine","properties":[{"name":"Vaccine","id":"\/medicine\/vaccine_developer\/vaccine","expected_type":"\/medicine\/vaccine","description":"Vaccine developed."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

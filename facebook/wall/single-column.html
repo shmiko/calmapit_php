@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Facebook Wall</title>
+
+	<!--style sheets-->
+		<link rel="stylesheet" href="css/jQueryFacebookWall.min.css" type="text/css" media="screen" />	<link rel="stylesheet" href="css/jqfm-example.css" type="text/css" media="screen" />
+</head>
+
+<body style="background:#fcfcfc url(img/background.jpg) repeat top center fixed;">
+	
+<script type="text/javascript">
+	window.fbAsyncInit = function() {
+		FB.init({ appId:'556026297862136', status:true, cookie:true, xfbml:true, oauth:true }); 
+	};
+</script>
+<script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=556026297862136";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="fb-root"></div>
+	
+<div class="jqfbw-example-nav" >    
+    <a class="jqfbw-example-nav-link" href="index.html" >Timeline Example</a>
+    <a class="jqfbw-example-nav-link" href="wall.html" >Wall Example</a>
+    <a class="jqfbw-example-nav-link" href="single-column.html" >Single Column Example</a>
+    <a class="jqfbw-example-nav-link" href="example-with-controls.html" >Example With Controls</a>
+    <a class="jqfbw-example-nav-link" href="options.html">Option Descriptions</a>
+</div>    
+<div class="fb-like-wrapper">
+	<div class="fb-like" data-href=""   data-show-faces="false" data-send="true"></div>
+</div>
+<!-- plugin home wide
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-5596827964697060"
+     data-ad-slot="2054567153"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+-->
+    <div style="width:40%; margin: 0 auto;">
+   		<div class="facebook-wall"></div>
+	</div>
+    <div class=" fb_reset" id="fb-root"></div>
+</body>
+	
+	<!--load jQuery from google, else get a local copy-->
+	<script src="js/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.min.js"><\/script>')</script>
+  
+                 
+	    <script src="js/jQueryFacebookWall.min.js"></script>  
+	    
+    <script>
+	$(document).ready(function(){
+		// Calling our plugin with a fb account username and an access token, from 
+		var temp = $('.facebook-wall').jQueryFacebookWall({
+			'appId': '556026297862136',
+			'facebookUser':'wendy',
+			'domain': 'calmapit.com',
+			'display':'single-column',
+			'posts':{
+				show: true,
+				limit: 5,
+				order: 5	
+			},
+			'comments':{
+				showAtStart:3,
+				showMoreNum:10,
+				limit: 50
+			},
+			likes:{
+				order: 4
+			},
+			albums:{
+				order: 3,
+				limit: 6
+			},
+			photos:{
+				order: 2
+			},
+			events:{
+				show: false,
+				order: 1,
+				limit: 4
+			},
+			'debug': false
+		});
+	})//end document ready
+	</script>
+
+</html>

@@ -1,0 +1,1 @@
+{"name":"Football Scoring Event","id":"\/american_football\/football_scoring_event","type":"\/type\/type","group":"type","_id":"w8j95E18","relation":"\/american_football","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

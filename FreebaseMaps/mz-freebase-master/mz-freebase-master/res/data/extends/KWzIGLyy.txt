@@ -1,0 +1,1 @@
+{"name":"TV terrestrial broadcast facility","id":"\/broadcast\/tv_terrestrial_broadcast_facility","type":"\/type\/type","group":"type","_id":"KWzIGLyy","relation":"\/broadcast","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Broadcast Distributor","id":"\/broadcast\/distributor"}]}

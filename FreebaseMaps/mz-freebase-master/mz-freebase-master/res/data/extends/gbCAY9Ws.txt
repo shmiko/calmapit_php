@@ -1,0 +1,1 @@
+{"name":"Brazilian federal district","id":"\/location\/br_federal_district","type":"\/type\/type","group":"type","_id":"gbCAY9Ws","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

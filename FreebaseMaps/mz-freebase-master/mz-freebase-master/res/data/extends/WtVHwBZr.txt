@@ -1,0 +1,1 @@
+{"name":"Drug class","id":"\/medicine\/drug_class","type":"\/type\/type","group":"type","_id":"WtVHwBZr","relation":"\/medicine","properties":[{"name":"Drugs","id":"\/medicine\/drug_class\/drugs","expected_type":"\/medicine\/drug","description":"Drugs in this class."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

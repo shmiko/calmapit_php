@@ -1,0 +1,1 @@
+{"name":"Founding Figure","id":"\/religion\/founding_figure","type":"\/type\/type","group":"type","_id":"jFGmvyH3","relation":"\/religion","properties":[{"name":"Religion Founded","id":"\/religion\/founding_figure\/religion_founded","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

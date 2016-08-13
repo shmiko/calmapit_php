@@ -1,0 +1,1 @@
+{"name":"Weave","id":"\/fashion\/weave","type":"\/type\/type","group":"type","_id":"AmhaDvQU","relation":"\/fashion","properties":[{"name":"Textiles of this weave","id":"\/fashion\/weave\/textiles_of_this_weave","expected_type":"\/fashion\/textile","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

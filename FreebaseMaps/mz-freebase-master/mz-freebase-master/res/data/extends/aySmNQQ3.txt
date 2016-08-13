@@ -1,0 +1,1 @@
+{"name":"Belief","id":"\/religion\/belief","type":"\/type\/type","group":"type","_id":"aySmNQQ3","relation":"\/religion","properties":[{"name":"Belief Of","id":"\/religion\/belief\/belief_of","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

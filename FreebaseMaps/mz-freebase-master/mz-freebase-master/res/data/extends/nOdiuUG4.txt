@@ -1,0 +1,1 @@
+{"name":"Musical tribute act","id":"\/music\/musical_tribute_act","type":"\/type\/type","group":"type","_id":"nOdiuUG4","relation":"\/music","properties":[{"name":"Tribute of","id":"\/music\/musical_tribute_act\/tribute_of","expected_type":"\/music\/artist","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Protected Places","id":"\/protected_sites","type":"\/type\/domain","group":"zone","_id":"63rS6vDg","relation":"root","properties":[],"included_types":[]}

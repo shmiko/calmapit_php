@@ -1,0 +1,1 @@
+{"name":"Hull material","id":"\/boats\/hull_material","type":"\/type\/type","group":"type","_id":"UwUxSD63","relation":"\/boats","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Film crewmember","id":"\/film\/film_crewmember","type":"\/type\/type","group":"type","_id":"zhBoVmIE","relation":"\/film","properties":[{"name":"Films crewed","id":"\/film\/film_crewmember\/films_crewed","expected_type":"\/film\/film_crew_gig","description":""}],"included_types":[{"name":"Person","id":"\/people\/person"},{"name":"Topic","id":"\/common\/topic"}]}

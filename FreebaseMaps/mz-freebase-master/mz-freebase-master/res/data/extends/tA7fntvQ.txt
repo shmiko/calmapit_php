@@ -1,0 +1,1 @@
+{"name":"Canonical Version","id":"\/music\/single","type":"\/type\/type","group":"type","_id":"tA7fntvQ","relation":"\/music","properties":[{"name":"Versions","id":"\/music\/single\/versions","expected_type":"\/music\/recording","description":"Other recordings of this composition by this artist."}],"included_types":[]}

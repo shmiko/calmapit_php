@@ -1,0 +1,1 @@
+{"name":"Culinary measure","id":"\/food\/culinary_measure","type":"\/type\/type","group":"type","_id":"MxLHnkrN","relation":"\/food","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

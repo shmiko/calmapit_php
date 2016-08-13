@@ -1,0 +1,1 @@
+{"name":"Game publisher","id":"\/games\/game_publisher","type":"\/type\/type","group":"type","_id":"QbcMlxqT","relation":"\/games","properties":[{"name":"Games published","id":"\/games\/game_publisher\/games_published","expected_type":"\/games\/game","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,229 @@
+
+
+    <!DOCTYPE HTML>
+
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GT3 Themes Demo</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <link href="selector/styles.css" rel="stylesheet" media="all"/>
+        <link href="selector/scroll/css/jquery.jscrollpane.css" rel="stylesheet" media="all"/>
+        <script type="text/javascript" src="selector/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="selector/scroll/js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="selector/scroll/js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript">
+            var theme_list_open = false;
+
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                window.location = 'http://www.gt3themes.com/wordpress-themes/oyster_landing/';
+            }
+
+            $(document).ready(function () {
+                function fixHeight() {
+                    var headerHeight = $("#switcher").height();
+                    $("#iframe").attr("height", (($(window).height()) - headerHeight));
+                }
+
+                $(window).resize(function () {
+                    fixHeight();
+                }).resize();
+                $("#theme_select").click(function () {
+                    if (theme_list_open == true) {
+                        $(".advanced_templates_block").css("visibility", "hidden");
+                        theme_list_open = false;
+                    } else {
+                        $(".advanced_templates_block").css("visibility", "visible");
+                        theme_list_open = true;
+                    }
+                    $(this).toggleClass("active");
+                    return false;
+                });
+
+                $("#theme_list ul li a, a.top_sell").click(function () {
+                    var theme_data = $(this).attr("rel").split(",");
+                    var nowurl = theme_data[1] + "?ref=mad_dog";
+                    $("li.purchase a").attr("href", nowurl);
+                    $("li.remove_frame a").attr("href", theme_data[0]);
+                    $("#iframe").attr("src", theme_data[0]);
+                    $("#theme_list a#theme_select").html($(this).html());
+                    $(".advanced_templates_block").css("visibility", "hidden");
+                    $(".previmg_cont").css("visibility", "hidden");
+                    $(".previmg").remove();
+                    theme_list_open = false;
+                    return false;
+                });
+
+				/* preview hover */
+                $(".templs_in li a").hover(
+                    function () {
+                        var previewurl = $(this).parent().attr("data-preview-image");
+                        $(".previmg_cont").append("<img src='" + previewurl + "' class='previmg' alt=''>").css("visibility", "visible");
+                    },
+                    function () {
+                        $(".previmg_cont").css("visibility", "hidden");
+                        $(".previmg").remove();
+                    }
+                );
+
+                $('.templs_in').jScrollPane(
+                    {showArrows: true, autoReinitialise: true}
+                );
+                $('.advanced_templates_block .f_left').jScrollPane(
+                    {showArrows: true, autoReinitialise: true}
+                );
+
+                if ($(window).width() < 501) {
+                    var adv_w = $(window).width() - 40;
+                    $(".advanced_templates_block, .templs_li_block").css({'width': adv_w + 'px'});
+                    $(".advanced_templates_block .f_left").css({'height': $("#iframe").height() + 'px'});
+
+                }
+            });
+
+            $(window).resize(function () {
+                if ($(window).width() < 501) {
+                    var adv_w = $(window).width() - 40;
+                    $(".advanced_templates_block, .templs_li_block").css({'width': adv_w + 'px'});
+                    $(".advanced_templates_block .f_left").css({'height': $("#iframe").height() + 'px'});
+                }
+            });
+        </script>
+        <script src="js.js" type="text/javascript"></script>
+
+<script type="text/javascript">try {
+
+        clicky.init(100590022);
+
+    } catch (e) {
+
+    }</script>
+
+        <!--<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-47268937-1', 'gt3themes.com');
+            ga('send', 'pageview');
+
+        </script>-->
+
+        <!-- Piwik -->
+<!--        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u=(("https:" == document.location.protocol) ? "https" : "http") + "://fivemediallc.com/piwik/";
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', 1]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+                g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <noscript><p><img src="http://fivemediallc.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>-->
+        <!-- End Piwik Code -->
+        
+    </head>
+
+    <body>
+    <div id="switcher">
+        <div class="center">
+            <ul class="headlines">
+                <li class="logo"><a href="http://www.gt3themes.com/"><img src="selector/logo.png" alt=""/></a></li>
+
+                <li id="theme_list"><a id="theme_select"
+                                       href="#"><span class='fl'>Select A Theme...</span></a>
+
+                    <div class="advanced_templates_block">
+                        <div class="f_left">
+                            <div class="templs_li_block wp_section"><h3>Wordpress Themes</h3><div class="templs_in"><ul><li data-preview-image="http://www.gt3themes.com/demo/selector/items/oyster_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/oyster_landing/,http://themeforest.net/item/oyster-creative-photo-wordpress-theme/8406045"><span class="fl">Oyster WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/yorker_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/yorker/,http://themeforest.net/item/yorker-business-wordpress-theme/8407908"><span class="fl">Yorker WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/healther_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/healther/,http://themeforest.net/item/healther-medical-health-wordpress-theme/8075315"><span class="fl">Healther WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/fit_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/fitplus/,http://themeforest.net/item/fit-multipurpose-sports-wordpress-theme/7940206"><span class="fl">Fit WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/flipstar_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/flipstar/,http://themeforest.net/item/flipstar-creative-business-wordpress-theme/7796312"><span class="fl">Flipstar WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/marvel_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/marvel/,http://themeforest.net/item/marvel-creative-portfolio-wordpress-theme/7571407"><span class="fl">Marvel WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/achromatic_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/achromatic_landing/,http://themeforest.net/item/achromatic-business-wordpress-theme/7361395"><span class="fl">Achromatic WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/eclipse_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/eclipse_landing/,http://themeforest.net/item/eclipse-photo-portfolio-wordpress-theme/7181755"><span class="fl">Eclipse WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/performer_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/performer/,http://themeforest.net/item/performer-minimalistic-portfolio-wordpress-theme/6757476"><span class="fl">Performer WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/shopper_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/shopper/,http://themeforest.net/item/shopper-multipurpose-woocommerce-wordpress-theme/6625922"><span class="fl">Shopper WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/quidditch_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/quidditch/,http://themeforest.net/item/quidditch-one-page-wordpress-theme/6584983"><span class="fl">Quidditch WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/palette_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/palette/,http://themeforest.net/item/palette-one-page-parallax-wordpress-theme/6332539"><span class="fl">Palette WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/trend_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/trend/,http://themeforest.net/item/trend-flat-clean-wp-theme-pagebuilder/6067534"><span class="fl">Trend WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/mavericks_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/mavericks/,http://themeforest.net/item/mavericks-business-portfolio-wordpress-theme/6120353"><span class="fl">Mavericks WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/frame_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/frame_landing/,http://themeforest.net/item/frame-photography-minimalistic-wp-theme-/5358164"><span class="fl">Frame WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/interior_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/interior/,http://themeforest.net/item/modern-interior-responsive-wordpress-theme/5087475"><span class="fl">Interior WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/galaxy_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/galaxy,http://themeforest.net/item/galaxy-responsive-portfolio-wordpress-theme/4918118"><span class="fl">Galaxy WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/dixit_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/dixit/,http://themeforest.net/item/dixit-responsive-multipurpose-wordpress-theme/4709826"><span class="fl">Dixit WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/output_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/output/,http://themeforest.net/item/output-responsive-multipurpose-wordpress-theme/4525865"><span class="fl">Output WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/point_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/point/,http://themeforest.net/item/point-business-responsive-wp-theme/4319087"><span class="fl">Point WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/yellow_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/yellowproject/,http://themeforest.net/item/yellowproject-multipurpose-retina-wp-theme/4066662"><span class="fl">YellowProject WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/cleanspace_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/cleanspace/,http://themeforest.net/item/cleanspace-retina-ready-business-wp-theme/3776000"><span class="fl">CleanSpace WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/showroom_wp.jpg"><a href="#" rel="http://gt3themes.com/wordpress-themes/showroom/,http://themeforest.net/item/showroom-portfolio-retina-ready-wp-theme/3473628"><span class="fl">Showroom WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/hq_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/hq,http://themeforest.net/item/hq-photography-responsive-wp-theme/3200962"><span class="fl">HQ WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/incipiens_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/incipiens/,http://themeforest.net/item/incipiens-responsive-portfolio-wordpress-theme/2762691"><span class="fl">Incipiens WP</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/jd_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/jd/,http://themeforest.net/item/jdoe-responsive-photography-wordpress-theme/2570713"><span class="fl">J.Doe Photography</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/oh_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/oh/,http://themeforest.net/item/oh-responsive-portfolio-wp-theme/2366916"><span class="fl">Oh Responsive</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/gameportal_wp.jpg"><a href="#" rel="http://demo.themedev.me/wordpress_themes/gameportal,http://themeforest.net/item/game-portal-wordpress-buddypress-theme/1995172"><span class="fl">Game Portal</span><span class="fr product_icon1"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/jr_wp.jpg"><a href="#" rel="http://www.gt3themes.com/wordpress-themes/jr-photography/,http://themeforest.net/item/jr-photography-wordpress-theme/1163891"><span class="fl">JR Photography</span><span class="fr product_icon1"></span></a></li></ul></div></div><div class="product_list_divider"></div><div class="templs_li_block html_section"><h3>HTML Templates</h3><div class="templs_in"><ul><li data-preview-image="http://www.gt3themes.com/demo/selector/items/quidditch_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/quidditch/,http://themeforest.net/item/quidditch-one-page-html-template/9149330"><span class="fl">Quidditch Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/oyster_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/oyster/,http://themeforest.net/item/oyster-creative-photography-html-template/8836136"><span class="fl">Oyster Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/marvel_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/marvel/,http://themeforest.net/item/marvel-creative-portfolio-website-template/8599324"><span class="fl">Marvel Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/eclipse_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/eclipse/,http://themeforest.net/item/eclipse-photography-website-template/8535119"><span class="fl">Eclipse Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/mocco_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/mocco/,http://themeforest.net/item/mocco-single-page-bootstrap-template/7532704"><span class="fl">Mocco Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/palette_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/palette/,http://themeforest.net/item/palette-bootstrap-parallax-html-template/6882214"><span class="fl">Palette Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/mavericks_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/mavericks/,http://themeforest.net/item/mavericks-business-and-portfolio-web-template/6653363"><span class="fl">Mavericks Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/performer_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/performer/,http://themeforest.net/item/performer-minimalistic-portfolio-web-template/5340700"><span class="fl">Performer Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/frame_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/frame/,http://themeforest.net/item/frame-photography-responsive-website-template/5198289"><span class="fl">Frame Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/galaxy_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/galaxy/,http://themeforest.net/item/galaxy-creative-portfolio-website-template/4999083"><span class="fl">Galaxy Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/modern_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/interior/,http://themeforest.net/item/modern-interior-responsive-web-template/4768740"><span class="fl">Modern Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/dixit_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/dixit/,http://themeforest.net/item/dixit-responsive-multipurpose-template/4664143"><span class="fl">Dixit Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/point_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/point/,http://themeforest.net/item/point-business-resposnive-web-template/4384134"><span class="fl">Point Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/yellowproject_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/yellow/,http://themeforest.net/item/yellowproject-bootstrap-responsive-template/3930790"><span class="fl">YellowProject Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/cleanspace_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/cleanspace/,http://themeforest.net/item/cleanspace-retina-ready-web-template/3928905"><span class="fl">CleanSpace Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/staple_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/staple/,http://themeforest.net/item/staple-bootstrap-responsive-web-template/3878835"><span class="fl">Staple Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/showroom_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/showroom/,http://themeforest.net/item/showroom-portfolio-responsive-html5-theme/3322137"><span class="fl">Showroom Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/charity_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/charity/,http://themeforest.net/item/charity-html5css3-website-template/3180454"><span class="fl">Charity Html</span><span class="fr product_icon2"></span></a></li><li data-preview-image="http://www.gt3themes.com/demo/selector/items/output_html.jpg"><a href="#" rel="http://www.gt3themes.com/website-templates/output/,http://themeforest.net/item/output-responsive-multipurpose-web-template/4482086"><span class="fl">Output Html</span><span class="fr product_icon2"></span></a></li></ul></div></div>                        </div>
+                        <div class="top_selling_block">
+                            <h3>Top Selling</h3>
+<!-- Top Selling left thumb -->
+<a class="top_sell"
+   rel="http://www.gt3themes.com/wordpress-themes/eclipse_landing/,http://themeforest.net/item/eclipse-photo-portfolio-wordpress-theme/7181755"
+   href="#">
+    <img src="img/item2.jpg" alt=""/>
+    <span class="fl">Eclipse WP</span>
+</a>
+<!-- //Top Selling left thumb -->
+
+<!-- Top Selling right thumb -->
+<a class="top_sell"
+   rel="http://www.gt3themes.com/wordpress-themes/frame_landing/,http://themeforest.net/item/frame-photography-minimalistic-wp-theme-/5358164"
+   href="#">
+    <img src="img/item1.jpg" alt=""/>
+    <span class="fl">Frame WP</span>
+</a>
+<!-- //Top Selling right thumb -->
+
+<!-- Banner 287*76 -->
+<a href="http://www.gt3themes.com/category/freebies/" target="_blank"><img src="img/banner.jpg" alt=""/></a>
+<!-- //Banner 287*76 -->
+
+                            <div class="c_lear"></div>
+                        </div>
+                        <div class="c_lear"></div>
+                    </div>
+                    <div class="previmg_cont"></div>
+                </li>
+
+                <!--<li class="socIcons addFacebook"><a href="http://www.facebook.com/people/@/gt3themes" target="_blank"></a></li>-->
+
+                <!--<li class="socIcons addTwitter"><a href="http://twitter.com/gt3themes" target="_blank"></a></li>-->
+
+                <!--<li class="socIcons addDribbble"><a href="http://dribbble.com/gt3themes.com" target="_blank"></a></li>-->
+
+                <!--<li class="socIcons addBehance"><a href="http://behance.net/gt3themes" target="_blank"></a></li>-->
+
+                <!--li class="gt3_btn banner_hosting"><a href="#" target="_blank">recommended hosting</a></li-->
+
+                <li class="remove_frame" rel="http://www.gt3themes.com/wordpress-themes/oyster_landing/"><a
+                        href="http://www.gt3themes.com/wordpress-themes/oyster_landing/">Remove Frame</a></li>
+
+                <li class="gt3_btn purchase" rel="http://themeforest.net/item/oyster-creative-photo-wordpress-theme/8406045"><a
+                        href="http://themeforest.net/item/oyster-creative-photo-wordpress-theme/8406045?ref=mad_dog">Purchase</a></li>
+                        
+                <li class="socials">
+                	<div class="socials_block">
+                    	<div class="soc_item"><div class="fb-like" data-href="http://www.gt3themes.com/demo/" data-width="75" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div></div>
+                        <div class="soc_item"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.gt3themes.com/demo/" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+                        <div class="soc_item"><g:plusone size="medium" href="http://www.gt3themes.com/demo/"></g:plusone></div>
+                    </div>
+                </li>                
+
+                <!--li class="skype_btn">
+                    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                    <div id="SkypeButton_Call_gt3themes_1">
+                        <script type="text/javascript">
+                            Skype.ui({
+                                "name": "chat",
+                                "element": "SkypeButton_Call_gt3themes_1",
+                                "participants": ["gt3themes"],
+                                "imageSize": 24
+                            });
+                        </script>
+                    </div>
+                </li-->
+            </ul>
+
+        </div>
+
+    </div>
+
+   
+		<div id="fb-root"></div>
+
+
+    
+    </body>
+
+
+    </html>
+

@@ -1,0 +1,1 @@
+{"name":"Chinese county district","id":"\/location\/cn_county_district","type":"\/type\/type","group":"type","_id":"Zp03SLHg","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

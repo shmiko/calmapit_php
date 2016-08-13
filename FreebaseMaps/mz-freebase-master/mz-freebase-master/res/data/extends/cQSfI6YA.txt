@@ -1,0 +1,1 @@
+{"name":"Musical Album Type","id":"\/music\/album_release_type","type":"\/type\/type","group":"type","_id":"cQSfI6YA","relation":"\/music","properties":[{"name":"Albums","id":"\/music\/album_release_type\/albums","expected_type":"\/music\/album","description":"albums which are instances of this release type"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

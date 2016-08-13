@@ -1,0 +1,1 @@
+{"name":"Foreign API Key","id":"\/freebase\/foreign_api_key","type":"\/type\/type","group":"type","_id":"x79Sd9lm","relation":"\/freebase","properties":[],"included_types":[]}

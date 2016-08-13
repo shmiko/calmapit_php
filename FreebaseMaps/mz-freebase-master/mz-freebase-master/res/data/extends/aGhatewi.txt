@@ -1,0 +1,1 @@
+{"name":"Scoreboard Quarter","id":"\/american_football\/scoreboard_quarter","type":"\/type\/type","group":"type","_id":"aGhatewi","relation":"\/american_football","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

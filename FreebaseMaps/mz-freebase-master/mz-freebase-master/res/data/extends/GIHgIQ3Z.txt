@@ -1,0 +1,1 @@
+{"name":"Desired Application","id":"\/freebase\/desired_application","type":"\/type\/type","group":"type","_id":"GIHgIQ3Z","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

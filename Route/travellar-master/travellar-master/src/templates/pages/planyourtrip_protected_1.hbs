@@ -1,0 +1,37 @@
+<div id="pytWrapper">
+
+<h1>Plan your trip</h1>
+
+<p>First we need some basic information about your trip.</p>
+<br />
+
+<div class="response"></div>
+
+<form action="" method="post" class="sideways" id="frmPlanYourTrip1">
+
+	<div>
+		<label for="name">Reference name</label>
+		<input type="text" name="name" id="name"{{#if trip.name }} value="{{trip.name}}" {{/if}}>
+	</div>
+
+	<div class="spacer"></div>
+
+	<div>
+		<label for="start_date">Start date</label>
+		<input type="date" name="start_date" id="start_date"{{#if trip.date_start }} value="{{trip.date_start}}" {{/if}}>
+	</div>
+
+	<div>
+		<label for="end_date">End date</label>
+		<input type="date" name="end_date" id="end_date"{{#if trip.date_end }} value="{{trip.date_end}}" {{/if}}>
+	</div>
+
+	<div class="spacer"></div>
+	
+	<div>
+		<input type="submit" value="Next" name="next">
+	</div>
+	
+</form>
+
+</div>

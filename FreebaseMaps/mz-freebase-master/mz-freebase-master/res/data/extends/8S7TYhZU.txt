@@ -1,0 +1,1 @@
+{"name":"Sponsored Recipient","id":"\/business\/sponsored_recipient","type":"\/type\/type","group":"type","_id":"8S7TYhZU","relation":"\/business","properties":[{"name":"Sponsorship","id":"\/business\/sponsored_recipient\/sponsorship","expected_type":"\/business\/sponsorship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

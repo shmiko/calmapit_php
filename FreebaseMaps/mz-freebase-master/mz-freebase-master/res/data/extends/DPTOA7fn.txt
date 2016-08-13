@@ -1,0 +1,1 @@
+{"name":"Event","id":"\/event","type":"\/type\/domain","group":"zone","_id":"DPTOA7fn","relation":"root","properties":[],"included_types":[]}

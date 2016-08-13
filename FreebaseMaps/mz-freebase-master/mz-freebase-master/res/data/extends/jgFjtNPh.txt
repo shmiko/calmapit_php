@@ -1,0 +1,1 @@
+{"name":"Soccer","id":"\/soccer","type":"\/type\/domain","group":"zone","_id":"jgFjtNPh","relation":"root","properties":[],"included_types":[]}

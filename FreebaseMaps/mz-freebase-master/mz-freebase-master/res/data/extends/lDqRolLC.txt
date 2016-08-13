@@ -1,0 +1,1 @@
+{"name":"South Korean city","id":"\/location\/kp_city","type":"\/type\/type","group":"type","_id":"lDqRolLC","relation":"\/location","properties":[],"included_types":[{"name":"City\/Town\/Village","id":"\/location\/citytown"},{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"}]}

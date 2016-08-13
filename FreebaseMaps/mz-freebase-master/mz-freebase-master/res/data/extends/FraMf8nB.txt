@@ -1,0 +1,1 @@
+{"name":"Royalty and Nobility","id":"\/royalty","type":"\/type\/domain","group":"zone","_id":"FraMf8nB","relation":"root","properties":[],"included_types":[]}

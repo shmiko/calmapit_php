@@ -1,0 +1,1 @@
+{"name":"Lake type","id":"\/geography\/lake_type","type":"\/type\/type","group":"type","_id":"I0dBx7Vk","relation":"\/geography","properties":[{"name":"Lakes of this type","id":"\/geography\/lake_type\/lakes_of_this_type","expected_type":"\/geography\/lake","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

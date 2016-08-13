@@ -1,0 +1,1 @@
+{"name":"Production company","id":"\/film\/production_company","type":"\/type\/type","group":"type","_id":"ZpfGfe6x","relation":"\/film","properties":[{"name":"Films","id":"\/film\/production_company\/films","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

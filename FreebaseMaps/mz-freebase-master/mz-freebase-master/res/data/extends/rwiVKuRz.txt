@@ -1,0 +1,1 @@
+{"name":"Nerve","id":"\/medicine\/nerve","type":"\/type\/type","group":"type","_id":"rwiVKuRz","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

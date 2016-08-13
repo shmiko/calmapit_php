@@ -1,0 +1,1 @@
+{"name":"Asset","id":"\/business\/asset","type":"\/type\/type","group":"type","_id":"Gbi4D6ri","relation":"\/business","properties":[{"name":"Owner(s)","id":"\/business\/asset\/owners","expected_type":"\/business\/asset_ownership","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

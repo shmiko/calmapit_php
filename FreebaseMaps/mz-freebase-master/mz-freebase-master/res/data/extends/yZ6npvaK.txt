@@ -1,0 +1,1 @@
+{"name":"Legal subject","id":"\/law\/legal_subject","type":"\/type\/type","group":"type","_id":"yZ6npvaK","relation":"\/law","properties":[{"name":"Legal cases","id":"\/law\/legal_subject\/legal_cases","expected_type":"\/law\/legal_case","description":"Cases addressing this subject"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

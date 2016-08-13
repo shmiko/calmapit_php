@@ -1,0 +1,1 @@
+{"name":"Computer Designer","id":"\/computer\/computer_designer","type":"\/type\/type","group":"type","_id":"xMnMPpEL","relation":"\/computer","properties":[{"name":"Computers Designed","id":"\/computer\/computer_designer\/computers_designed","expected_type":"\/computer\/computer","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

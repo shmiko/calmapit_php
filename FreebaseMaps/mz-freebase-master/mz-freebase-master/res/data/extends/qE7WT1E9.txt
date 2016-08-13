@@ -1,0 +1,1 @@
+{"name":"Student organization","id":"\/education\/student_organization","type":"\/type\/type","group":"type","_id":"qE7WT1E9","relation":"\/education","properties":[],"included_types":[{"name":"Organization","id":"\/organization\/organization"},{"name":"Topic","id":"\/common\/topic"}]}

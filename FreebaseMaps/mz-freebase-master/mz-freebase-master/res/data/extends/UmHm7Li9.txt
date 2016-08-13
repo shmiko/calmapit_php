@@ -1,0 +1,1 @@
+{"name":"Freebase API HTTP header","id":"\/freebase\/metaweb_api_http_header","type":"\/type\/type","group":"type","_id":"UmHm7Li9","relation":"\/freebase","properties":[{"name":"services","id":"\/freebase\/metaweb_api_http_header\/services","expected_type":"\/freebase\/metaweb_api_service","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

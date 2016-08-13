@@ -1,0 +1,673 @@
+<?xml version="1.0" standalone="yes"?>
+<EntitiesSample>
+  <xs:schema id="EntitiesSample" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="EntitiesSample" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" type="xs:string"/>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Address" type="xs:string" minOccurs="0" />
+                <xs:element name="Phone" type="xs:string" minOccurs="0" />
+                <xs:element name="Image" type="xs:string" minOccurs="0" />
+                <xs:element name="Review" type="xs:string" minOccurs="0" />
+                <xs:element name="Url" type="xs:string" minOccurs="0" />
+            <xs:element name="Category" type="xs:string" minOccurs="0" />
+                <xs:element name="Latitude" type="xs:double" minOccurs="0" />
+                <xs:element name="Longitude" type="xs:double" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Entity" />
+        <xs:field xpath="EntityID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+   <Entity>
+      <EntityID>1000</EntityID>
+      <Name>Museum of Glass</Name>
+      <Description>It began in August, 1992 in the course of a conversation between two friends, Phil Phibbs, who had recently retired as president of the University of Puget Sound and artist Dale Chihuly who had grown up in a neighborhood near the campus and had attended the university. Dr. Phibbs suggested that Tacoma should have a glass museum. He reasoned that artists from the Pacific Northwest had played a major role in the Studio Glass movement as it developed around the world.</Description>
+      <Address>1801 Dock Street, Tacoma, WA, 98421</Address>
+      <Phone>253.284.4750</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
+      <Review>5</Review>
+      <Url>http://museumofglass.org</Url>
+      <Category>Attraction</Category>
+      <Latitude>47.245401</Latitude>
+      <Longitude>-122.433714</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1001</EntityID>
+      <Name>Cafe Brosseau</Name>
+      <Description>A family friendly cafe where the coffee and food are local and fresh. It's named to honor the history of the building, the area, and because we like how the name sounds! To pronounce it just think "Brew-So." Appropriate for a coffee shop, n'est-ce pas?</Description>
+      <Address>2716 North 21st Street, Tacoma WA 98406 USA</Address>
+      <Phone>253.327.1306</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1387400473/cafe-brosseau-52b20ca86d5561f77f00002c.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.cafebrosseau.com</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>47.2674781</Latitude>
+      <Longitude>-122.4725308</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1002</EntityID>
+      <Name>O'Blarney's Irish Pub</Name>
+      <Description>Lively fare of  great food, drinks, games and good times. Friendly staff, welcoming atmosphere and good food make O’Blarney’s Irish Pub one of the area’s favorite pubs.</Description>
+      <Address>4411 Martin Way East, Olympia WA 98516 USA</Address>
+      <Phone>360.459.8084</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1379444510/oblarneys-irish-pub-5238a5a136698a593c000257.jpg</Image>
+      <Review>3</Review>
+      <Url>http://oblarneyspub.com</Url>
+      <Category>Restaurant</Category>
+      <Latitude>47.0474451</Latitude>
+      <Longitude>-122.827103</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1003</EntityID>
+      <Name>New Moon Cafe</Name>
+      <Description>One of the best kept secrets in Olympia, Washington for breakfast and lunch. New Moon Cafe pride themselves in fresh ingredients, consistent quality, amazing prices, and an atmosphere that feels just like home. They never cut corners: all their salad dressings, hashbrowns, and their famous Blackberry Jam are all homemade!</Description>
+      <Address>113 4th Ave W, Olympia WA 98501 USA</Address>
+      <Phone>360.357.3452</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1371573747/new-moon-cafe-500d831cd0394a2948000053.jpg</Image>
+      <Review>4</Review>
+      <Url>http://newmooncafeolympia.com/</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>47.0447067</Latitude>
+      <Longitude>-122.902315</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1004</EntityID>
+      <Name>Great Wolf Lodge</Name>
+      <Description>Your Great Wolf Lodge adventure begins in our massive, 84-degree indoor water park. Splash the day away in over 56,000 square feet of water-packed excitement, including jaw-dropping slides for thrill seekers or zero-depth entry areas for little ones. Outside the water park, the fun continues. Grab a wand and battle a dragon in MagiQuest or get an ice cream-themed manicure in Scooops Kid Spa before gathering your family in our Grand Lobby for nightly fireside Story Time, the perfect ending to a Great Wolf day.</Description>
+      <Address>20500 Old Highway 99 SW, Grand Mound 98531 WA USA</Address>
+      <Phone>360.273.7718</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1371043203/great-wolf-lodge-516d6a2e54b9724642001bbe.jpg</Image>
+      <Review>4</Review>
+      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
+      <Category>Attraction</Category>
+      <Latitude>46.7891922</Latitude>
+      <Longitude>-123.0104822</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1005</EntityID>
+      <Name>Chehalis-Centralia Railroad and Museum</Name>
+      <Description>The Chehalis-Centralia Railroad & Museum is a non-profit organization based in Washington State. It’s goal is to preserve the logging and railroading heritage of Lewis County in specific, and Southwest Washington State in general, in the form of a railroad and a historic, living museum.</Description>
+      <Address>1101 SW Sylvenus St., Chehalis WA 98532 USA</Address>
+      <Phone>360-748-9593</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1389117055/chehalis-centralia-railroad-and-museum-109210.jpg</Image>
+      <Review>3</Review>
+      <Url>http://steamtrainride.com</Url>
+      <Category>Museum</Category>
+      <Latitude>46.6533972</Latitude>
+      <Longitude>-122.9815746</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1006</EntityID>
+      <Name>Las Tarascas</Name>
+      <Description>Authentic Mexican Food Family owned and operated since 1997.</Description>
+      <Address>1001 W Main St, Centralia WA 98531 USA</Address>
+      <Phone>360.736.7756</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1393434023/las-tarascas-8315.jpg</Image>
+      <Review>4</Review>
+      <Url>https://www.facebook.com/pages/La-Tarasca/172945187142</Url>
+      <Category>Restaurant</Category>
+      <Latitude>46.718796</Latitude>
+      <Longitude>-122.965534</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1007</EntityID>
+      <Name>Travel Inn Resort</Name>
+      <Description>Strategically located at the gateway to Ocean and Mountain recreation, just 30 minutes away from the Coastal Beaches. Local rivers and streams have Salmon, Steelhead and Trout, while the surrounding forests abound in game birds, deer and elk. Nearby Westport offers some of the best seafood and fishing in the world. Activities at the park include swimming pool, pickle ball and pot lucks.</Description>
+      <Address>801 E Main Street, Elma WA 98541 USA</Address>
+      <Phone>360.482.2888</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1383518985/travel-inn-resort-5276d2ae85c07aef540000be.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.kmresorts.com/travel-inn-resort</Url>
+      <Category>Hotel</Category>
+      <Latitude>47.0087493</Latitude>
+      <Longitude>-123.3861179</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1008</EntityID>
+      <Name>Clarks Restaurant</Name>
+      <Description>Clarks is famous for their home made icecream.  We have over thirty flavors of milkshakes or sundaes.  We have been voted "Best Burger" in the twin harbors by the readers of the local newspaper thirteen years now. </Description>
+      <Address>731 U.S. 101, Cosmopolis WA 98537 USA</Address>
+      <Phone>360.538.1487</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1390419627/clarks-restaurant-43899.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.clarksrestaurant.com/</Url>
+      <Category>Restaurant</Category>
+      <Latitude>46.9056078</Latitude>
+      <Longitude>-123.7173502</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1009</EntityID>
+      <Name>Worlds Longest Drivable Beach</Name>
+      <Description>The Long Beach Peninsula is remarkable for its continuous sand beaches on the Pacific Ocean side, 28 miles in extent, claimed to be the longest beach in the United States and the world's largest drivable beach, however is second to Cox's Bazar in Bangladesh.</Description>
+      <Address>Long Beach WA 98631 USA</Address>
+      <Phone>253.284.4423</Phone>
+      <Imagehttps://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1371211189/worlds-longest-drivable-beach-4f5e1b8046d09d675b00027d.jpg</Image>
+      <Review>4</Review>
+      <Url>http://en.wikipedia.org/wiki/Long_Beach_Peninsula</Url>
+      <Category>Beach</Category>
+      <Latitude>46.3922329</Latitude>
+      <Longitude>-124.0306964</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1010</EntityID>
+      <Name>Peter Iredale Shipwreck</Name>
+      <Description>The Peter Iredale was a four-masted steel barque sailing vessel that ran ashore October 25, 1906, on the Oregon coast en route to the Columbia River. It was abandoned on Clatsop Spit near Fort Stevens in Warrenton about four miles (6 km) south of the Columbia River channel. Wreckage is still visible, making it a popular tourist attraction as one of the most accessible shipwrecks of the Graveyard of the Pacific.</Description>
+      <Address>Peter Iredale Road, Hammond OR 97121 USA</Address>
+      <Phone>253.284.2222</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.oregonhistoryproject.org/</Url>
+      <Category>Monument</Category>
+      <Latitude>46.1791919</Latitude>
+      <Longitude>-123.9675145</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1011</EntityID>
+      <Name>Cannon Beach</Name>
+      <Description>Cannon Beach is recognized by its well-known landmark, Haystack Rock, located southwest of downtown Cannon Beach, near Tolovana Park. This igneous rock has an elevation of 235 feet (72 m) and is often accessible at low tide, especially in the summertime. There is a small cave system that penetrates the rock and can be seen from the coastline. The rock is also protected as a marine sanctuary, Oregon Islands National Wildlife Refuge and events are not allowed within 100 feet (30 m) of either side of the rock. Near Haystack Rock are the Needles, two tall rocks rising straight out of the water.</Description>
+      <Address>3140 S Hemlock St, Cannon Beach OR 97145 USA</Address>
+      <Phone>503.436.2822</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1366377358/cannon-beach-4f2eff557f2818000100005e.jpg</Image>
+      <Review>5</Review>
+      <Url>http://en.wikipedia.org/wiki/Cannon_Beach,_Oregon</Url>
+      <Category>Beach</Category>
+      <Latitude>45.874365</Latitude>
+      <Longitude>-123.960135</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1012</EntityID>
+      <Name>Surftides Lincoln City</Name>
+      <Description>Perched on the picturesque Oregon Coast in Lincoln City, the vacation begins once you pass through our gates and enter the hotel. Spacious oceanfront rooms and suites with private balconies and night-lit surf offer a soothing and inspirational experience for our guests. We have incorporated work from the finest local artisans to create an authentic regional ambience that is the cornerstone of the hotel.</Description>
+      <Address>2945 N.W. Jetty Ave., Lincoln City OR 97367 USA</Address>
+      <Phone>541.994.2191</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1367715348/surftides-lincoln-city-515eccd654b97271fa000b29.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.surftideslincolncity.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>44.9866276</Latitude>
+      <Longitude>-124.0132533</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1013</EntityID>
+      <Name>Oregon Dunes National Recreation Area</Name>
+      <Description>Adventure and solitude await you in 40 miles of wind-sculpted, shifting sand dunes</Description>
+      <Address>855 U.S. 101, Reedsport OR 97467 USA</Address>
+      <Phone>541.271.3611</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1379615084/oregon-dunes-national-recreation-area-5212806f90330505a1000568.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.fs.usda.gov/recarea/siuslaw/recreation/recarea/?recid=42465</Url>
+      <Category>Attraction</Category>
+      <Latitude>43.689938</Latitude>
+      <Longitude>-124.154</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1014</EntityID>
+      <Name>East 19th Street Cafe</Name>
+      <Description>Perched on the lively campus of the University of Oregon, near Mac Court, the East 19th Street Café is right in line with the latter-day-hippie vibe at U of O. Outside our front door is one of the first original peace poles, reading "May Peace Prevail on Earth" in four different languages including what has been described as "animal language." Animals, huh? Well, they did shoot the classic Belushi comedy Animal House at U of O didn't they? It all makes sense to us.</Description>
+      <Address>1485 E 19th Ave, Eugene OR 97403 USA</Address>
+      <Phone>541.342.4025</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1366650183/east-19th-street-cafe-4f2cf3177383af0001000057.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.mcmenamins.com/East19</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>44.039229</Latitude>
+      <Longitude>-123.070053</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1015</EntityID>
+      <Name>Buckhead Nature Trail</Name>
+      <Description>The Buckhead Nature Trail is an easy 0.5 mile hike. This paved interpretive trail focuses on wildlife and wildlife habitat. The tall black cottonwoods and scattered conifers offer cover to deer and elk, while the slow, slack water supports populations of Western Pond Turtles and Oregon Chubb. Wildflowers bloom in the spring, and tangles of Himalaya blackberries wait to be picked in late summer.</Description>
+      <Address>National Forest Development Road 19, Westfir OR 97492 USA</Address>
+      <Phone>253.111.1750</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1380653356/buckhead-nature-trail-521280fc90330505a1000752.jpg</Image>
+      <Review>4</Review>
+      <Url>http://traveloregon.com/see-do/recreation/hiking/buckhead-nature-trail</Url>
+      <Category>Hike</Category>
+      <Latitude>43.765334</Latitude>
+      <Longitude>-122.4890461</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1016</EntityID>
+      <Name>Pronghorn, An Auberge Resort</Name>
+      <Description>Relax in luxury accommodations while looking out on one of the most beautiful golf courses in the world. All of our Residence Club units are situated along the 18th hole of the Jack Nicklaus Signature Golf Course at Pronghorn Club and Resort. These accommodations are available for short term rental or longer term stays in Central Oregon. Each 2, 3 & 4 bedroom residence is fully furnished with exceptional interiors.</Description>
+      <Address>65600 Pronghorn Club Drive, Bend OR 97702 USA</Address>
+      <Phone>888.965.6250</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1399480784/pronghorn-an-auberge-resort-904668.jpg</Image>
+      <Review>4</Review>
+      <Url>http://pronghorn.aubergeresorts.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>44.181806</Latitude>
+      <Longitude>-121.169197</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1017</EntityID>
+      <Name>The Cove Palisades State Park</Name>
+      <Description>The Cove Palisades State Park is a year-round recreational destination for the entire family. Located in our high desert region, the weather is sunny and warm in the summer months and chilly but generally mild in the winter. The park is situated among towering cliffs that surround beautiful Lake Billy Chinook.</Description>
+      <Address>Terrebonne OR 97760 USA</Address>
+      <Phone>541.546.3412</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1379602602/the-cove-palisades-state-park-5212807890330505a10005c7.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=24</Url>
+      <Category>Lake</Category>
+      <Latitude>44.3400545</Latitude>
+      <Longitude>-121.1839555</Longitude>
+   <Entity>
+      <EntityID>1018</EntityID>
+      <Name>Stock Island Marina Village</Name>
+      <Description>A Key West dockside community where everyone knows your name. The largest deep water marina in the Keys, Stock Island Marina Village is only minutes from world famous Duval Street, Sloppy Joes, Jimmy Buffett's Margaritaville, and other great Key West attractions. The Marina Village provides a peaceful and secure homestead from which to venture and explore. With a dog park and community garden, new laundry and state-of-the-art Fitness Center, we offer an extended list of amenities, including nightly Boatel rentals. In addition to the marina resources, our community also comprises local artisan workshops and Yacht Services.</Description>
+      <Address>7009 Shrimp Rd, Key West, FL, 33040</Address>
+      <Phone>305.294.2288</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1401996265/stock-island-marina-village-910807.jpg</Image>
+      <Review>3</Review>
+      <Url>http://stockislandmarina.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>24.5645308</Latitude>
+      <Longitude>-81.7391174</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1019</EntityID>
+      <Name>Seven Mile Bridge</Name>
+      <Description>The Seven Mile Bridge is a famous bridge in the Florida Keys, in Monroe County, Florida, United States. It connects Knight's Key (part of the city of Marathon, Florida) in the Middle Keys to Little Duck Key in the Lower Keys. Among the longest bridges in existence when it was built, it is one of the many bridges on US 1 in the Keys, where the road is called the Overseas Highway.</Description>
+      <Address>Florida Keys, FL</Address>
+      <Phone>305.294.2288</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1393345722/seven-mile-bridge-58595.jpg</Image>
+      <Review>4</Review>
+      <Url>http://en.wikipedia.org/wiki/Seven_Mile_Bridge</Url>
+      <Category>Attraction</Category>
+      <Latitude>24.702372</Latitude>
+      <Longitude>-81.155048</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1020</EntityID>
+      <Name>Morada Bay Beach Café</Name>
+      <Description>In March 1997, the Morada Bay Beach Café opened, offering guests a beautiful sunset view from bayside tables, a casual surfing and sailboard interior and an eclectic bistro style menu.   Created to evoke the feel of a beach café where the Hawaiian and Californian surfers and sailboarders would relax after a day on the water, The Café is an outdoor Mediterranean bistro set in the sand, with inside and outside bars, unique live entertainment, a large child-friendly beach with giant Adirondack chairs, and renowned Full-Moon Parties every month.</Description>
+      <Address>81600 Overseas Hwy, Islamorada, FL, 33036</Address>
+      <Phone>305.664.0604</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1368654182/morada-bay-beach-cafe-4f5e24d546d09d675b000723.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.moradabay.com</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>24.916052</Latitude>
+      <Longitude>-80.63866</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1021</EntityID>
+      <Name>Kona Kai Resort</Name>
+      <Description>Kona Kai is a magical hideaway, teeming with the natural beauty of old Key Largo and hand polished into one of the most exclusive resorts known to the Florida Keys. At Kona Kai, you are welcomed by the unexpected. Beauty, barely visible from the highway, makes Kona Kai "Key Largo's hidden treasure".</Description>
+      <Address>97802 Overseas Hwy., Key Largo, FL, 33037</Address>
+      <Phone>305.852-7200</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/kona-kai-resort-504e28b31d45e04eb50011ee.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.konakairesort.com/</Url>
+      <Category>Hotel</Category>
+      <Latitude>25.077727</Latitude>
+      <Longitude>-80.461131</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1022</EntityID>
+      <Name>Christ of the Deep</Name>
+      <Description> The approximate nine foot bronze sculpture symbolizes peace of mankind from its unusual setting - beneath the ocean at Key Largo Dry Rocks off John Pennekamp Coral Reef State Park.</Description>
+      <Address>Mile Marker 105, Key Largo, FL, 33037</Address>
+      <Phone>305.451.1202</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1372437732/christ-of-the-deep-4f5e1b1e46d09d675b000045.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.glo-con.com/article/article_no/4257</Url>
+      <Category>Attraction</Category>
+      <Latitude>25.1051704</Latitude>
+      <Longitude>-80.4326046</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1023</EntityID>
+      <Name>Zoo Miami</Name>
+      <Description>The Miami-Dade Zoological Park and Gardens, branded and commonly known as Zoo Miami, formerly known as Miami MetroZoo, is the largest and oldest zoological garden in Florida, and the only tropical zoo in the continental United States. It is located on the old Richmond Naval Air Station site, southwest of Miami in southern metropolitan Miami-Dade County, in the center of the census-designated places of Three Lakes (north), South Miami Heights (south), Palmetto Estates (east) and Richmond West (west). It houses over 2,000 animals on 740 acres (299 ha), 324 acres (131 ha) of which are developed. It is about 3 mi (5 km) around if walked on the path, and has over 100 exhibits.</Description>
+      <Address>12400 SW 152nd St / One Zoo Boulevard, Miami, FL, 33166-1402</Address>
+      <Phone>305.251.0400</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/zoo-miami-50ca26e51d45e07be7000072.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.zoomiami.org/</Url>
+      <Category>Attraction</Category>
+      <Latitude>25.613336</Latitude>
+      <Longitude>-80.398437</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1024</EntityID>
+      <Name>Historic Virginia Key Beach Park</Name>
+      <Description>Historic Virginia Key Beach Park, located off the Rickenbacker Causeway, is just minutes away from the Miami’s downtown financial centers, top tourist destinations, sport facilities, retail, dining and renowned educational institutions.In an era of dire circumstances coupled with urban sprawl, we offer a unique retreat that transports our guests into lush, green public spaces full of nature, history, preservation and recreation where each and every person can experience their own version of ‘Paradise Renewed’.</Description>
+      <Address>4020 Virginia Beach Dr, Miami, FL, 33149</Address>
+      <Phone>305.960.4600</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1398874066/historic-virginia-key-beach-park-903808.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.virginiakeybeachpark.net</Url>
+      <Category>Beach</Category>
+      <Latitude>25.7354627</Latitude>
+      <Longitude>-80.1587133</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1025</EntityID>
+      <Name>Blue Point Ocean Grill</Name>
+      <Description>Blue Point Ocean Grill is a contemporary seafood kitchen and bar which features comfortable atmosphere filled with cozy round leather booths, warm wood-paneled walls and modern lighting. It is the perfect place for lunch, dinner or semi-private events with family, friends or business associates. The menu offers a wide selection of fresh seafood, prime steaks, entree salads and mouth-watering sandwiches, in addition to an impressive selection of draft beers, signature martinis and fine wines available by the glass or bottle.</Description>
+      <Address>5730 Seminole Way, Hollywood, FL, 33314</Address>
+      <Phone>954.327.8911</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/blue-point-ocean-grill-504e1dfd1d45e04c20000557.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.restaurants-america.com/restaurants/2-bluepoint</Url>
+      <Category>Restaurant</Category>
+      <Latitude>26.0513061</Latitude>
+      <Longitude>-80.2119776</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1026</EntityID>
+      <Name>Seminole Casino Coconut Creek</Name>
+      <Description>Seminole Casino Coconut Creek features over 2,400 of the best Vegas-style and bingo-style slot machines in South Florida. You can also find South Florida’s best table games with 65 live tables including blackjack and baccarat amongst many more</Description>
+      <Address>5550 NW 40th St, Coconut Creek, FL, 33073</Address>
+      <Phone>954.977.6700</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1368479860/seminole-casino-coconut-creek-504e97c91d45e00491000898.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.seminolecoconutcreekcasino.com</Url>
+      <Category>Attraction</Category>
+      <Latitude>26.2779831</Latitude>
+      <Longitude>-80.1992851</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1027</EntityID>
+      <Name>Cafe De France</Name>
+      <Description>CARPE DIEM by Cafe de France is operated by Olivier, a 6th generation chef and baker. His culinary heritage dates back to 1820 when his family opened their first bakery in Northern France. The original bakery is still in existence today. "Quan minimum credule postero, Carpe Diem" (seize the day) embodies our new concept. We are still dedicated to excellent dining, rich wines, and superb service.</Description>
+      <Address>110 E. Atlantic Ave., Delray Beach, FL, 33483</Address>
+      <Phone>561.455.2140</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/cafe-de-france-504e1e1b1d45e04c200005a1.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.110carpediem.com</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>26.461357</Latitude>
+      <Longitude>-80.0718091</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1028</EntityID>
+      <Name>The Breakers Inn & Golf</Name>
+      <Description>A spectacular resort destination on Florida’s Atlantic coast, The Breakers Palm Beach, has lured generations of discerning travelers to its idyllic, Italian-Renaissance setting. Experience the irresistible charm and storied history of this legendary oceanfront resort, which seamlessly blends with an amazing range of modern amenities. Feel the allure of its glamorous yet classic ambiance, the warmth and care of its devoted staff...you will quickly discover why The Breakers is a peerless destination, well beyond what you would expect of the finest luxury hotels and beachfront resorts in North America.</Description>
+      <Address>1 S County Rd, Palm Beach, FL, 33480</Address>
+      <Phone>561.659.8474</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1365438702/the-breakers-inn-and-golf-4f30363d2d3c5c000100012c.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.thebreakers.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>26.7148777</Latitude>
+      <Longitude>-80.0345472</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1029</EntityID>
+      <Name>Jan's Place</Name>
+      <Description>Please feel free to browse our walls as almost everything is for sale. Our food is all prepared fresh and to order, so relax and we know you will not leave us hungry. Make sure to stop by the kitchen window to say hello.</Description>
+      <Address>1990 NE Jensen Beach Boulevard, Jensen Beach, FL, 34957</Address>
+      <Phone>772.334.9590</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1393528901/jans-place-12868.jpg</Image>
+      <Review>3</Review>
+      <Url>https://www.facebook.com/JansPlace.JensenBeach</Url>
+      <Category>Restaurant</Category>
+      <Latitude>27.2441916</Latitude>
+      <Longitude>-80.2261437</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1030</EntityID>
+      <Name>Westgate River Ranch Resort</Name>
+      <Description>Nestled in Polk County (near beautiful Lake Wales) and just over an hour South of Orlando, Florida, Westgate River Ranch provides fun and adventure for the whole family! Return to the days of “Old Florida” when the state was home to cowboys and cattle ranchers. Activities at Westgate River Ranch include horseback riding, hiking, fishing, boating, trap and skeet shooting, swimming, airboat and swamp buggy rides, hayrides, a petting zoo and more! Go line dancing at the River Ranch Saloon or enjoy the Saturday night rodeo. Leave all your city worries behind and experience a “Western-style” change of pace at Westgate River Ranch</Description>
+      <Address>3200 River Ranch Blvd., River Ranch, FL, 33867</Address>
+      <Phone>863.692.1321</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1369819504/westgate-river-ranch-resort-504e2cc71d45e04eb5001b0a.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.wgriverranch.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>26.9732416</Latitude>
+      <Longitude>-81.0146202</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1031</EntityID>
+      <Name>Legoland Florida</Name>
+      <Description>LEGOLAND® Florida, Central Florida’s newest theme park, is a 150-acre, full two-day interactive family theme park specifically designed for families with children ages 2 to 12. The largest LEGOLAND Park in the world, it features more than 50 rides, shows, and attractions, restaurants, shopping, a breathtaking botanical garden and the all-new LEGOLAND Water Park. Just 45 minutes from Orlando and downtown Tampa, LEGOLAND Florida rests along the shores of Lake Eloise in the city of Winter Haven. Here guests can enjoy 10 easy-to-navigate and highly-themed zones that include pink-knuckle roller coasters, Miniland USA, the Imagination Zone and LEGO City where youngsters can learn how to drive by freely navigating their own boats and LEGO cars. The all-new LEGOLAND Water Park is a “park within a park” and provides splish-splashin’ fun for the whole family. Main attractions include the Build-A-Raft River where guests can build their own LEGO raft and float down the 1,000-foot lazy river or play for hours at the Joker Soaker water playground. Other attractions include the LEGO Wave Pool, five slippery-fast water slides and the DUPLO® Splash Safari, a toddler-haven with perfectly-sized slides and a zero-depth wading pool.</Description>
+      <Address>6000 Cypress Gardens Boulevard,  Winter Haven, FL,  33884</Address>
+      <Phone>863.318.5346</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1374690118/legoland-florida-51eee83954b972cf0100001a.jpg</Image>
+      <Review>5</Review>
+      <Url>http://florida.legoland.com</Url>
+      <Category>Attraction</Category>
+      <Latitude>27.989311</Latitude>
+      <Longitude>-81.688649</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1032</EntityID>
+      <Name>Tuscana Resort</Name>
+      <Description>Tuscana Resort is a 2 and 3 bedroom fully furnished Condominium Resort. We are located just 2 exits west of Disney World (4 miles) with easy 1- 4 access at exit 58 Champions Gate Fl. The two bedroom will sleep 6 persons each bedroom has a private attached full bath. There are TVs in each bedroom and TV and DVD player in the living room. The three bedroom will sleep 8 persons. the third bedroom has two twin beds Each condo has a fully equipped kitchen to prepare meals and a large washer and dryer. Large heated Olympic sized pool and club house with movie theater . Restaurant and poolside bar open daily. We are approximately 13 miles to the Orlando Convention Center and 14 to Universal Studios</Description>
+      <Address>1395 Tuscana Ln, Davenport, FL, 33896</Address>
+      <Phone>407.787.4800</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1369815971/tuscana-resort-50692cfa1d45e02877000014.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.tuscanaresort.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>28.2686012</Latitude>
+      <Longitude>-81.6104049</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1033</EntityID>
+      <Name>Kringla Bakeri og Kafe</Name>
+      <Description>Tuck into traditional Norwegian specialties like kringla sweet pretzels, cream-filled pastry horns, lefse flatbread and the open-faced salmon and egg sandwich. Then ready yourself for conquest with the Viking coffee! Beer is also available</Description>
+      <Address>1510 Avenue of the Stars, Lake Buena Vista, FL, 32830</Address>
+      <Phone>407.939.3463</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1400083141/kringla-bakeri-og-kafe-906523.jpg</Image>
+      <Review>3</Review>
+      <Url>https://disneyworld.disney.go.com/dining/epcot/kringla-bakeri-og-kafe</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>28.3654818</Latitude>
+      <Longitude>-81.5472342</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1034</EntityID>
+      <Name>SeaWorld Orlando</Name>
+      <Description>SeaWorld Orlando is a theme park, and marine-life based zoological park, in Orlando, Florida. It is owned and operated by SeaWorld Parks & Entertainment, a subsidiary of The Blackstone Group. When combined with its neighbor Discovery Cove and Aquatica, it forms Seaworld Parks and Resorts Orlando, an entertainment complex consisting of the three parks and many neighboring hotels and eateries.</Description>
+      <Address>7007 SeaWorld Dr., Orlando, FL, 32821</Address>
+      <Phone>407.351.3600</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1398268471/seaworld-orlando-60556.jpg</Image>
+      <Review>5</Review>
+      <Url>http://seaworldparks.com/seaworld-orlando</Url>
+      <Category>Attraction</Category>
+      <Latitude>28.4079608</Latitude>
+      <Longitude>-81.4634568</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1035</EntityID>
+      <Name>Universal Studios Florida</Name>
+      <Description>Go behind the scenes, beyond the screen, and jump right into the action of your favorite movies at Universal Studios®, the world's premier movie and TV based theme park. It’s everybody’s fantasy… to leap through the screen and find yourself in the middle of your favorite motion pictures. Here at Universal Studios®, YOU become the star of some of the greatest movies and TV shows ever made.</Description>
+      <Address>6000 Universal Blvd., Orlando, FL, 32819</Address>
+      <Phone>407.363.8000</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1398268188/universal-studios-florida-58748.jpg</Image>
+      <Review>5</Review>
+      <Url>https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx</Url>
+      <Category>Attraction</Category>
+      <Latitude>28.4721242</Latitude>
+      <Longitude>-81.465733</Longitude>
+   </Entity>
+   <Entity>
+      <EntityID>1036</EntityID>
+      <Name>Universal's Islands of Adventure</Name>
+      <Description>Around every bend is another epic adventure. Around every corner awaits another once-in-a-lifetime thrill. Take an unforgettable journey through the uniquely themed islands of Universal’s Islands of Adventure®, where the world's most cutting edge rides, shows and interactive attractions bring your favorite stories, myths, cartoons, comic book heroes and children's tales to life. </Description>
+      <Address>1000 Universal Studios Plz, Orlando, FL, 32819</Address>
+      <Phone>407.363.8000</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/universals-islands-of-adventure-4f5e24d546d09d675b0007d3.jpg</Image>
+      <Review>5</Review>
+      <Url>https://www.universalorlando.com/Theme-Parks/Islands-of-Adventure.aspx</Url>
+      <Category>Attraction</Category>
+      <Latitude>28.972881</Latitude>
+      <Longitude>-81.9671752</Longitude>
+   </Entity>
+  <Entity>
+    <EntityID>1037</EntityID>
+    <Name>Space Needle</Name>
+    <Description>The Space Needle is an observation tower in Seattle, Washington, a landmark of the Pacific Northwest, and a symbol of Seattle. It was built in the Seattle Center for the 1962 World's Fair, which drew over 2.3 million visitors, when nearly 20,000 people a day used its elevators.</Description>
+    <Address>400 Broad St, Seattle, 98109</Address>
+    <Phone>205.905.2100</Phone>
+    <Image>http://0.tqn.com/d/architecture/1/0/D/u/SeattleSpaceNeedle.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.spaceneedle.com</Url>
+   <Category>Monument</Category>
+    <Latitude>47.620506</Latitude>
+    <Longitude>-122.349277</Longitude>
+</Entity>
+  <Entity>
+    <EntityID>1038</EntityID>
+    <Name>Hiram M. Chittenden (Ballard) Locks</Name>
+    <Description>The Hiram M. Chittenden Locks is a complex of locks that sits at the west end of Salmon Bay, part of Seattle, Washington's Lake Washington Ship Canal</Description>
+    <Address>Salmon Bay, Seattle, WA</Address>
+    <Phone>206.783.7059</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/5/57/1091-51.Jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.seattle.gov/tour/locks.htm</Url>
+   <Category>Attraction</Category>
+    <Latitude>47.666705</Latitude>
+    <Longitude>-122.398068</Longitude>
+</Entity>
+  <Entity>  
+    <EntityID>1039</EntityID>
+    <Name>Seattle Aquarium</Name>
+    <Description>The Seattle Aquarium is a public aquarium opened in 1977 and located on Pier 59 on the Elliott Bay waterfront in Seattle, Washington, USA. It is accredited by the Association of Zoos and Aquariums.</Description>
+    <Address>1483 Alaskan Way Pier 59, Seattle, WA, 98101 </Address>
+    <Phone>206.386.4300</Phone>
+    <Image>http://depts.washington.edu/uwconf/aquarius/images/Seattle-Aquarium-04.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.seattleaquarium.org</Url>
+   <Category>Attraction</Category>
+    <Latitude>47.60743</Latitude>
+    <Longitude>-122.320984</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1040</EntityID>
+    <Name>Luther Burbank Park</Name>
+    <Description>Luther Burbank is a large park of 77 acres with three-quarters of a mile of Lake Washington waterfront.</Description>
+    <Address>1483 Alaskan Way Pier 59, Seattle, WA, 98101 </Address>
+    <Phone>206.386.4300</Phone>
+    <Image>http://media-cache-ec0.pinimg.com/736x/a2/52/08/a2520801a8d7132ce60cae47cdd1b566.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.mercergov.org</Url>
+   <Category>Park</Category>
+    <Latitude>47.59179</Latitude>
+    <Longitude>-122.22671</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1041</EntityID>
+    <Name>Belle Pastry</Name>
+    <Description>The Seattle Aquarium is a public aquarium opened in 1977 and located on Pier 59 on the Elliott Bay waterfront in Seattle, Washington, USA. It is accredited by the Association of Zoos and Aquariums.</Description>
+    <Address>10246 Main St Ste A, Bellevue</Address>
+    <Phone>425.289.0015</Phone>
+    <Image>http://convivial.org/wp-content/uploads/2012/05/Belle-Pastry-3.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.bellepastry.com</Url>
+   <Category>CoffeeShop</Category>
+    <Latitude>47.61039</Latitude>
+    <Longitude>-122.203275</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1042</EntityID>
+    <Name>Tiger Mountain Hike</Name>
+    <Description>Tiger Mountain is a mountain in the U.S. state of Washington. The mountain has six peaks in the center of the Issaquah Alps forming a 13,500-acre triangle between Interstate 90 on the north.</Description>
+    <Address>From Issaquah head east on Front Street (which becomes Issa-quah-Hobart Road after it leaves town). About 6 miles past the city limits, turn left (north) onto SE Tiger Mountain Road. Continue for 1/4 mile before parking on the left shoulder at a wide pullout. The trail is on the right, up the road a hundred feet or so from the pullout.</Address>
+    <Phone>206.625.1367</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/en/f/f1/Tiger_mountain.jpg</Image>
+    <Review>4</Review>
+   <Url>http://www.wta.org/go-hiking/hikes/tiger-mountain-trail</Url>
+   <Category>Hike</Category>
+    <Latitude>47.4883311</Latitude>
+    <Longitude>-121.9466666</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1043</EntityID>
+    <Name>Wild Horses Monument</Name>
+    <Description> Artist David Govedare’s life size sculptures, added during Washington State's Centennial Celebration, are entitled Grandfather Cuts Loose the Ponies. Hoping to capture the mystical spirits of a time that has passed, this 200 foot line of steel ponies remind us all of time when creatures were able to roam wild and free.</Description>
+    <Address>From Ellensburg drive east on Interstate 90 to exit 139 (just after crossing the Columbia River). The exit, signed "Scenic Viewpoint," leads to a large parking area. In winter, park at the closed gate and walk in. In any season, though, stop here for a quiet, relaxing, hour-long break when traveling across the state on I-90.</Address>
+    <Phone>206.625.1367</Phone>
+    <Image>https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1/p320x320/1234331_502373896511066_1791014429_n.jpg</Image>
+    <Review>4</Review>
+   <Url>http://www.wta.org/go-hiking/hikes/wild-horses-monument</Url>
+   <Category>Hike</Category>
+    <Latitude>46.964416</Latitude>
+    <Longitude>-119.964331</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1044</EntityID>
+    <Name>Grand Coulee Dam</Name>
+    <Description> Grand Coulee Dam is a gravity dam on the Columbia River in the U.S. state of Washington built to produce hydroelectric power and provide irrigation. It was constructed between 1933 and 1942, originally with two power plants.</Description>
+    <Address>110 Stevens Ave, Coulee Dam</Address>
+    <Phone>800.268.5332</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Coulee_Dam.jpg</Image>
+    <Review>4</Review>
+   <Url>http://www.nwcouncil.org/history/GrandCouleeHistory</Url>
+   <Category>Attraction</Category>
+    <Latitude>47.956297</Latitude>
+    <Longitude>-118.9817</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1045</EntityID>
+    <Name>Palouse Falls</Name>
+    <Description>Its size and splendor make Palouse Falls one of the most scenic and impressive waterfalls in all of Washington, but its location adds even more magic and wonder to its image.</Description>
+    <Address>From Dayton, drive US 12 north for 14 miles. Turn left on State Route 261 and continue through the tiny community of Starbuck (sorry, the only coffee here is usually day-old Hills Brothers at the small cafe). You'll also pass Lyons Ferry Park at 14.7 miles. At 20.5 miles from US 12, turn right onto Palouse Falls Road signed "Palouse Falls State Park--2." Drive down the hill 2.4 miles to enter the park and to park.</Address>
+    <Phone>502.633.0770</Phone>
+    <Image>http://brianruebphotography.com/wp-content/uploads/Palouse-Falls.jpg</Image>
+    <Review>4</Review>
+   <Url>http://www.stateparks.com/palouse_falls.html</Url>
+   <Category>Waterfall</Category>
+    <Latitude>46.6636105</Latitude>
+    <Longitude>-118.223611</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1046</EntityID>
+    <Name>Sun Lakes Dry Falls</Name>
+    <Description>Sun Lakes-Dry Falls State Park is a 4,027-acre camping park with 73,640 feet of freshwater shoreline at the foot of Dry Falls. Dry Falls is one of the great geological wonders of North America. Carved by Ice Age floods that long ago disappeared, the former waterfall is now a stark cliff, 400 feet high and 3.5 miles wide.</Description>
+    <Address>34875 Park Lake Rd Ne, Coulee City, WA, US, 99115</Address>
+    <Phone>509.632.5585</Phone>
+    <Image>http://adventureawaits.com/wp-content/uploads/2013/06/Dry-Falls-CC-roswellsgirl.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.parks.wa.gov/298/Sun-Lakes-Dry-Falls</Url>
+   <Category>Attraction</Category>
+    <Latitude>47.597012</Latitude>
+    <Longitude>-119.395857</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1047</EntityID>
+    <Name>Davenport Hotel</Name>
+    <Description>The Davenport Hotel opened in 1914 as a destination in its own right. It was to be a place where guests could experience a singular combination of world-class service, palatial splendor, and inviting warmth. Constructed in 1914 under the auspices of Louis Davenport, the Davenport Hotel has served as a beacon of culture and refinement throughout the region for the better part of a century.</Description>
+    <Address>10 South Post Street, Spokane, WA 99201</Address>
+    <Phone>509.455.8888</Phone>
+    <Image>http://jetsetwithmary.com/wp-content/uploads/2012/10/398850991.jpg</Image>
+    <Review>5</Review>
+   <Url>http://www.davenporthotelcollection.com/</Url>
+   <Category>Museum</Category>
+    <Latitude>47.656908</Latitude>
+    <Longitude>-117.424455</Longitude>
+</Entity>
+<Entity> 
+    <EntityID>1048</EntityID>
+    <Name>Clinkerdagger Restaurant</Name>
+    <Description>The tradition has continued for almost 40 years at this Spokane landmark overlooking the majestic Spokane River and city skyline. This is perhaps the perfect place for a special business or romantic occasion or perhaps simply a nice getaway for lunch or dinner..</Description>
+    <Address>621 W Mallon Ave Ste 404, Spokane, WA, US, 99201</Address>
+    <Phone>509.328.5965</Phone>
+    <Image>http://media.spokesman.com/guide_item_images/CLINKERDAGGER_5852817_t800.JPG?0c04c5c8c06b202cbbc82737bbdd60bd468bb60f</Image>
+    <Review>4</Review>
+   <Url>clinkerdagger.com</Url>
+   <Category>Restaurant</Category>
+    <Latitude>47.664994</Latitude>
+    <Longitude>-117.42211</Longitude>
+</Entity>
+</EntitiesSample>
+
+
+
+
+

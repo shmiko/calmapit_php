@@ -1,0 +1,1 @@
+{"name":"Dedicator","id":"\/media_common\/dedicator","type":"\/type\/type","group":"type","_id":"lNZilx85","relation":"\/media_common","properties":[{"name":"Dedications","id":"\/media_common\/dedicator\/dedications","expected_type":"\/media_common\/dedication","description":"Dedications made by the dedicator"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

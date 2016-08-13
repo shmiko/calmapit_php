@@ -1,0 +1,1 @@
+{"name":"Sports","id":"\/sports","type":"\/type\/domain","group":"zone","_id":"R8ddin3D","relation":"root","properties":[],"included_types":[]}

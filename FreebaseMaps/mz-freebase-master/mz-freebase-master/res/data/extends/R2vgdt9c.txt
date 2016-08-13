@@ -1,0 +1,1 @@
+{"name":"Broadcast Genre","id":"\/broadcast\/genre","type":"\/type\/type","group":"type","_id":"R2vgdt9c","relation":"\/broadcast","properties":[{"name":"Content","id":"\/broadcast\/genre\/content","expected_type":"\/broadcast\/content","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

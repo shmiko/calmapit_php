@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html data-type="example" data-id="panorama-click-free">
+  <head>
+    <title>Desktop & Mobile Ready Multipurpose Panoramic Viewer</title>
+    <meta charset='utf-8' content='text/html' http-equiv='Content-type' />
+
+    <script src='js/jquery-1.9.1.min.js' type='text/javascript'></script>
+    <script src="js/jquery-ui.min.js" type='text/javascript'></script>
+    <script src='js/jquery.reel-min.js' type='text/javascript'></script>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pano.css">
+
+  </head>
+  <body>
+
+    
+
+
+    <div class="PanoContainer">
+
+    <!-- Here is the 360 panorama picture code starts which have it's original height and width more is in documentation -->
+
+      <img src="img/1.jpg" height="753px" width="100%"
+        class="reel"
+        id="mainpicture"
+        data-image="img/1.jpg"
+        data-orientable="true"
+        data-frames="100"
+        data-frame="1"
+        data-stitched="4575">
+
+    <!-- end 360 panorama picture -->
+
+
+
+
+    <!-- Here is the annotation pointer code starts here annotation pointer code have it's x and y position and unique id and data-for which is needed for connect main 360 picture. -->
+
+    <!-- move to different position pointer code starts here -->
+
+      <a class="reel-annotation" title="#"
+        id="locationchanger"
+        href="davinci.html"
+        data-x="650"
+        data-y="450"
+        data-for="mainpicture">
+          <center><label class="marker-label">DaVinci Expo</label><br/>
+          <img src="assets/path.gif"/></center>     
+      </a>
+      <script>
+
+        $( "#locationchanger" ).tooltip({ 
+          content: '<center><img src="img/user2.jpg" /><br/><span class="name-tag">Jack Jones </span><br/><span class="role-tag">Says "You gotta come here..."</span></center>' 
+        });
+
+      </script>
+
+    <!-- end move position pointer -->
+
+    <!-- first annotation pointer code starts here -->
+
+      <a class="reel-annotation" title="#"
+        id="horse"
+        href="#"
+        data-x="1500"
+        data-y="450"
+        data-for="mainpicture">
+          <center><label class="marker-label">The Great Stallion</label><br/>
+          <img src="assets/pointer.gif"/></center>     
+      </a>
+      <script>
+
+        $( "#horse" ).tooltip({ 
+          content: '<center><img src="img/logo.png" /><br/><span class="name-tag">CalMapIt Now!</span><br/><span class="role-tag">Add this to CalMapIt</span></center>' 
+        });
+
+      </script>
+
+    <!-- end first annotation -->
+
+    <!-- second annotation pointer code starts here -->
+
+      <a class="reel-annotation" title="#"
+        id="woman"
+        href="#"
+        data-x="2470"
+        data-y="450"
+        data-for="mainpicture">
+          <center><label class="marker-label">Julia Doe</label><br/>
+          <img src="assets/pointer.gif"/></center>     
+      </a>
+      <script>
+
+        $( "#woman" ).tooltip({ 
+          content: '<center><img src="img/user3.jpg" /><br/><span class="name-tag">Wendy Jones</span><br/><span class="role-tag">This is image added tooltip</span></center>' 
+        });
+
+      </script>
+
+    <!-- end second annotation -->
+
+    <!-- end annotation -->
+
+
+
+    </div>
+    <div class="descContainer">
+      <h1>Multipurpose 360 panorama script</h1>
+      <p>A panorama is a wide-angle view made from a series of images combined together using special software. It offers a very realistic experience, giving the sensation that the user is right there on the location. The plugin manipulates such a panorama image and uses jQuery to rotate, add hotspots and integrate it on mobile, touchpads and desktop browsers. This script is the premier alternative to Flash, Java or Quicktime. </p>
+
+      <h1>Features</h1>
+        <ul>
+          <li>mobile/touchpads support</li>
+          <li>auto-scroll with sliding controls</li>
+          <li>image smart preloader</li>
+          <li>160/360 degree visibility</li>
+          <li>can be used in a responsive design</li>
+          <li>takes width of container (height must be set if used in fixed size version)</li>
+          <li>hotspots + fancybox integration</li>
+          <li>multiple panorama selection + carouFredSel integration</li>
+        </ul>
+
+        <br/><br/><br/>
+      <h5>Sincerely: Javkhlan.R /java.ren/</h5>
+    </div>
+    
+<script>
+      $(function(){ // when DOM ready
+        return;
+        $('#mainpicture').reel({
+          stitched:    1620,
+          vertical: true,
+          orientable:  true,
+          responsive: false,
+          cursor: 'pointer'
+        });
+      });
+
+      $.noConflict();
+      jQuery( document ).ready(function( $ ) {
+        $( document ).tooltip();
+      });
+
+    </script>
+
+
+  </body>
+</html>
+

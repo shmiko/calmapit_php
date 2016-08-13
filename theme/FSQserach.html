@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Title here -->
+		<title>CalMapIt FourSquare Search</title>
+		<!-- Description, Keywords and Author -->
+		<link rel="shortcut icon" href="http://calmapit.com/favicon.ico" type="image/vnd.microsoft.icon" />
+		<meta name="description" content="Calendar Map Itinerary" />
+		<meta name="keywords" content="Google Maps, calendar, itinerary, travel,travel planning, printable travel book" />
+		<meta name="author" content="Paul Jones - shmik.com" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 
+		 
+		<!-- Styles -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/FSQsearch.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/tiles.css" type="text/css" media="all" />
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Animate CSS -->
+		<link href="css/animate.min.css" rel="stylesheet">
+		<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+		<link href="css/settings.css" rel="stylesheet">
+		<!--[if IE ]><link rel="stylesheet" href="css/settings-ie8.css"><![endif]-->
+		<!-- Portfolio CSS -->
+		<link href="css/prettyPhoto.css" rel="stylesheet">
+		<!-- Countdown CSS -->
+		<link href="css/jquery.countdown.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">		
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.wookmark.min.js"></script>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="#">
+	</head>
+	
+	<body>
+		<script type="text/javascript">$('#myContent li').wookmark();</script>
+    
+		<!-- Body Wrapper -->
+		<div class="wrapper white">
+		
+			<!-- Header Start -->
+			<div class="header">
+				<!-- Header Information -->
+				<div class="header-info">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<!-- Social Media -->
+								<div class="search">
+									<form>
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Text to search">
+											<span class="input-group-btn">
+												<button class="btn" type="button"><i class="fa fa-search"></i></button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<!-- Search Box -->
+								
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<!-- Contact Info -->
+								<div class="contact-info">
+									<div class="row-fluid" id="login">
+									  	<!-- The plugin will be embedded into this div //-->
+										<div id="oa_social_login_container"></div>
+
+										<script type="text/javascript">
+										 var _oneall = _oneall || [];
+										 _oneall.push(['social_login', 'set_callback_uri', 'http://calmapit.com']);
+										 _oneall.push(['social_login', 'set_providers', ['blogger', 'facebook', 'google', 'instagram', 'openid', 'twitter', 'wordpress', 'yahoo', 'youtube']]);
+										 _oneall.push(['social_login', 'do_render_ui', 'oa_social_login_container']);
+										</script>
+									  </div>  
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Header Navigation -->
+				<div class="header-navigation">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<!-- Logo -->
+								<div class="logo">
+									<!-- Heading -->
+									<h1><a href="http://calmapit.com"><img src="img/calmapit_color_55x_icon.png" alt="calmapit"/><img src="img/calmapit_logo1.png" alt="calmapit" /></a></h1>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<!-- Bootstrap Navbar -->
+								<nav class="navbar navbar-default" role="navigation">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle br-orange" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav navbar-right">
+											<!-- Cal -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-lemon" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-calendar link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Cal <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-sm">
+													<li class="br-light-orange">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<h4 class="br-orange-yellow"><i class="fa fa-calendar heading-icon"></i> Calendar</h4>
+																</div>
+															
+																<style type="text/css">
+																#gcf-ticker .gcf-header-block {
+																  -webkit-border-bottom-left-radius: 4px;
+																  -moz-border-bottom-left-radius: 4px;
+																  border-bottom-left-radius: 4px;
+																  float: left;
+																  height: 100%;
+																  margin-bottom: 0;
+																}
+																#gcf-ticker .gcf-item-container-block {
+																  margin-top: 0.2em;
+																  overflow: hidden;
+																} 
+																#gcf-ticker .gcf-item-block .gcf-item-description {
+																  padding-left: 1em;
+																  color: #888;
+																  font-size: 78%;
+																}
+																#gcf-ticker .gcf-item-description:before { content: " -- "; color: #aaa; }
+																</style>
+																<div id="gcf-ticker" style="width: 95%; height: 135px; left:3px;">
+																  <div class="gcf-header-block br-lemon">
+																	<div class="gcf-title-block " style="width: 50px; height: 58px; color:black;">
+																		Upcoming</br> Events:
+																	</div>
+																  </div>
+																  <div class="gcf-item-container-block">
+																	<div class="gcf-item-block">
+																	  <div class="gcf-item-header-block">
+																		<div class="gcf-item-title-block">
+																		  (<span class="gcf-item-update-date">20/12</span>)</br>
+																		  <span class="gcf-item-title">Item Title of Your event</span>
+																		  
+																		</div>
+																	  </div>
+																	</div>
+																  </div>
+																</div></br></br></br>
+																
+																</div>
+														
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled" >
+																		<li><a href="gcal.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Integrated Google Calendar</a></li>
+																		<li><a href="mobile_cal/jqm-calc.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Mobile Calendar Test</a></li>
+																		<li><a href="feature.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> View Events Panel</a></li>
+																		<li><a href="calendar.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Print Calendar</a></li>
+																		<li><a href="login.html" class="br-orange-yellow"><i class="fa fa-arrow-right dd-link-icon"></i> Share Calendar</a></li>
+																		
+																	</ul>
+																</div>
+																
+																	     
+																
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Map -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-purp" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-map-marker link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Map <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-sm">
+													<li class="br-purp">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<h4 class="br-orange"><i class="fa fa-share heading-icon"></i> Map Views</h4>
+																	<p style="color:#000000;">There are many map views available, street view, multi view - try them all here.</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="multiview.html"><i class="fa fa-arrow-right dd-link-icon"></i> Multi View</a></li>
+																		<li><a href="streetviewdirections.html"><i class="fa fa-arrow-right dd-link-icon"></i> Street View</a></li>
+																		<li><a href="MUID/advancerouteplanner.html"><i class="fa fa-arrow-right dd-link-icon"></i> Direction Drive View</a></li>
+																		<li><a href="MUID/waypoints.html"><i class="fa fa-arrow-right dd-link-icon"></i> Direction WayPoints View</a></li>
+																		<li><a href="mapsed-master/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Map Examples</a></li>
+																		<li><a href="pano/pano.html"><i class="fa fa-arrow-right dd-link-icon"></i> Panorama View</a></li>
+																		<li><a href="calmapit.html"><i class="fa fa-arrow-right dd-link-icon"></i> Custom Event View</a></li>
+																		<li><a href="Mapping/form/details.html"><i class="fa fa-arrow-right dd-link-icon"></i> Detailed Place View</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Itinerary -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-med-green" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-book  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Itinerary <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-default br-med-green">
+													<li><a href="flipbook/end.htm"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Travel Itinerary</a></li>
+													<li><a href="faq.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Print Itinerary</a></li>
+													<li><a href="landing-page.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Share Itinerary</a></li>
+													<li><a href="index-column.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Save Itinerary</a></li>
+													<li><a href="service.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Create Trip Book</a></li>
+													<li><a href="sitemap.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Create Photo Book</a></li>
+													<li><a href="time-line.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Upload to Blog</a></li>
+												</ul>
+											</li>
+											<!-- Bookings -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-yellow1" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-suitcase  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Bookings <b class="fa fa-angle-down"></b></span> 
+												</a>
+												
+												<ul class="dropdown-menu dropdown-sm br-yellow1">
+													
+													<li><a href="travel/index.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Travel Book Anything</a></li>
+													<li><a href="traveler_index-1.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Traveller Book Everything</a></li>
+													<li><a href="travelhub.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Hub</a></li>
+													<li><a href="hotel_reservation.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Restaurants Reserve</a></li>
+													<li><a href="index-column.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Theatre</a></li>
+													<li><a href="service.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Room Service</a></li>
+													<li><a href="sitemap.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> ThemeParks</a></li>
+													<li><a href="time-line.html"><i class="fa fa-arrow-right dd-link-icon aqua"></i> Tours</a></li>
+																
+												</ul>
+											</li>
+											<!-- Trips -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-pink-purp" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-pencil-square-o  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Trips <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-pink-purp">
+													<li>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> View Trips.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">View your trips, get reminders, view on a map, get directions. Add event activities for more detailed planning on the day</p>
+																	<div class="view-button">
+																		<a href="trips.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-yellow"><i class="fa fa-ticket heading-icon"></i> Add/Edit/Delete Events.</h4>
+																	<!-- Image -->
+																	<img src="img/w2.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Make changes to events including event activities.</p>
+																	<!-- View Next Button -->
+																	<div class="view-button">
+																		<a href="#" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="navigator/blog.html"><i class="fa fa-arrow-right dd-link-icon"></i> View Events</a></li>
+																		<li><a href="navigator/blog_post.html"><i class="fa fa-arrow-right dd-link-icon"></i> Change Events</a></li>
+																		<li><a href="calmapit.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your current trips</a></li>
+																		<li><a href="travel/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your Bucket List</a></li>
+																		<li><a href="product.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your Visited Places</a></li>
+																		<li><a href="places.html"><i class="fa fa-arrow-right dd-link-icon"></i> Suggestions</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Ideas -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-aqua" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-globe link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Ideas <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-aqua">
+													<li>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> Need ideas? Search for Places,Events or Things to Do.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Search for new places to vist, add them to your trip, get reminders, view new places on a map, get directions.</p>
+																	<div class="view-button">
+																		<a href="places.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-yellow"><i class="fa fa-ticket heading-icon"></i> Find things to do.</h4>
+																	<!-- Image -->
+																	<img src="img/w2.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">Find new things to do, local events and activities, add them to your trip, get reminders, view on a map, get directions..</p>
+																	<!-- View Next Button -->
+																	<div class="view-button">
+																		<a href="#" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="demo/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Voice Control</a></li>
+																		<li><a href="Parallax/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Parallax Me</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> View your trips</a></li>
+																		<li><a href="navigator/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Navigator</a></li>
+																		<li><a href="weather/fweather/demo.php"><i class="fa fa-arrow-right dd-link-icon"></i> Check Weather</a></li>
+																		<li><a href="weather/weather/accordion-weather.php"><i class="fa fa-arrow-right dd-link-icon"></i> Weather Map</a></li>
+																		<li><a href="twitterfeeds/twitter-oauth/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> Twitter Feeds</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> Facebook Events</a></li>
+																		<li><a href="Mapping/birdseye/jquery-birdseye-gh-pages/index.html"><i class="fa fa-arrow-right dd-link-icon"></i> AirBnB</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<!-- Gallery -->
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle br-maroon" data-toggle="dropdown">
+													<!-- Link Icon -->
+													<i class="fa fa-road  link-icon"></i>
+													<!-- Link Title -->
+													<span class="link-title">Gallery <b class="fa fa-angle-down"></b></span> 
+												</a>
+												<ul class="dropdown-menu dropdown-md br-maroon">
+													<li>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="col-inner col-disable">
+																	<!-- Heading -->
+																	<h4 class="br-green"><i class="fa fa-filter heading-icon"></i> View Photos.</h4>
+																	<img src="img/w1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p style="color:#000000;">View some photos then see them on a map.</p>
+																	<div class="view-button">
+																		<a href="gallery.html" class="btn btn-danger btn-sm">View More <i class="fa fa-angle-right"></i></a>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-md-6">
+																<div class="col-inner">
+																	<ul class="list-unstyled">
+																		<li><a href="places.html"><i class="fa fa-arrow-right dd-link-icon"></i> View Suggested Drives</a></li>
+																		<li><a href="trips.html"><i class="fa fa-arrow-right dd-link-icon"></i> Reccommended</a></li>
+																		<li><a href="portfolio.html"><i class="fa fa-arrow-right dd-link-icon"></i> Reviews</a></li>
+																		<li><a href="pricing.html"><i class="fa fa-arrow-right dd-link-icon"></i> Add to bucket list</a></li>
+																		<li><a href="product.html"><i class="fa fa-arrow-right dd-link-icon"></i> Print list of drives</a></li>
+																		<li><a href="testimonial.html"><i class="fa fa-arrow-right dd-link-icon"></i> Add a Drive</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											
+										</ul>
+									</div><!-- /.navbar-collapse -->
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Header End -->
+			
+			<!-- Inner Page Content // Start -->
+			
+			<div class="inner-page">
+				<div class="container-fluid">
+					<div class="row">
+						<input type="text" id="inputLocation" class="control-input" placeholder="Enter City then click a type below"/>
+					</div>
+					<div class="row">
+						<div class="category">
+							<ul class="nav nav-pills">
+								<li><a href="javascript:search(''4deefb944765f83613cdba6e,4fceea171983d5d06c3e9823,4bf58dd8d48988d182941735'');">Attractions</a></li>
+								<li><a href="javascript:search('4d4b7105d754a06374d81259');">Dietary</a></li>
+								<li><a href="javascript:search('4bf58dd8d48988d1fa931735')">Accommodation</a></li>
+								<li><a href="javascript:search('4bf58dd8d48988d1ed931735,4bf58dd8d48988d1fd931735,4bf58dd8d48988d129951735')">Public facility</a></li>
+								<li><a href="javascript:search('4d4b7105d754a06378d81259')">Shopping</a></li>
+							</ul>
+						</div>
+					</div>
+					<br/>
+					<div class="row"> 
+						<!-- Main-bar Column -->
+						<ul id="tiles">
+						</ul> 
+					</div>
+				</div>
+			</div>
+			
+			<!-- Inner Page Content // End -->
+			
+			<!-- Footer Start -->
+			
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<div id="disqus_thread"></div>
+								<script type="text/javascript">
+								/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+									var disqus_shortname = 'calmapit'; // required: replace example with your forum shortname
+
+								/* * * DON'T EDIT BELOW THIS LINE * * */
+								(function() {
+								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+								})();
+								</script>
+								<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+								<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Logo Icon -->
+								<!-- Heading -->
+								<h2><a href="index.html"><img src="img/calmapit_color_55x_icon.png"style="margin-right: 5px;margin-top: -8px; height:10%;width:10%;" /><img src="img/calmapit_logo1.png" alt="" style="margin-right: 5px;margin-top: -8px; height:30%;width:30%;" /></a></h2>
+								<!-- Paragraph -->
+								<p>Keep you eye and ears opened as CalMapIt will become as popular as Google, get Ready To CalMapIt!</p>
+								<!-- Social Media -->
+								<div class="social">
+									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+									<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+									<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+									<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								</div>
+								
+								<div class="row">
+									<!-- Button trigger modal -->
+									<button class="btn btn-primary btn-lg"  title="Share this content" data-toggle="modal" data-target="#myModal">
+									  <i class="fa fa-share-alt"></i> Share
+									</button>
+
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+													<h4 class="modal-title" id="myModalLabel"><i class="fa fa-share-alt"></i> Share</h4>
+												</div>
+												<div class="modal-body">
+													<p>	
+														<a title="Facebook" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> 
+														<a title="Twitter" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a> 
+														<a title="Google+" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x"></i></span></a> 
+														<a title="Linkedin" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a> 
+														<a title="Reddit" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-reddit fa-stack-1x"></i></span></a> 
+														<a title="WordPress" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-wordpress fa-stack-1x"></i></span></a> 
+														<a title="Digg" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-digg fa-stack-1x"></i></span></a>  
+														<a title="Stumbleupon" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-stumbleupon fa-stack-1x"></i></span></a>
+														<a title="E-mail" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x"></i></span></a>  
+														<a title="Print" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-print fa-stack-1x"></i></span></a>
+													</p>
+													<h2><i class="fa fa-envelope"></i> Newsletter</h2>
+													<p>Subscribe to our weekly Newsletter and stay tuned.</p>
+													<form action="" method="post">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+															<input type="email" class="form-control" placeholder="your@email.com">
+														</div>
+														<br />
+														<button type="submit" value="sub" name="sub" class="btn btn-primary"><i class="fa fa-share"></i> Subscribe Now!</button>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-plus br-maroon"></i> Navigation Menu</h5>
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<!-- Menu Icons link -->
+										<ul class="list-unstyled">
+											<li><a href="gcal.html"><i class="fa fa-calendar br-lemon" style="color:#000000 !important;"></i> Cal</a></li>
+											<li><a href="calmapit.html"><i class="fa fa-map-marker br-purp" style="color:#000000 !important;"></i> Map</a></li>
+											<li><a href="tripnotes.htm"><i class="fa fa-book br-med-green" style="color:#000000 !important;"></i> Itinerary</a></li>
+											<li><a href="places.html"><i class="fa fa-globe br-aqua" style="color:#000000 !important;"></i> Places</a></li>
+											<li><a href="calmapit.html"><i class="fa fa-pencil-square-o br-hot-pink" style="color:#000000 !important;"></i> Events</a></li>
+										</ul>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<!-- Menu Icons link -->
+										<ul class="list-unstyled">
+											<li><a href="places.html"><i class="fa fa-road br-maroon" style="color:#000000 !important;"></i> Drives</a></li>
+											<li><a href="#"><i class="fa fa-search br-pink" style="color:#000000 !important;"></i> Testimonials</a></li>
+											<li><a href="navigator/about.html"><i class="fa fa-user br-orange" style="color:#000000 !important;"></i> About Us</a></li>
+											<li><a href="#"><i class="fa fa-sign-in br-green" style="color:#000000 !important;"></i> Register</a></li>
+											<li><a href="#"><i class="fa fa-file br-brown" style="color:#000000 !important;"></i> Reviews</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-map-marker br-yellow"></i> Contact Us</h5>
+								<address>
+									<i class="fa fa-home br-green"></i> # Castlereagh Street <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; Riverstone,  <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; New South Walesn <br />
+									&nbsp; &nbsp; &nbsp; &nbsp; Australia 2765<br />
+									<span><i class="fa fa-phone br-orange"></i> +61 123-456-2345</span>
+									<span><i class="fa fa-envelope-o br-blue"></i> <a href="#">pjones@calmapit.com</a></span>
+								</address>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<!-- Heading -->
+								<h5><i class="fa fa-location-arrow br-aqua"></i> Location</h5>
+								<!-- Google Map -->
+								<div class="map">
+									<!-- Image -->
+									<img src="img/map.png" class="img-responsive" alt="" />
+									<!-- Map Marker -->
+									<i class="fa fa-map-marker marker india aqua"></i>
+									<i class="fa fa-map-marker marker usa orange"></i>
+									<i class="fa fa-map-marker marker africa green"></i>
+								</div>
+								<span class="location-name">
+									<i class="fa fa-map-marker br-aqua"></i> India &nbsp;&nbsp;
+									<i class="fa fa-map-marker br-orange"></i> USA &nbsp;&nbsp;
+									<i class="fa fa-map-marker br-green"></i> Africa
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- Footer Copyright -->
+					<div class="footer-copyright">
+						<p>&copy; Copyright 2014 <a href="#">CalMapit</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Footer End -->
+			
+		</div>
+		<!-- Footer End -->
+		
+		<!-- Scroll to top -->
+		<span class="totop"><a href="#"><i class="fa fa-angle-up"></i></a></span> 
+
+		
+		
+		
+		<!-- Javascript files -->
+		<script type="text/javascript" src="js/FSQsearch.js"></script>
+   
+		
+	</body>	
+</html>

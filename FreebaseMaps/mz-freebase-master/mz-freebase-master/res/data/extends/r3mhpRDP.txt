@@ -1,0 +1,1 @@
+{"name":"Fruit Source","id":"\/wine\/fruit_source","type":"\/type\/type","group":"type","_id":"r3mhpRDP","relation":"\/food","properties":[{"name":"Wines","id":"\/wine\/fruit_source\/wines","expected_type":"\/wine\/wine","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

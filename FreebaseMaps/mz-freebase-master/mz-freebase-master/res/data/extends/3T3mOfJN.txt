@@ -1,0 +1,1 @@
+{"name":"Opera Genre","id":"\/opera\/opera_genre","type":"\/type\/type","group":"type","_id":"3T3mOfJN","relation":"\/opera","properties":[{"name":"Operas In This Genre","id":"\/opera\/opera_genre\/operas_in_this_genre","expected_type":"\/opera\/opera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

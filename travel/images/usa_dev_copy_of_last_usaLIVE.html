@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>USA Road Trip - Dev</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		
+		[if lt IE 7]>
+			<style type="text/css">
+				#wrapper { height:100%; }
+			</style>
+		[endif]
+		
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4&sensor=true"></script>
+
+		<link href="/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=panoramio"></script>
+
+		<script>
+
+					var poly;
+
+					var map;
+					
+					var line;
+
+					var blueStar = 'blue-star.png';
+
+					var orangeStar = 'orange-star.png';
+
+					var directionDisplay;
+
+					var directionsService = new google.maps.DirectionsService();
+
+					var geocoder = new google.maps.Geocoder();
+
+					
+
+					function geocodePosition(pos) {
+
+					  geocoder.geocode({
+
+						latLng: pos
+
+					  }, function(responses) {
+
+						if (responses && responses.length > 0) {
+
+						  updateMarkerAddress(responses[0].formatted_address);
+
+						} else {
+
+						  updateMarkerAddress('Cannot determine address at this location.');
+
+						}
+
+					  });
+
+					}
+
+					//End geocodePosition
+
+					
+
+					function updateMarkerStatus(str) {
+
+					  document.getElementById('markerStatus').innerHTML = str;
+
+					}
+
+					//End updateMarkerStatus
+
+					
+
+					function updateMarkerPosition(latLng) {
+
+					  document.getElementById('info').innerHTML = [
+
+						latLng.lat(),
+
+						latLng.lng()
+
+					  ].join(', ');
+
+					}
+
+					//End updateMarkerPosition
+
+					
+
+					function updateMarkerAddress(str) {
+
+					  document.getElementById('address').innerHTML = str;
+
+					}
+
+					//End updateMarkerAddress
+
+					
+
+					function detectBrowser() {
+
+
+
+						var useragent = navigator.userAgent;
+
+
+
+						var mapdiv = document.getElementById("map-canvas");
+
+
+
+
+
+
+
+						if 	(useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
+
+
+
+								mapdiv.style.width = '100%';
+
+
+
+								mapdiv.style.height = '100%';
+
+
+
+							} 
+
+
+
+						else 
+
+
+
+							{
+
+
+
+								mapdiv.style.width = '600px';
+
+
+
+								mapdiv.style.height = '800px';
+
+
+
+							}
+
+
+
+						}
+
+					//End detectBrowser
+
+					
+
+					function initialize() {
+
+
+
+						//<img src="/images/shmiklogovsm.png" alt="shmik" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>
+
+
+
+						// Add images paths as array #5 then insert into info box.
+
+
+						//'Markers
+						
+						var 	markers = [
+							['orlando', 28.538315,-81.379242,'Saturday March 29th -- Day 5 -- Arrive Orlando Florida at 8pm','5','<img src="/images/orlando-florida.jpg" alt="Orlando Florida" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['disney', 28.418749,-81.581211,'Sunday March 30th -- Day 6 -- Fort Wilderness Resort Disney World for 7 Days','6','<img src="/images/disneyworld-map.jpg" alt="Disney World Map" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Florida_Caverns_State_Park', 30.806572,-85.212692,'Saturday April 6th -- Day 13 -- Universal Studios & Florida Caverns','13','<img src="/images/hollywood-studios.jpg" alt="Hollywood Studios" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['french_quarters_rv_park', 29.962936,-90.074089,'Sunday April 7th -- Day 14 -- Staying at RV Park in New Orleans, Louisiana','14','<img src="/images/cafe-du-monde.jpg" alt="Cafe-du-monde" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Barataria_Preserve', 29.804623,-90.118668,'Monday April 8th -- Day 15 -- Drive to Barataria Preserve on Monday 8th April','15','<img src="/images/Barataria-Preserve.jpg" alt="Barataria Preserve" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['shallow_creek_rv_resort', 32.45425,-94.936317,'Stay at Shallow Creek RV Resort in Gladewater, Texas','15','<img src="/images/shallow-creek-rv-resort.jpg" alt="Shallow Creek RV Resort" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Childress', 34.426292,-100.204086,'Tuesday April 9th -- Day 16 -- Stay at Childress Inn Childress, Texas','16','<img src="/images/texas-usa.jpg" alt="Texas" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['KOA_Kampgrounds', 35.072102,-106.508919,'Wednesday April 10th -- Day 17 -- Albuquerque, New Mexico','17','<img src="/images/albuquerque-new-mexico.jpg" alt="Albuquerque" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Gouldings_Lodge', 37.007347,-110.203468,'Thursday April 11th -- Day 18 -- Monument Valley, Stay at Gouldings Lodge & Campground','18','<img src="/images/monument-valley-utah.jpg" alt="Monument Valley" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Grand_Canyon_National_Park', 36.056332,-112.116394,'Friday April 12th -- Day 19 -- Tour Grand Canyon and Stay at Grand Canyon Camper Village','19','<img src="/images/grand-canyon.jpg" alt="Grand Canyon" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['MGM_Grand', 36.103645,-115.169426,'Saturday April 13th -- Day 20 -- Las Veags - Visit MGM for Show','20','<img src="/images/las-vegas.jpg" alt="Las Veags" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Circus_Circus_Drive', 36.138603,-115.165939,'Saturday April 14th -- Day 20 -- Las Veags - Stay at Circus Circus and See Cirque Du Soleil','20','<img src="/images/circus-du-soleil-ka-las-vegas.jpg" alt="Cirque Du Soleil" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Kettleman_City', 36.008286,-119.961807,'Sunday April 15th -- Day 21 -- Stay at Kettleman City on the way to San Fran','21','<img src="/images/kettleman-city.jpg" alt="Kettleman City" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['san_fran', 37.77494,-122.419434,'Monday April 16th -- Day 22 -- Drive to San Francisco and Muir Woods','22','<img src="/images/san-fransisco.png" alt="San Francisco" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Muir_Woods_National_Monument', 37.940742,-122.515427,'Monday April 16th -- Day 22 -- Muir Woods','22','<img src="/images/muir-woods-national-monument.jpg" alt="Muir Woods" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Whinchester_Mystery_House', 37.319031,-121.950218,'Tuesday April 17th -- Day 23 -- Drive to Winchester Mystery House San Jose and back to LA to Stay','23','<img src="/images/winchester-mystery-house.jpg" alt="Winchester Mystery House" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>'],
+							['Hawethorne', 33.929813,-118.351387,'Wednesday April 18th -- Day 24 is our Last Day -- Fly out of Los Angeles','24','<img src="/images/shopping-la.jpg" alt="LA" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;"/>']
+							];
+						
+						//'End Markers
+						
+
+						var	LA =   new google.maps.LatLng(37.77494,-122.419434);
+
+						var	LA2 = new google.maps.LatLng(37.940742,-122.515427);
+
+						var	LA3 = new google.maps.LatLng(37.319031,-121.950218);
+
+						var	LA4 = new google.maps.LatLng(33.929813,-118.351387);
+
+						
+
+						var MY_MAPTYPE_ID = 'custom_style';
+
+
+
+						var featureOpts = [
+
+										  {
+
+											"featureType": "administrative",
+
+											"stylers": [
+
+											  { "hue": "#aa00ff" },
+
+											  { "visibility": "on" },
+
+											  { "saturation": 27 },
+
+											  { "weight": 1.3 }
+
+											]
+
+										  },{
+
+											"featureType": "poi.park",
+
+											"stylers": [
+
+											  { "visibility": "on" },
+
+											  { "weight": 2.3 },
+
+											  { "color": "#ade875" },
+
+											  { "saturation": -25 },
+
+											  { "hue": "#6e00ff" },
+
+											  { "lightness": 61 }
+
+											]
+
+										  },{
+
+											"featureType": "landscape",
+
+											"stylers": [
+
+											  { "visibility": "on" },
+
+											  { "weight": 0.1 },
+
+											  { "hue": "#ff5500" },
+
+											  { "lightness": -8 },
+
+											  { "saturation": 41 }
+
+											]
+
+										  },{
+
+											"featureType": "road.highway",
+
+											"stylers": [
+
+											  { "visibility": "on" },
+
+											  { "saturation": 93 },
+
+											  { "hue": "#ff00f6" },
+
+											  { "weight": 1 }
+
+											]
+
+										  },{
+
+										  },{
+
+											"featureType": "road.local",
+
+											"stylers": [
+
+											  { "hue": "#ffff00" },
+
+											  { "saturation": 81 },
+
+											  { "weight": 1.1 }
+
+											]
+
+										  },{
+
+										  },{
+
+										  },{
+
+											"featureType": "landscape.natural.terrain",
+
+											"stylers": [
+
+											  { "hue": "#ff1a00" },
+
+											  { "visibility": "on" },
+
+											  { "saturation": 63 }
+
+											]
+
+										  }
+
+										];
+
+
+
+
+
+						var mapOptions = {
+
+
+
+							zoom: 5,
+
+
+
+							center: new google.maps.LatLng(35.496456,-101.981445), // centered US,  34.633208,-97.602539
+
+							panControl:true,
+							zoomControl:true,
+							mapTypeControl:true,
+							scaleControl:true,
+							streetViewControl:true,
+							overviewMapControl:true,
+							rotateControl:true,
+
+							scaleControlOptions: {
+
+												 /* since we decided to show the scale, we tell the script to show it in the corner we like, in this case Bottom Left */
+
+												 position: google.maps.ControlPosition.TOP_LEFT
+
+												 },
+
+
+
+							mapTypeControlOptions: {
+
+
+
+													mapTypeIds: [google.maps.MapTypeId.HYBRID, MY_MAPTYPE_ID]
+
+
+
+												},
+
+
+
+							mapTypeId: MY_MAPTYPE_ID
+
+
+
+						};
+
+
+
+						
+
+					var image = new google.maps.MarkerImage('images/shmikmapicon.png',new google.maps.Size(30, 30),new google.maps.Point(0, 0));
+
+					var image2 = new google.maps.MarkerImage('images/shmikmapiconred.png',new google.maps.Size(30, 30),new google.maps.Point(0, 0));
+
+
+					var iterator = 0;
+
+
+
+					map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
+
+						
+
+					var infowindow = new google.maps.InfoWindow(), marker, i;
+
+
+
+						for (i = 0; i < markers.length; i++) {  
+
+
+
+							marker = new google.maps.Marker({
+
+
+
+								position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+
+
+
+								icon: image,
+
+
+
+								animation: google.maps.Animation.DROP,
+
+
+
+								map: map,
+
+
+
+								title: 'Day ' + markers[i][4]});
+
+
+
+								
+
+
+
+							var contentString = '<div id="content">'+
+
+
+
+														'<p><h3><b>'+markers[i][0]+'..'+markers[i][3]+'</b></h3></p>'+markers[i][5]+'</div>';
+
+
+
+				  
+
+
+
+							google.maps.event.addListener(marker, 'click', (function(marker, i) {
+
+
+
+								return function() {
+
+
+
+									infowindow.setContent('<div id="content">'+
+
+
+
+														'<p><h3><b>'+markers[i][0]+'..'+markers[i][3]+'</b></h3></p>'+markers[i][5]+'</div>');
+
+
+
+									infowindow.open(map, marker);
+
+
+
+								}
+
+
+
+							})(marker, i));
+
+
+
+							
+
+
+
+							google.maps.event.addListener(marker, 'mouseover', (function(marker, i){
+
+								return function() {
+
+
+
+								infowindow.setContent('<div id="content">'+
+
+
+
+														'<p><h3><b>'+markers[i][0]+'..'+markers[i][3]+'</b></h3></p>' + image2 + '</div>');
+
+
+
+								infowindow.open(map, marker);
+
+								}
+
+
+
+							})(marker, i));
+
+
+
+
+
+
+
+							//google.maps.event.addListener(marker, 'mouseout', function(){
+
+
+
+								//infowindow.close(map, this);
+
+
+
+							//});
+
+
+
+							 
+
+						  
+
+							
+
+
+
+						} //End For
+
+						
+
+						
+
+						
+
+					
+
+
+
+
+
+						var styledMapOptions = {
+
+
+
+						  name: 'Custom Style'
+
+
+
+						};
+
+
+
+
+
+						var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);			 	
+
+					
+
+						map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+
+
+
+						map.setMapTypeId(MY_MAPTYPE_ID);
+
+						
+
+						panoramioLayer = new google.maps.panoramio.PanoramioLayer();
+
+			 
+
+						panoramioLayer.setMap(null);
+
+
+
+						
+
+						var toggleButton = document.getElementById('toggleButton');
+
+							google.maps.event.addDomListener(toggleButton, 'click', function() {
+
+							panoramioLayer.setMap(panoramioLayer.getMap() ? null : map);
+
+						});
+
+						  
+
+						// Update current position info.
+
+							updateMarkerPosition(latLng);
+
+							geocodePosition(latLng);
+
+						
+
+						// Add dragging event listeners.
+
+							google.maps.event.addListener(marker, 'dragstart', function() {
+
+							zpdateMarkerAddress('Dragging...');
+
+						});
+
+						
+
+						google.maps.event.addListener(marker, 'drag', function() {
+
+							updateMarkerStatus('Dragging...');
+
+							updateMarkerPosition(marker.getPosition());
+
+						});
+
+						
+
+						google.maps.event.addListener(marker, 'dragend', function() {
+
+							updateMarkerStatus('Drag ended');
+
+							geocodePosition(marker.getPosition());
+
+						});
+
+						  
+
+						var lineCoordinates = [
+
+							LAA,LAB
+
+						  ];
+						  
+						var	LAA =   new google.maps.LatLng(37.77494,-122.419434);
+
+						var	LAB = new google.maps.LatLng(37.940742,-122.515427);
+
+						
+
+						  var lineSymbol = {
+
+							path: google.maps.SymbolPath.CIRCLE,
+
+							scale: 8,
+
+							strokeColor: '#2221753'
+
+						  };
+
+							var myTrip=[LA,LA2,LA3,LA4];
+
+							var flightPath=new google.maps.Polyline({
+
+							  path:myTrip,
+
+							  strokeColor:"#2221753",
+
+							  strokeOpacity:0.8,
+
+							  strokeWeight:2,
+
+							  fillColor:"#2221753",
+
+							  fillOpacity:0.4,
+							  
+							 icons: [{
+
+							  icon: lineSymbol,
+
+							  offset: '100%'
+
+							 }],
+							 map: map
+
+							  });
+
+							
+
+							
+						
+
+						  line = new google.maps.Polyline({
+
+							path: lineCoordinates,
+
+							icons: [{
+
+							  icon: lineSymbol,
+
+							  offset: '100%'
+
+							}],
+
+							map: map
+
+						  });
+
+						//flightPath.setMap(map);
+
+					} 
+
+					//End Initilise
+
+				  
+
+					function animateCircle() {
+
+						var count = 0;
+
+						offsetId = window.setInterval(function() {
+
+						  count = (count + 1) % 200;
+
+						  var icons = flightPath.get('icons');
+
+						  icons[0].offset = (count / 2) + '%';
+
+						  flightPath.set('icons', icons);
+
+					  }, 20);
+
+					} 
+
+					//End animateCircle
+
+					
+
+					function getTaggedPhotos() {
+
+					  var tagFilter = document.getElementById('tag').value;
+
+					  panoramioLayer.setTag(tagFilter);
+
+					}
+
+					//End getTaggedPhotos
+
+					//google.maps.event.addDomListener(window, 'load',initialize);	
+
+		</script>
+
+
+	</head>
+
+	<body onload="initialize(); animateCircle()">
+
+		<div id="wrapper">
+
+			<div id="header">
+
+				<H1>Our USA Family Road Trip</H1>
+
+			</div> 
+
+			<div id="content">
+
+				<div id="map_canvas" style="width: 100%; Height: 88%; position: absolute; top: 50; bottom: 50; left: 0; right: 0; z-index: 0;"></div>
+
+
+			</div>
+
+			<div id="footer">
+
+				<div id="fltrt">Search for and View Panoramio Images - We'll be posting our photos and video as we travel. 
+
+					<input id="tag" type="textbox" value="Disney">
+
+					<input type="button" value="Search for Photos" onClick="getTaggedPhotos()">
+
+					<input type="button" value="Turn On/Off Photos" id="toggleButton">
+
+				</div>
+
+				<div id="fltlft">
+
+					<input type="button" value="Re Center Map" id="ReCenterMap">
+
+					<i>Click and drag the marker.<b> Marker status:</b></i><b> Current position:</b><b> Closest matching address:</b>
+
+				</div>
+
+			</div>
+			
+		</div>
+	
+	</body>
+
+</html>
+

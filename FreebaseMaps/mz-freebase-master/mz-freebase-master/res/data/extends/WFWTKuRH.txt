@@ -1,0 +1,1 @@
+{"name":"Meteorite Source","id":"\/astronomy\/meteorite_source","type":"\/type\/type","group":"type","_id":"WFWTKuRH","relation":"\/astronomy","properties":[{"name":"Meteorites","id":"\/astronomy\/meteorite_source\/meteorites","expected_type":"\/astronomy\/meteorite","description":"Meteorites from this celestial body."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

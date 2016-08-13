@@ -1,0 +1,56 @@
+<div id="pytWrapper">
+
+<h1>Day {{ day.day }}: {{ dateFormat day.day_date format="dddd [the] Do [of] MMMM[,] YYYY" }}</h1>
+
+<p>
+	{{#equal day.day 1}}
+	This is the first day, choose a point on the map where you want to start from.
+	{{else}}
+	You can now choose your next stop!
+	{{/equal}}
+</p>
+
+<div id="mapPlaceHolder"></div>
+
+<div class="response"></div>
+
+<form action="" method="post" class="sideways" id="frmPlanYourTrip4">
+
+	<div>
+		<label for="location">Where are you going to?</label>
+		<input type="text" name="location" id="location" readonly="readonly" placeholder="Place a marker on the map">
+	</div>
+
+	<div class="spacer"></div>
+
+	<div>
+		<label for="transport_id">How will you get to there?</label>
+		<select id="transport_id" name="transport_id">
+			{{#each transports}}
+				<option value="{{ id }}">{{ name }}</option>
+			{{/each}}
+		</select>
+	</div>
+
+	<div>
+		<label for="sleep_place_id">Where will you sleep that night?</label>
+		<select id="sleep_place_id" name="sleep_place_id">
+			{{#each sleepplaces}}
+				<option value="{{ id }}">{{ place }}</option>
+			{{/each}}
+		</select>
+	</div>
+
+	<div class="spacer"></div>
+
+	<div class="info">
+		<p class="info">Changes are automatically saved when you navigate back with the button below.</p>
+	</div>
+	
+</form>
+
+<div class="buttons">
+	<a href="#" id="backToDays" class="button">Back to daily overview</a>
+</div>
+
+</div>

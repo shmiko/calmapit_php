@@ -1,0 +1,1 @@
+{"name":"Fashion designer","id":"\/fashion\/fashion_designer","type":"\/type\/type","group":"type","_id":"X7gUkwXH","relation":"\/fashion","properties":[{"name":"Labels","id":"\/fashion\/fashion_designer\/labels","expected_type":"\/fashion\/designer_label_association","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

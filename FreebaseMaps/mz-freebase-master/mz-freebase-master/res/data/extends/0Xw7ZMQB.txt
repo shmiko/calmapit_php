@@ -1,0 +1,1 @@
+{"name":"Medical trial sponsor","id":"\/medicine\/medical_trial_sponsor","type":"\/type\/type","group":"type","_id":"0Xw7ZMQB","relation":"\/medicine","properties":[{"name":"Trials sponsored","id":"\/medicine\/medical_trial_sponsor\/trials_sponsored","expected_type":"\/medicine\/medical_trial","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

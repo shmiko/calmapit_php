@@ -1,0 +1,1 @@
+{"name":"Genome Curator","id":"\/biology\/genome_curator","type":"\/type\/type","group":"type","_id":"GihHqNae","relation":"\/biology","properties":[{"name":"Build","id":"\/biology\/genome_curator\/build","expected_type":"\/biology\/genome_build","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

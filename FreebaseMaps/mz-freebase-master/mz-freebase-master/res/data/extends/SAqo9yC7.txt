@@ -1,0 +1,1 @@
+{"name":"Type Status","id":"\/freebase\/type_status","type":"\/type\/type","group":"type","_id":"SAqo9yC7","relation":"\/freebase","properties":[{"name":"Types","id":"\/freebase\/type_status\/types","expected_type":"\/freebase\/type_profile","description":""}],"included_types":[]}

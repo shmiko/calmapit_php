@@ -1,0 +1,1 @@
+{"name":"Protected Namespace","id":"\/dataworld\/protected_namespace","type":"\/type\/type","group":"type","_id":"MQFwqHl8","relation":"\/dataworld","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Book Binding","id":"\/book\/book_binding","type":"\/type\/type","group":"type","_id":"GggnMNG5","relation":"\/book","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

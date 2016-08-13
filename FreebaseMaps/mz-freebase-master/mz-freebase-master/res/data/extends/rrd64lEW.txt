@@ -1,0 +1,1 @@
+{"name":"Meteorology","id":"\/meteorology","type":"\/type\/domain","group":"zone","_id":"rrd64lEW","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Gene Group","id":"\/biology\/gene_group","type":"\/type\/type","group":"type","_id":"gnHRD7Sb","relation":"\/biology","properties":[{"name":"Gene","id":"\/biology\/gene_group\/gene","expected_type":"\/biology\/gene_group_membership","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

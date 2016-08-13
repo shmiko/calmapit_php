@@ -1,0 +1,21 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+#Expire Header
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|swf)$">
+ExpiresDefault "access plus 2 months"
+</FilesMatch>
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName shmik.com
+AuthUserFile /home2/shmikcom/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home2/shmikcom/public_html/_vti_pvt/service.grp

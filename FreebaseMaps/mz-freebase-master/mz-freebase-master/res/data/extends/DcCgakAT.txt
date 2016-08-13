@@ -1,0 +1,1 @@
+{"name":"German urban district","id":"\/location\/de_urban_district","type":"\/type\/type","group":"type","_id":"DcCgakAT","relation":"\/location","properties":[],"included_types":[{"name":"German city","id":"\/location\/de_city"},{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"City\/Town\/Village","id":"\/location\/citytown"}]}

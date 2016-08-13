@@ -1,0 +1,1 @@
+{"name":"Family name","id":"\/people\/family_name","type":"\/type\/type","group":"type","_id":"Psfvuayr","relation":"\/people","properties":[{"name":"People with this family name","id":"\/people\/family_name\/people_with_this_family_name","expected_type":"\/people\/person","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

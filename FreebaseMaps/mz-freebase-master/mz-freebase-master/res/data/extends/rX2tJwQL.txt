@@ -1,0 +1,1 @@
+{"name":"Drummer","id":"\/music\/drummer","type":"\/type\/type","group":"type","_id":"rX2tJwQL","relation":"\/music","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

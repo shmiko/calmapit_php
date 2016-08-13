@@ -1,0 +1,1 @@
+{"name":"Religious Text","id":"\/religion\/religious_text","type":"\/type\/type","group":"type","_id":"S2pY3G4Z","relation":"\/religion","properties":[{"name":"Religious Text Of","id":"\/religion\/religious_text\/religious_text_of","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

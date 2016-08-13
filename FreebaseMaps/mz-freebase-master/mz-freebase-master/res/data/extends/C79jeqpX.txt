@@ -1,0 +1,1 @@
+{"name":"ICAO airline designator","id":"\/aviation\/icao_airline_designator","type":"\/type\/type","group":"type","_id":"C79jeqpX","relation":"\/aviation","properties":[{"name":"Airline","id":"\/aviation\/icao_airline_designator\/airline","expected_type":"\/aviation\/airline","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

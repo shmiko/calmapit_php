@@ -1,0 +1,1 @@
+{"name":"Baseball","id":"\/baseball","type":"\/type\/domain","group":"zone","_id":"AW4n8QX1","relation":"root","properties":[],"included_types":[]}

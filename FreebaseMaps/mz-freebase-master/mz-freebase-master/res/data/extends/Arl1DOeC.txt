@@ -1,0 +1,1 @@
+{"name":"Airport terminal","id":"\/aviation\/airport_terminal","type":"\/type\/type","group":"type","_id":"Arl1DOeC","relation":"\/aviation","properties":[{"name":"Airport","id":"\/aviation\/airport_terminal\/airport","expected_type":"\/aviation\/airport","description":"The airport this terminal is part of."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

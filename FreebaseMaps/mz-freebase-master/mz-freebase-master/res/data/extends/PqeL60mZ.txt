@@ -1,0 +1,1 @@
+{"name":"URI property","id":"\/common\/uri_property","type":"\/type\/type","group":"type","_id":"PqeL60mZ","relation":"\/common","properties":[{"name":"URI template","id":"\/common\/uri_property\/uri_template","expected_type":"\/common\/uri_template","description":"One or more URI templates which provide alternate ways to represent this property."}],"included_types":[]}

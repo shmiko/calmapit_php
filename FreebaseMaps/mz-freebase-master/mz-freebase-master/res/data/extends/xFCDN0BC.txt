@@ -1,0 +1,1 @@
+{"name":"US Patent Type","id":"\/law\/us_patent_type","type":"\/type\/type","group":"type","_id":"xFCDN0BC","relation":"\/law","properties":[{"name":"Patents","id":"\/law\/us_patent_type\/patents","expected_type":"\/law\/us_patent","description":"Patents of this type."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Chinese special administrative region","id":"\/location\/cn_special_administrative_region","type":"\/type\/type","group":"type","_id":"4PMmkH0A","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

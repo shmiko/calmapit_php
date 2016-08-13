@@ -1,0 +1,1 @@
+{"name":"US Federal District","id":"\/location\/us_federal_district","type":"\/type\/type","group":"type","_id":"xu4RPFfF","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

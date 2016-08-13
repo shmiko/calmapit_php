@@ -1,0 +1,1 @@
+{"name":"Type Project","id":"\/dataworld\/type_project","type":"\/type\/type","group":"type","_id":"zdqEtAYn","relation":"\/dataworld","properties":[{"name":"Types Needing Work","id":"\/dataworld\/type_project\/types_needing_work","expected_type":"\/dataworld\/type_project_mediator","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

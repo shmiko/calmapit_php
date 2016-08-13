@@ -1,0 +1,27 @@
+<p>
+	The list below shows the trips you already have created. You can edit or delete them.<br>
+	Haven't got trips yet? <a href="#plan-your-trip">Create one</a>!
+</p>
+
+<div class="response"></div>
+
+<table>
+	<tr>
+		<th width="5%">#</th>
+		<th width="15%">Actions</th>
+		<th width="25%">Name</th>
+		<th>Companions</th>
+	</tr>
+	{{#each trips}}
+		<tr>
+			<td>{{ id }}</td>
+			<td><a href="#" class="action edit" data-id="{{ id }}">Edit</a> <a href="#" class="action delete" data-id="{{ id }}">Delete</a></td>
+			<td>{{ name }}</td>
+			<td>{{#foreach companions}} {{ fname }}{{#unless $last}}, {{/unless}} {{/foreach}}</td>
+		</tr>
+	{{else}}
+		<tr>
+			<td class="empty" colspan="4" width="100%">You have no trips planned at the moment. <a href="#plan-your-trip">Plan a trip!</a></td>
+		</tr>
+	{{/each}}
+</table>

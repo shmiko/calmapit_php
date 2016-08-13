@@ -1,0 +1,1 @@
+{"name":"Mascot","id":"\/sports\/mascot","type":"\/type\/type","group":"type","_id":"5slF19QL","relation":"\/sports","properties":[{"name":"Team","id":"\/sports\/mascot\/team","expected_type":"\/sports\/sports_team","description":"The team(s) this mascot represents"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

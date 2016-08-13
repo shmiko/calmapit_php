@@ -1,0 +1,1 @@
+{"name":"Published Work","id":"\/book\/published_work","type":"\/type\/type","group":"type","_id":"nSr0l55W","relation":"\/media_common","properties":[{"name":"Published In","id":"\/book\/published_work\/published_in_published_as","expected_type":"\/book\/contents","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

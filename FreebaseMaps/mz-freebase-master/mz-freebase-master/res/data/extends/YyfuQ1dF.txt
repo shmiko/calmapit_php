@@ -1,0 +1,1 @@
+{"name":"Spaceflight","id":"\/spaceflight","type":"\/type\/domain","group":"zone","_id":"YyfuQ1dF","relation":"root","properties":[],"included_types":[]}

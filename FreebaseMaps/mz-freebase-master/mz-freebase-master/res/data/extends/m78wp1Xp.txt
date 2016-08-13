@@ -1,0 +1,1 @@
+{"name":"US Territory","id":"\/location\/us_territory","type":"\/type\/type","group":"type","_id":"m78wp1Xp","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

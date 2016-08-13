@@ -1,0 +1,1 @@
+{"name":"International Patent Category","id":"\/law\/international_patent_category","type":"\/type\/type","group":"type","_id":"TcqrAZUy","relation":"\/law","properties":[{"name":"Patents","id":"\/law\/international_patent_category\/patents","expected_type":"\/law\/us_patent","description":"Patents of this category."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

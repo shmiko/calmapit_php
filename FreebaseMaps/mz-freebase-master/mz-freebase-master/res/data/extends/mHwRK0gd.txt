@@ -1,0 +1,1 @@
+{"name":"Romantic relationship type","id":"\/celebrities\/romantic_relationship_type","type":"\/type\/type","group":"type","_id":"mHwRK0gd","relation":"\/celebrities","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

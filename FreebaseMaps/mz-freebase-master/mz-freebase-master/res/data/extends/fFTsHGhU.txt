@@ -1,0 +1,1 @@
+{"name":"Freebase API argument","id":"\/freebase\/metaweb_api_argument","type":"\/type\/type","group":"type","_id":"fFTsHGhU","relation":"\/freebase","properties":[{"name":"Used by","id":"\/freebase\/metaweb_api_argument\/used_by","expected_type":"\/freebase\/metaweb_api_service_argument","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Neighborhood Calendar</title>
+<link rel='stylesheet' type='text/css' href='./fullcalendar/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='./fullcalendar/fullcalendar.print.css' media='print' />
+
+<link rel='stylesheet' type='text/css' href="../jquery/default.css" />	
+<link rel='stylesheet' type='text/css' href="../jquery/jquery-ui-1.8.9.custom.css" />	
+
+<script type='text/javascript' src='../jquery/jquery-1.5.2.min.js'></script>
+<script type="text/javascript" src="../jquery/jquery-ui-1.8.9.custom.min.js"></script>
+
+<script type='text/javascript' src='./fullcalendar/fullcalendar.min.js'></script>
+
+<style type='text/css'>
+    #adminMessage { border:1px solid #ddd; margin-bottom:10px; padding:10px; display:none; }
+	#loading {
+		position: absolute;
+		font-size: 24px;
+		background-color: #fff;
+	}
+	#calendar { display: none; width: 100%; min-width: 550px; margin: 0 auto; }
+
+    #searchFilterHolder
+	{
+		background:#fff; padding-top: 10px
+	}
+	#searchFilters
+	{
+		background:#e8e8db;
+		border:1px solid #ddd; border-bottom:0px; margin:0px 10px 0px; padding:10px 10px 8px; max-width:1200px;
+	}
+	#navHolder
+	{
+		background:#e8e8db;
+		border:1px solid #ddd; border-top:0px; margin:0px 10px 10px; padding:0px 10px 0px; max-width:1200px;
+		height: 18px;
+	}
+	.calendarTabs
+    {
+        font-weight: bold;
+        overflow:hidden;
+        width: 100%;
+    }
+    .calendarTabs ul
+    {
+        padding: 6px 0 7px 0; /*6px should equal top padding of "ul li a" below, 7px should equal bottom padding + bottom border of "ul li a" below */
+        padding: 0px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .calendarTabs ul li
+    {
+        display: inline;
+    }
+    .calendarTabs ul li a
+    {
+        color: #093e85;
+        padding: 0px 6px 0px;
+        margin-right: 8px; /*spacing between each menu link*/
+        text-decoration: none;
+        border: 1px solid #ccc;
+        border-bottom: 0px;
+        background-color: #eee;
+        -moz-border-radius-topright: 6px;
+        -moz-border-radius-topleft: 6px;
+	    -webkit-border-top-right-radius: 6px;
+	    -webkit-border-top-left-radius: 6px;
+	    border-top-right-radius: 6px;
+	    border-top-left-radius: 6px;
+        font-family: calibri, helvetica;
+	    font-size:10pt;
+	    line-height: 18px;
+	    float:left;
+	    min-width:60px;
+    }
+    .calendarTabs ul li a:hover
+    {
+        background-color: #fff;
+    }
+    .calendarTabs ul li a .selected
+    {
+    	background-color: #fff;
+        border-bottom-color: red;
+    }
+    
+    .calendarTabs ul li a .active
+    {
+    	background-color: #fff; /* not working */
+    }
+    
+    .rollover:hover {
+	    cursor: pointer;
+    }
+	.thumbnail 
+	{
+		margin-left:4px; max-height:68px
+	}
+	
+    .fc, .fc .fc-header, .fc .fc-content
+    {
+	    font-size: 1.05em;
+	}
+	.fc-header-title 
+	{
+	   font-weight: normal; 
+       line-height: 1.3em;
+       font-family: trebuchet ms, futura bk bt, Century Gothic, ITC Officina Sans Book, Helvetica, Arial, Verdana, Sans-Serif; 
+       font-size: 21px;
+       margin: 0px;
+       color: #656544;
+	}
+	
+	.fc-event 
+	{
+		color: #ccc;
+		background-color: #ccc;
+	}
+	.fc-event-hori 
+	{
+		color: #ccc;
+		background-color: #ccc;
+	}
+	
+	.fc-state-default
+	{
+		background: #ccf;
+		background: #998;
+		background: #b9bf95;
+		background: #99a882;
+		color: #fff;
+		font-size: 12pt;
+	}
+	
+	.fc-day-number
+	{
+		color: #333;
+	}
+    
+    .fc-event, .fc-event-inner
+	{
+        /* lite blue #dfdfff - to use ;ater for event highlight 
+        grey #e3e5e6
+        */
+        background-color: #e8e8db;
+        border-color: #ccd;
+        border-top-color: #fff;
+        line-height:1.2em;
+        color: #4B6A83;
+    }
+    
+    .fc-event a
+    {
+    	padding-leftXX:3px;
+    }
+    .fc-event a:hover
+	{
+        background-color: #d4d4fe; /* dusty blue #9999dc; */
+        background-color: #f0e9cb;
+        border-color1: #9999dc;
+        color1: #fff;
+    }
+    
+	#filters { display1: none; }
+	/*
+    Flip order of div layers if converting back to left side using overflow.
+	#eventList { display: none; overflow:hidden; min-width:300px; }
+    #eventListOngoing { float:right;width:310px;padding-left:10px }
+    */
+    
+    #eventList { float:left; width:65%; min-width: 400px; margin-right:10px}
+	#eventListOngoing { overflow:hidden; min-width: 200px; max-width: 400px; }
+    
+	.dateRow 
+    {
+	    color:#fff;
+	    font-size:14pt;
+	    padding: 8px;
+	    background: #ccf;
+	    background: #c5caa9;
+	    -moz-border-radius: 8px;
+	    -webkit-border-radius: 8px;
+	    margin-top: 8px;
+	    margin-bottom: 3px;
+	    line-height: 1em;
+	    border-top: 1px solid #eee;
+    }
+    .eventRow {
+	    padding: 8px;
+	    background: #f4f4f4;
+	    -moz-border-radius: 8px;
+	    -webkit-border-radius: 8px;
+	    margin-bottom: 4px;
+	    font-family: calibri, helvetica;
+	    font-size:10.5pt;
+	    color:#777;
+	    border-bottom: 1px solid #ddd;
+	    line-height: 1.2em;
+	    overflow: hidden;
+	    min-width:280px;
+    }
+    .eventRow a
+    {
+        colorX:#4B6Aaa;
+    }
+    .todoRow {
+	    padding: 8px;
+	    background: #fcc;
+	    -moz-border-radius: 8px;
+	    -webkit-border-radius: 8px;
+	    margin-bottom: 4px;
+    }
+    .moreInfo
+    {
+	    cursor:pointer;
+	    color:#77c;
+	    font-size:0.8em;
+    }
+    
+    .moreInfo:hover
+    {
+    	text-decoration: underline;
+    }
+    
+    .hideLink
+    {
+	    cursor:pointer;
+	    color:#77c;
+	    font-size:0.8em;
+	    display:none;
+    }
+    .detailsText
+    {
+    	margin-top:3px;
+	    color:#777;
+	    font-sizeX:0.95em;
+	    display:none;
+    }
+    .patternText
+    {
+    	float:right;
+    	color:#999;
+    	font-size:.9em;
+    }
+    .largerTitle
+    {
+    	font-size:11.5pt;
+    	font-weight: bold;
+    	line-height:1.2em;
+    	color: #5a5acc;
+    }
+    #creditsDiv
+    {
+    	margin-top: 2px;
+    	border: 2px solid #bbb;
+    	padding: 0px 7px 0px;
+    	-moz-border-radius: 8px;
+	    -webkit-border-radius: 8px;
+	    font-size: .85em;
+	    color: #4B6A83;
+    }
+</style>
+
+<!-- Make Parameter - currently applies to all sites -->
+<style type='text/css'>
+    .contentArea { max-width: 2000px; background-color: #fff }
+</style>
+
+<!-- Event List -->
+<script type="text/javascript">
+    // If you use this script in a public website, please send us a link to your feed.
+	// Use the Contact Us form at http://Neighborhood.org/contact
+    // Our goal is to reduce redundent data entry through calendar data exchange.  Loren Heyns
+    // This message must remain in your HTML.  Thanks!
+
+    var jsonLink = '';
+    var initialLoad = true;
+
+    $(document).ready(function () {
+        
+        jQuery.url = function () { var segments = {}; var parsed = {}; var options = { url: window.location, strictMode: false, key: ["source", "protocol", "authority", "userInfo", "user", "password", "host", "port", "relative", "path", "directory", "file", "query", "anchor"], q: { name: "queryKey", parser: /(?:^|&)([^&=]*)=?([^&]*)/g }, parser: { strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*):?([^:@]*))?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/, loose: /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*):?([^:@]*))?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/} }; var parseUri = function () { str = decodeURI(options.url); var m = options.parser[options.strictMode ? "strict" : "loose"].exec(str); var uri = {}; var i = 14; while (i--) { uri[options.key[i]] = m[i] || "" } uri[options.q.name] = {}; uri[options.key[12]].replace(options.q.parser, function ($0, $1, $2) { if ($1) { uri[options.q.name][$1] = $2 } }); return uri }; var key = function (key) { if (!parsed.length) { setUp() } if (key == "base") { if (parsed.port !== null && parsed.port !== "") { return parsed.protocol + "://" + parsed.host + ":" + parsed.port + "/" } else { return parsed.protocol + "://" + parsed.host + "/" } } return (parsed[key] === "") ? null : parsed[key] }; var param = function (item) { if (!parsed.length) { setUp() } return (parsed.queryKey[item] === null) ? null : parsed.queryKey[item] }; var setUp = function () { parsed = parseUri(); getSegments() }; var getSegments = function () { var p = parsed.path; segments = []; segments = parsed.path.length == 1 ? {} : (p.charAt(p.length - 1) == "/" ? p.substring(1, p.length - 1) : path = p.substring(1)).split("/") }; return { setMode: function (mode) { strictMode = mode == "strict" ? true : false; return this }, setUrl: function (newUri) { options.url = newUri === undefined ? window.location : newUri; setUp(); return this }, segment: function (pos) { if (!parsed.length) { setUp() } if (pos === undefined) { return segments.length } return (segments[pos] === "" || segments[pos] === undefined) ? null : segments[pos] }, attr: key, param: param} } ();
+
+        <!-- Make parameter - for EE -->
+        $('#creditsDiv').hide();
+        $("a#activeEvents").text("event list");
+        $("a#activeMonthly").text("calendar view");
+        <!-- end -->
+
+        populateMonthDD();
+        $("#from").datepicker();
+        $("#to").datepicker();
+        if($.url.param("distance"))
+        {
+            $("#distance").val($.url.param("distance"));
+        }
+        if($.url.param("zip"))
+        {
+            $("#zip").val($.url.param("zip"));
+        }
+        if($.url.param("cityid"))
+        {
+            $("#ctl00_ContentPlaceHolder1_CityDD").val($.url.param("cityid"));
+        }
+        if($.url.param("profdev"))
+        {
+            var rbValue = $.url.param("profdev");
+            $("[name=profdevRB]").filter("[value="+rbValue+"]").attr("checked","checked");
+        }
+        if($.url.param("tid"))
+        {
+            // Loop to set more than one tid checkbox
+            var cbValue = $.url.param("tid");
+            var thisValue = '';
+            //$("[name=typeCB]").filter("[value="+cbValue+"]").attr("checked","checked");
+
+            $("input[type='checkbox'][name='typeCB']").each(
+                function()
+                        {
+                            thisValue = this.value;
+                            //if(this.checked)
+
+                            // Loop through comma separated tid's from URL.
+                            $($.url.param("tid").split(",")).each(function(i,v){
+                                if(thisValue == v)
+                                {
+                                    $("[name=typeCB]").filter("[value="+v+"]").attr("checked","checked");
+                                }
+                            })
+                        }
+            );
+        }
+        if ($.url.param("show") != "list") {
+
+            $('#activeMonthly').css({ 'background-color': '#fff' });
+
+            var startDate = new Date();
+            var startDateString = (startDate.getMonth() + 1) + '/1/' + fourdigits(startDate.getYear());
+            if($.url.param("sd"))
+            {
+                startDateString = $.url.param("sd");
+            }
+            var monthStart = new Date(startDateString);
+            var dayOfWeek = monthStart.getDay();
+
+            // Set calendar to start on day of first week, typically in previous month
+            // For sites that want to show surrounding days.
+            //startDate.setDate(monthStart.getDate() - dayOfWeek);
+            //startDateString = (startDate.getMonth() + 1) + '/' + startDate.getDate() + '/' + fourdigits(startDate.getYear());
+
+            $('#from').datepicker('setDate', startDateString);
+
+            // Get the last day of month
+            var endDateString = (monthStart.getMonth() + 2) + '/1/' + fourdigits(monthStart.getYear());  // Adding 2 is actually adding 1 month.
+            var monthEnd = new Date(endDateString);
+            monthEnd.setDate(monthEnd.getDate() - 1);
+            endDateString = (monthEnd.getMonth() + 1) + '/' + monthEnd.getDate() + '/' + fourdigits(monthEnd.getYear());
+
+            if (startDate.getMonth() == 11) { // December
+                endDateString = ('1/31/' + fourdigits(startDate.getYear() + 1));
+            }
+
+            $('#to').datepicker('setDate', endDateString);
+        } else {
+            if ($.url.param("sd")) { // To do: Add date validation
+                $('#from').datepicker('setDate', $.url.param("sd"));
+            } else {
+                $('#from').datepicker('setDate', new Date());
+            }
+            var sd = $("#from").val();
+            var endDate = new Date();
+
+            //End of next month
+            endDate.setMonth(endDate.getMonth() + 1);
+            var endDateString = (endDate.getMonth() + 1) + '/' + daysInMonth((endDate.getMonth() + 1), endDate.getYear()) + '/' + fourdigits(endDate.getYear());
+            
+            if ($.url.param("ed")) { // To do: Add date validation
+                //alert($.url.param("ed")); // Must start with 01, 02, etc.
+                //endDate = new Date($.url.param("ed"));
+                //alert(endDate);
+                endDateString = $.url.param("ed");
+                //alert('Testing - endDateString: ' + endDateString);
+            } 
+            //alert(endDateString);
+            //$('#to').datepicker('setDate', '+2m'); // +3m 2d
+            $('#to').datepicker('setDate', endDateString);
+        }
+
+        loadDisplay();
+        initialLoad = false; // Allows URI params to be added with arrow and go clicks.
+    });
+    function loadDisplay() {
+        if ($.url.param("show") == "list") {
+            loadEventList();
+        } else {
+            loadCalendar();
+        }
+    }
+    jQuery.fn.getCheckboxVal = function () {
+        var vals = [];
+        var i = 0;
+        this.each(function () {
+            vals[i++] = jQuery(this).val();
+        });
+        return vals;
+    } 
+    function buildJsonLink() {
+        var profdev = '';
+        if ($('input[name=profdevRB]')[0]) { // If exists
+            profdev = $('input[name=profdevRB]:checked').val();
+        }
+
+        var typeIDs = '';
+        if ($('input[name=typeCB]')[0]) { // If exists
+            //typeIDs = $('input[name=typeCB]:checked').val();
+            typeIDs = $('input[name=typeCB]:checked').getCheckboxVal();
+        }
+
+        var keywords = $("#keywords").val();
+        var siteID = '';
+        if (document.getElementById('ctl00_ContentPlaceHolder1_SiteDD')) {
+            siteID = $("#ctl00_ContentPlaceHolder1_SiteDD").val();
+        }
+        var distance = '';
+        if (document.getElementById('distance')) {
+            distance = $("#distance").val();
+        }
+        var cityID = $("#ctl00_ContentPlaceHolder1_CityDD").val();
+        var zip = $("#zip").val();
+        var sd = $("#from").val();
+        var ed = $("#to").val();
+        var tid = '';
+        if (typeIDs.length) {
+            tid = typeIDs;
+        }
+        else if ($.url.param("tid")) {
+            tid = $.url.param("tid");
+        }
+        // Add 1 day to the end date to move to midnight
+        var endDate = new Date(ed);
+
+        // Set to end of date, one minute prior to next day. (One second would get rounded up to the next day.)
+        ed = (endDate.getMonth() + 1) + '/' + endDate.getDate() + '/' + fourdigits(endDate.getYear()) + "+11:59+PM";
+        if ($.url.param("show") != "list") { // In month view, don't pass an end date.
+            //ed = '';
+        }
+        //var jsonLink = 'sample-json.txt';
+        // fullcalendarfeed.aspx fullcaltest.txt
+        
+        if ($.url.param("show") != "list")
+        {
+            //jsonLink = 'sd=' + sd; // End date still needed for monthly calendar
+            jsonLink = 'sd=' + sd + '&ed=' + ed;
+        } else {
+            jsonLink = 'sd=' + sd + '&ed=' + ed;
+        }
+        if (keywords) { jsonLink += '&keywords=' + keywords; }
+        if (siteID) { jsonLink += '&siteid=' + siteID; }
+        if (cityID) { jsonLink += '&cityid=' + cityID; };
+        if (zip) { jsonLink += '&zip=' + zip; };
+        if (distance) { jsonLink += '&distance=' + distance; };
+        if (profdev) { jsonLink += '&profdev=' + profdev; };
+        if (tid) { jsonLink += '&tid=' + tid; };
+
+        if (!initialLoad) // Allows URI to remain short initially.
+        {
+            // Build URL Hash
+            window.location.hash = jsonLink;
+        }
+
+        jsonLink = '/core/event/fullcalendarfeed.aspx?admin=1&json=1&db=georgia&s=0.0.0.5&' + jsonLink;
+        
+        //alert(jsonLink);
+    }
+    function loadEventList() {
+        $('#monthDDTable').hide();
+        $('#dateRangeTable').show();
+        $('#calendarTitle').hide();
+        $('#adminMessage').hide();
+        $("#adminMessage").html(""); // Clear the previous adminMessage
+        $('#displayCount').hide();
+        $("#displayCount").html("");
+        $("#eventList").html(""); // Clear the previous eventList
+        $("#eventListOngoing").html(""); // Clear the previous eventListOngoing
+
+        var systemVersion = 2;
+        <!-- Make Parameter IsSiteType("ee") -->
+            //systemVersion = 1;
+        <!-- -->
+
+        buildJsonLink();
+        eventListJsonLink = jsonLink + '&getwhat=results';
+
+		//alert(eventListJsonLink);
+        // Temporary.  Generated from:
+        // http://southeastee.org/core/event/fullcalendarfeed.aspx?admin=1&json=1&sd=01/01/2012&ed=2/29/2012+11:59+PM&distance=25&getwhat=results
+        eventListJsonLink = './json-eventlist.txt';
+
+        var gData;
+        var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        var previousDateString;
+
+        if ($.url.param("show") == "list") {
+            $('#activeEvents').css({ 'background-color': '#fff'});
+
+            $('#filters').show();
+            $('#eventList').show();
+            $.getJSON(eventListJsonLink, function (data) {
+
+                var parent = document.getElementById('eventList');
+                var parentOngoing = document.getElementById('eventListOngoing');
+                var dataModified = new Array();
+                var dataOngoing = new Array();
+
+                $.each(data.message, function (i, id) {
+                    // Display admin messages from JSON file.
+                    if (id.id) {
+                        child = document.createElement("div");
+                        child.innerHTML = '<div >' + id.id + '</div>';
+                        document.getElementById('adminMessage').appendChild(child);
+                        $('#adminMessage').show();
+                    }
+                });
+
+                $.each(data.results, function (i, id) {
+
+                    var startDate = new Date(id.start);
+                    var endDate = new Date(id.end);
+
+                    var endRangeStr = $("#to").val();
+        
+                    // Add 1 day to the end date to move to midnight
+                    endRangeStr = endRangeStr + " 11:59 PM";
+                    var endRange = new Date(endRangeStr);
+                    //alert('endRange: ' + endRange);
+
+                    id.displayTime = +new Date(startDate).getTime();
+                    id.totalDays = daysBetween(startDate, endDate);
+                    if (id.totalDays != 0) {
+                        id.totalDays += 1;
+                        id.currentDay = 1;
+                    }
+                    if (id.totalDays < 15) {
+
+                        dataModified.push(id);
+
+                        var currentDay = 1;
+                        while (daysBetween(startDate, endDate) != 0) {
+                            startDate.setDate(startDate.getDate() + 1);
+                            if (startDate <= endRange) // Only copy forward if within the range.
+                            {
+                                var copyid = clone(id);
+                                copyid.currentDay = ++currentDay;
+                                //startDate.setDate(startDate.getDate() + 1);
+                                copyid.displayTime = +new Date(startDate).getTime();
+                                dataModified.push(copyid);
+                            }
+                        }
+                    } else {
+                        dataOngoing.push(id);
+                    }
+                });
+                // To do: If data.results count == 0
+                // eventListOngoing style='float:left;max-width:750';
+
+
+                // Then sort dataModified by start date.
+                dataModified.sort(sortMyObjects);
+
+                var title = '';
+                var lineBreak = '';
+                var thumbStr = '';
+                var locationStr = '';
+                var summaryStr = '';
+                var numberDays = '';
+                var occurrenceCount = 0;
+
+                var fromDateString = $("#from").val();
+                var fromDate = new Date(fromDateString);
+
+                $.each(dataModified, function (i, id) {
+
+                    var startDate = new Date(id.start);
+                    var startDateString = days[startDate.getDay()] + ", " + months[startDate.getMonth()] + ' ' + startDate.getDate() + ', ' + fourdigits(startDate.getYear());
+
+                    var endDate = new Date(id.end);
+                    var endDateString = days[endDate.getDay()] + ", " + months[endDate.getMonth()] + ' ' + endDate.getDate() + ', ' + fourdigits(endDate.getYear());
+
+                    displayDate = new Date(id.displayTime);
+                    var displayDateString = days[displayDate.getDay()] + ", " + months[displayDate.getMonth()] + ' ' + displayDate.getDate() + ', ' + fourdigits(displayDate.getYear());
+
+                    floatRight = '';
+                    title = '';
+                    lineBreak = '';
+                    timeStr = '';
+                    thumbStr = '';
+                    locationStr = '';
+                    summaryStr = '';
+                    numberDays = '';
+
+                    //numberDays += '<br />fromDate ' + fromDate + '<br />';
+                    //numberDays += '<br />displayDate ' + displayDate + '<br />';
+                    //numberDays += 'startDate ' + startDate + '<br />';
+
+                    if (displayDate >= fromDate) {
+                        occurrenceCount++;
+                        if (displayDateString != previousDateString) {
+
+                            child = document.createElement("div");
+
+                            child.innerHTML = '<div class="dateRow">' + displayDateString + '</div>';
+                            parent.appendChild(child);
+
+                            previousDateString = displayDateString;
+                        }
+
+                        child = document.createElement("div");
+                        //if (startDateString != endDateString) {
+                        //    numberDays += ' - Day ' + id.currentDay + ' of ' + id.totalDays;
+                        //}
+                        if (id.location) {
+                            if (systemVersion == 1)
+                            {
+                                locationStr = '<a href="/net/org/info.aspx?s=' + id.locationid + '" style="color:#77a">' + id.location + '</a>';
+                            } else {
+                                locationStr = '<a href="/info/' + id.locationid + '" style="color:#77a">' + id.location + '</a>';
+                            }
+                        }
+                        if (id.distance >= 0) {
+                            locationStr += ' <span>(Distance: ' + id.distance + ' miles)</span>';
+                        }
+                        if (id.city) {
+                            locationStr += ', ' + id.city;
+                        }
+                        if (id.state) {
+                            locationStr += ', ' + id.state;
+                        }
+                        if (id.thumbnail) {
+                            thumbStr = '<img src="' + id.thumbnail + '" alt="" align="right" class="thumbnail">';
+                        }
+                        if (id.description) {
+                            summaryStr = '<span class="detailsLink"> - <span class="moreInfo">MORE</span></span>';
+                            //summaryStr += '<span class="detailsText">' + thumbStr + ' - ' + id.description + '</span>'; //  
+                            summaryStr += '<span class="detailsText"><br />' + id.description + '</span> '; //  <span class="hideLink">HIDE</span>
+                        } else if (thumbStr != '') {
+                            //summaryStr += '<span class="detailsText">' + thumbStr + '</span>';
+                        }
+
+
+                        if (startDateString != endDateString) {
+                            floatRight = '<span class="patternText">Day ' + id.currentDay + ' of ' + id.totalDays + '</span>';
+                        }
+                        else if (id.pattern == '2') {
+                            floatRight = '<span class="patternText">Sat-Sun</span>';
+                        }
+                        else if (id.pattern == '3') {
+                            floatRight = '<span class="patternText">Fri, Sat, Sun</span>';
+                        }
+                        else if (id.pattern == '4') {
+                            floatRight = '<span class="patternText">Mon-Fri</span>';
+                        }
+
+                        if (id.allDay != 'true') {
+                            var startDate = new Date(id.start);
+                            timeStr = showTheHours(startDate.getHours()) + showZeroFilled(startDate.getMinutes()) + showAmPm(startDate);
+                        }
+                        if (id.nullend != 'true') {
+                            var endDate = new Date(id.end);
+                            timeStr += ' to ' + showTheHours(endDate.getHours()) + showZeroFilled(endDate.getMinutes()) + showAmPm(endDate);
+                        }
+                        //if (id.allDay != 'true' || id.nullend != 'true') { // allDay represents nullstart for Full Calendar.
+                        
+                        if (locationStr.length > 0 || timeStr.length > 0) {
+                            lineBreak = '<br />';
+                        }
+                        if (locationStr.length > 0 && timeStr.length > 0) {
+                            timeStr += ' - ';
+                        }
+                        
+                        title += id.title;
+                        child.innerHTML = '<div class="eventRow">' + thumbStr + floatRight + '<a class="largerTitle" href="' + id.url + '">' + title + numberDays + '</a>' + lineBreak + timeStr + locationStr + summaryStr + '</div>';
+                        parent.appendChild(child);
+                    }
+                });
+
+                ongoingEventCount = 0;
+                $.each(dataOngoing, function (i, id) {
+                    ongoingEventCount++;
+                    var startDate = new Date(id.start);
+                    var startDateString = days[startDate.getDay()] + ", " + months[startDate.getMonth()] + ' ' + startDate.getDate() + ', ' + fourdigits(startDate.getYear());
+
+                    var endDate = new Date(id.end);
+                    var endDateString = days[endDate.getDay()] + ", " + months[endDate.getMonth()] + ' ' + endDate.getDate() + ', ' + fourdigits(endDate.getYear());
+
+                    displayDate = new Date(id.displayTime);
+                    var displayDateString = days[displayDate.getDay()] + ", " + months[displayDate.getMonth()] + ' ' + displayDate.getDate() + ', ' + fourdigits(displayDate.getYear());
+
+                    locationStr = '';
+                    thumbStr = '';
+                    numberDays = '';
+                    dateRangeString = '';
+
+                    if (ongoingEventCount == 1) {
+                        child = document.createElement("div");
+                        child.innerHTML = '<div class="dateRow" style="background:#bba;">Ongoing Events <span style="font-size:12pt;">- <span style="white-space: nowrap;">14 days and longer</span></span></div>';
+                        parentOngoing.appendChild(child);
+                    }
+
+                    child = document.createElement("div");
+                    if (startDateString != endDateString) {
+                        //numberDays = ' - ' + id.totalDays + ' Days';
+                        dateRangeString = '<br />' + startDateString + '<br />until ' + endDateString;
+                    }
+
+                    if (id.location) {
+                        locationStr = '<br /><a href="/info/' + id.locationid + '" style="color:#77a">' + id.location + '</a>';
+                    }
+                    if (id.distance >= 0) {
+                        locationStr += '<br /><span>Distance: ' + id.distance + ' miles</span>';
+                    }
+                    if (id.city) {
+                        locationStr += ', ' + id.city;
+                    }
+                    if (id.state) {
+                        locationStr += ', ' + id.state;
+                    }
+                    if (id.thumbnail) {
+                        thumbStr = '<img src="' + id.thumbnail + '" alt="" align="right" class="thumbnail">';
+                    }
+                    if (id.description) {
+                        locationStr += '<span class="detailsLink"> - <span class="moreInfo">MORE</span></span>';
+                        //locationStr += '<span class="detailsText">' + thumbStr + ' - ' + id.description + '</span>'; //  <span class="hideLink"> - less</span>
+                        locationStr += '<span class="detailsText"><br />' + id.description + '</span>'; //  <span class="hideLink"> - less</span>
+                    }
+                    //else if (thumbStr != '') {
+                    //    locationStr += '<span class="detailsText">' + thumbStr + '</span>';
+                    //}
+                    child.innerHTML = '<div class="eventRow">' + thumbStr + '<a class="largerTitle" href="' + id.url + '">' + id.title + numberDays + '</a>' + dateRangeString + locationStr + '</div>';
+
+                    parentOngoing.appendChild(child);
+                });
+
+//                $.each(data.count, function (i, id) {
+//                    // Display admin messages from JSON file.
+//                    if (id.id) {
+//                        child = document.createElement("div");
+//                        var countStr = '';
+
+//                        // Instances are less than monthly because ongoing events are not counted in instances.
+//                        // Ongoing events that start outside of month are included in right side, so inflates amount
+//                        if (ongoingEventCount > 0) {
+//                            countStr += (ongoingEventCount + occurrenceCount) + ' events';
+//                            countStr += ' (' + occurrenceCount + ' plus ' + ongoingEventCount + ' ongoing)';
+//                        } else {
+//                            countStr += occurrenceCount + ' events.';
+//                        }
+//                        child.innerHTML = '<div >' + countStr + '</div>';
+
+//                        document.getElementById('displayCount').appendChild(child);
+//                        $('#displayCount').show();
+//                    }
+//                });
+            });
+
+            $('.detailsLink').live('click', function () {
+                // Display nested, then hide self
+                $(this).parent('div').children('span').attr('style', 'display:inline');
+                $(this).attr('style', 'display:none');
+            });
+            $('.hideLink').live('click', function () {
+                // Hide nested, then display detailsLink
+                $(this).parent('div').children('span').attr('style', 'display:none');
+                
+                // TO DO: Get this working to show detailLink:
+                //$(this).parent('div').children('#detailsLink').attr('style', 'display:inline');
+                // Activate hover on more info link
+            });
+        } // End param("show") == "list"
+    }
+    function fourdigits(number) {
+        return (number < 1000) ? number + 1900 : number;
+    }
+    function showTheHours(theHour) {
+        if (theHour > 0 && theHour < 13) {
+            if (theHour == "0") theHour = 12;
+            return (theHour);
+        }
+        if (theHour == 0) {
+            return (12);
+        }
+        return (theHour - 12);
+    }
+    function showZeroFilled(inValue) {
+        if (inValue > 9) {
+            return ":" + inValue;
+        }
+        if (inValue > 0) {
+            return ":0" + inValue;
+        }
+        return "";
+    }
+    function showAmPm(inDate) {
+        if (inDate.getHours() < 12) {
+            return ("am");
+        }
+        return ("pm");
+    }
+    function daysBetween(date1, date2) {
+        var DSTAdjust = 0;
+        // constants used for our calculations below
+        oneMinute = 1000 * 60;
+        var oneDay = oneMinute * 60 * 24;
+        // equalize times in case date objects have them
+        date1.setHours(0);
+        date1.setMinutes(0);
+        date1.setSeconds(0);
+        date2.setHours(0);
+        date2.setMinutes(0);
+        date2.setSeconds(0);
+        // take care of spans across Daylight Saving Time changes
+        if (date2 > date1) {
+            DSTAdjust =
+	            (date2.getTimezoneOffset() - date1.getTimezoneOffset()) * oneMinute;
+        } else {
+            DSTAdjust =
+	            (date1.getTimezoneOffset() - date2.getTimezoneOffset()) * oneMinute;
+        }
+        var diff = Math.abs(date2.getTime() - date1.getTime()) - DSTAdjust;
+        return Math.ceil(diff / oneDay);
+    }
+
+    function sortMyObjects(a, b) {
+        return a.displayTime - b.displayTime;
+    }
+
+    function clone(obj) {
+        if (obj == null || typeof (obj) != 'object')
+            return obj;
+        var temp = new obj.constructor();
+        for (var key in obj)
+            temp[key] = clone(obj[key]);
+        return temp;
+    }
+
+    // http://jqueryui.com/demos/datepicker/#date-range
+	$(function () {
+	    var dates = $("#from, #to").datepicker({
+	        defaultDate: "+1w",
+	        changeMonth: true,
+	        changeYear: true,
+	        numberOfMonths: 1,
+	        onSelect: function (selectedDate) {
+	            var option = this.id == "from" ? "minDate" : "maxDate",
+				instance = $(this).data("datepicker");
+	            date = $.datepicker.parseDate(
+					instance.settings.dateFormat ||
+					$.datepicker._defaults.dateFormat,
+					selectedDate, instance.settings);
+	            dates.not(this).datepicker("option", option, date);
+	        }
+	    });
+	});
+
+	function getMonthFromDateSelect() {
+	    var sd = $("#from").val();
+	    var startDate = new Date(sd);
+	    startDate.setDate(startDate.getDate() + 7);
+	    return startDate.getMonth();
+	}
+	function getYearFromDateSelect() {
+	    var sd = $("#from").val();
+	    var startDate = new Date(sd);
+	    startDate.setDate(startDate.getDate() + 7);
+	    return fourdigits(startDate.getYear());
+	}
+	function loadCalendar() {
+        $('#calendar').show();
+	    $('#monthDDTable').show();
+        $('#dateRangeTable').hide();
+        $('#arrowsByTitle').show();
+        $("#calendar").html(""); // Clear the previous calendar
+        $('#displayCount').hide();
+        $("#displayCount").html(""); // Clear the previous adminMessage
+        buildJsonLink();
+
+        var jsonLinkCalendar = jsonLink + '&forcal=1';
+
+		// alert(jsonLinkCalendar);
+		// Sample: http://southeastee.org/core/event/fullcalendarfeed.aspx?admin=1&json=1&sd=01/01/2012&ed=1/31/2012+11:59+PM&distance=25&forcal=1
+		
+        // Temporary, generated from:
+        // http://eeingeorgia.org/core/event/fullcalendarfeed.aspx?forcal=1&admin=1&json=1&sd=04/01/2011&ed=4/30/2011+11:59+PM&distance=25
+        jsonLinkCalendar = './json-calendar.txt';
+
+	    // Sample of using getJSON and JSONP to investigate, add holidays.
+	    // http: //code.google.com/p/fullcalendar/issues/detail?id=338
+
+	    // Unfortunately, getMonthFromDateSelect() is only called on initial load.
+	    // , left: 'title', right: 'today month prev,next'
+	    // ,agendaWeek,agendaDay
+
+        // Add for performance:
+        //cache: true,
+	    $('#calendar').fullCalendar({
+
+	        month: getMonthFromDateSelect(),
+	        year: getYearFromDateSelect(),
+	        editable: false,
+	        header: {
+	            left: '', right: ''
+	        },
+	        events: jsonLinkCalendar,
+            
+	        eventDrop: function (event, delta) {
+	            alert(event.title + ' was moved ' + delta + ' days\n' +
+					'(should probably update your database)');
+	        },
+	        weekMode: 'liquid',
+	        loading: function (bool) {
+	            if (bool) $('#loading').show();
+	            else $('#loading').hide();
+	        },
+            timeFormat: 'h(:mm)tt',
+	        viewDisplay: function (view) {
+	            //alert('The new title of the view is ' + view.start);
+	            var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        
+	            var startDate = new Date(view.start);
+	            $('#calendarTitle').html(months[startDate.getMonth()] + ' ' + fourdigits(startDate.getYear()));
+	            //$('#from').datepicker('setDate', view.start);
+	            //$('#to').datepicker('setDate', view.end);
+	        }
+
+	    });
+	}
+
+	function goNextMonth() {
+	    var ed = $("#to").val();
+	    var endDate = new Date(ed);
+	    endDate.setDate(endDate.getDate() + 1);
+	    sd = (endDate.getMonth() + 1) + '/' + endDate.getDate() + '/' + fourdigits(endDate.getYear());
+	    ed = (endDate.getMonth() + 1) + '/' + daysInMonth((endDate.getMonth() + 1), endDate.getYear()) + '/' + fourdigits(endDate.getYear());
+	    $('#from').datepicker('setDate', sd);
+	    $('#to').datepicker('setDate', ed);
+	    $("#MonthDD").val((endDate.getMonth() + 1) + '/1/' + fourdigits(endDate.getYear()));
+	    loadDisplay();
+	}
+	function goPreviousMonth() {
+	    var ed = $("#from").val();
+	    var endDate = new Date(ed);
+	    endDate.setDate(endDate.getDate() - 1); // One day previous to prior start.  Pushes 1st into prior month.
+	    if (endDate.getDate() <= 7) { // Include previous month if near start of month
+	        //endDate.setDate(endDate.getMonth() - 1);
+	        sd = (endDate.getMonth()) + '/1/' + fourdigits(endDate.getYear());
+	        ed = (endDate.getMonth() + 1) + '/' + endDate.getDate() + '/' + fourdigits(endDate.getYear());
+	    } else {
+	        sd = (endDate.getMonth() + 1) + '/1/' + fourdigits(endDate.getYear());
+	        ed = (endDate.getMonth() + 1) + '/' + daysInMonth((endDate.getMonth() + 1), endDate.getYear()) + '/' + fourdigits(endDate.getYear());
+	    }
+	    $('#from').datepicker('setDate', sd);
+	    $('#to').datepicker('setDate', ed);
+	    $("#MonthDD").val((endDate.getMonth() + 1) + '/1/' + fourdigits(endDate.getYear()));
+	    loadDisplay();
+	}
+	function goCalendar() {
+	    if ($.url.param("tid")) {
+	        location.href = './?tid=' + $.url.param("tid");
+	    } else {
+	        location.href = './';
+	    }
+	}
+	function goSearchEvents() {
+	    if ($.url.param("tid")) {
+	        location.href = './?show=list&tid=' + $.url.param("tid");
+	    } else {
+	        location.href = './?show=list';
+	    }
+	}
+	function setRangeStartDate() {
+	    var sd = $("#from").val();
+	    var startDate = new Date(sd);
+	    var ed = $("#to").val();
+	    var endDate = new Date(ed);
+	    if (endDate < startDate) {
+	        // Set start to first day of month
+	        sd = (endDate.getMonth() + 1) + '/1/' + fourdigits(endDate.getYear());
+	        $('#from').datepicker('setDate', sd);
+	    }
+	}
+	function setRangeEndDate() {
+	    var sd = $("#from").val();
+	    var startDate = new Date(sd);
+	    var ed = $("#to").val();
+	    var endDate = new Date(ed);
+	    if (startDate > endDate) {
+            // Set end to last day of month
+	        ed = (startDate.getMonth() + 1) + '/' + daysInMonth((startDate.getMonth() + 1), startDate.getYear()) + '/' + fourdigits(startDate.getYear());
+	        $('#to').datepicker('setDate', ed);
+	    }
+    }
+    function updateDateRange() {
+        var sd = $("#MonthDD").val();
+        $('#from').datepicker('setDate', sd);
+        var startDate = new Date(sd);
+        // Get last day of month
+        var ed = (startDate.getMonth() + 1) + '/' + daysInMonth((startDate.getMonth() + 1), startDate.getYear()) + '/' + fourdigits(startDate.getYear());
+        $('#to').datepicker('setDate', ed);
+    }
+    function daysInMonth(month, year) {
+        var dd = new Date(year, month, 0);
+        return dd.getDate();
+    }
+
+    function populateMonthDD() {
+        //alert(window.location.hash);
+        var startDate = new Date();
+        startDate.setMonth(startDate.getMonth() - 6);
+        var numMonths = 24;
+        var monthNumber = startDate.getMonth() - 1;
+        if (monthNumber == 12) monthNumber = 0;
+        var year = fourdigits(startDate.getYear());
+        var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+
+        var optionsValues = '<select id="MonthDD" onchange="updateDateRange()">';
+        for (var i = 0; i <= numMonths; i++) {
+            monthNumber++;
+            if (monthNumber > 11) {
+                monthNumber = 0;
+                year++;
+            }
+            //var option = new Option(months[monthNumber] + " " + year, (monthNumber + 1) + "/1/" + year);
+            //sel.options[i] = option;
+            optionsValues += '<option value="' + (monthNumber + 1) + "/1/" + year + '">' + months[monthNumber] + " " + year + '</option>';
+        }
+        optionsValues += '</select>';
+        var options = $('#MonthDD');
+        options.replaceWith(optionsValues); // Inserts all at once for fastest performance
+
+        var today = new Date();
+        if($.url.param("sd"))
+        {
+            today = new Date($.url.param("sd"));
+        }
+        $("#MonthDD").val((today.getMonth() + 1) + '/1/' + fourdigits(today.getYear()));
+    }
+</script>
+</head>
+
+<body>
+<!-- DIV FOR Z-INDEX -->
+<div id='searchFilterHolder' style='position: relative;'>
+<!-- Filters -->
+<div id='searchFilters'>
+
+<div id='filters' style='float:left; margin-right:20px'>
+
+<table id='monthDDTable'>
+		<tr>
+			<td width="80" height="25">Month:</td>
+			<td>
+                <select id="MonthDD" onchange="updateDateRange()"><option>Loading...</option></select>
+			</td>
+            <!--
+            <td style='padding-left:10px'>
+                    <img src="/core/elements/buttons/go-orange.gif" height="17" width="36" onclick="loadDisplay();return;" class="rollover" alt="go" />
+            </td>
+            -->
+		</tr>
+</table>
+
+<table id='dateRangeTable'>
+		<tr>
+			<td width="80" height="25">Date Range:</td>
+			<td>
+
+                <!-- Range Selection -->
+                <input type="text" id="from" name="from" onchange="setRangeEndDate()" style="width:80px;z-index:99999"/>
+                <label for="to">to</label>
+                <input type="text" id="to" name="to" onchange="setRangeStartDate()" style="width:80px;z-index:99999"/>
+                <!-- End Range Selection -->
+
+			</td>
+            <!--
+            <td style='padding-left:10px'>
+                    <img src="/core/elements/buttons/go-orange.gif" height="17" width="36" onclick="loadDisplay();return;" class="rollover" alt="go" />
+            </td>
+            -->
+		</tr>
+</table>
+
+<table>
+<tr>
+	<td width="80">Keywords:</td>
+	<td valign="top"><input id="keywords" type="text" style="width:250px" /></td>
+</tr>
+</table>
+
+<table>
+	<tr>
+        <td width="80" height="25">Location:</td>
+		<td style="vertical-align:bottom; padding-bottom:6px"><nobr>
+        <asp:DropDownList id="CityDD" runat="server"></asp:DropDownList>
+        <asp:label id="ZipLabel" runat="server"> or zip: </asp:label></nobr></td>
+		<td><input name="zip" id="zip" type="text" value="" style="margin-left:0px;width:80px; font-size:11px;" /></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td width="80" height="25">Distance:</td>
+	    <td>
+            <select id="distance">
+		        <option value="">Within</option>
+                <option value="5">5 Miles</option>
+                <option value="10">10 Miles</option>
+		        <option selected="selected" value="25">25 Miles</option>
+		        <option value="50">50 Miles</option>
+                <option value="75">75 Miles</option>
+		        <option value="100">100 Miles</option>
+                <option value="150">150 Miles</option>
+		        <option value="200">200 Miles</option>
+                <option value="500">500 Miles</option>
+	        </select>
+        </td>
+        <td style='padding-left:10px; vertical-align:middle'>
+            <img src="/core/elements/buttons/go-orange.gif" height="17" width="36" onclick="loadDisplay();return;" class="rollover" alt="go" />
+        </td>
+	</tr>
+</table>
+
+</div>
+
+<!--
+<div style='float:left;'>
+    
+    <input onclick="loadDisplay()" type="radio" name="profdevRB" value="" class="radio" checked="checked" />View All Events<br />
+    <input onclick="loadDisplay()" type="radio" name="profdevRB" value="public" class="radio" />Public Programs<br />
+    <input onclick="loadDisplay()" type="radio" name="profdevRB" value="28400" class="radio" />Professional Development Programs<br />
+           
+    <input onclick="loadDisplay()" type="checkbox" name="typeCB" value="22311" />Outdoor Activities<br />
+    <input onclick="loadDisplay()" type="checkbox" name="typeCB" value="22301" />Volunteer Events<br />
+    <input onclick="loadDisplay()" type="checkbox" name="typeCB" value="19990" />Handicap Accessible<br />
+      
+</div>
+-->
+
+<div style="float:right; border:1px solid #555; padding:20px">
+    <span style="font-size:14pt">SocialCalendar</span><br />
+	<a href="">Get Involved.</a>
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+<!-- End Filters -->
+
+<div id="navHolder">
+
+    <div class="calendarTabs">
+
+    <ul>
+
+        <li id="searchLink" onclick="goSearchEvents();"><a href="#" id='activeEvents'>events</a></li>
+
+        <li id="calendarLink" onclick="goCalendar();"><a href="#" id='activeMonthly'>calendar</a></li>
+
+        <!--
+        <li onclick="goCalendar();"><a href="#">weekly</a></li>
+
+        <li onclick="goCalendar();"><a href="#">daily</a></li>
+        -->
+
+    </ul>
+
+    </div>
+
+</div>
+<div style="clear:both"></div>
+
+<div class="contentArea" style="position:relative">
+
+<div id="adminMessage" style='overflow:hidden'></div>
+
+<div id='loading' style='display:none; float:left; background-color:#fff; height:30px; width:200px'>Loading...</div>
+<div id='calendarTitle' style='min-height:27px; font-size:18pt; overflow:hidden; float:left'></div>
+<div id='arrowsByTitle' style='float:left; overflow:hidden; margin-left: 10px; display:none'>
+    <img onclick="javascript:goPreviousMonth();void 0;" onmouseover="this.style.cursor='hand'" src="/core/elements/arrows/sphere-arrow-back.gif" class="rollover" alt="previous" />
+    <img onclick="javascript:goNextMonth();void 0;" onmouseover="this.style.cursor='hand'" src="/core/elements/arrows/sphere-arrow.gif" class="rollover" alt="next" />
+</div>
+<div style='clear:both'></div>
+
+<div id='calendar' style='z-index:-1;'></div>
+
+<div id="eventList"></div>
+<div id="eventListOngoing"></div>
+<div style="clear:both"></div>
+
+<div id="displayCount" style='float:left'></div>
+
+<div style='margin-top:3px; width:50px; float:right; margin-left:3px'>
+<img onclick="javascript:goPreviousMonth();void 0;" onmouseover="this.style.cursor='hand'" src="/core/elements/arrows/sphere-arrow-back.gif" class="rollover" alt="previous" />
+<img onclick="javascript:goNextMonth();void 0;" onmouseover="this.style.cursor='hand'" src="/core/elements/arrows/sphere-arrow.gif" class="rollover" alt="next" />
+</div>
+
+<div id="creditsDiv" style='float:right'>Social Calendar Project</div>
+<div style="clear:both"></div>
+
+</div>
+           
+</div>
+<!-- END DIV FOR Z-INDEX -->
+
+<style type="text/css">
+    .ui-datepicker-div { z-index: 99999; font-size: 9pt}
+    #ui-datepicker-div { z-index: 99999; font-size: 9pt}
+    .ui-datepicker { z-index:99999; font-size: 9pt}
+    #ui-datepicker { z-index:99999; font-size: 9pt}
+    
+    .fc-event
+    {
+    	z-index:-1;
+    }
+    #fc-event
+    {
+    	z-index:-1;
+    }
+	.fc-content .fc-day-number
+	{
+		background:#777;
+		color:#fff;
+		min-width:16px;
+		text-align:center;
+		float:left;
+		font-family: calibri, helvetica;
+	    font-size:10pt;
+	}
+	.fc-content .fc-state-highlight
+	{
+		background:transparent;
+		background: #f8fdfd;
+		background-image:url(/core/event/fullcalendar/images/today.png);
+		background-repeat:no-repeat;
+		background-position: 21px -1px;
+		
+	}
+</style>
+
+<script type="text/javascript">
+    // Must reside within body tag.
+    var winwidth = document.all ? document.body.clientWidth : window.innerWidth;
+    var winHeight = document.all ? document.body.clientHeight : window.innerHeight;
+    if (winwidth < 400) {
+        // Allows right side to fall under left for mobile phones.
+        $("#eventList").css({ "min-width": winwidth - 50 });
+
+        // Not working yet:
+        $("#eventListOngoing").css({ "min-width": winwidth - 50 });
+        $("#eventRow").css({ "min-width": winwidth - 50 });
+
+        // To consider - for narrow screens turn off align:left and set both width to 100%.
+    }
+</script>
+</body>
+</html>

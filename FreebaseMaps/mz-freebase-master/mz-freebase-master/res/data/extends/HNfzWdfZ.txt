@@ -1,0 +1,1 @@
+{"name":"Film cinematographer","id":"\/film\/cinematographer","type":"\/type\/type","group":"type","_id":"HNfzWdfZ","relation":"\/film","properties":[{"name":"Film cinematography credits","id":"\/film\/cinematographer\/film","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

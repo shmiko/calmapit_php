@@ -1,0 +1,1 @@
+{"name":"Film editor","id":"\/film\/editor","type":"\/type\/type","group":"type","_id":"rNU0C9js","relation":"\/film","properties":[{"name":"Films edited","id":"\/film\/editor\/film","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

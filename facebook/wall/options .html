@@ -1,0 +1,407 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="en-US"> <!--<![endif]-->
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>jQueryFacebookWall Plugin Options | Iron Lasso</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Add CSS3 Rules here for IE 7-9
+================================================== -->
+
+<!--[if IE]>
+<style type="text/css">
+html.ie #navigation,
+html.ie a.button,
+html.ie .cta,
+html.ie .wp-caption,
+html.ie #breadcrumbs,
+html.ie a.more-link,
+html.ie .gallery .gallery-item img,
+html.ie .gallery .gallery-item img.thumbnail,
+html.ie .widget-container,
+html.ie #author-info {behavior: url("http://ironlasso.com/wp-content/themes/skeleton/PIE.php");position: relative;}</style>
+<![endif]-->
+
+
+<!-- Mobile Specific Metas
+================================================== -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+<!-- Favicons
+================================================== -->
+
+<link rel="shortcut icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/favicon.ico">
+
+<link rel="apple-touch-icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon.png">
+
+<link rel="apple-touch-icon" sizes="72x72" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-72x72.png" />
+
+<link rel="apple-touch-icon" sizes="114x114" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-114x114.png" />
+
+<link rel="pingback" href="http://ironlasso.com/xmlrpc.php" />
+<link rel="stylesheet" id="custom" href="http://ironlasso.com/?get_styles=css" type="text/css" media="all" />
+<link rel="stylesheet" href="/jQueryFacebookWall/css/jQueryFacebookWall.min.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Feed" href="http://ironlasso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Comments Feed" href="http://ironlasso.com/comments/feed/" />
+<link rel='stylesheet' id='skeleton-css'  href='http://ironlasso.com/wp-content/themes/skeleton/skeleton.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='theme-css'  href='http://ironlasso.com/wp-content/themes/skeleton/style.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='layout-css'  href='http://ironlasso.com/wp-content/themes/skeleton/layout.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='formalize-css'  href='http://ironlasso.com/wp-content/themes/skeleton/formalize.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='superfish-css'  href='http://ironlasso.com/wp-content/themes/skeleton/superfish.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='jfw-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/css/jQueryFacebookWall.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jfw-light-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/css/jQueryFacebookWallLight.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://ironlasso.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ironlasso.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ironlasso.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='jQueryFacebookWall Documentation' href='http://ironlasso.com/jqueryfacebookwall-documentation/' />
+<link rel='next' title='jQueryFacebookWall Wall Style Feed' href='http://ironlasso.com/jqueryfacebookwall-wall/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='canonical' href='http://ironlasso.com/jqueryfacebookwall-plugin-options/' />
+<link rel='shortlink' href='http://ironlasso.com/?p=57' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body class="page page-id-57 page-template-default">
+	<div id="wrap" class="container">
+	<div class="resize"></div>
+	<div id="header" class="sixteen columns">
+<div class="inner">
+<div id="site-title" class="text"><a href="http://ironlasso.com/" title="Iron Lasso">Iron Lasso</a></div>
+<span class="site-desc text">Changing the Internet one website at a time.</span>
+</div></div><!--/#header-->	<div id="navigation" class="row sixteen columns"><div class="menu-header"><ul id="menu-main-menu" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a title="Lorenzo Gangi Web Development" href="http://ironlasso.com/">Home</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://ironlasso.com/blog/">Blog</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-18"><a title="jQuery Facebook Wall Plugin" href="http://ironlasso.com/jqueryfacebookwall-plugin/">jQueryFacebookWall</a>
+<ul class="sub-menu">
+	<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a title="jQuery Facebook Wall Plugin Timline Style Example" href="http://ironlasso.com/jqueryfacebookwall-timeline/">Timeline Style</a></li>
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a title="jQueryFacebookWall Wall Style Feed" href="http://ironlasso.com/jqueryfacebookwall-wall/">Wall Style</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://ironlasso.com/jquery-facebook-wall-faq/">jQuery Facebook Wall FAQ</a></li>
+	<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="http://ironlasso.com/upgrading/">Upgrading</a></li>
+	<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a title="jQueryFacebookWall Documentation" href="http://ironlasso.com/jqueryfacebookwall-documentation/">Documentation</a></li>
+	<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-57 current_page_item menu-item-122"><a title="jQueryFacebookWall Plugin Options" href="http://ironlasso.com/jqueryfacebookwall-plugin-options/">Plugin Options</a></li>
+	<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396"><a href="http://ironlasso.com/install-instruction-video/">Install Instruction video</a></li>
+</ul>
+</li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-235"><a title="jQueryFacebookWall Wordpress Plugin" href="http://ironlasso.com/jqueryfacebookwall-wordpress-plugin/">jQueryFacebookWall WordPress</a>
+<ul class="sub-menu">
+	<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="http://ironlasso.com/jqueryfacebookwallwp-documentation/">jQueryFacebookWallWP Documentation</a></li>
+	<li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a href="http://ironlasso.com/jqueryfacebookwallwp-faq/">jQueryFacebookWallWP FAQ</a></li>
+	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a href="http://ironlasso.com/jqueryfacebookwallwplight/">jQueryFacebookWallWPLight</a></li>
+</ul>
+</li>
+<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a title="Page Background Plugin" href="http://ironlasso.com/jquery-page-background-pro/">jQueryPageBackground</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://ironlasso.com/contact-2/">Contact</a></li>
+</ul></div></div><!--/#navigation-->		<a name="top" id="top"></a><div id="content" class="eleven columns">
+
+				<div id="post-57" class="post-57 page type-page status-publish hentry">
+								
+															
+						<h1 class="entry-title">jQueryFacebookWall Plugin Options</h1>
+						
+													
+					<div class="entry-content">
+						<p>jQueryFacebookWall offers a multitude of options so you can tweak it to get exactly what you want.</p>
+<h3>Plugin options column summary</h3>
+<table border="0" cellspacing="0" cellpadding="0" align="left">
+<tbody>
+<tr>
+<td valign="top" width="98"><b>Option:</b></td>
+<td valign="top" width="541">Name of the plugin option.</td>
+</tr>
+<tr>
+<td valign="top" width="98"><b>Type:</b></td>
+<td valign="top" width="541">Data type of the option. If the option is an enumerated, type the possible values are listed in array style syntax i.e., [‘value 1’, ‘value 2’].</td>
+</tr>
+<tr>
+<td valign="top" width="98"><b>Required:</b></td>
+<td valign="top" width="541">Defines if the option must be set; if ‘yes’ then the option value must be provided in the plugin instantiation call. If not yes, the default value of the option is listed.</td>
+</tr>
+<tr>
+<td valign="top" width="98"><b>Description:</b></td>
+<td valign="top" width="541">Description of the options functional purpose.</td>
+</tr>
+</tbody>
+</table>
+<h3>jQueryFacebookWall plugin options</h3>
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%"><b>Option</b></td>
+<td valign="top" width="12%"><b>Type</b></td>
+<td valign="top" width="15%"><b>Required</b></td>
+<td valign="top" width="45%"><b>Description</b></td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%"></td>
+<td valign="top" width="12%"></td>
+<td valign="top" width="15%"></td>
+<td valign="top" width="45%"></td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">appId</td>
+<td valign="top" width="12%">string</td>
+<td valign="top" width="15%">yes</td>
+<td valign="top" width="45%">Facebook app id.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">domain</td>
+<td valign="top" width="12%">string</td>
+<td valign="top" width="15%">yes</td>
+<td valign="top" width="45%">Domain name where the plugin is used. i.e., <a href="http://www.ironlasso.com/">www.ironlasso.com</a></td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">FacebookUser</td>
+<td valign="top" width="12%">string</td>
+<td valign="top" width="15%">­­­­­­­­­­­­­­­­­­­­­­­­­yes</td>
+<td valign="top" width="45%">Your book account name.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">display</td>
+<td valign="top" width="12%">[‘timeline’,’wall’]</td>
+<td valign="top" width="15%">timeline</td>
+<td valign="top" width="45%">The display style of the wall. See examples.<a href="http://ironlasso.com/jQueryFacebookWall/timeline.html">Timeline style</a><a href="http://ironlasso.com/jQueryFacebookWall/wall.html">Wall style</a></td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%"> language</td>
+<td valign="top" width="12%"> &#8216;english&#8217;, &#8216;espanol&#8217;, &#8216;italiano&#8217;, &#8216;francais&#8217;, &#8216;svenska&#8217;</td>
+<td valign="top" width="15%"> no defaults to english</td>
+<td valign="top" width="45%"> selects language for all headers like and comment buttons input place holders etc. New languages are easily added in languages.js contact me if you want to do a translation and add it to the list.</td>
+</tr>
+<tr>
+<td>posts.show</td>
+<td>['true','false']</td>
+<td>true</td>
+<td>Turns the posts section of the feed on and off.</td>
+</tr>
+<tr>
+<td>posts.order</td>
+<td>1,2,3,4,5</td>
+<td>5</td>
+<td>The order in which the posts section should be added to the plugin.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">posts.feedType</td>
+<td valign="top" width="12%">[‘feed’,’posts’]</td>
+<td valign="top" width="15%">feed</td>
+<td valign="top" width="45%">Feed type defines if you would like to show the Facebook users feed (include posts from other users) or posts (only posts from Facebook user).</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">posts.limit</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">10</td>
+<td valign="top" width="45%">The max number of posts to retrieve from Facebook. Note, Facebook may or may not return the max number of posts. Some posts get filtered for various reasons (privacy, blocked user, region etc.).</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">comments.limit</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">100</td>
+<td valign="top" width="45%">Max number of comments returned from Facebook; 5000 is the max value Facebook allows.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">comments.showAtStart</td>
+<td valign="top" width="12%">int, ‘All’</td>
+<td valign="top" width="15%">2</td>
+<td valign="top" width="45%">The number of comments to show when the wall first loads; use &#8216;All&#8217; to show all posts on load.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">comments.showMoreNum</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">50</td>
+<td valign="top" width="45%">The number of comments that will be revealed when the &#8216;view more comments&#8217; link is clicked for a story.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">likes.show</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">true</td>
+<td valign="top" width="45%">Show your Facebook account likes.</td>
+</tr>
+<tr>
+<td>likes.order</td>
+<td>1,2,3,4,5</td>
+<td>4</td>
+<td>The order in which the Likes section should be added to the plugin.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">likes.useCoverPhotos</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">false</td>
+<td valign="top" width="45%">Show only likes that have a cover photo defined, and use the cover photo as the like image.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">likes.limit</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">5</td>
+<td valign="top" width="45%">The number of account likes to show.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">albums.show</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">true</td>
+<td valign="top" width="45%">Show your Facebook account albums.</td>
+</tr>
+<tr>
+<td>albums.order</td>
+<td>1,2,3,4,5</td>
+<td>3</td>
+<td>The order in which the Albums section should be added to the plugin.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">albums.limit</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">3</td>
+<td valign="top" width="45%">Number of albums to show.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">photos.show</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">true</td>
+<td valign="top" width="45%">Show your Facebook account photos.</td>
+</tr>
+<tr>
+<td>photos.order</td>
+<td>1,2,3,4,5</td>
+<td>2</td>
+<td>The order in which the Photos section should be added to the plugin.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">photos.type</td>
+<td valign="top" width="12%">[‘profile’,’uploaded’,’tagged’]</td>
+<td valign="top" width="15%">uploaded</td>
+<td valign="top" width="45%">The type of photos to show in your photos Section. ‘Uploaded’ shows timeline photos, ‘profile’ shows your profile pics, ‘tagged’ shows photos you have been tagged in.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">photos.numColumns</td>
+<td valign="top" width="12%">[‘2’,‘3’,‘4’]</td>
+<td valign="top" width="15%">4</td>
+<td valign="top" width="45%">The number of image columns you want in the photos Section, you may want to adjust the image height in jQueryFacebookWall.css =&gt; .Facebook-wall.timeline .photos .photo-cover-photo-wrapper</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">photos.showAtStart</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">12</td>
+<td valign="top" width="45%">The total number of photo thumbnail images to show.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">photos.limit</td>
+<td valign="top" width="12%">int</td>
+<td valign="top" width="15%">25</td>
+<td valign="top" width="45%">The total number of photos to retrieve from Facebook.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">events.show</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">true</td>
+<td valign="top" width="45%">Show your Facebook account events.</td>
+</tr>
+<tr>
+<td>events.order</td>
+<td>1,2,3,4,5</td>
+<td>1</td>
+<td>The order in which the Events section should be added to the plugin.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">events.showTicketLink</td>
+<td valign="top" width="12%">['true','false']</td>
+<td valign="top" width="15%">false</td>
+<td valign="top" width="45%">Shows a link to the event tickets location if its provided by facebook.</td>
+</tr>
+<tr>
+<td valign="top" nowrap="nowrap" width="26%">debug</td>
+<td valign="top" width="12%">boolean</td>
+<td valign="top" width="15%">false</td>
+<td valign="top" width="45%">Print plugin debugging info in the js console.</td>
+</tr>
+</tbody>
+</table>
+																	</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+				
+<!-- You can start editing here. -->
+<div id="comments">
+
+	
+
+</div>
+
+		</div><!-- /.columns (#content) -->
+<div id="sidebar" class="five columns" role="complementary"><ul>
+		        
+            <li id="text-3" class="widget-container widget_text"><h3 class="widget-title">jQueryPageBackgroundPro</h3>			<div class="textwidget"><div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jquery-page-background-pro/7690770?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get your very own copy of jQueryPageBackgroundPro today! <div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jquery-page-background-pro/7690770?ref=ludicrisMaximus">Download jQueyPageBackgroundPro</a></div><div class="clear"></div> 
+</div><div class="clear"></div> 
+
+</div>
+		</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">jQueryFacebookWall</h3>			<div class="textwidget"><div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get your very own copy of jQueryFacebookWall WordPress Plugin today!<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall-wordpress/5574064?ref=ludicrisMaximus">Download WordPress Plugin</a></div><div class="clear"></div> 
+</div><div class="clear"></div> 
+
+<div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get started by getting your very own copy of jQueryFacebookWall jQuery Plugin.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus">Download jQuery Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> 
+
+<div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get started  for FREE by downloading a copy of jQueryFacebookWallWPLight.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://wordpress.org/plugins/jqueryfacebookwallwplight/">Download WordPress Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> </div>
+		</li>        
+         
+        <li class="widget-container widget_text">
+            <a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=LorenzoGangi-ironlasso.com">
+                <img class="affiliate-banner" src="http://tracking.hostgator.com/img/Shared/234x60.gif" border="0" title='Get some radical hosting'>
+            </a>	
+        </li> 
+        <li class="widget-container widget_text">
+        <div class='google-ads'>
+        <script type="text/javascript"><!--
+			google_ad_client = "ca-pub-5596827964697060";
+			/* 160 image rich */
+			google_ad_slot = "4532406355";
+			google_ad_width = 160;
+			google_ad_height = 600;
+			//-->
+			</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
+        </li>
+        
+    </ul>
+</div><!-- #sidebar -->
+<div class="clear"></div><div id="footer" class="noborder sixteen columns">
+
+<div id="credits"><br /><a class="themeauthor" href="http://www.simplethemes.com" title="Simple WordPress Themes">WordPress Themes</a></div><script type='text/javascript' src='http://ironlasso.com/jQueryFacebookWall/js/jQueryFacebookWall.min.js?ver=1'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/app.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/superfish.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/jquery.formalize.min.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWall.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWallInline.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/js/jQueryFacebookWallLight.min.js?ver=1.0.0'></script>
+
+</div><!--/#footer-->
+</div><!--/#wrap.container-->
+<script type="text/javascript">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41228315-1', 'ironlasso.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

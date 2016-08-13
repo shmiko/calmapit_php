@@ -1,0 +1,1 @@
+{"name":"Camera Image Ratio","id":"\/digicams\/camera_image_ratio","type":"\/type\/type","group":"type","_id":"ibbD096q","relation":"\/digicams","properties":[{"name":"Cameras","id":"\/digicams\/camera_image_ratio\/cameras","expected_type":"\/digicams\/digital_camera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

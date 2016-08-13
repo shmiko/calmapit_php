@@ -1,0 +1,1 @@
+{"name":"Tennis Grip Style","id":"\/tennis\/tennis_grip_style","type":"\/type\/type","group":"type","_id":"s8U6v1Kk","relation":"\/tennis","properties":[{"name":"Tennis players","id":"\/tennis\/tennis_grip_style\/tennis_players","expected_type":"\/tennis\/tennis_player","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

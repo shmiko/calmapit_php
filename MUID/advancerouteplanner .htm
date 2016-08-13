@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Advance Route Planner API Ver 1.0</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=adsense"></script>
+<script src="js/routeplannerapi.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+
+  </head>
+
+<body>
+  
+<br>
+    <div class="container">
+    
+    <div class="row">
+
+<div class="col-lg-12 text-center">
+
+<a href="http://zincksoft.com/" target="_blank"><img src="images/logo.png" width="350" height="90"  alt=""/></a>
+
+</div>
+</div>
+
+    
+    <div class="row" >
+    <div class="col-lg-12">
+    
+    
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Search</h3>
+  </div>
+  <div class="panel-body">
+
+
+<form class="form-inline" role="form">
+  
+  <div class="form-group">
+    <label class="sr-only" for="start">Starting Location :</label>
+    <input type="text" class="form-control" id="start" placeholder="Enter Starting Location">
+  </div>
+  
+  <div class="form-group">
+    <label class="sr-only" for="end">Destination Location :</label>
+    <input type="text" class="form-control" id="end" placeholder="Enter Destination Location">
+  </div>
+  
+  <div class="form-group">
+  <select class="form-control" id="mode" name="mode">
+  <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+</select>
+  </div>
+  
+  <button type="button" class="btn btn-success" onClick="calcRoute();">Get Route</button>
+</form>
+
+
+</div>
+    </div>
+    
+    
+    
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+  
+  <div class="text-left" style="float:left;padding-top:10px;"><h3 class="panel-title">Google Map</h3></div><div class="text-right"><a href="#" class="btn btn-success text-right" onClick="window.print()"><i class="glyphicon glyphicon-print"></i></a><span id="share"></span></div>
+  
+  
+  </div>
+  <div class="panel-body">
+    <div id="map-canvas" class="col-lg-12" style="height:350px;"></div>
+
+</div>
+    </div>
+    
+    
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Total Distance: <span id="total"></span></h3>
+  </div>
+  <div class="panel-body">
+<div id="directionsPanel"></div>
+
+</div>
+    </div>
+    
+    
+
+
+  </div>
+</div>
+    
+    
+    
+ <div class="row">
+
+<div class="col-lg-12 text-center">
+
+Powered By : <a href="http://zincksoft.com/" target="_blank">Zincksoft.com</a>
+
+</div>
+</div>   
+    
+    
+
+    </div> <!-- /container -->
+
+
+
+
+<!--tracking Code-->
+
+<script type="text/javascript">  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-7912009-2']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+
+<!-- Zincksoft HelpDesk Chat Button Link Code (ALWAYS PLACE IN BODY ELEMENT) -->
+<link href="http://zincksoft.com/support/css/widget.css" rel="stylesheet" />
+<a href="javascript:void(window.open('http://zincksoft.com/support/start.php','','width=600,height=778,left=0,top=0,resizable=yes,menubar=no,location=yes,status=yes,scrollbars=yes'))"><img src='http://zincksoft.com/support/imagef.php?type=2' border="0" alt="Zincksoft Help Desk" style='position:fixed;float:right;top:250px;right:0;'></a>
+<div id="ZincksoftHD_Tracking" style="display:none"></div>
+<script type="text/javascript"> var script = document.createElement("script");script.type="text/javascript";var src = "http://zincksoft.com/support/tracker.js";var serversrc = "http://zincksoft.com/support";var pageurl=document.URL;setTimeout("script.src=src;document.getElementById('ZincksoftHD_Tracking').appendChild(script)",1); </script>
+
+
+
+  </body>
+</html>

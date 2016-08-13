@@ -1,0 +1,1 @@
+{"name":"Highway system","id":"\/transportation\/highway_system","type":"\/type\/type","group":"type","_id":"QTrMZygM","relation":"\/transportation","properties":[{"name":"Highways","id":"\/transportation\/highway_system\/highways","expected_type":"\/transportation\/road","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

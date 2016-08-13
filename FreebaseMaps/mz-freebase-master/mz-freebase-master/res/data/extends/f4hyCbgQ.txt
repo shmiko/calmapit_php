@@ -1,0 +1,1 @@
+{"name":"German city","id":"\/location\/de_city","type":"\/type\/type","group":"type","_id":"f4hyCbgQ","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"City\/Town\/Village","id":"\/location\/citytown"}]}

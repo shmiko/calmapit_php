@@ -1,0 +1,1 @@
+{"name":"Maintenance Profile","id":"\/freebase\/maintenance_profile","type":"\/type\/type","group":"type","_id":"eqKSgPzs","relation":"\/freebase","properties":[{"name":"Registration Off","id":"\/freebase\/maintenance_profile\/registration_off","expected_type":"\/type\/boolean","description":""}],"included_types":[]}

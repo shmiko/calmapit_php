@@ -1,0 +1,97 @@
+html, body{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-image: url("https://s3.amazonaws.com/ooomf-com-files/hBd6EPoQT2C8VQYv65ys_White%20Sands.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100%;
+}
+
+#container{
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  overflow: hidden;
+  width: 80%;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+#map-canvas {
+  height: 80%;
+  width: 75%;
+  float: left;
+  margin: 0px;
+  padding: 0px
+  border: 1px solid #ccc;
+  position: relative;
+  top: 40px;
+}
+
+#controls {
+  position: relative;
+  top: 30px;
+  height: 100%;
+  width: 25%;
+  float: right;
+  margin: 0px;
+  padding: 5px;
+}
+
+input {
+  display: block;
+}
+
+#add, #subtract {
+  width: 34px;
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  margin: 0;
+}
+
+#waypoints {
+  width: 72%;
+  display: inline-block;
+  margin-right: 0px;
+}
+
+#results {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-top: 13px;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 700;
+}
+
+#trip {
+  position: relative;
+  right: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#route {
+  position: relative;
+  top: 10px;
+  background-color: white;
+  /*visibility: hidden;*/
+  height: 22em;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#submit {
+  margin-top: 9px;
+  margin-bottom: 5px;
+  background-color: #ccc;
+  border: 1px solid rgb(177, 177, 177);
+}

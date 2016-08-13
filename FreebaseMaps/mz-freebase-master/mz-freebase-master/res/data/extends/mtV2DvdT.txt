@@ -1,0 +1,1 @@
+{"name":"Japanese city\/town","id":"\/location\/jp_city_town","type":"\/type\/type","group":"type","_id":"mtV2DvdT","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"City\/Town\/Village","id":"\/location\/citytown"}]}

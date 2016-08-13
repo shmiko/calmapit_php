@@ -1,0 +1,1 @@
+{"name":"Cricket Delivery Type","id":"\/cricket\/cricket_delivery_type","type":"\/type\/type","group":"type","_id":"Dh0c4hTn","relation":"\/cricket","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Adjoining Relationship","id":"\/location\/adjoining_relationship","type":"\/type\/type","group":"type","_id":"LcLvXIyd","relation":"\/location","properties":[{"name":"Adjoins","id":"\/location\/adjoining_relationship\/adjoins","expected_type":"\/location\/location","description":""}],"included_types":[]}

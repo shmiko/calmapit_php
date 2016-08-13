@@ -1,0 +1,1 @@
+{"name":"Rivalry","id":"\/celebrities\/rivalry","type":"\/type\/type","group":"type","_id":"c3SouojX","relation":"\/celebrities","properties":[{"name":"Rival","id":"\/celebrities\/rivalry\/rival","expected_type":"\/celebrities\/celebrity","description":""}],"included_types":[]}

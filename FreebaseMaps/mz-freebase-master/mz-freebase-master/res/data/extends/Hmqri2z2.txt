@@ -1,0 +1,1 @@
+{"name":"Hormone","id":"\/medicine\/hormone","type":"\/type\/type","group":"type","_id":"Hmqri2z2","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

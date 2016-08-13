@@ -1,0 +1,1 @@
+{"name":"Building function","id":"\/architecture\/building_function","type":"\/type\/type","group":"type","_id":"pg2rrD5M","relation":"\/architecture","properties":[{"name":"Buildings","id":"\/architecture\/building_function\/buildings","expected_type":"\/architecture\/building","description":"buildings of this type"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

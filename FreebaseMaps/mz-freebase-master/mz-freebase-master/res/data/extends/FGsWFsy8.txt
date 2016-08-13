@@ -1,0 +1,1 @@
+{"name":"Law","id":"\/law","type":"\/type\/domain","group":"zone","_id":"FGsWFsy8","relation":"root","properties":[],"included_types":[]}

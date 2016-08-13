@@ -1,0 +1,1 @@
+{"name":"Vote Value","id":"\/pipeline\/vote_value","type":"\/type\/type","group":"type","_id":"RMCNkCPU","relation":"\/pipeline","properties":[],"included_types":[]}

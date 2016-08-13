@@ -1,0 +1,1 @@
+{"name":"Freebase API service status","id":"\/freebase\/metaweb_api_service_status","type":"\/type\/type","group":"type","_id":"yojFEPaZ","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

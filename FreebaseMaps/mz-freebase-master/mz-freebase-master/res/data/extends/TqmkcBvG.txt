@@ -1,0 +1,1 @@
+{"name":"Art owner","id":"\/visual_art\/art_owner","type":"\/type\/type","group":"type","_id":"TqmkcBvG","relation":"\/visual_art","properties":[{"name":"Artworks owned","id":"\/visual_art\/art_owner\/artworks_owned","expected_type":"\/visual_art\/artwork_owner_relationship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

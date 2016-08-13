@@ -1,0 +1,1 @@
+{"name":"Interest","id":"\/interests\/interest","type":"\/type\/type","group":"type","_id":"f7LvA7t4","relation":"\/interests","properties":[{"name":"People with this interest","id":"\/interests\/interest\/people_with_this_interest","expected_type":"\/people\/person","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Website Status","id":"\/internet\/website_status","type":"\/type\/type","group":"type","_id":"k8Ue3DBb","relation":"\/internet","properties":[{"name":"Sites","id":"\/internet\/website_status\/sites","expected_type":"\/internet\/website","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Mountain type","id":"\/geography\/mountain_type","type":"\/type\/type","group":"type","_id":"zBzVtEHe","relation":"\/geography","properties":[{"name":"Mountains of this type","id":"\/geography\/mountain_type\/mountains_of_this_type","expected_type":"\/geography\/mountain","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

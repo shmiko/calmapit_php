@@ -1,0 +1,1 @@
+{"name":"TV Genre","id":"\/tv\/tv_genre","type":"\/type\/type","group":"type","_id":"KVasStBl","relation":"\/tv","properties":[{"name":"TV programs of this genre","id":"\/tv\/tv_genre\/programs","expected_type":"\/tv\/tv_program","description":""}],"included_types":[{"name":"Media genre","id":"\/media_common\/media_genre"},{"name":"Topic","id":"\/common\/topic"}]}

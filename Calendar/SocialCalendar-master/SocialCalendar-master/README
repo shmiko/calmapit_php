@@ -1,0 +1,29 @@
+SocialCalendar adds an event list to Full Calendar.  
+https://github.com/arshaw/fullcalendar
+
+DONE:
+
+Events spanning multiple days are automatically displayed on each day they occur.
+
+Examples:
+
+Event List View
+http://grantpark.org/core/event/calendar.aspx?show=list&mode=a
+
+Monthly Calendar View
+http://grantpark.org/core/event/calendar.aspx?mode=a
+
+TO DO:
+
+$100 Project:
+1. Copy HTML and Javascript from page above to GitHub. (Optional: Remove unrelated HTML.)
+2. Update JavaScript to toggle between Event List and calendar view without reloading feed.
+3. Create a means to load multiple json feeds into the same calendar.
+4. Load holidays from Google using JSONP. Sample: http://arshaw.com/js/fullcalendar-1.5.3/demos/gcal.html
+5. Load friend events from Facebook. (Loren has a sample.)
+6. Display a different color for each data source.
+
+Note that the Google and Facebook event feeds will have a different syntax.  Either include a parameter indicating which syntax to use for each feed specified, or detect each feed's syntax automatically. 
+
+Contact Loren if you are interested in making the six updates above for $100.
+http://dreamstudio.com/account/write/8

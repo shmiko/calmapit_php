@@ -1,0 +1,1 @@
+{"name":"Filming location","id":"\/film\/film_location","type":"\/type\/type","group":"type","_id":"oePqVa1a","relation":"\/film","properties":[{"name":"Featured In Films","id":"\/film\/film_location\/featured_in_films","expected_type":"\/film\/film","description":"Enter films that were shot on location in this place."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

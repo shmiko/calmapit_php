@@ -1,0 +1,9 @@
+<h1>{{city}},{{state}} Details!</h1>
+<h2>Total Population: {{totalPopulation | number}}</h2>
+<ul>
+    <li ng-repeat="detail in details">
+        <p>Zip:{{detail.zip}}</p>
+        <p>Population:{{detail.pop | number}}</p>
+        <p>Location:{{detail.loc[0]}}{{detail.loc[1]}}</p>
+    </li>
+</ul>

@@ -1,0 +1,1 @@
+{"name":"Film festival sponsor","id":"\/film\/film_festival_sponsor","type":"\/type\/type","group":"type","_id":"ueyPXKuB","relation":"\/film","properties":[{"name":"Festivals sponsored","id":"\/film\/film_festival_sponsor\/festivals_sponsored","expected_type":"\/film\/film_festival_sponsorship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

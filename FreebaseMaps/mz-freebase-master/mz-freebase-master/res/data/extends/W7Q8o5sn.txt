@@ -1,0 +1,1 @@
+{"name":"Vote","id":"\/pipeline\/vote","type":"\/type\/type","group":"type","_id":"W7Q8o5sn","relation":"\/pipeline","properties":[{"name":"Vote Value","id":"\/pipeline\/vote\/vote_value","expected_type":"\/pipeline\/vote_value","description":""}],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Dismissal Type","id":"\/cricket\/dismissal_type","type":"\/type\/type","group":"type","_id":"xJmLKALY","relation":"\/cricket","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

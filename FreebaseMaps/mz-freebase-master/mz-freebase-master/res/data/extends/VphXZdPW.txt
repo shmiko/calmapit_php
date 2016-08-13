@@ -1,0 +1,1 @@
+{"name":"Driveline","id":"\/automotive\/driveline","type":"\/type\/type","group":"type","_id":"VphXZdPW","relation":"\/automotive","properties":[{"name":"Trim Levels Available","id":"\/automotive\/driveline\/trim_levels","expected_type":"\/automotive\/trim_level","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

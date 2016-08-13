@@ -1,0 +1,1 @@
+{"name":"Game genre","id":"\/games\/game_genre","type":"\/type\/type","group":"type","_id":"lL6kAvHU","relation":"\/games","properties":[{"name":"Games","id":"\/games\/game_genre\/boardgames","expected_type":"\/games\/game","description":""}],"included_types":[{"name":"Media genre","id":"\/media_common\/media_genre"},{"name":"Topic","id":"\/common\/topic"}]}

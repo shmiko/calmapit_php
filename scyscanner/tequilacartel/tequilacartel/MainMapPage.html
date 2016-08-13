@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<meta charset="us-ascii">
+<html>		
+	<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+ <!--[if lte IE 8]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+ <![endif]-->
+ <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+<script src="worldMap.js"></script>
+<script src="SkySQueries.js"></script>
+<script src="map.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+
+
+
+		<style type="text/css">
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+		.skystyle1{
+			text-align:center;
+			color:skyblue;
+			} 
+			
+		.skystyle2{
+			text-align:center;
+			color:white;
+			}
+			
+		h1 {
+			text-align:center;
+			color:white;
+			}
+			
+		h2 {
+			text-align:center;
+			margin: 0px;
+			padding: 5px;
+			}
+			
+		body {
+		background-color:#353535;
+		background-image:url('skyscanner_logo.png');
+		background-repeat:no-repeat;
+		background-position:top right;
+		}
+		
+		div.skybg1 {
+		height: 700px;
+		border: 10px inset skyblue;
+		outline-style: dotted;
+		outline-color: skyblue;
+		margin-top:90px;
+		margin-bottom:10px;
+		background-color:white;
+		}
+		
+		div.skybg2 {
+		height:30px;
+		}
+		
+		div.skydate{
+		height: 645px;
+		width:200px;
+		background-color:skyblue;
+		color: black;
+		text-align: center;
+		}
+		
+		table {border-collapse:collapse;}
+		th {border:10px solid skyblue; background-color: skyblue; color: white}
+		td {border:1px solid #353535; background-color: white; color: skyblue; text-align:center; padding: 10px;}
+
+        .sliderValue {
+            padding: 1px;
+            background-color: #d0d0f0;
+            border: 1px solid #808080;
+		}
+		</style> 
+	</head>
+	<body onload="initialize()">
+		
+		<div class = "skybg2" id="formcontainer">
+			<div id="dateform" style= "float:left; text-align:left;">
+				<form name="input" action="undefined" method="get">
+				<fieldset style = "background-color: skyblue;">
+				<legend style = "background-color: skyblue; color: orangered;"> <h2><b>FROM:</b> <input type ="text" id="origin" value="Edinburgh" onchange="chOri()"/> </h2> </legend>
+				<b>BETWEEN</b> <input type="text" id="minD" value="7" onchange="change()"/>
+				<b>AND</b> <input type="text" id="maxD" value="10" onchange="change()"/>
+				<b>DAYS</b>
+				<b style="margin-left: 10px">BUDGET (GBP):</b> 
+
+						<div style="margin-left: 10px; float: right;">	<link rel="stylesheet" type="text/css" href="range.css"/>
+							<input type="range" id="budget" name="range1" min="0" max="2500" step="10" value="100" onchange="chSlide()"/>
+							<script>
+								$(":range").rangeinput();
+							</script>
+						</div>
+				</fieldset>
+				</form> 
+			</div>
+		</div>
+		
+		<div class="skybg1" id="container">
+				
+			<div id="datecon" style="float: left; width: 205px; height: 700px; margin: 0px;">	
+			
+				<div id="datetits" style= "width: 205px; height:60px; margin:0px; background-color: #353535; color: skyblue;"> 
+				<h2><b> DEPARTURE DATES</b> </h2>
+				</div>
+				
+				<div class="skydate" id="dates">
+				<iframe src="table.html" width="200" height ="640"></iframe>
+				</div>
+
+					
+			</div>
+
+				<div id="map" style="background-color:skyblue; height:700px;">
+				</div>
+					
+		</div>
+		
+		<div id="footer" style="background-color:#353535; clear:both;text-align:center; color: white;">
+			<div style="width: 1200px; float: left;"> 
+			<p> In order to operate please choose a starting airport, the default is Edinburgh. Then choose date or set of dates using the familiar shift- and control- click keys.
+				the duration of the trip can also be chosen at this point.
+				Choosing a date will color the map, in different hues depending on the price of the flight including its return flight.
+				Hovering the mouse pointer over a country will then display this price.
+				It is also possible to move around and click on different countries in order to zoom in to this particular country.
+			</div>
+			<div style="width:400px; float: right;">EDINBURGH UNIVERSITY ILW OPENDATA HACK 2013<br> TEQUILACARTEL<sup>Yep that's our name.</sup> </div>
+		</div>
+		
+	</body>
+</html>

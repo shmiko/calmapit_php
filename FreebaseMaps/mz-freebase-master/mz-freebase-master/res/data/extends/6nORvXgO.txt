@@ -1,0 +1,1 @@
+{"name":"Gene Ontology Group Type","id":"\/biology\/gene_ontology_group_type","type":"\/type\/type","group":"type","_id":"6nORvXgO","relation":"\/biology","properties":[{"name":"Group","id":"\/biology\/gene_ontology_group_type\/group","expected_type":"\/biology\/gene_ontology_group","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

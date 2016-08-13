@@ -1,0 +1,1 @@
+{"name":"Accommodation type","id":"\/travel\/accommodation_type","type":"\/type\/type","group":"type","_id":"nfKB3b2P","relation":"\/travel","properties":[{"name":"Accommodation of this type","id":"\/travel\/accommodation_type\/accommodation_of_this_type","expected_type":"\/travel\/accommodation","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

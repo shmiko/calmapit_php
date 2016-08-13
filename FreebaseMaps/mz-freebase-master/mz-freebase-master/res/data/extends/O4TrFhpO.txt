@@ -1,0 +1,1 @@
+{"name":"Market Index","id":"\/finance\/market_index","type":"\/type\/type","group":"type","_id":"O4TrFhpO","relation":"\/business","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

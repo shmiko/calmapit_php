@@ -1,0 +1,1 @@
+{"name":"Delete Task","id":"\/pipeline\/delete_task","type":"\/type\/type","group":"type","_id":"uDhTZdcs","relation":"\/pipeline","properties":[{"name":"Delete guid","id":"\/pipeline\/delete_task\/delete_guid","expected_type":"\/type\/rawstring","description":""}],"included_types":[{"name":"Task","id":"\/pipeline\/task"}]}

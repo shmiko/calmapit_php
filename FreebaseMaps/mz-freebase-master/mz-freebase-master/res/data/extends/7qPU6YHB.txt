@@ -1,0 +1,1 @@
+{"name":"Mexican federal district borough","id":"\/location\/mx_federal_district_borough","type":"\/type\/type","group":"type","_id":"7qPU6YHB","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

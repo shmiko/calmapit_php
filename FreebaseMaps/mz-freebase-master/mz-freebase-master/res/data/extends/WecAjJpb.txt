@@ -1,0 +1,1 @@
+{"name":"Japanese designated city","id":"\/location\/jp_designated_city","type":"\/type\/type","group":"type","_id":"WecAjJpb","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"City\/Town\/Village","id":"\/location\/citytown"},{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Club interest","id":"\/organization\/club_interest","type":"\/type\/type","group":"type","_id":"oWKu4Jrz","relation":"\/organization","properties":[{"name":"Clubs with this interest","id":"\/organization\/club_interest\/clubs","expected_type":"\/organization\/club","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

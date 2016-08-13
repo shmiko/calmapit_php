@@ -1,0 +1,1 @@
+{"name":"Beer container","id":"\/food\/beer_container","type":"\/type\/type","group":"type","_id":"yMDDMmLc","relation":"\/food","properties":[{"name":"Beers","id":"\/food\/beer_container\/beers","expected_type":"\/food\/beer_containment","description":"Beers sold in this kind of container."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Theater Actor","id":"\/theater\/theater_actor","type":"\/type\/type","group":"type","_id":"bmrHiQbO","relation":"\/theater","properties":[{"name":"Theater Roles","id":"\/theater\/theater_actor\/theater_roles","expected_type":"\/theater\/theater_role","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

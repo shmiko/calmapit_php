@@ -1,0 +1,1 @@
+{"name":"Astronomy","id":"\/astronomy","type":"\/type\/domain","group":"zone","_id":"YXwV8I1z","relation":"root","properties":[],"included_types":[]}

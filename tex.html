@@ -1,0 +1,131 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+body {
+	margin: 0;
+}
+
+#container {
+	margin: 20px auto;
+	width: 100%;
+}
+
+#accordion {
+	list-style:none;
+	margin:30px 0;
+	padding:0;
+	height:270px;
+	width: 100%;
+	margin:0 0 0 11px;
+	border:2px solid #000000;
+	overflow:hidden;
+}
+.panel {
+	float:left;
+	display:block;
+	height:270px;
+	width:44px;
+	overflow:hidden;
+	color:#666666;
+	text-decoration:none;
+	font-size:16px;
+	line-height:1.5em
+}
+.panel.active {
+	width:848px
+}
+
+.panelContent {
+	padding:15px 15px 15px 55px;
+	height:240px;
+	width:778px;
+}
+.pink {
+	width:42px;
+	height:270px;
+	float:left;
+	background:url(../images/accordionSprite.png) no-repeat 4px 85px #B3B300;
+	border-right:2px solid #ffffff;
+	cursor:pointer
+}
+.dark1 {
+	background:url(../images/accordionSprite.png) no-repeat -58px 85px #B3B300
+}
+.dark2 {
+	background:url(../images/accordionSprite.png) no-repeat -117px 86px #FFFF00
+}
+.dark3 {
+	background:url(../images/accordionSprite.png) no-repeat -184px 87px #FFFF73
+}
+.last {
+	border:none
+}
+.p1 {
+	background:url(../images/panel1.jpg) no-repeat left top
+}
+.p2 {
+	background:url(../images/panel1.jpg) no-repeat left top
+}
+.p3 {
+	background:url(../images/panel1.jpg) no-repeat left top
+}
+.p4 {
+	background:url(../images/panel1.jpg) no-repeat left top
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+	var fullWidth = $('#container').css().width() – (44 x 3);
+    activePanel = $("#accordion div.panel:first");
+    $(activePanel).addClass('active');
+ 
+    $("#accordion").delegate('.panel', 'click', function(e){
+         if( ! $(this).is('.active') ){
+			$(activePanel).animate({width: "44px"}, 1000);
+			$(this).animate({'width': fullWidth}, 1000);
+			
+			$('#accordion .panel').removeClass('active');
+			$(this).addClass('active');
+			activePanel = this;
+		 };
+    });
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="accordion">
+    <div class="panel">
+      <div class="pink"></div>
+      <div class="panelContent p1"> <strong>Section 1 Header</strong><br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+      </div>
+    </div>
+    <div class="panel">
+      <div class="pink dark1"></div>
+      <div class="panelContent p2"> <strong>Section 2 Header</strong><br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+      </div>
+    </div>
+    <div class="panel">
+      <div class="pink dark2"></div>
+      <div class="panelContent p3"> <strong>Section 3 Header</strong><br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+      </div>
+    </div>
+    <div class="panel">
+      <div class="pink dark3"></div>
+      <div class="panelContent p4"> <strong>Section 4 Header</strong><br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam pellentesque.
+      </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

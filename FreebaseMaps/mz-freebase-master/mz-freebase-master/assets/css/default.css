@@ -1,0 +1,116 @@
+html {}
+body{background-color:#fff;font:400 normal 12px arial;color:#000;cursor:default;}
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);border-radius: 10px;}
+::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);}
+.overflow-visible{overflow:visible !important;}
+
+/***** Screen 960px *****/
+#status{position:fixed;z-index:102;left:0px;top:10px;width:300px;height:24px;text-align:center;}
+#status .process{padding:5px 17px 7px;font:700 italic 14px arial;color:#060;background:#ffa;-moz-box-shadow:0 0 25px #999;-webkit-box-shadow:0 0 25px #999;box-shadow:0 0 25px #999;border:solid 1px #ddd;text-shadow: 4px 2px 4px rgba(24, 15, 63, 0.4);	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#status .success{padding:5px 17px 7px;font:700 14px arial;color:#060;background:#efe;-moz-box-shadow:0 0 25px #999;-webkit-box-shadow:0 0 25px #999;box-shadow:0 0 25px #999;border:solid 1px #ddd;text-shadow: 4px 2px 4px rgba(24, 15, 63, 0.4);	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#status .error{padding:5px 17px 7px;font:700 14px arial;color:#fff;background:#900;-moz-box-shadow:0 0 25px #999;-webkit-box-shadow:0 0 25px #999;box-shadow:0 0 25px #999;border:solid 1px #ddd;text-shadow: 4px 2px 4px rgba(24, 15, 63, 0.4);	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+
+#main{}
+#logo{font:800 normal 30px sans-serif !important;color:red;text-shadow: 4px 2px 4px rgba(124, 115, 163, 0.72);}
+
+.search-box{padding-top:2px;}
+.mz-input, #mz_button_search{padding:4px;font:500 14px arial;color:#000;}
+#mz_button_search{width:80px;}
+#mz_input_keyword{width:300px;}
+
+.outer-block{min-height:500px;}
+.outer-block label{display:block;font:500 italic 15px arial;color:#666;}
+.left-panel{padding-top:10px;}
+.center-panel{padding-top:10px;}
+.right-panel{padding-top:10px;}
+.content-block {padding:10px;}
+
+#mz_summary{min-height:30px;}
+
+.bj-input, #bj_button_search{padding:4px;font:500 14px arial;color:#000;}
+#bj_button_search{width:80px;}
+#bj_input_keyword{width:300px;}
+
+#bj_leftPanel{padding:0px;margin-top:10px;}
+
+    margin: 7px;
+}
+
+#inner-details {
+    font-size:0.8em;
+    list-style:none;
+    margin:7px;
+}
+
+#mz_navigator {
+    position:relative;
+    width:100%;
+    min-height:600px;
+    height:auto;
+    margin:auto;
+    overflow:hidden;
+    background-color:#fff;
+}
+#dialog {position:absolute;z-index:1000;display:none;width:500px;height:auto;min-height:150px;padding:10px 10px 15px;top:100px;left:200px;background-color:#fff;-moz-box-shadow:0 0 25px #999;-webkit-box-shadow:0 0 25px #999;box-shadow:0 0 25px #999;border:solid 1px #ddd;text-shadow: 2px 1px 2px rgba(24, 15, 63, 0.4);	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#dialog .title{font:700 16px arial;color:#009;margin-bottom:5px;}
+#dialog .title .close{float:right;font:500 12px arial;color:#500;text-decoration:underline;cursor:pointer;}
+#dialog .content img {min-height:120px;float:left;margin-right:10px;background-color:#000;-moz-box-shadow:2px 2px 5px #999;-webkit-box-shadow:2px 2px 5px #999;box-shadow:2px 2px 5px #999;}
+
+.fbs-pane{padding:0px !important;}
+.fbs-pane .fbs-status{display:none !important;}
+.fbs-pane .fbs-more{display:none !important;}
+.fbs-flyout-pane{display:none !important;}
+
+/*TOOLTIPS*/
+.tip {
+    color: #111;
+    width: 139px;
+    background-color: white;
+    border:1px solid #ccc;
+    -moz-box-shadow:#555 2px 2px 8px;
+    -webkit-box-shadow:#555 2px 2px 8px;
+    -o-box-shadow:#555 2px 2px 8px;
+    box-shadow:#555 2px 2px 8px;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    font-size:10px;
+    font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding:7px;
+}
+
+.footer{padding:20px 0px;}
+
+
+/***** Screen Bigger than 960px *****/
+@media only screen and (min-width:1200px) {
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 810px) {
+	
+}
+
+/***** Tablet (Smaller than 959px) *****/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+}
+
+/***** Phone (portrait 300px) *****/
+@media only screen and (max-width: 767px) {
+	.outer-block{min-height:30px;}
+}
+
+
+/***** Phone (landscape 420px) *****/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.outer-block{min-height:30px;}
+}
+
+
+
+/***** Retina *****/
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.outer-block{min-height:30px;}
+}

@@ -1,0 +1,1 @@
+{"name":"Customer","id":"\/business\/customer","type":"\/type\/type","group":"type","_id":"eIb5LXBA","relation":"\/business","properties":[{"name":"Supplier","id":"\/business\/customer\/supplier","expected_type":"\/business\/business_operation","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Internet","id":"\/internet","type":"\/type\/domain","group":"zone","_id":"8xxyvjB5","relation":"root","properties":[],"included_types":[]}

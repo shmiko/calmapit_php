@@ -1,0 +1,1 @@
+{"name":"Waterfall type","id":"\/geography\/waterfall_type","type":"\/type\/type","group":"type","_id":"4QgpLEku","relation":"\/geography","properties":[{"name":"Waterfalls","id":"\/geography\/waterfall_type\/waterfalls","expected_type":"\/geography\/waterfall","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

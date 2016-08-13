@@ -1,0 +1,1 @@
+{"name":"UK crown dependency","id":"\/location\/uk_crown_dependency","type":"\/type\/type","group":"type","_id":"eM6lrJpA","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

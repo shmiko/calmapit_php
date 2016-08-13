@@ -1,0 +1,1 @@
+{"name":"Language Dialect","id":"\/language\/language_dialect","type":"\/type\/type","group":"type","_id":"Ik6vYzyt","relation":"\/language","properties":[{"name":"Language","id":"\/language\/language_dialect\/language","expected_type":"\/language\/human_language","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"University system","id":"\/education\/university_system","type":"\/type\/type","group":"type","_id":"Zb8y58A2","relation":"\/education","properties":[],"included_types":[{"name":"Organization","id":"\/organization\/organization"},{"name":"Topic","id":"\/common\/topic"}]}

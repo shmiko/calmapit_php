@@ -1,0 +1,1 @@
+{"name":"Zoo category","id":"\/zoos\/zoo_category","type":"\/type\/type","group":"type","_id":"tlQ6HxtY","relation":"\/zoos","properties":[{"name":"Zoos","id":"\/zoos\/zoo_category\/zoos","expected_type":"\/zoos\/zoo","description":"Zoos or aquariums that are of this category."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

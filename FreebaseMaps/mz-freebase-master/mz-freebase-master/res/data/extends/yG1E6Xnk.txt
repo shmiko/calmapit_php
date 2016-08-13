@@ -1,0 +1,1 @@
+{"name":"Disease Stage","id":"\/medicine\/disease_stage","type":"\/type\/type","group":"type","_id":"yG1E6Xnk","relation":"\/medicine","properties":[{"name":"Stage of","id":"\/medicine\/disease_stage\/stage_of","expected_type":"\/medicine\/disease","description":"The disease that this is a stage of."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

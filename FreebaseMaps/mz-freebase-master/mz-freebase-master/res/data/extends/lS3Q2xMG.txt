@@ -1,0 +1,1 @@
+{"name":"Data Task Status","id":"\/dataworld\/data_task_status","type":"\/type\/type","group":"type","_id":"lS3Q2xMG","relation":"\/dataworld","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

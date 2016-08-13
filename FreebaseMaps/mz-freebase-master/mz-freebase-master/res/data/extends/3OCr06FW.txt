@@ -1,0 +1,1 @@
+{"name":"Conference sponsor","id":"\/conferences\/conference_sponsor","type":"\/type\/type","group":"type","_id":"3OCr06FW","relation":"\/conferences","properties":[{"name":"Conferences","id":"\/conferences\/conference_sponsor\/conferences","expected_type":"\/conferences\/conference_series","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,298 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="en-US"> <!--<![endif]-->
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>jQueryFacebookWall Documentation | Iron Lasso</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Add CSS3 Rules here for IE 7-9
+================================================== -->
+
+<!--[if IE]>
+<style type="text/css">
+html.ie #navigation,
+html.ie a.button,
+html.ie .cta,
+html.ie .wp-caption,
+html.ie #breadcrumbs,
+html.ie a.more-link,
+html.ie .gallery .gallery-item img,
+html.ie .gallery .gallery-item img.thumbnail,
+html.ie .widget-container,
+html.ie #author-info {behavior: url("http://ironlasso.com/wp-content/themes/skeleton/PIE.php");position: relative;}</style>
+<![endif]-->
+
+
+<!-- Mobile Specific Metas
+================================================== -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+<!-- Favicons
+================================================== -->
+
+<link rel="shortcut icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/favicon.ico">
+
+<link rel="apple-touch-icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon.png">
+
+<link rel="apple-touch-icon" sizes="72x72" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-72x72.png" />
+
+<link rel="apple-touch-icon" sizes="114x114" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-114x114.png" />
+
+<link rel="pingback" href="http://ironlasso.com/xmlrpc.php" />
+<link rel="stylesheet" id="custom" href="http://ironlasso.com/?get_styles=css" type="text/css" media="all" />
+<link rel="stylesheet" href="/jQueryFacebookWall/css/jQueryFacebookWall.min.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Feed" href="http://ironlasso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Comments Feed" href="http://ironlasso.com/comments/feed/" />
+<link rel='stylesheet' id='skeleton-css'  href='http://ironlasso.com/wp-content/themes/skeleton/skeleton.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='theme-css'  href='http://ironlasso.com/wp-content/themes/skeleton/style.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='layout-css'  href='http://ironlasso.com/wp-content/themes/skeleton/layout.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='formalize-css'  href='http://ironlasso.com/wp-content/themes/skeleton/formalize.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='superfish-css'  href='http://ironlasso.com/wp-content/themes/skeleton/superfish.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='jfw-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/css/jQueryFacebookWall.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jfw-light-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/css/jQueryFacebookWallLight.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://ironlasso.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ironlasso.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ironlasso.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='jQueryFacebookWall Timeline Style Feed' href='http://ironlasso.com/jqueryfacebookwall-timeline/' />
+<link rel='next' title='jQueryFacebookWall Plugin Options' href='http://ironlasso.com/jqueryfacebookwall-plugin-options/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='canonical' href='http://ironlasso.com/jqueryfacebookwall-documentation/' />
+<link rel='shortlink' href='http://ironlasso.com/?p=55' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body class="page page-id-55 page-template-default">
+	<div id="wrap" class="container">
+	<div class="resize"></div>
+	<div id="header" class="sixteen columns">
+<div class="inner">
+<div id="site-title" class="text"><a href="http://ironlasso.com/" title="Iron Lasso">Iron Lasso</a></div>
+<span class="site-desc text">Changing the Internet one website at a time.</span>
+</div></div><!--/#header-->	<div id="navigation" class="row sixteen columns"><div class="menu-header"><ul id="menu-main-menu" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a title="Lorenzo Gangi Web Development" href="http://ironlasso.com/">Home</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://ironlasso.com/blog/">Blog</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-18"><a title="jQuery Facebook Wall Plugin" href="http://ironlasso.com/jqueryfacebookwall-plugin/">jQueryFacebookWall</a>
+<ul class="sub-menu">
+	<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a title="jQuery Facebook Wall Plugin Timline Style Example" href="http://ironlasso.com/jqueryfacebookwall-timeline/">Timeline Style</a></li>
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a title="jQueryFacebookWall Wall Style Feed" href="http://ironlasso.com/jqueryfacebookwall-wall/">Wall Style</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://ironlasso.com/jquery-facebook-wall-faq/">jQuery Facebook Wall FAQ</a></li>
+	<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="http://ironlasso.com/upgrading/">Upgrading</a></li>
+	<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-55 current_page_item menu-item-123"><a title="jQueryFacebookWall Documentation" href="http://ironlasso.com/jqueryfacebookwall-documentation/">Documentation</a></li>
+	<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a title="jQueryFacebookWall Plugin Options" href="http://ironlasso.com/jqueryfacebookwall-plugin-options/">Plugin Options</a></li>
+	<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396"><a href="http://ironlasso.com/install-instruction-video/">Install Instruction video</a></li>
+</ul>
+</li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-235"><a title="jQueryFacebookWall Wordpress Plugin" href="http://ironlasso.com/jqueryfacebookwall-wordpress-plugin/">jQueryFacebookWall WordPress</a>
+<ul class="sub-menu">
+	<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="http://ironlasso.com/jqueryfacebookwallwp-documentation/">jQueryFacebookWallWP Documentation</a></li>
+	<li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a href="http://ironlasso.com/jqueryfacebookwallwp-faq/">jQueryFacebookWallWP FAQ</a></li>
+	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a href="http://ironlasso.com/jqueryfacebookwallwplight/">jQueryFacebookWallWPLight</a></li>
+</ul>
+</li>
+<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a title="Page Background Plugin" href="http://ironlasso.com/jquery-page-background-pro/">jQueryPageBackground</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://ironlasso.com/contact-2/">Contact</a></li>
+</ul></div></div><!--/#navigation-->		<a name="top" id="top"></a><div id="content" class="eleven columns">
+
+				<div id="post-55" class="post-55 page type-page status-publish hentry">
+								
+															
+						<h1 class="entry-title">jQueryFacebookWall Documentation</h1>
+						
+													
+					<div class="entry-content">
+						<h4>These Instructions are a bit dated.</h4>
+<p>I&#8217;m leaving them up so you can get an idea of what it takes to get the plugin working. New instruction are included in the download .zip with the source files. If you want to see a list of all of the plugin options checkout out the <a title="jQuery Facebook Wall Plugin Options" href="http://ironlasso.com/jqueryfacebookwallwp-documentation/#plugin-options">WordPress documentation</a> - there&#8217;s a table that describes them all.</p>
+<h4><a href="#getting-started">A. GETTTING STARTED</a></h4>
+<h4><a href="#setup">B. SETUP</a></h4>
+<ul class="square">
+<li><a href="#section1">Section 1 – Creating a Facebook wall 1</a></li>
+<li><a href="#section2">Section 2 &#8211; Getting your Facebook account name. 2</a></li>
+<li><a href="#section3">Section 3 – Creating a Facebook app. 2</a></li>
+<li><a href="#section4">Section 4 &#8211; Generating a Facebook access token. 2</a></li>
+<li><a href="#section4">Section 5 &#8211; Facebook pages vs. regular user accounts 3</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>GETTTING STARTED</h3>
+<p>Thanks for downloading your very own copy of jQueryFacebookWall.</p>
+<p>Before we get started you should know a couple things. To get the Facebook data required to build your wall, you need or need to know the following:</p>
+<ol class="square">
+<li>A Facebook account, and from that you’ll need to get the name of the account (Section 2)</li>
+<li>A Facebook App associated with that account (Section 3)</li>
+<li>A Facebook App access token (Section 4)</li>
+<li>Facebook accounts can have pages; pages have far &#8216;looser&#8217; authentication requirements than normal Facebook accounts. Consequently, you can retrieve more data from them. (Section 5)</li>
+</ol>
+<p>&nbsp;</p>
+<h3>SETUP</h3>
+<h4>Section 1 – Creating a Facebook wall</h4>
+<p>Adding a Facebook wall or timeline to your website requires a few steps (see index.html from the .zip download for a working version):</p>
+<ol>
+<ol>
+<li>Generate a Facebook access token via the steps in Section 3.</li>
+<li>Make an html element to hold the Facebook wall</li>
+<li>Call the jQueryFacebookWall plugin via the following code:</li>
+</ol>
+</ol>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="javascript" style="font-family:monospace;">        $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'.facebook-wall'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">jQueryFacebookWall</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+            appId<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourAppId'</span><span style="color: #339933;">,</span>
+            FacebookUser<span style="color: #339933;">:</span> <span style="color: #3366CC;">'YourFacebookAccountName'</span><span style="color: #339933;">,</span>
+            domain<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourDomain.com'</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>&nbsp;</p>
+<h4>Section 2 &#8211; Getting your Facebook account name</h4>
+<p>Your Facebook username appears after the www.facebook.com/ in your browser url. Usually it looks something like this: www.facebook.com/*yourUserName*</p>
+<p>In other words, if you are Rick James, your Facebook url looks something like: <a href="http://www.facebook.com/RickJames">www.facebook.com/RickJames</a></p>
+<p align="center"><a href="http://ironlasso.com/wp-content/uploads/2013/05/facebookAccountName.png"><img class="scale-with-grid" alt="facebookAccountName" src="http://ironlasso.com/wp-content/uploads/2013/05/facebookAccountName.png" /></a>Figure 1 – Facebook account name</p>
+<p>&nbsp;</p>
+<p>Copy the value of the username, delineated by *yourUserName* above, and add it to your plugin call</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="javascript" style="font-family:monospace;">$<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'.Facebook-wall'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">jQueryFacebookWall</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span> 
+    appId<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourAppId'</span><span style="color: #339933;">,</span> 
+    FacebookUser<span style="color: #339933;">:</span> <span style="color: #3366CC;">'RickJames'</span><span style="color: #339933;">,</span> 
+    domain<span style="color: #339933;">:</span> <span style="color: #3366CC;">'RickJames.com'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>&nbsp;</p>
+<h4>Section 3 – Creating a Facebook app</h4>
+<ol>
+<li>Log into your Facebook account.</li>
+<li>Go to https://developers.Facebook.com/apps</li>
+<li>Click the &#8216;Create New App&#8217; button in the upper right hand corner.</li>
+<li>Fill out your app info, name, etc.</li>
+</ol>
+<p align="center"><a href="http://ironlasso.com/wp-content/uploads/2013/05/facebookAppInfo.png"><img class="scale-with-grid" alt="facebookAppInfo" src="http://ironlasso.com/wp-content/uploads/2013/05/facebookAppInfo.png" /></a>Figure 2 – Facebook App ID and App Secret</p>
+<p>User your App Id/API Key highlighted in red above for &#8216;yourAppId&#8217; in the plugin call</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="javascript" style="font-family:monospace;">$<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'.Facebook-wall'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">jQueryFacebookWall</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    appId<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourAppId'</span><span style="color: #339933;">,</span>
+    FacebookUser<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourUserName'</span><span style="color: #339933;">,</span>
+    domain<span style="color: #339933;">:</span> <span style="color: #3366CC;">'yourDomain.com'</span> 
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>&nbsp;</p>
+<h4>Section 4 &#8211; Generating a Facebook access token</h4>
+<ol>
+<ol>
+<li>Open fb_get_app_token.php and enter your Facebook app id and secret (see Figure 2) on lines 19&amp;20.</li>
+</ol>
+</ol>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #cc66cc;">19</span>         <span style="color: #000088;">$app_id</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'----------------'</span><span style="color: #339933;">;</span> 
+<span style="color: #cc66cc;">20</span>         <span style="color: #000088;">$app_secret</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'----------------'</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<ol>
+<li>Save and exit the file.</li>
+<li>Generate a Facebook access token for your Facebook app by running  fb_get_app_token.php in your browser. If you have unzipped the plugin and put it in, say, youDomainWebRoot/jQueryFacebooWall/, then in your browser open www.yourdomain.com/fb_get_app_token.php</li>
+<li>fb_get_app_token.php will retrieve an access token from Facebook and write it to the fb_app_token.php file. Make sure that fb_app_token.php has full write permissions.</li>
+<li>Open fb_app_token.php it should contain something that looks like this:
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="javascript" style="font-family:monospace;"><span style="color: #009900;">&#123;</span><span style="color: #3366CC;">&quot;appToken&quot;</span><span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;24506blahblahblahblahblah2722|fkLcyxj6C-_blahblahblahblahblah&quot;</span><span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+</li>
+<li>If it doesn&#8217;t, you didn’t get an access token from Facebook. An alternative method of retrieving an app access token is running <a href="http://www.yourdomain.com/fb_get_app_token.php?debug=true">www.yourdomain.com/fb_get_app_token.php?debug=true</a> This will show debugging information for the script. If it returns an access token, copy and paste it into fb_app_token.php</li>
+</ol>
+<p align="center"><a href="http://ironlasso.com/wp-content/uploads/2013/05/facebookAccessToken.png"><img class="scale-with-grid" alt="facebookAccessToken" src="http://ironlasso.com/wp-content/uploads/2013/05/facebookAccessToken.png" /></a>Figure 3 – Facebook Access Token</p>
+<p>* To generate an app access token via the fb_get_app_token.php script, php must have <i>https wrapper enabled</i>. In your php.ini ;extension=php_openssl.dll must be uncommented, if you can’t do this you may have to contact your hosting provider or system administrator.</p>
+<p>&nbsp;</p>
+<h4>Section 5 &#8211; Facebook pages vs. regular user accounts</h4>
+<p>jQueryFacebookWall plugin makes use of Facebook’s open graph api, which has various levels of authentication requirements. Facebook pages have looser restrictions than user accounts; therefore, the plugin can retrieve more info (posts and album data) for pages than normal accounts. jQueryFacebookWall will work with normal accounts, but you will not be able to retrieve album data and you will have to edit the permissions of your posts, and photos in your Facebook account. If you don’t have a Facebook page you should consider creating one. You can do so by logging into face book and going here. https://www.Facebook.com/pages/create/</p>
+<p>Here are the caveats imposed by Facebook’s authentication requirements:</p>
+<ul class="square">
+<li>Pages can have albums.</li>
+<li>Pages can show all posts.</li>
+<li>User accounts can’t have albums.</li>
+<li>User accounts don’t include all posts.</li>
+</ul>
+																	</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+				
+<!-- You can start editing here. -->
+<div id="comments">
+
+	
+
+</div>
+
+		</div><!-- /.columns (#content) -->
+<div id="sidebar" class="five columns" role="complementary"><ul>
+		        
+            <li id="text-3" class="widget-container widget_text"><h3 class="widget-title">jQueryPageBackgroundPro</h3>			<div class="textwidget"><div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jquery-page-background-pro/7690770?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get your very own copy of jQueryPageBackgroundPro today! <div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jquery-page-background-pro/7690770?ref=ludicrisMaximus">Download jQueyPageBackgroundPro</a></div><div class="clear"></div> 
+</div><div class="clear"></div> 
+
+</div>
+		</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">jQueryFacebookWall</h3>			<div class="textwidget"><div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get your very own copy of jQueryFacebookWall WordPress Plugin today!<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall-wordpress/5574064?ref=ludicrisMaximus">Download WordPress Plugin</a></div><div class="clear"></div> 
+</div><div class="clear"></div> 
+
+<div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get started by getting your very own copy of jQueryFacebookWall jQuery Plugin.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus">Download jQuery Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> 
+
+<div class="cta" >
+<h3>Download</h3>
+<a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus" ><img class="size-full wp-image-75 alignleft" alt="arrow" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" width="45" height="48" /></a>Get started  for FREE by downloading a copy of jQueryFacebookWallWPLight.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://wordpress.org/plugins/jqueryfacebookwallwplight/">Download WordPress Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> </div>
+		</li>        
+         
+        <li class="widget-container widget_text">
+            <a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=LorenzoGangi-ironlasso.com">
+                <img class="affiliate-banner" src="http://tracking.hostgator.com/img/Shared/234x60.gif" border="0" title='Get some radical hosting'>
+            </a>	
+        </li> 
+        <li class="widget-container widget_text">
+        <div class='google-ads'>
+        <script type="text/javascript"><!--
+			google_ad_client = "ca-pub-5596827964697060";
+			/* 160 image rich */
+			google_ad_slot = "4532406355";
+			google_ad_width = 160;
+			google_ad_height = 600;
+			//-->
+			</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
+        </li>
+        
+    </ul>
+</div><!-- #sidebar -->
+<div class="clear"></div><div id="footer" class="noborder sixteen columns">
+
+<div id="credits"><br /><a class="themeauthor" href="http://www.simplethemes.com" title="Simple WordPress Themes">WordPress Themes</a></div><script type='text/javascript' src='http://ironlasso.com/jQueryFacebookWall/js/jQueryFacebookWall.min.js?ver=1'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/app.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/superfish.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/jquery.formalize.min.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWall.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWallInline.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/js/jQueryFacebookWallLight.min.js?ver=1.0.0'></script>
+
+</div><!--/#footer-->
+</div><!--/#wrap.container-->
+<script type="text/javascript">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41228315-1', 'ironlasso.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"Wine Sub-region","id":"\/wine\/wine_sub_region","type":"\/type\/type","group":"type","_id":"IOfdVJ6b","relation":"\/food","properties":[{"name":"Wines","id":"\/wine\/wine_sub_region\/wines","expected_type":"\/wine\/wine","description":""}],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"}]}

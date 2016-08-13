@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Jquery Mobile Event Calendar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<link rel="stylesheet" href="css/jqm-cal.css" />
+<link rel="stylesheet" href="css/phone.css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+<!-- We are using https://github.com/phstc/jquery-dateFormat to format events display date -->
+<script type="text/javascript" src="js/formatdate.js"></script>
+<script type="text/javascript" src="js/jqm-cal.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+$( document ).ready(function() {
+var date1 = new Date();
+var date2 = new Date();
+var date3 = new Date();
+var date4 = new Date();
+var date5 = new Date();
+var date6 = new Date();
+var date7 = new Date();
+var date8 = new Date();
+var date9 = new Date();
+
+date1.setDate(date1.getDate() - 30);
+date2.setDate(date2.getDate() - 15);
+date3.setDate(date3.getDate() - 13);
+date4.setDate(date4.getDate() - 3);
+date5.setDate(date5.getDate() + 5);
+date6.setDate(date6.getDate() + 6);
+date7.setDate(date7.getDate() + 12);
+date8.setDate(date8.getDate() + 30);
+date9.setDate(date9.getDate() + 38);
+
+var calEvents = [
+	{"icon": "bars","eid":"someID 1","name":"My event test","url":"#","start":new Date("2014-02-10T08:00:00.000Z"),"end":new Date("2014-02-10T10:00:00.000Z"),"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"someID 1","name":"My event test","url":"#","start":new Date("2014-02-10T17:00:00.000Z"),"end":new Date("2014-02-10T18:00:00.000Z"),"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"someID 1","name":"My event 1","url":"#","start":date1,"end":date1,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"icon": "info","eid":"SomeID 2","name":"My event 2","url":"#","start":date2,"end":date3,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"SomeID 3","name":"My event 3","url":"#","start":date4,"end":date4,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"icon": "alert","eid":"SomeID 4","name":"My event 4","url":"#","start":date5,"end":date6,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"SomeID 5","name":"My event 5","url":"#","start":date7,"end":date7,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"SomeID 6","name":"My event 6","url":"#","start":date8,"end":date8,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+	{"eid":"SomeID 7","name":"My event 7","url":"#","start":date9,"end":date9,"summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet sem risus. Curabitur vehicula lacus eu tincidunt interdum."},
+];
+
+
+   $("#calendar").jqmCalendar({
+      events : calEvents,
+      months : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      days : ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+      startOfWeek : 1
+   });
+
+
+$(".ui-listview").find('.event-item-link').die().live({
+    click: function() {
+        if ($(this).attr("rel")) {
+            alert('Clicked event with ID: ' + $(this).attr("rel"));
+        }
+    },
+});
+});
+</script>
+
+<div id="frame" class="mobile portrait" style="width: 356px; height: 586px;">
+		<div id="frame_lt"></div>
+		<div id="frame_lm"></div>
+		<div id="frame_lb"></div>
+		<div id="frame_mt">
+			<div id="loud_speaker_h"></div>
+		</div>
+		<div id="frame_mm">
+			<div class="inside">
+					<div id="calendar"></div>
+			</div>
+		</div>
+		<div id="frame_mb"></div>
+		<div id="frame_rt"></div>
+		<div id="frame_rm">
+			<div id="loud_speaker_v"></div>
+		</div>
+		<div id="frame_rb"></div>
+	</div>
+	
+	
+</body>
+</html>

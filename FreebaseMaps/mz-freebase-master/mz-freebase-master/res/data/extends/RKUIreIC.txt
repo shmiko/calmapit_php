@@ -1,0 +1,1 @@
+{"name":"Animal owner","id":"\/biology\/animal_owner","type":"\/type\/type","group":"type","_id":"RKUIreIC","relation":"\/biology","properties":[{"name":"Animals owned","id":"\/biology\/animal_owner\/animals_owned","expected_type":"\/biology\/animal_ownership","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

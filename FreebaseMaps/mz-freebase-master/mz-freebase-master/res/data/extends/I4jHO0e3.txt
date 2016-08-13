@@ -1,0 +1,1 @@
+{"name":"Ligament","id":"\/medicine\/ligament","type":"\/type\/type","group":"type","_id":"I4jHO0e3","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

@@ -1,0 +1,1 @@
+{"name":"Military rank","id":"\/military\/rank","type":"\/type\/type","group":"type","_id":"0TwBMmRo","relation":"\/military","properties":[{"name":"Used by services","id":"\/military\/rank\/used_by_services","expected_type":"\/military\/military_service","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

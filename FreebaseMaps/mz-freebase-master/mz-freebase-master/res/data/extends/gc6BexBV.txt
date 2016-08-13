@@ -1,0 +1,1 @@
+{"name":"Automotive Class","id":"\/automotive\/automotive_class","type":"\/type\/type","group":"type","_id":"gc6BexBV","relation":"\/automotive","properties":[{"name":"Examples","id":"\/automotive\/automotive_class\/examples","expected_type":"\/automotive\/model","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

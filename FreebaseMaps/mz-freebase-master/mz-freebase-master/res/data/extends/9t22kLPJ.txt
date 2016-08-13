@@ -1,0 +1,1 @@
+{"name":"Baseball Position","id":"\/baseball\/baseball_position","type":"\/type\/type","group":"type","_id":"9t22kLPJ","relation":"\/baseball","properties":[{"name":"Players","id":"\/baseball\/baseball_position\/players","expected_type":"\/baseball\/baseball_player","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

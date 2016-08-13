@@ -1,0 +1,1 @@
+{"name":"Project participant","id":"\/projects\/project_participant","type":"\/type\/type","group":"type","_id":"sVpigWmx","relation":"\/projects","properties":[{"name":"Projects","id":"\/projects\/project_participant\/projects","expected_type":"\/projects\/project_participation","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

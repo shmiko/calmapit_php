@@ -1,0 +1,1 @@
+{"name":"Project role","id":"\/projects\/project_role","type":"\/type\/type","group":"type","_id":"tWlcuugQ","relation":"\/projects","properties":[{"name":"Projects","id":"\/projects\/project_role\/projects","expected_type":"\/projects\/project_participation","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

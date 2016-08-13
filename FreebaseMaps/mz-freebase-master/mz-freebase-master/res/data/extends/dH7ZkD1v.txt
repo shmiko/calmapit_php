@@ -1,0 +1,1 @@
+{"name":"Golfer","id":"\/sports\/golfer","type":"\/type\/type","group":"type","_id":"dH7ZkD1v","relation":"\/sports","properties":[],"included_types":[{"name":"Athlete","id":"\/sports\/pro_athlete"},{"name":"Person","id":"\/people\/person"},{"name":"Topic","id":"\/common\/topic"}]}

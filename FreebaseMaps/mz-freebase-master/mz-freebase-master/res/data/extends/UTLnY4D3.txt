@@ -1,0 +1,1 @@
+{"name":"Lift type","id":"\/skiing\/lift_type","type":"\/type\/type","group":"type","_id":"UTLnY4D3","relation":"\/skiing","properties":[{"name":"Ski lifts","id":"\/skiing\/lift_type\/ski_lifts","expected_type":"\/skiing\/lift_tenure","description":"Ski lifts of this type."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

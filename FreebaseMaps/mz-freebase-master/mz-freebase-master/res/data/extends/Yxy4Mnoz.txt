@@ -1,0 +1,1 @@
+{"name":"Peer Relationship","id":"\/influence\/peer_relationship","type":"\/type\/type","group":"type","_id":"Yxy4Mnoz","relation":"\/influence","properties":[{"name":"Peers","id":"\/influence\/peer_relationship\/peers","expected_type":"\/influence\/influence_node","description":""}],"included_types":[]}

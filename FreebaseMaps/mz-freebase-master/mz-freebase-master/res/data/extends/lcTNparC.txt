@@ -1,0 +1,1 @@
+{"name":"Camera ISO Capability","id":"\/digicams\/camera_iso","type":"\/type\/type","group":"type","_id":"lcTNparC","relation":"\/digicams","properties":[{"name":"Cameras","id":"\/digicams\/camera_iso\/cameras","expected_type":"\/digicams\/digital_camera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

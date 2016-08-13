@@ -1,0 +1,1 @@
+{"name":"Physical Geography","id":"\/geography","type":"\/type\/domain","group":"zone","_id":"jTZnR3Jt","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Constellation bordering relationship","id":"\/astronomy\/constellation_bordering_relationship","type":"\/type\/type","group":"type","_id":"Nx00uT0b","relation":"\/astronomy","properties":[{"name":"Constellations","id":"\/astronomy\/constellation_bordering_relationship\/constellations","expected_type":"\/astronomy\/constellation","description":""}],"included_types":[]}

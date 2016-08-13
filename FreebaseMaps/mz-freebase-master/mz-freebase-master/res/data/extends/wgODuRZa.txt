@@ -1,0 +1,1 @@
+{"name":"Glacier status","id":"\/geography\/glacier_status","type":"\/type\/type","group":"type","_id":"wgODuRZa","relation":"\/geography","properties":[{"name":"Glaciers of this status","id":"\/geography\/glacier_status\/glaciers_of_this_status","expected_type":"\/geography\/glacier","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

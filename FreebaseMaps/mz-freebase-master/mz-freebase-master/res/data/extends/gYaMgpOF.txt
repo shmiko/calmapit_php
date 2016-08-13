@@ -1,0 +1,1 @@
+{"name":"Visual Art Genre","id":"\/visual_art\/visual_art_genre","type":"\/type\/type","group":"type","_id":"gYaMgpOF","relation":"\/visual_art","properties":[{"name":"Artworks","id":"\/visual_art\/visual_art_genre\/artworks","expected_type":"\/visual_art\/artwork","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

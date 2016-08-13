@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type = "text/javascript" src="background.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="map-canvas"></div>
+      <div id="controls">
+        <form class="form-horizontal" role="form">
+          <div class="control-group">
+            <label for="origin" class="control-label">Starting Location</label>
+            <div class="control">
+              <input type="text" class="form-control" id="origin" placeholder="starting location">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="waypoints" class="control-label">Waypoints</label>
+            <div class="control">
+              <input type="text" class="form-control" id="waypoints" placeholder="waypoints">
+              <button type="button" class="btn btn-success" id="add">+</button>
+              <button type="button" class="btn btn-danger" id="subtract">-</button>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="destination" class="control-label">Destination</label>
+            <div class="control">
+              <input type="text" class="form-control" id="destination" placeholder="destination">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="mpg" class="control-label">Miles Per Gallon</label>
+            <div class="control">
+              <input type="text" class="form-control" id="mpg" placeholder="fuel economy (mpg)">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="vol" class="control-label">Tank Volume (gal)</label>
+            <div class="control">
+              <input type="text" class="form-control" id="vol" placeholder="tank volume (gal)">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="cost" class="control-label">Cost Per Gallon ($)</label>
+            <div class="control">
+              <input type="text" class="form-control" id="cost" placeholder="cost per gallon ($)">
+            </div>
+          </div>
+          <button type="button" class="btn btn-default" id="submit">submit</button>
+        </form>
+        <div id="results">
+          <p id="pdist">Distance: </p>
+          <p id="estcost">Estimated Cost: </p>
+          <p id="fillups">Fuel Stops: </p>
+        </div>
+        <div id="route">
+          <ul id="trip"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type = "text/javascript" src="ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

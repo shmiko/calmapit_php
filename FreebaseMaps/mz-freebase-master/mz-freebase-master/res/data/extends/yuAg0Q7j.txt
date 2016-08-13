@@ -1,0 +1,1 @@
+{"name":"News article","id":"\/freebase\/news_article","type":"\/type\/type","group":"type","_id":"yuAg0Q7j","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,92 @@
+body{
+    font-family:'Raleway';
+}
+h1{
+    font-size: 48px;
+    text-align: center;
+}
+p{
+    font-size: 18px;
+}
+/*
+ * Classes below in alpha order
+ */
+
+.daytitle{ /* 3 day Day title */
+    text-align: center;
+}
+.high{ /* 3-day high temp */
+    text-align: center;
+}
+.hour:nth-child(odd){ /* Every other .hour */
+    float: left;
+}
+
+.hour:nth-child(even){ /* Every other .hour */
+    display: inline;
+    float: right;
+}
+.low{ /* 3-day low temp */
+    text-align: center;
+}
+.tday{ /* 3-day used to separate day and evening */
+    width: 25em;
+    height: 18em;
+    padding: 10px;
+    margin: auto;
+}
+.wicon{ /* weather icons */
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+.weather p{
+    text-align: center;
+}
+.weather h2{
+    text-align: center;
+}
+.weather{
+    width: 20em;
+    height: 18em;
+    padding: 5px;
+}
+
+/*
+ * IDs in alpha order
+ */
+
+#almanac{
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#almanac h2{
+    text-align: center;
+}
+#highs{ /* almanac highs */
+    text-decoration: underline;
+}
+#hourly{ /* Hourly container */
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#lows{ /* almanac lows */
+    text-decoration: underline;
+}
+#period:nth-child(even){ /* Every other #period */
+    float: left;
+}
+#period:nth-child(odd){ /* Every other #period */
+    float: right;
+}
+#prefore{
+    text-align: left;
+}
+#tdforecast{ /* Container for the 3day forecast */
+    width: 60em;
+    margin-left: auto ;
+    margin-right: auto ;
+}

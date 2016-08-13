@@ -1,0 +1,1 @@
+{"name":"Domain Category Display Column","id":"\/freebase\/domain_category_display_column","type":"\/type\/type","group":"type","_id":"cLG8JICR","relation":"\/freebase","properties":[{"name":"Domain Categories","id":"\/freebase\/domain_category_display_column\/domains","expected_type":"\/freebase\/domain_category","description":""}],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Visual Art","id":"\/visual_art","type":"\/type\/domain","group":"zone","_id":"L9kzHCSY","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Muscle","id":"\/medicine\/muscle","type":"\/type\/type","group":"type","_id":"r8de8ZWQ","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

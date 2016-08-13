@@ -1,0 +1,1 @@
+{"name":"Flag Vote","id":"\/freebase\/flag_vote","type":"\/type\/type","group":"type","_id":"aUrjwACx","relation":"\/freebase","properties":[{"name":"Judgments","id":"\/freebase\/flag_vote\/judgments","expected_type":"\/freebase\/flag_judgment","description":"Judgments that have used this vote"}],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Boat Fate","id":"\/boats\/boat_fate","type":"\/type\/type","group":"type","_id":"qcfNDYI1","relation":"\/boats","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

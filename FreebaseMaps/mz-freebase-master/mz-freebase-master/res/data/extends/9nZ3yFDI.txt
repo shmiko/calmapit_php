@@ -1,0 +1,1 @@
+{"name":"Ship owner","id":"\/boats\/ship_owner","type":"\/type\/type","group":"type","_id":"9nZ3yFDI","relation":"\/boats","properties":[{"name":"Ships owned","id":"\/boats\/ship_owner\/ships_owned","expected_type":"\/boats\/ship_ownership","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

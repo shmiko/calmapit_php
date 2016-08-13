@@ -1,0 +1,1 @@
+{"name":"Sports League Award Winner","id":"\/sports\/sports_award_winner","type":"\/type\/type","group":"type","_id":"iYGZIUMl","relation":"\/sports","properties":[{"name":"Awards","id":"\/sports\/sports_award_winner\/awards","expected_type":"\/sports\/sports_award","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

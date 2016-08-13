@@ -1,0 +1,1 @@
+{"name":"Planet","id":"\/astronomy\/planet","type":"\/type\/type","group":"type","_id":"ZN3dQ8qT","relation":"\/astronomy","properties":[],"included_types":[{"name":"Orbital Relationship","id":"\/astronomy\/orbital_relationship"},{"name":"Topic","id":"\/common\/topic"},{"name":"Celestial Object","id":"\/astronomy\/celestial_object"}]}

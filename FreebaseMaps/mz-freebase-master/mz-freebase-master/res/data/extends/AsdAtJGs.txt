@@ -1,0 +1,1 @@
+{"name":"Italian frazione","id":"\/location\/it_frazione","type":"\/type\/type","group":"type","_id":"AsdAtJGs","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"}]}

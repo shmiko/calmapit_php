@@ -1,0 +1,1 @@
+{"name":"Aircraft Line","id":"\/aviation\/aircraft_line","type":"\/type\/type","group":"type","_id":"kKUnnuuh","relation":"\/aviation","properties":[{"name":"Models In Line","id":"\/aviation\/aircraft_line\/models_in_line","expected_type":"\/aviation\/aircraft_model","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

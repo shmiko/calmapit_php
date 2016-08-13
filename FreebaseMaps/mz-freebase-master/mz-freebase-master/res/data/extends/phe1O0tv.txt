@@ -1,0 +1,1 @@
+{"name":"Software Ticket Status","id":"\/freebase\/software_ticket_status","type":"\/type\/type","group":"type","_id":"phe1O0tv","relation":"\/freebase","properties":[{"name":"Tickets","id":"\/freebase\/software_ticket_status\/tickets","expected_type":"\/freebase\/software_ticket","description":""}],"included_types":[]}

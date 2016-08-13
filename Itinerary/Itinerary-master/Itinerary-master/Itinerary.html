@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Find Near Route Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	 <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/jquery.loadTemplate-1.4.4.js"></script>
+    <script src="entities.js"></script>
+	<script type="text/html" id="attractionTemplate">
+		<li class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" data-src="icon" alt="something went wrong">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading" data-content="name"></h4>
+			<p data-content="description"></p>
+		</div>
+		</li>
+	</script>
+	<script type="text/html" id="savedRouteTemplate">
+		<li class="media route-list-el li-route-list-entry" data-id="routeId">
+			<a class="pull-left" href="#">
+				<img class="media-object" src="icons/route.png">
+			</a>
+			<div class="media-body row">
+				<h5 class="media-heading" data-content="routeName" style="float:left; overflow:hidden; text-overflow:ellipsis" ></h5>
+				<button type="button" class="btn btn-default btn-sm link-to-route-button" style="margin-left:5px" >
+					<span class="glyphicon glyphicon-link"></span>
+				</button>
+			</div>
+		</li>
+	</script>
+	
+	<script type="text/html" id="savedRouteTemplate">
+		<li class="media" >
+			<p data-content="trashContent" ></p>
+		</li>
+	</script>	
+	
+	
+    <style type="text/css">
+        html
+        {
+            overflow:hidden;
+            font-family: Verdana;
+            font-size: 12px;
+            width:100%;
+            height:100%;
+        }
+        
+        body
+        {
+            width:100%; 
+            height:100%; 
+            margin:0 0 0 0;
+        }
+    </style>
+	<style>
+		.panel > div {
+				position:absolute;
+				background-color: #ffffff;
+				right:10px;
+				top:10px;
+				width:250px;
+
+				border-radius: 10px;
+				opacity:0.9;
+		}
+	</style>
+    <style>
+        .checkbox-new {
+            line-height:37px;
+            margin-top:0;
+            margin-bottom:0;
+        }
+    </style>
+    <style>
+        .list-group-item-new {
+            padding-top:0;
+            padding-bottom:0
+        }
+    </style>
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script type="text/javascript">
+        window.onload = load;
+        window.onresize = Resize;
+
+        var bmKey = "Asb6qAbAnwhscp9ItaQx6kirs1AAkFXES2Vpgdr9C8NNiEeT52bPln0Ij9wHYzKa";
+        var map = null;
+        var MM = Microsoft.Maps;
+        var directionsErrorEventObj;
+        var directionsUpdatedEventObj;
+		var directionsManager = null;
+        var trafficFlowVisible = false;
+        var trafficFlowLayer = null;
+        var entitiesLayer = null;
+        var infoBoxLayer = null;
+		
+        var startLat = null;
+        var startLon = null;
+		
+		var startName = null;
+		var endName = null;
+
+        var middleLat = null;
+        var middleLon = null;
+
+        var endLat = null;
+        var endLon = null;
+
+        var prevRect = null;
+
+        var foundAttractionsInfo = {};
+
+		var selectedLocations = [];
+		
+		var savedRoutes = {};
+		
+		var idsequence = 0;
+
+		// 20 miles are 0.28 degrees of latitude and 0.42 degrees of longitude near Seattle. Let's take 0.34 for both
+		var distance = 0.34;
+		var dist2 = distance * distance;
+		
+		var polyline = [];
+		var segments = [];
+		
+		function getNextId() {
+			return idsequence++;
+		}
+		
+		function getCurrentRouteInfo() {
+			return {
+				routeId: "route_id_" + getNextId(),
+				routeName: startName + " - " + endName,
+				startName: startName,
+				endName: endName,
+				startLat: startLat,
+				startLon: startLon,
+				selectedLocations: selectedLocations,
+				id:getNextId()
+			}
+		}
+
+        var pinpointsLocations = {};
+        var pinpointsCategories = {};
+
+		function load()
+		{
+			GetMap();
+			
+			//If route was provided in URL
+			var tokens = document.URL.split('#');
+			if (tokens.length > 1) {
+				var encodedDataString = tokens[1];					
+alert( encodedDataString );
+				var routeInfo = decodeRoute( encodedDataString );
+alert( routeInfo );				
+console.dir( routeInfo );
+				//Setup provided route
+				selectedLocations = routeInfo.selectedLocations;
+console.dir( selectedLocations );				
+				rebuildRoute();
+			}			
+		}
+
+        function GetMap() {
+            map = new MM.Map(document.getElementById('myMap'), { 
+                credentials: bmKey,
+                mapTypeId: MM.MapTypeId.road,
+                bounds: MM.LocationRect.fromCorners(new MM.Location(49.0, -125.0), new MM.Location(25.0, -80.0)),
+                enableClickableLogo: false,
+                enableSearchLogo: false,
+				showScalebar: false,
+				showDashboard: false
+            });
+
+            MM.Events.addHandler(map, 'click', clearInfoBox);
+            Resize();
+        }
+
+        function clearInfoBox(e) {
+            if (e.targetType == "map" && infoBoxLayer != null) {
+                infoBoxLayer.clear();
+            }
+        }
+
+        function createDirectionsManager(directionsUpdatedCallback) {
+			if(directionsManager == null) {
+				directionsManager = new MM.Directions.DirectionsManager(map);
+				var displayMessage;
+				directionsManager.resetDirections();
+				directionsErrorEventObj = MM.Events.addHandler(directionsManager, 'directionsError', function (arg) { alert(arg.message) });
+			}
+			
+			if(directionsUpdatedCallback == null) {
+				MM.Events.removeHandler(directionsUpdatedEventObj);
+			} else {
+				directionsUpdatedEventObj = MM.Events.addHandler(directionsManager, 'directionsUpdated', directionsUpdatedCallback);
+			}
+			
+			return directionsManager;
+        }
+
+        function createDrivingRoute() {
+            var directionsManager = createDirectionsManager(ApproximateRoute);
+			directionsManager.clearDisplay();
+            var options = directionsManager.getRequestOptions();
+            options.routeDraggable = false;
+            directionsManager.resetDirections();
+            directionsManager.setRenderOptions({ autoUpdateMapView: true });
+			startName = document.getElementById('txtStart').value;
+            var myStart = new MM.Directions.Waypoint({ address:startName });
+            directionsManager.addWaypoint(myStart);
+			endName = document.getElementById('txtEnd').value;
+            var myEnd = new MM.Directions.Waypoint({ address: endName });
+            directionsManager.addWaypoint(myEnd);
+            directionsManager.setRequestOptions(options);
+            directionsManager.calculateDirections();
+        }
+
+        function createDirections() {
+			MM.loadModule('Microsoft.Maps.Directions', { callback: createDrivingRoute });		
+			
+	        var start = document.getElementById('txtStart').value;
+            var end = document.getElementById('txtEnd').value;
+ 			selectedLocations = [
+			{	"name" : start,
+				"icon" : "icons/A.png"
+			},
+			{	"name" : end,
+				"icon" : "icons/B.png"
+			}];
+			$(".list-attraction").loadTemplate($("#attractionTemplate"), selectedLocations);
+        }
+
+        function Resize() {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+            document.getElementById('myMap').style.width = (windowWidth) + "px";
+            document.getElementById('myMap').style.height = (windowHeight) + "px";
+        }
+
+        function ToggleTraffic() {
+            if (trafficFlowVisible == false) {
+                MM.loadModule('Microsoft.Maps.Traffic', {
+                    callback: function () {
+                        trafficFlowLayer = new MM.Traffic.TrafficLayer(map);
+                        trafficFlowLayer.show();
+                    }
+                });
+                trafficFlowVisible = true;
+            }
+            else {
+                trafficFlowLayer.hide();
+                trafficFlowVisible = false;
+            }
+        }
+
+        function RouteRequest(credentials) {
+            var request = "http://dev.virtualearth.net/REST/V1/Routes/Driving?" +
+                "wp.0=" + startName +
+                "&wp.1=" + endName +
+                "&key=" + credentials +
+                "&rpo=Points" +
+                "&tl=0.05" +
+                "&o=json" +
+                "&jsonp=callbackRoute";
+
+            CallRestService(request);
+        }
+
+        function callbackRoute(result) {
+           if (result &&
+                  result.resourceSets &&
+                  result.resourceSets.length > 0 &&
+                  result.resourceSets[0].resources &&
+                  result.resourceSets[0].resources.length > 0) {
+
+				var points = result.resourceSets[0].resources[0].routePath.line.coordinates;
+				var indices = result.resourceSets[0].resources[0].routePath.generalizations[0].pathIndices;
+				polyline = [];
+				for (var i = 0; i < indices.length; ++i)
+					polyline.push(points[indices[i]]);
+				segments = [];
+				for (var i = 1; i < polyline.length; ++i)
+				{
+					var ax = polyline[i - 1][0];
+					var bx = polyline[i][0];
+					var dx = ax - bx;
+					var ay = polyline[i - 1][1];
+					var by = polyline[i][1];
+					var dy = ay - by;
+					var d2 = dx * dx + dy * dy;
+					var segment = {ax: ax, bx: bx, ay: ay, by: by, dx: dx, dy: dy, d2: d2};
+					segments.push(segment);
+				}
+
+				FindEntitiesNearRoute();
+            }
+        }
+
+        function ZoomTest() {
+               var prevRect = map.getBounds();
+               prevRect.height /= 2;
+               prevRect.width /= 2;
+               map.setView( {bounds:prevRect} );
+        }
+
+		function rebuildRoute() {
+		   var directionsManager = createDirectionsManager( ApproximateRoute );
+
+		   var options = directionsManager.getRequestOptions();
+		   options.routeDraggable = false;
+		   directionsManager.resetDirections();
+		   directionsManager.setRenderOptions({ autoUpdateMapView: false });
+
+		   //prevRect = map.getBounds();
+
+		   var myStart = new MM.Directions.Waypoint({ address:selectedLocations[0].name });
+		   directionsManager.addWaypoint(myStart);
+
+		   for(var i = 1; i < selectedLocations.length - 1; i++) {
+				var coordinates = selectedLocations[i]["latitude"] + " " + selectedLocations[i]["longitude"] 
+				var myMiddle = new MM.Directions.Waypoint({ address: coordinates });
+				directionsManager.addWaypoint(myMiddle);
+			}
+ 
+		   var myEnd = new MM.Directions.Waypoint({ address:selectedLocations[selectedLocations.length - 1].name });
+		   directionsManager.addWaypoint(myEnd);
+
+		   directionsManager.setRequestOptions(options);
+
+		   directionsManager.calculateDirections();
+
+		    //window.setTimeout("map.setView( {bounds:prevRect} )",1000);
+		   //ApproximateRoute();
+		}
+		
+		function updatePanel(button) {
+			attractionInfo = foundAttractionsInfo[button.id];
+			var newAttraction = {}
+						
+			newAttraction["name"] = attractionInfo.Name;
+			newAttraction["icon"] = "icons/" + attractionInfo.Category + ".png";
+			newAttraction["description"] = "";
+			newAttraction["latitude"] = attractionInfo.Latitude;
+			newAttraction["longitude"] = attractionInfo.Longitude;
+			
+			var alreadyAdded = false;
+			for(var i = 0; i < selectedLocations.length; i++) {
+				if (newAttraction["name"] == selectedLocations[i]["name"]) {
+					alreadyAdded = true;
+				}
+			}
+			if(!alreadyAdded) {
+				selectedLocations.splice(selectedLocations.length - 1, 0, newAttraction);
+				$(".list-attraction").loadTemplate($("#attractionTemplate"), selectedLocations);
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+        function onAddToRoute(button) {
+			if(updatePanel(button)) {
+				rebuildRoute();
+			}
+        }
+
+        function ApproximateRoute(result) {
+            //startLat = result.route[0].routeLegs[0].startWaypointLocation.latitude;
+            //startLon = result.route[0].routeLegs[0].startWaypointLocation.longitude;
+            //endLat = result.route[0].routeLegs[0].endWaypointLocation.latitude;
+            //endLon = result.route[0].routeLegs[0].endWaypointLocation.longitude;
+            map.getCredentials(RouteRequest);
+        }
+
+        function FindEntitiesNearRoute()
+		{
+			try {
+			    try {
+					entitiesLayer.clear();
+					infoBoxLayer.clear();
+				}
+				catch (err) {
+					entitiesLayer = new MM.EntityCollection;
+					infoBoxLayer = new MM.EntityCollection;
+				}
+
+				var entitiesNear = entities.filter(function (entity) {
+					return (isCloseToPolyline(entity.Latitude, entity.Longitude));
+				});
+
+				
+				for (i = 0; i < entitiesNear.length; i++) {
+					var entity = entitiesNear[i];
+					var pushpinOptions = { icon:"icons/" + entity.Category + ".png", height: 37, width: 32, anchor: new MM.Point(15, 15) };
+					var pushpin = new MM.Pushpin(new MM.Location(entity.Latitude, entity.Longitude), pushpinOptions);
+					pushpin.title = '<font size="5"><b>' + entity.Name + '</b>' + ' (' + entity.Category + ')</font>';
+					var id = 'pinpoint_' + i;
+					pinpointsLocations[id] = pushpin.getLocation();
+					pushpin.id = id;
+					pushpin.category = entity.Category;
+					foundAttractionsInfo[id] = entity;
+					pushpin.html =
+						'<div style = "background-color: #ffffff;width:500px;border-radius: 20px;opacity:0.9;padding: 10px;">' +
+						pushpin.title + 
+						'<img src="' + entity.Image + '" alt="Image" height="130" width="300">' + '<br><br>'  +
+						'<b>Description</b>: ' + entity.Description + '<br><br>' +
+						'<b>Address</b>: ' + entity.Address + '<br><br>' +
+						'<b>Phone</b>: ' + entity.Phone + '<br><br>' +
+						'<b>Url</b>:  ' +  '<br><a href="' + entity.Url + '">' + entity.Url + '</a><br><br>'  +
+						'<button title="Add this place to your itenerary" id="' + id + '" type="button" onclick="onAddToRoute(' + id + ');"><img src="icons/add.png" height=32 width=32></button>' +
+						'</div>';
+					pushpinClick = MM.Events.addHandler(pushpin, 'click', showInfoBox);
+					entitiesLayer.push(pushpin);
+				}
+				map.entities.push(entitiesLayer);
+				map.entities.push(infoBoxLayer);
+
+				document.getElementById("cats").style.visibility = "visible";
+				document.getElementById("rightPanel").style.visibility = "visible";
+				
+				$("#cats").find(':checkbox').each(function() {handleCategoryChanged(this);} );
+			}
+			catch (err) {
+			}
+			var script;
+			while (script = document.getElementById('JSONP')) {
+				script.parentNode.removeChild(script);
+			}
+        }
+
+        function showInfoBox(e) {
+            if (e.targetType = "pushpin") {
+                infoBoxLayer.clear();
+                infobox = new MM.Infobox(e.target.getLocation());
+				infobox.setHtmlContent(e.target.html);
+				var a = infobox.getHtmlContent();
+                infoBoxLayer.push(infobox);
+            }
+        }
+
+        function CallRestService(request) {
+            var script = document.createElement("script");
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("src", request);
+            document.body.appendChild(script);
+        }
+		
+		function saveSelectedRoute() {
+						
+			var routeRecord = getCurrentRouteInfo();
+			
+			savedRoutes[routeRecord.routeId] = routeRecord;
+			
+			var savedRoutesArray = [];
+			for (var k in savedRoutes) {
+				savedRoutesArray.push( savedRoutes[k] );
+			}			
+			
+			$(".list-routes").loadTemplate($("#savedRouteTemplate"), savedRoutesArray );
+			$(".link-to-route-button").bind("click", function(e) {
+					var id = $(this).parent().parent().attr("id");
+					var routeInfo = savedRoutes[id];
+					
+					e.stopPropagation();
+					
+					var documentServerURLPart = document.URL.split('#')[0];
+					var resultURL = documentServerURLPart + '#' + encodeRoute( routeInfo );
+					
+					alert(resultURL);
+					
+				}
+			);
+						
+			$(".li-route-list-entry").click( function() {
+					$(".li-route-list-entry").css("background", "white");
+					$(this).css("background", "#33CCFF" );
+					var id = $(this).attr("id");
+					var routeInfo = savedRoutes[id];
+					selectedLocations = routeInfo.selectedLocations;
+
+					$('#txtStart').val(selectedLocations[0].name);
+					startName = selectedLocations[0].name;
+					$('#txtEnd').val( selectedLocations[selectedLocations.length - 1].name );
+					endName = selectedLocations[selectedLocations.length - 1].name;
+					rebuildRoute( null );					
+				}
+			);
+		}
+		
+		function setCurrentRoute( routeInfo ) {
+			selectedLocations = routeInfo.selectedLocations;
+			rebuildRoute( null );
+		}
+		
+		function encodeRoute( routeInfo ) {
+			var str = [];
+			for(var p in routeInfo)
+				if (routeInfo.hasOwnProperty(p)) {
+					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(routeInfo[p]));
+				}
+			return str.join("&");
+		}
+		
+		function decodeRoute( encodedDataString ) {
+			//var decodedDataString = decodeURIComponent(encodedDataString);
+
+			var match,
+			pl     = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(encodedDataString.replace(pl, " ")); },
+			query  = encodedDataString;
+
+			urlParams = {};
+			while (match = search.exec(query))			
+				urlParams[decode(match[1])] = decode(match[2]);		
+				
+			return urlParams;
+		}
+		
+		function handleCategoryChanged(element) {
+		    for (i = 0; i < entitiesLayer.getLength(); ++i) {
+		        var pin = entitiesLayer.get(i);
+		        if (element.id == pin.category)
+		            pin.setOptions({visible: element.checked});
+		        //alert(pinpointsCategories[pin.id]);
+		    }
+		}
+		
+		function isCloseToSegment(x, y, segment)
+		{
+			var t = (segment.dx * (segment.ax - x) + segment.dy * (segment.ay - y)) / segment.d2;
+			if (t < 0 || t > 1) return false;
+			var tmp = segment.dx * (segment.by - y) - segment.dy * (segment.bx - x);
+			return (tmp * tmp < segment.d2 * dist2);
+		}
+
+		function isCloseToPolyline(x, y)
+		{
+			for (var i = 0; i < polyline.length; ++i)
+			{
+				var dx = polyline[i][0] - x;
+				var dy = polyline[i][1] - y;
+				if (dx * dx + dy * dy < dist2) return true;
+			}
+			
+			for (var i = 0; i < segments.length; ++i)
+			{
+				if (isCloseToSegment(x, y, segments[i])) return true;
+			}
+			
+			return false;
+		}
+
+    </script>
+</head>
+ <body>
+     <div id='myMap' style="position:absolute; top:0px; left:0px; width:300px; height:300px;"></div>
+     
+         <div style='position:absolute; top:15px; left:5px;'>
+             <div class="input-group">
+                 <span class="input-group-addon" style='margin-left:10px;'>From</span>
+                 <input id="txtStart" type="text" class="form-control" value="Seattle" style="width:200px;" onkeydown="if (event.keyCode == 13) document.getElementById('buildRoute').click()"/>
+             </div>
+             <div class="input-group" style='margin-top:2px';>
+                 <span class="input-group-addon" style='margin-left:10px;width:58px'>To</span>
+                 <input id="txtEnd" type="text" class="form-control" value="Portland,WA" style="width:200px;" onkeydown="if (event.keyCode == 13) document.getElementById('buildRoute').click()"/>
+             </div>
+             <div class="btn-group">
+                 <button type="button" id="buildRoute" class="btn btn-default" onclick="createDirections();" style='width:260px;margin-top:2px'>Build a route</button>
+             </div>
+         </div>
+             <ul class="list-group" id="cats" style="position:absolute; top:123px; left:5px; width:260px; opacity:.9; visibility:hidden;">
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Attraction" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Attractions</label>
+                         <img src="icons/attraction.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Park" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Parks</label>
+                         <img src="icons/park.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="CoffeeShop" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Coffee shops</label>
+                         <img src="icons/coffeeshop.png" style="float:right"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Hike" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Hikes</label>
+                         <img src="icons/hike.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Monument" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Monuments</label>
+                         <img src="icons/monument.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Museum" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Museums</label>
+                         <img src="icons/museum.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Waterfall" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Waterfalls</label>
+                         <img src="icons/waterfall.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label> <input type="checkbox" id="Restaurant" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Restraurants</label>
+                         <img src="icons/restaurant.png" style="float:right;"/>
+                     </div>
+                 </li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Hotel" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Hotels</label>
+					<img src="icons/hotel.png" style="float:right;"/>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Beach" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Beaches</label>
+					<img src="icons/beach.png" style="float:right;"/>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Lake" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Lakes</label>
+					<img src="icons/lake.png" style="float:right;"/>
+					</div>
+				</li>
+             </ul>
+
+	<div class="panel panel-default" style="visibility:hidden;" id="rightPanel">
+		<div class="panel-body">
+			<p><font size=4 color=black><b>Your itinerary:</b></font></p>
+			<ul class="media-list list-attraction">
+			</ul>
+			<div class="btn-group"  >
+				<button type="button" class="btn btn-default" onclick="saveSelectedRoute();">Save</button>
+				<!-- <button type="button" class="btn btn-default" onclick="shareSelectedRoute();">Share</button> -->
+			</div>
+			<div style="margin-top:15px; border:1px solid #BDBDBD; border-radius:3px;">
+				<div style="margin-top:4px; margin-left:4px" >Saved routes</div>
+				<div>
+					<ul class="media-list list-routes">
+					</ul>		
+				</div>				
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

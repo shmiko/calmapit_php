@@ -1,0 +1,1 @@
+{"name":"Litigant","id":"\/law\/litigant","type":"\/type\/type","group":"type","_id":"FTZEkMOg","relation":"\/law","properties":[{"name":"Party to cases","id":"\/law\/litigant\/party_to_cases","expected_type":"\/law\/legal_case_party_relationship","description":"The case or cases this entity has been party to."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

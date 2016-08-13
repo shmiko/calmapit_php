@@ -1,0 +1,1 @@
+{"name":"Bicycle type","id":"\/bicycles\/bicycle_type","type":"\/type\/type","group":"type","_id":"pKYds31O","relation":"\/bicycles","properties":[{"name":"Bicycle models of this type","id":"\/bicycles\/bicycle_type\/bicycle_models_of_this_type","expected_type":"\/bicycles\/bicycle_model","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

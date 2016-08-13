@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="itinerary">
+<head>
+	<meta charset="utf-8" />
+	<title>itinerary</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
+	<script src="http://js.api.here.com/se/2.5.3/jsl.js?with=all"></script>
+	<script src="./js/jquery-2.0.3.min.js"></script>
+	<script src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./config/development.js"></script>
+	<script src="./js/services/here-api.js"></script>
+	<script src="./js/directives/map-searchbox.js"></script>
+	<script src="./js/directives/map.js"></script>
+	<script src="./js/directives/sortable.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+	<map class="fill" points="waypoints"></map>
+	<div id="sidebar">
+		<h1>ITINERARY</h1>
+		<div class="map-searchbox" results-list="waypoints"></div>
+		<p ng-show="!waypoints.length">
+			No waypoints. Start searching for place or address.
+		</p>
+		<p ng-show="waypoints.length">
+			Your itinerary (drag to reorder) :
+		</p>
+		<ul ui-sortable="sortableOptions" ng-model="waypoints">
+			<li ng-repeat="waypoint in waypoints">
+				<strong>{{$index + 1}}</strong>
+				{{waypoint.title}}
+				<span class="close" ng-click="removeWaypoint(waypoint)">X</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

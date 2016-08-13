@@ -1,0 +1,1 @@
+{"name":"Flag referent","id":"\/symbols\/flag_referent","type":"\/type\/type","group":"type","_id":"Jr3UXH5x","relation":"\/symbols","properties":[{"name":"Flag","id":"\/symbols\/flag_referent\/flag","expected_type":"\/symbols\/flag_use","description":"A flag used by this entity."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

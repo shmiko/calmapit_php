@@ -1,0 +1,1 @@
+{"name":"Annotation Index","id":"\/common\/annotation_index","type":"\/type\/type","group":"type","_id":"QAaweihK","relation":"\/common","properties":[{"name":"Annotations","id":"\/common\/annotation_index\/annotations","expected_type":"\/common\/webpage","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

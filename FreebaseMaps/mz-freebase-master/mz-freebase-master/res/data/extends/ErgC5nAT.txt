@@ -1,0 +1,1 @@
+{"name":"Film music contributor","id":"\/film\/music_contributor","type":"\/type\/type","group":"type","_id":"ErgC5nAT","relation":"\/film","properties":[{"name":"Film music credits","id":"\/film\/music_contributor\/film","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

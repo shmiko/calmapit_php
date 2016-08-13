@@ -1,0 +1,1 @@
+{"name":"Medicine","id":"\/medicine","type":"\/type\/domain","group":"zone","_id":"mS7DIwK0","relation":"root","properties":[],"included_types":[]}

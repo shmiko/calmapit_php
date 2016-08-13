@@ -1,0 +1,1 @@
+{"name":"Chivalric Title Gender Equivalence","id":"\/royalty\/chivalric_title_gender_equivalency","type":"\/type\/type","group":"type","_id":"ZVvwSC1V","relation":"\/royalty","properties":[{"name":"Equivalent Titles","id":"\/royalty\/chivalric_title_gender_equivalency\/equivalent_titles","expected_type":"\/royalty\/chivalric_title","description":""}],"included_types":[]}

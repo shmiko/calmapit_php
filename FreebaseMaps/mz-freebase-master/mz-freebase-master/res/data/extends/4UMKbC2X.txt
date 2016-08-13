@@ -1,0 +1,1 @@
+{"name":"School mascot","id":"\/education\/school_mascot","type":"\/type\/type","group":"type","_id":"4UMKbC2X","relation":"\/education","properties":[{"name":"School","id":"\/education\/school_mascot\/school","expected_type":"\/education\/educational_institution","description":"The school(s) that this is a mascot of."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

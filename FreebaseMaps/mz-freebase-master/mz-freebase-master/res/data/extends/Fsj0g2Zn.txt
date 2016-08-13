@@ -1,0 +1,1 @@
+{"name":"Heraldic Brisure","id":"\/symbols\/heraldic_brisure","type":"\/type\/type","group":"type","_id":"Fsj0g2Zn","relation":"\/symbols","properties":[{"name":"Coat of Arms","id":"\/symbols\/heraldic_brisure\/coat_of_arms","expected_type":"\/symbols\/coat_of_arms","description":"The coat of arms where used."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

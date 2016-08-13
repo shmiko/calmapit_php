@@ -1,0 +1,1 @@
+{"name":"Topic","id":"\/nytimes\/topic","type":"\/type\/type","group":"type","_id":"NvRrTMl7","relation":"\/nytimes","properties":[{"name":"uri","id":"\/nytimes\/topic\/uri","expected_type":"\/type\/enumeration","description":""}],"included_types":[]}

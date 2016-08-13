@@ -1,0 +1,7 @@
+*.pem
+*.rdb
+*.swp
+*.csv
+*.zip
+*.sqlite
+freegeoip

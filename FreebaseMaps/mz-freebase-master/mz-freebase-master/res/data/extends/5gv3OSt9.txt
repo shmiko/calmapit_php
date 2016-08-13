@@ -1,0 +1,1 @@
+{"name":"Resource","id":"\/common\/resource","type":"\/type\/type","group":"type","_id":"5gv3OSt9","relation":"\/common","properties":[{"name":"Annotations","id":"\/common\/resource\/annotations","expected_type":"\/common\/webpage","description":""}],"included_types":[]}

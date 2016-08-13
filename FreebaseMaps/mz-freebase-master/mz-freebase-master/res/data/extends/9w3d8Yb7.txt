@@ -1,0 +1,1 @@
+{"name":"Poetic Verse Form","id":"\/book\/poetic_verse_form","type":"\/type\/type","group":"type","_id":"9w3d8Yb7","relation":"\/book","properties":[{"name":"Poems Of This Form","id":"\/book\/poetic_verse_form\/poems_of_this_form","expected_type":"\/book\/poem","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

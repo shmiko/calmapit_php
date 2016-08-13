@@ -1,0 +1,1 @@
+{"name":"Railway type","id":"\/rail\/railway_type","type":"\/type\/type","group":"type","_id":"0ME5Nr3B","relation":"\/rail","properties":[{"name":"Railways of this type","id":"\/rail\/railway_type\/railways_of_this_type","expected_type":"\/rail\/railway_type_relationship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Theater Designer Role","id":"\/theater\/theater_designer_role","type":"\/type\/type","group":"type","_id":"utnjbok1","relation":"\/theater","properties":[{"name":"Designers","id":"\/theater\/theater_designer_role\/designers","expected_type":"\/theater\/theater_designer_gig","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

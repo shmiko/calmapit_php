@@ -1,0 +1,1 @@
+{"name":"Mass Data Load","id":"\/dataworld\/mass_data_load","type":"\/type\/type","group":"type","_id":"8gIuvGV9","relation":"\/dataworld","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

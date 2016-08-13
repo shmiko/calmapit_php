@@ -1,0 +1,1 @@
+{"name":"Diet follower","id":"\/food\/diet_follower","type":"\/type\/type","group":"type","_id":"k9qYnK8h","relation":"\/food","properties":[{"name":"Follows diet","id":"\/food\/diet_follower\/follows_diet","expected_type":"\/food\/diet","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

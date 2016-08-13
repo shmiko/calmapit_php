@@ -1,0 +1,1 @@
+{"name":"Newspaper edition type","id":"\/book\/newspaper_edition_type","type":"\/type\/type","group":"type","_id":"Qr8kxoEo","relation":"\/periodicals","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

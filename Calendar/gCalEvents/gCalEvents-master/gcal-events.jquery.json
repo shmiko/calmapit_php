@@ -1,0 +1,40 @@
+{
+"name": "gcal-events",
+"title": "gCalEvents",
+"description": "A jQuery plugin that parses a Google Calendar Atom feed, with options. ",
+"keywords": [
+	"calendar",
+	"google",
+	"gcal",
+	"events"
+	],
+"version": "1.0.4",
+"author": {
+"name": "Michael McGlynn",
+"url": "http://www.reignitioninc.com"
+},
+"maintainers": [
+{
+"name": "Michael McGlynn",
+"email": "info@reignition.net",
+"url": "http://www.reignitioninc.com"
+}
+],
+"licenses": [
+{
+"type": "MIT",
+"url": "http://en.wikipedia.org/wiki/MIT_License"
+},
+{
+"type": "GPL",
+"url": "http://en.wikipedia.org/wiki/GNU_General_Public_License"
+}
+],
+"bugs": "https://github.com/mmcglynn/gCalEvents/issues",
+"homepage": "https://github.com/mmcglynn/gCalEvents",
+"docs": "https://github.com/mmcglynn/gCalEvents/blob/master/README.md",
+"download": "https://github.com/mmcglynn/gCalEvents/archive/master.zip",
+"dependencies": {
+"jquery": ">=1.5"
+}
+}

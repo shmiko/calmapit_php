@@ -1,0 +1,1 @@
+{"name":"Surgeon","id":"\/medicine\/surgeon","type":"\/type\/type","group":"type","_id":"rwZsFBfO","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

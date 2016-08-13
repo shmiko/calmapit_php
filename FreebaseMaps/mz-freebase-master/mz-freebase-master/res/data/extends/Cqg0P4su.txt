@@ -1,0 +1,1 @@
+{"name":"Handedness","id":"\/sports\/handedness","type":"\/type\/type","group":"type","_id":"Cqg0P4su","relation":"\/sports","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

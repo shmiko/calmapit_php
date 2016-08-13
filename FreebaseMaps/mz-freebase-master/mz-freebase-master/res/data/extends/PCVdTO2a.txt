@@ -1,0 +1,1 @@
+{"name":"Ship Builder","id":"\/boats\/ship_builder","type":"\/type\/type","group":"type","_id":"PCVdTO2a","relation":"\/boats","properties":[{"name":"Ships built","id":"\/boats\/ship_builder\/ships_built","expected_type":"\/boats\/ship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

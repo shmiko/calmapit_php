@@ -1,0 +1,1 @@
+{"name":"Satellite Type","id":"\/spaceflight\/satellite_type","type":"\/type\/type","group":"type","_id":"cX5WRo7P","relation":"\/spaceflight","properties":[{"name":"Satellites","id":"\/spaceflight\/satellite_type\/satellites","expected_type":"\/spaceflight\/satellite","description":"Satellites of this type"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,193 @@
+<?xml version="1.0" standalone="yes"?>
+<EntitiesSample>
+  <xs:schema id="EntitiesSample" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="EntitiesSample" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" type="xs:string"/>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Address" type="xs:string" minOccurs="0" />
+                <xs:element name="Phone" type="xs:string" minOccurs="0" />
+                <xs:element name="Image" type="xs:string" minOccurs="0" />
+                <xs:element name="Review" type="xs:string" minOccurs="0" />
+                <xs:element name="Url" type="xs:string" minOccurs="0" />
+				<xs:element name="Category" type="xs:string" minOccurs="0" />
+                <xs:element name="Latitude" type="xs:double" minOccurs="0" />
+                <xs:element name="Longitude" type="xs:double" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Entity" />
+        <xs:field xpath="EntityID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+ <Entity>
+    <EntityID>1000</EntityID>
+    <Name>Space Needle</Name>
+    <Description>The Space Needle is an observation tower in Seattle, Washington, a landmark of the Pacific Northwest, and a symbol of Seattle. It was built in the Seattle Center for the 1962 World's Fair, which drew over 2.3 million visitors, when nearly 20,000 people a day used its elevators.</Description>
+    <Address>400 Broad St, Seattle, 98109</Address>
+    <Phone>(800) 937-9582</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/2/23/Space_Needle_2011-07-04.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.spaceneedle.com</Url>
+	<Category>Monument</Category>
+    <Latitude>47.568249</Latitude>
+    <Longitude>-122.364243</Longitude>
+</Entity>
+  <Entity>
+    <EntityID>1001</EntityID>
+    <Name>Hiram M. Chittenden (Ballard) Locks</Name>
+    <Description>The Hiram M. Chittenden Locks is a complex of locks that sits at the west end of Salmon Bay, part of Seattle, Washington's Lake Washington Ship Canal</Description>
+    <Address>Salmon Bay, Seattle, WA</Address>
+    <Phone>(206) 783-7059</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/5/57/1091-51.Jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.seattle.gov/tour/locks.htm</Url>
+	<Category>Attraction</Category>
+    <Latitude>47.565466</Latitude>
+    <Longitude>-122.397102</Longitude>
+</Entity>
+  <Entity>	
+    <EntityID>1002</EntityID>
+    <Name>Seattle Aquarium</Name>
+    <Description>The Seattle Aquarium is a public aquarium opened in 1977 and located on Pier 59 on the Elliott Bay waterfront in Seattle, Washington, USA. It is accredited by the Association of Zoos and Aquariums.</Description>
+    <Address>1483 Alaskan Way Pier 59, Seattle, WA, 98101 </Address>
+    <Phone>(206) 386-4300</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/0/02/Seattle_-_Pier_59_-_01.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.seattleaquarium.org</Url>
+	<Category>Attraction</Category>
+    <Latitude>47.507426</Latitude>
+    <Longitude>-122.342232</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1003</EntityID>
+    <Name>Luther Burbank Park</Name>
+    <Description>Luther Burbank is a large park of 77 acres with three-quarters of a mile of Lake Washington waterfront.</Description>
+    <Address>1483 Alaskan Way Pier 59, Seattle, WA, 98101 </Address>
+    <Phone>(206) 386-4300</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/0/02/Seattle_-_Pier_59_-_01.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.mercergov.org</Url>
+	<Category>Park</Category>
+    <Latitude>47.588123</Latitude>
+    <Longitude>-122.225945</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1004</EntityID>
+    <Name>Belle Pastry</Name>
+    <Description>The Seattle Aquarium is a public aquarium opened in 1977 and located on Pier 59 on the Elliott Bay waterfront in Seattle, Washington, USA. It is accredited by the Association of Zoos and Aquariums.</Description>
+    <Address>10246 Main St Ste A, Bellevue</Address>
+    <Phone>(425) 289-0015</Phone>
+    <Image>http://convivial.org/wp-content/uploads/2012/05/Belle-Pastry-3.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.bellepastry.com</Url>
+	<Category>CoffeeShop</Category>
+    <Latitude>47.61277</Latitude>
+    <Longitude>-122.207111</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1005</EntityID>
+    <Name>Tiger Mountain Hike</Name>
+    <Description>Tiger Mountain is a mountain in the U.S. state of Washington. The mountain has six peaks in the center of the Issaquah Alps forming a 13,500-acre triangle between Interstate 90 on the north.</Description>
+    <Address>From Issaquah head east on Front Street (which becomes Issa-quah-Hobart Road after it leaves town). About 6 miles past the city limits, turn left (north) onto SE Tiger Mountain Road. Continue for 1/4 mile before parking on the left shoulder at a wide pullout. The trail is on the right, up the road a hundred feet or so from the pullout.</Address>
+    <Phone>(206) 625-1367</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/en/f/f1/Tiger_mountain.jpg</Image>
+    <Review>4</Review>
+	<Url>http://www.wta.org/go-hiking/hikes/tiger-mountain-trail</Url>
+	<Category>Hike</Category>
+    <Latitude>47.511929</Latitude>
+    <Longitude>-121.936752</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1006</EntityID>
+    <Name>Wild Horses Monument</Name>
+    <Description> Artist David Govedare’s life size sculptures, added during Washington State's Centennial Celebration, are entitled Grandfather Cuts Loose the Ponies. Hoping to capture the mystical spirits of a time that has passed, this 200 foot line of steel ponies remind us all of time when creatures were able to roam wild and free.</Description>
+    <Address>From Ellensburg drive east on Interstate 90 to exit 139 (just after crossing the Columbia River). The exit, signed "Scenic Viewpoint," leads to a large parking area. In winter, park at the closed gate and walk in. In any season, though, stop here for a quiet, relaxing, hour-long break when traveling across the state on I-90.</Address>
+    <Phone>(206) 625-1367</Phone>
+    <Image>https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1/p320x320/1234331_502373896511066_1791014429_n.jpg</Image>
+    <Review>4</Review>
+	<Url>http://www.wta.org/go-hiking/hikes/wild-horses-monument</Url>
+	<Category>Hike</Category>
+    <Latitude>47.028076</Latitude>
+    <Longitude>-120.529526</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1007</EntityID>
+    <Name>Grand Coulee Dam</Name>
+    <Description> Grand Coulee Dam is a gravity dam on the Columbia River in the U.S. state of Washington built to produce hydroelectric power and provide irrigation. It was constructed between 1933 and 1942, originally with two power plants.</Description>
+    <Address>110 Stevens Ave, Coulee Dam</Address>
+    <Phone>(509) 633-0750</Phone>
+    <Image>http://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Coulee_Dam.jpg</Image>
+    <Review>4</Review>
+	<Url>http://www.nwcouncil.org/history/GrandCouleeHistory</Url>
+	<Category>Attraction</Category>
+    <Latitude>47.192574</Latitude>
+    <Longitude>-118.453110</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1008</EntityID>
+    <Name>Palouse Falls</Name>
+    <Description>Its size and splendor make Palouse Falls one of the most scenic and impressive waterfalls in all of Washington, but its location adds even more magic and wonder to its image.</Description>
+    <Address>From Dayton, drive US 12 north for 14 miles. Turn left on State Route 261 and continue through the tiny community of Starbuck (sorry, the only coffee here is usually day-old Hills Brothers at the small cafe). You'll also pass Lyons Ferry Park at 14.7 miles. At 20.5 miles from US 12, turn right onto Palouse Falls Road signed "Palouse Falls State Park--2." Drive down the hill 2.4 miles to enter the park and to park.</Address>
+    <Phone>(502) 633-0770</Phone>
+    <Image>http://brianruebphotography.com/wp-content/uploads/Palouse-Falls.jpg</Image>
+    <Review>4</Review>
+	<Url>http://www.stateparks.com/palouse_falls.html</Url>
+	<Category>Waterfall</Category>
+    <Latitude>47.060659</Latitude>
+    <Longitude>-118.674437</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1009</EntityID>
+    <Name>Sun Lakes - Dry Falls</Name>
+    <Description>Sun Lakes-Dry Falls State Park is a 4,027-acre camping park with 73,640 feet of freshwater shoreline at the foot of Dry Falls. Dry Falls is one of the great geological wonders of North America. Carved by Ice Age floods that long ago disappeared, the former waterfall is now a stark cliff, 400 feet high and 3.5 miles wide.</Description>
+    <Address>34875 Park Lake Rd Ne, Coulee City, WA, US, 99115</Address>
+    <Phone>(509) 632-5585</Phone>
+    <Image>http://adventureawaits.com/wp-content/uploads/2013/06/Dry-Falls-CC-roswellsgirl.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.parks.wa.gov/298/Sun-Lakes-Dry-Falls</Url>
+	<Category>Attraction</Category>
+    <Latitude>47.604150</Latitude>
+    <Longitude>-119.444546</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1010</EntityID>
+    <Name>Davenport Hotel</Name>
+    <Description>The Davenport Hotel opened in 1914 as a destination in its own right. It was to be a place where guests could experience a singular combination of world-class service, palatial splendor, and inviting warmth. Constructed in 1914 under the auspices of Louis Davenport, the Davenport Hotel has served as a beacon of culture and refinement throughout the region for the better part of a century.</Description>
+    <Address>10 South Post Street, Spokane, WA 99201</Address>
+    <Phone>(800) 899-1482</Phone>
+    <Image>http://jetsetwithmary.com/wp-content/uploads/2012/10/398850991.jpg</Image>
+    <Review>5</Review>
+	<Url>http://www.davenporthotelcollection.com/</Url>
+	<Category>Museum</Category>
+    <Latitude>47.604150</Latitude>
+    <Longitude>-119.444546</Longitude>
+</Entity>
+<Entity>	
+    <EntityID>1011</EntityID>
+    <Name>Clinkerdagger Restaurant</Name>
+    <Description>The tradition has continued for almost 40 years at this Spokane landmark overlooking the majestic Spokane River and city skyline. This is perhaps the perfect place for a special business or romantic occasion or perhaps simply a nice getaway for lunch or dinner..</Description>
+    <Address>621 W Mallon Ave Ste 404, Spokane, WA, US, 99201</Address>
+    <Phone>(509) 328-5965</Phone>
+    <Image>http://media.spokesman.com/guide_item_images/CLINKERDAGGER_5852817_t800.JPG?0c04c5c8c06b202cbbc82737bbdd60bd468bb60f</Image>
+    <Review>4</Review>
+	<Url>clinkerdagger.com</Url>
+	<Category>Restaurant</Category>
+    <Latitude>47.679320</Latitude>
+    <Longitude>-117.403916</Longitude>
+</Entity>
+</EntitiesSample>
+
+
+
+
+

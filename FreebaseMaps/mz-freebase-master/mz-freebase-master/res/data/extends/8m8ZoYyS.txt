@@ -1,0 +1,1 @@
+{"name":"Video host","id":"\/tv\/video_host","type":"\/type\/type","group":"type","_id":"8m8ZoYyS","relation":"\/tv","properties":[{"name":"Videos","id":"\/tv\/video_host\/videos","expected_type":"\/tv\/video","description":"Videos that can be watched on this site."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

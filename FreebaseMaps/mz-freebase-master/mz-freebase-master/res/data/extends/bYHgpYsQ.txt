@@ -1,0 +1,1 @@
+{"name":"Glacier terminus","id":"\/geography\/glacier_terminus","type":"\/type\/type","group":"type","_id":"bYHgpYsQ","relation":"\/geography","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

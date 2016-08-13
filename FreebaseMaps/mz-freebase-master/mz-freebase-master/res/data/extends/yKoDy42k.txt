@@ -1,0 +1,1 @@
+{"name":"Cricket Batting Stroke","id":"\/cricket\/cricket_batting_stroke","type":"\/type\/type","group":"type","_id":"yKoDy42k","relation":"\/cricket","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

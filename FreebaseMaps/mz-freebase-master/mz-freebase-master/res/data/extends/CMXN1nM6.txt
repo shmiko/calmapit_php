@@ -1,0 +1,1 @@
+{"name":"Boxing","id":"\/boxing","type":"\/type\/domain","group":"zone","_id":"CMXN1nM6","relation":"root","properties":[],"included_types":[]}

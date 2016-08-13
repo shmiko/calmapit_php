@@ -1,0 +1,1 @@
+{"name":"Chemical Element Discoverer","id":"\/chemistry\/element_discoverer","type":"\/type\/type","group":"type","_id":"kO6x1Inr","relation":"\/chemistry","properties":[{"name":"Discovered","id":"\/chemistry\/element_discoverer\/discovered","expected_type":"\/chemistry\/chemical_element","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

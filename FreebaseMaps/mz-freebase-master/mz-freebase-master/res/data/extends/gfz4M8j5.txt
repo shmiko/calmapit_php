@@ -1,0 +1,1 @@
+{"name":"Spacecraft","id":"\/spaceflight\/spacecraft","type":"\/type\/type","group":"type","_id":"gfz4M8j5","relation":"\/spaceflight","properties":[{"name":"Manufacturer","id":"\/spaceflight\/spacecraft\/manufacturer","expected_type":"\/spaceflight\/satellite_manufacturer","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

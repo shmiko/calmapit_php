@@ -1,0 +1,1 @@
+{"name":"Culinary tool","id":"\/food\/culinary_tool","type":"\/type\/type","group":"type","_id":"DR6bgL4Y","relation":"\/food","properties":[{"name":"Used in recipes","id":"\/food\/culinary_tool\/used_in_recipes","expected_type":"\/food\/recipe","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

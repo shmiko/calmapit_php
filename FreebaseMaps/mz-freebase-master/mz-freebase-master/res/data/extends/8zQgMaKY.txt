@@ -1,0 +1,1 @@
+{"name":"Media Rights Holder","id":"\/common\/media_rights_holder","type":"\/type\/type","group":"type","_id":"8zQgMaKY","relation":"\/common","properties":[{"name":"Rights Holder Of","id":"\/common\/media_rights_holder\/images","expected_type":"\/common\/image","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

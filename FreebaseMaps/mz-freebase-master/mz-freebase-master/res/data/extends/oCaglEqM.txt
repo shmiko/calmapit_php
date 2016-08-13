@@ -1,0 +1,1 @@
+{"name":"TV station owner","id":"\/broadcast\/tv_station_owner","type":"\/type\/type","group":"type","_id":"oCaglEqM","relation":"\/broadcast","properties":[{"name":"TV stations owned","id":"\/broadcast\/tv_station_owner\/tv_stations","expected_type":"\/broadcast\/tv_station","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

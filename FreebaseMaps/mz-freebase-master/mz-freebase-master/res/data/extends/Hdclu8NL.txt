@@ -1,0 +1,1 @@
+{"name":"Deity","id":"\/religion\/deity","type":"\/type\/type","group":"type","_id":"Hdclu8NL","relation":"\/religion","properties":[{"name":"Religion(s) That Worship This Deity","id":"\/religion\/deity\/deity_of","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

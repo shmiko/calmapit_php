@@ -1,0 +1,1 @@
+{"name":"Holiday Period","id":"\/time\/holiday_period","type":"\/type\/type","group":"type","_id":"kQdFLV04","relation":"\/time","properties":[{"name":"Related Holidays","id":"\/time\/holiday_period\/holidays","expected_type":"\/time\/holiday","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

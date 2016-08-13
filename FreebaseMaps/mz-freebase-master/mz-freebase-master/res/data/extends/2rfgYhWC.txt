@@ -1,0 +1,1 @@
+{"name":"Electric current type","id":"\/engineering\/electric_current_type","type":"\/type\/type","group":"type","_id":"2rfgYhWC","relation":"\/engineering","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

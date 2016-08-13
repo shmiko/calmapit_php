@@ -1,0 +1,1 @@
+{"name":"Do Not Merge Mediator","id":"\/dataworld\/do_not_merge_mediator","type":"\/type\/type","group":"type","_id":"xCpwZ6jy","relation":"\/dataworld","properties":[{"name":"Never merge with","id":"\/dataworld\/do_not_merge_mediator\/never_merge_with","expected_type":"\/dataworld\/gardening_hint","description":"Node(s) that should not be merged."}],"included_types":[]}

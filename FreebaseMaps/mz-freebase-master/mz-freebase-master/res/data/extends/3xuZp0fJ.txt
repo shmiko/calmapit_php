@@ -1,0 +1,1 @@
+{"name":"Radio station owner","id":"\/broadcast\/radio_station_owner","type":"\/type\/type","group":"type","_id":"3xuZp0fJ","relation":"\/broadcast","properties":[{"name":"Radio stations owned","id":"\/broadcast\/radio_station_owner\/radio_stations","expected_type":"\/broadcast\/radio_station","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

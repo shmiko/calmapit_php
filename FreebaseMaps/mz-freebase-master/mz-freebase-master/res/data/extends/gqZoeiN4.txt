@@ -1,0 +1,1 @@
+{"name":"Shareholder","id":"\/business\/shareholder","type":"\/type\/type","group":"type","_id":"gqZoeiN4","relation":"\/business","properties":[{"name":"Holding","id":"\/business\/shareholder\/holding","expected_type":"\/business\/holding","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

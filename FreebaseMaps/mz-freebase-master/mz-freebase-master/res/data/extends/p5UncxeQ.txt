@@ -1,0 +1,1 @@
+{"name":"Sports Equipment","id":"\/sports\/sports_equipment","type":"\/type\/type","group":"type","_id":"p5UncxeQ","relation":"\/sports","properties":[{"name":"Sport used for","id":"\/sports\/sports_equipment\/sport_used_for","expected_type":"\/sports\/sport","description":"The sport(s) this thing is used to play"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

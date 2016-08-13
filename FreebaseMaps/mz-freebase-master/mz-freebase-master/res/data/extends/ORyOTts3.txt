@@ -1,0 +1,1 @@
+{"name":"Conlang type","id":"\/language\/conlang_purpose","type":"\/type\/type","group":"type","_id":"ORyOTts3","relation":"\/language","properties":[{"name":"Languages of this type","id":"\/language\/conlang_purpose\/languages_of_this_type","expected_type":"\/language\/conlang","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

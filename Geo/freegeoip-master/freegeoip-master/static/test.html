@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="freegeoip">
+	<head>
+		<meta charset="utf-8">
+		<title>freegeoip.net: FREE IP Geolocation Web Service</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Alexandre Fiori">
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/index.min.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+		<script src="js/index.min.js"></script>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body ng-controller="freegeoip">
+		<div class="container-narrow">
+			<div class="row">
+				<div class="col-md-6">
+					<h1 class="pull-left">freegeoip.net</h1>
+				</div>
+				
+			<hr ng-hide="map">
+			<iframe id="map" width="100%" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="" ng-show="map"></iframe>
+			<div class="row">
+				<div class="col-md-6">
+					<div ng-show="error=='403'">
+						<h4>Oooops!</h4>
+						<div class="alert alert-error">Over quota</div>
+						<p>This service is public and free with a hard limit
+						of 10.000 requests per hour, and you've reached your quota.</p>
+						<p>Check out the <i>Limits</i> section below for more information.</p>
+					</div>
+					<div ng-show="error=='404'">
+						<h4>Oooops!</h4>
+						<div class="alert alert-block">No results for <span ng-bind="errorq||'your IP'"></span></div>
+						<p>Try one of the following:</p>
+						<ul>
+							<li>Make sure you enter a valid IP address, or</li>
+							<li>A valid host, or domain name (e.g. google.com)</li>
+						</ul>
+					</div>
+					<div ng-show="error=='503'">
+						<h4>Oooops!</h4>
+						<div class="alert alert-warning">Service Unavailable</div>
+						<p>The service is unavailable due to maintenance or high load.</p>
+						<p>We apologize for the inconvenience. Please try again later.</p>
+					</div>
+					<div ng-hide="error">
+						<h4>Estimated location:</h4>
+						<table class="table table-striped">
+							<tbody>
+								<tr><td>IP</td><td><span ng-bind="geoip.ip"></span></td></tr>
+								<tr><td>Country</td><td><span ng-bind="geoip.country_name"></span></td></tr>
+								<tr><td>Region</td><td><span ng-bind="geoip.region_name"></span></td></tr>
+								<tr><td>City</td><td><span ng-bind="geoip.city"></span></td></tr>
+								<tr><td>Zip code</td><td><span ng-bind="geoip.zipcode"></span></td></tr>
+								<tr><td>Latitude and Longitude</td><td><span ng-bind="geoip.latitude"></span> <span ng-bind="geoip.longitude"></span></td></tr>
+								<tr><td>Area and Metro codes</td><td><span ng-bind="geoip.area_code"></span> <span ng-bind="geoip.metro_code"></span></td></tr>
+							</tbody>
+						</table>
+						<a href="/?q={{q}}&map=1" ng-hide="map">Show map</a>
+						<a href="/?q={{q}}" ng-show="map">Hide map</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					
+				</div>
+			</div>
+			<hr>
+			
+			<footer>
+			<p><small>Last updated: Sep 2014</small></p>
+			<p><small>This web site and all documentation is licensed under
+				<a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0</a>.
+				This service includes GeoLite data created by MaxMind, available
+				from <a href="http://www.maxmind.com">maxmind.com</a>.</small></p>
+			</footer>
+		</div> <!-- /container -->
+		
+	</body>
+</html>

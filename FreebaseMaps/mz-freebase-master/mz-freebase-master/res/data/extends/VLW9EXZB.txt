@@ -1,0 +1,1 @@
+{"name":"Boats","id":"\/boats","type":"\/type\/domain","group":"zone","_id":"VLW9EXZB","relation":"root","properties":[],"included_types":[]}

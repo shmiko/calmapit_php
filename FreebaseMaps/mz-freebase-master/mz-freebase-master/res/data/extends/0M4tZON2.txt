@@ -1,0 +1,1 @@
+{"name":"Film story contributor","id":"\/film\/film_story_contributor","type":"\/type\/type","group":"type","_id":"0M4tZON2","relation":"\/film","properties":[{"name":"Film Story Credits","id":"\/film\/film_story_contributor\/film_story_credits","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

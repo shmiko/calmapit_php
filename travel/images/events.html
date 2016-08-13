@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	
+    <title>Shmik Events</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="http://shmik.com/favicons.ico" type="image/vnd.microsoft.icon" />
+	<meta name="description" content="Google Maps API V3: Custom Directions Panel" />
+	<meta name="keywords" content="Google Maps API V3, Custom Directions Panel, jQuery, jQuery tutorials, shmik.com wordpress code blog" />
+	<meta name="author" content="Paul Jones - shmik.com" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+	<link href="css/styleok.css" type="text/css" rel="stylesheet"  media='all' />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+	<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+	<script type="text/javascript" src="js/jquery.countdown.js"></script>
+  </head>
+  <body>
+
+			<a id="top"></a>
+		
+			<div id='header'>
+				
+				
+				<ul id='header-nav'>
+					<a href="http://shmik.com"><img src="./images/shmiklogovvsm.png" alt="shmik" style="margin-left: 120px;"/>
+					<div id="H2">USA Family Holiday March 10th - April 23th 2016</div>
+					<div id="headerlogo"><a href='/'><img src='images/start_herep.png' alt='SHMIK - TEST FUSION QUERIES'/></a>
+					
+					<div style="float:left"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.shmik.com" data-text="SHMIK"></a></div>
+					
+				
+					
+				</ul>
+				
+			</div>
+			
+			<div id="body" style="width:100%;;float: right;">
+				
+				<div id="map_canvas"></div>
+				<div id="directionsPanel">
+					<class="msg"><span id="label-darkred"><b>Search for Direcions or <br>use the list of pre set destinations</b></span></><br><br>
+					<a href="#geoLocation" id="useGPS">Use My Location</a><br><br>
+					<p class="or">Or Search</p>
+					<div class="directionInputs">
+						<form>
+							<p><label>S</label><input type="text" value="" id="dirSource" /><br>
+							<label>F</label><input type="text" value="" id="dirDestination" /></p><br>
+							
+							<div id='input-radius'>
+								&nbsp;<p class="or">within &hellip;</p>
+									<select id='ddlRadius'>
+										<option value='400'>2 blocks</option>
+										<option value='805'>1/2 mile</option>
+										<option value='1610'>1 mile</option>
+										<option value='3220'>2 miles</option>
+									</select>
+									<a href="#getDirections" id="getDirections">Go</a><br><br>
+								</div>
+							
+							<hr /><br>
+							<p class='mute' style="float: left;"><h4>Select from the list of destinations<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></h4></br>
+							<p><label>S</label>
+							<select id="dirSourceLeft" data-runid="0" >
+								<option value="new york, ny">New York</option>
+								<option value="kanab, ut">Kanab</option>
+								<option value="mesa verde, co">Mesa Verde</option>
+								<option value="grand canyon, az">Grand Canyon</option>
+								<option value="page, az">Page</option>
+								<option value="flagstaff, az">Flagstaff</option>
+								<option value="phoenix, az">Phoenix</option>
+								<option value="las vegas, nv">Las Vegas</option>
+								<option value="yosemite village, ca ">Yosemite Village</option>
+								<option value="san francisco, ca">San Francisco</option>
+								<option value="los angeles, ca">Los Angeles</option>
+								<option value="san jose, ca">San Jose</option>
+							  </select><br>
+							<label>F</label>
+							<select id="dirDestinationLeft" data-runid="0">
+								<option value="new york, ny">New York</option>
+								<option value="kanab, ut">Kanab</option>
+								<option value="mesa verde, co">Mesa Verde</option>
+								<option value="grand canyon, az">Grand Canyon</option>
+								<option value="page, az">Page</option>
+								<option value="flagstaff, az">Flagstaff</option>
+								<option value="phoenix, az">Phoenix</option>
+								<option value="las vegas, nv">Las Vegas</option>
+								<option value="yosemite village, ca ">Yosemite Village</option>
+								<option value="san francisco, ca">San Francisco</option>
+								<option value="los angeles, ca">Los Angeles</option>
+								<option value="san jose, ca">San Jose</option>
+							  </select></p>
+							<br><div id="buttons"><p><a href="#getDirections" id="getDirectionsLeft">Go</a>
+							<a href="#reset" id="paneReset">Reset</a></div>
+						</form>	
+					</div>
+					<div id="directionSteps">
+						<p class="msg">Direction Steps Will Render Here</p>
+					</div>
+					<a href="#toggleBtn1" id="paneToggle" class="out">&lt;</a>
+				</div>
+				<div id="directionsPanelRight">
+						<class="msg"><span id="label-darkred"><b>Holiday Calendar Events </b><br></span></><br><br><br>
+						<div class="content-secondary">
+							<class="msg"><span id="label-black">Data comes from google calendar via spreadsheet, app script to fusion table and output with GViz.</span><span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></><br><br>
+							<br>
+							<div id='search'>
+								<h4>Filter by Event Types<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></h4><br>
+								<ul class='options-h'>
+									<li><span id="label-blue"><label for='cbOpen1'><input type='checkbox' id='cbOpen1' />Motels</label></span></li>
+									<li><span id="label-green"><label for='cbOpen2'><input type='checkbox' id='cbOpen2' />Attractions</label></span></li>
+									<li><span id="label-yellow"><label for='cbOpen3'><input type='checkbox' id='cbOpen3' />Sightseeing</label></span></li>
+								</ul>
+								
+								<ul class='options-h'>
+									<li><span id="label-darkred"><label for='cbFire1'><input type='checkbox' id='cbFire1' />Driving</label></span></li>
+									<li><span id="label-purple"><label for='cbInUse1'><input type='checkbox' id='cbInUse1' />Entertainment</label></span></li>
+								</ul>
+								<hr /> <br>
+								<h4>
+									Filter by Event Dates<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span>
+									</h4>
+								<div id="preset"></div> 
+								 <div id="s-h">
+									 <label> 
+									  <h4 ><span id="out1"></span></h4>
+									</label>
+								  </div>
+								<div class='clear'></div>
+								<hr /> <br>
+								<p class='mute'><h4>Find Local Events<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></h4></p>
+								<br>
+								<div class='clear'></div>
+								<ul class='c3l options-v'>
+									<li><span id="label-tan"><label for='rbCensus1'><input name='rbCensus' type='radio' id='rbCensus1'/>Seasonal Events</label></span></li>
+									<li><span id="label-pink"><label for='rbCensus2'><input name='rbCensus' type='radio' id='rbCensus2'/>Special Events</label></span></li>
+								</ul>
+								<ul class='c3m options-v'>
+									<li><span id="label-blue"><label for='rbCensus3'><input name='rbCensus' type='radio' id='rbCensus3'/>Road Closures</label></span></li>
+									<li><span id="label-yellow"><label for='rbCensus4'><input name='rbCensus' type='radio' id='rbCensus4'/>Tourist Information</label></span></li>
+								</ul>
+								</br>
+								<div class='clear'></div>
+								<br><br><br><br><br><hr /><br>
+								<p class='mute' style="float: left;"><h4>View Events<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></h4></p>
+								<div id="directionStepsRight">
+									<p class="msg">Events Will Render Here</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p>
+									<p>This is just some filler text</p><br>
+								</div>
+								<hr /> 
+								<br>
+								<small align="bottom"><a href="#streetview">See the Street View Display</a></small>  --- <small><a href="#multiview">See the Multi View Display</a></small>
+							</div>
+						</div>
+					<a href="#toggleBtn2" id="paneToggleRight" class="out">&gt;</a>
+					
+				</div>
+				
+			</div>
+			<div id="footer" align="center">
+				<div id="directionsPanelBottom">
+					<p class='mute'><h4>Display Feeds<span class='mute'>(<a href='./about.html#where-did-you-get-your-data-from'>?</a>)</span></h4></p>
+					
+				
+				<a href="#toggleBtnBottom" id="paneToggleBottom" class="out">&lt;</a></div>
+					<div id="defaultCountdown"></div>
+					<span id="label-purple" style="align: middle;"><ul><class='mute'>A project by Paul Jones</br>
+					Copyright &copy; 2003-2014 <a href='http://shmik.com'>shmik.com</a></span>
+					<li><div id="time_right">
+
+						<script type="text/javascript">
+							qlock_city_name="New York, NY";
+							qlock_gmt_offset=-5;
+							qlock_bg_color="#8900B7";
+							qlock_text_color="#73FF73";
+							qlock_dst_week1=2;
+							qlock_dst_dow1=7;
+							qlock_dst_month1=3;
+							qlock_dst_week2=1;
+							qlock_dst_dow2=7;
+							qlock_dst_month2=11;
+							</script>
+							<script type="text/javascript" src="http://www.qlock.com/live/qlock.js"></script>
+					</div></li>
+					<li><div id="time_right2">
+						<script type="text/javascript">
+							qlock_city_name="Sydney";
+							qlock_gmt_offset=10;
+							qlock_bg_color="#8900B7";
+							qlock_text_color="#73FF73";
+							qlock_dst_week1=1;
+							qlock_dst_dow1=7;
+							qlock_dst_month1=10;
+							qlock_dst_week2=1;
+							qlock_dst_dow2=7;
+							qlock_dst_month2=4;
+						</script>
+						<script type="text/javascript" src="http://www.qlock.com/live/qlock.js"></script>
+					</div></li>
+					<li><div id="time_right3">
+						<script type="text/javascript">
+							qlock_city_name="Los Angeles, CA";
+							qlock_gmt_offset=-8;
+							qlock_bg_color="#8900B7";
+							qlock_text_color="#73FF73";
+							qlock_dst_week1=2;
+							qlock_dst_dow1=7;
+							qlock_dst_month1=3;
+							qlock_dst_week2=1;
+							qlock_dst_dow2=7;
+							qlock_dst_month2=11;
+							</script>
+						<script type="text/javascript" src="http://www.qlock.com/live/qlock.js"></script>
+					</div></li>
+					
+				</div>
+				<script src="http://platform.twitter.com/widgets.js" type="text/javascript" defer="defer"></script>
+				<script type="text/javascript" src="js/shmikok.js"></script> 
+				<script language="javascript" type="text/javascript">	
+					$(function () {
+						var holiday = new Date(2016, 4 -1 , 10);
+						$('#defaultCountdown').countdown({until: holiday,timezone: +10, format: 'YOWDHMS'});
+					});
+				</script>	
+  </body>
+ 
+</html>

@@ -1,0 +1,1 @@
+{"name":"Football Position","id":"\/soccer\/football_position","type":"\/type\/type","group":"type","_id":"tTZdXYUL","relation":"\/soccer","properties":[{"name":"Players","id":"\/soccer\/football_position\/players","expected_type":"\/soccer\/football_player","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

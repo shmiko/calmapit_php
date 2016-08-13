@@ -1,0 +1,1 @@
+{"name":"Option","id":"\/automotive\/option","type":"\/type\/type","group":"type","_id":"OTNwm1Xq","relation":"\/automotive","properties":[{"name":"Option Packages","id":"\/automotive\/option\/option_packages","expected_type":"\/automotive\/option_package","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

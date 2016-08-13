@@ -1,0 +1,1 @@
+{"name":"Artery","id":"\/medicine\/artery","type":"\/type\/type","group":"type","_id":"5dhy2rCJ","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

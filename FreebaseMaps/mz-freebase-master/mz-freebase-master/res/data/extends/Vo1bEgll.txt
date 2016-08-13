@@ -1,0 +1,1 @@
+{"name":"Comparable Aircraft Relationship","id":"\/aviation\/comparable_aircraft_relationship","type":"\/type\/type","group":"type","_id":"Vo1bEgll","relation":"\/aviation","properties":[{"name":"Aircraft","id":"\/aviation\/comparable_aircraft_relationship\/aircraft","expected_type":"\/aviation\/aircraft_model","description":""}],"included_types":[]}

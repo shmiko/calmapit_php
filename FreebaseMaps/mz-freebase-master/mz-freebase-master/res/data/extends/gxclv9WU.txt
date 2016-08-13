@@ -1,0 +1,1 @@
+{"name":"Cranial nerve","id":"\/medicine\/cranial_nerve","type":"\/type\/type","group":"type","_id":"gxclv9WU","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"},{"name":"Nerve","id":"\/medicine\/nerve"}]}

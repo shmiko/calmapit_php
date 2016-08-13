@@ -1,0 +1,1 @@
+{"name":"Patent Assignee","id":"\/law\/patent_assignee","type":"\/type\/type","group":"type","_id":"XbyzBhYE","relation":"\/law","properties":[{"name":"Patents assigned","id":"\/law\/patent_assignee\/patents_assigned","expected_type":"\/law\/us_patent","description":"Patents assigned to this entity."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Comet group","id":"\/astronomy\/comet_group","type":"\/type\/type","group":"type","_id":"NiXkfNjH","relation":"\/astronomy","properties":[{"name":"Comet family members","id":"\/astronomy\/comet_group\/comet","expected_type":"\/astronomy\/comet","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+nav ul {
+    overflow:hidden;
+    
+}
+
+nav ul li {
+    display: block;
+    float:left;
+    height: 200px;
+}
+
+.liHome {
+    background-color: #FF2800;
+}
+
+.liRsvp {
+    background-color: #530FAD;
+}
+
+.liStory {
+    background-color: #00A480;
+}
+
+.liVenue {
+    background-color: #FFE800;
+}
+
+.liGuestbook {
+    background-color: #F30021;
+}
+
+.liGallery {
+    background-color: #1D1AB2;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+<script>
+    //Remove 1 element(selected), and find the width of the rest(unselected)
+    var qtySect = 6-1;
+    var unselectedWidth = 40 / qtySect +"%";
+    var selectedWidth = 60+"%";
+
+        //set initial widths
+    $("nav ul li:first-child").addClass('selected');
+    $("nav ul li").not(':first-child').addClass('unselected');
+    $(".unselected").css("width", unselectedWidth);
+    $(".selected").css("width",selectedWidth);
+        //mouseover animate
+    $("nav ul li").mouseenter(function() {
+        if ($(this).hasClass("unselected")){
+             $(this).animate( { width: selectedWidth }, { queue: false, duration: 1000, easing: "linear" } )
+             $(".selected").animate( { width: unselectedWidth }, { queue: false, duration: 1000, easing: "linear" } );
+            $(".selected").addClass("unselected").removeClass("selected");
+            $(this).addClass("selected").removeClass("unselected");
+        }
+    });
+</script>
+</head>
+<body>
+<nav>
+            <ul>
+                <li class="liHome">home</li>
+                <li class="liRsvp">rsvp</li>
+                <li class="liStory">story</li>
+                <li class="liVenue">venue</li>
+                <li class="liGuestbook">guestbook</li>
+                <li class="liGallery">gallery</li>
+            </ul>
+</nav>
+</body>
+</html>

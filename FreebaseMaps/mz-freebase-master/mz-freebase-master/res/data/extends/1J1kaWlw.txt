@@ -1,0 +1,1 @@
+{"name":"Chinese municipality","id":"\/location\/cn_municipality","type":"\/type\/type","group":"type","_id":"1J1kaWlw","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

@@ -1,0 +1,36 @@
+<div id="pytWrapper">
+
+<h1>Who's coming with you?</h1>
+
+<p>
+	Now that you have created your trip, you can invite some companions to plan the trip together.<br />
+	Just add them by email. If you do not want to invite other people you can skip this step.
+</p>
+
+<br />
+
+<div class="response"></div>
+
+<form action="" method="post" class="sideways" id="frmPlanYourTrip2">
+
+	<div>
+		<label for="email">Companion's email</label>
+		<input type="email" name="email" id="email">
+	</div>
+
+	<div class="spacer"></div>
+
+	<div style="width: 100%">
+		{{> planyourtrip_protected_2_companions }}
+	</div>
+
+	<div class="spacer"></div>
+	
+	<div>
+		<input type="button" value="Next" name="next" id="goTo3">
+		<input type="button" value="Skip" name="skip" id="skipTo3">
+	</div>
+	
+</form>
+
+</div>

@@ -1,0 +1,1 @@
+{"name":"Namesake","id":"\/symbols\/namesake","type":"\/type\/type","group":"type","_id":"yXlexdhB","relation":"\/symbols","properties":[{"name":"Named after","id":"\/symbols\/namesake\/named_after","expected_type":"\/symbols\/name_source","description":"What this entity was named after."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,21 @@
+<div id="pytWrapper">
+
+<h1>What are you going to do?</h1>
+
+<p>
+	So you've created a trip, added some companions (or didn't).. Now it's time to fill in the days.<br>
+	Where are you going to and what are you going to do in those <strong>{{ days_count }} days</strong>?
+</p>
+
+<br />
+
+<div class="days_overview">
+	{{#each days}}
+		<a href="#" {{#if location_id }} class="done" {{/if}} data-id="{{ id }}">
+			<span class="day">Day {{ day }}</span>
+			<span class="date">{{ dateFormat day_date format="D MMM YYYY" }}</span>
+		</a>
+	{{/each}}
+</div>
+
+</div>

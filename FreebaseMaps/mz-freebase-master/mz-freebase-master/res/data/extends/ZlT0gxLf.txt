@@ -1,0 +1,1 @@
+{"name":"Flag Kind","id":"\/freebase\/flag_kind","type":"\/type\/type","group":"type","_id":"ZlT0gxLf","relation":"\/freebase","properties":[{"name":"Flags","id":"\/freebase\/flag_kind\/flags","expected_type":"\/freebase\/review_flag","description":"The flags of this kind"}],"included_types":[]}

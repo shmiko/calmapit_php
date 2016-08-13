@@ -1,0 +1,1 @@
+{"name":"Award-Winning Work","id":"\/award\/award_winning_work","type":"\/type\/type","group":"type","_id":"kjWB8ouW","relation":"\/award","properties":[{"name":"Awards Won","id":"\/award\/award_winning_work\/awards_won","expected_type":"\/award\/award_honor","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

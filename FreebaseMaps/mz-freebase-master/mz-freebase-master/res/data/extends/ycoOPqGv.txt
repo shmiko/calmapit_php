@@ -1,0 +1,1 @@
+{"name":"Judicial title","id":"\/law\/judicial_title","type":"\/type\/type","group":"type","_id":"ycoOPqGv","relation":"\/law","properties":[{"name":"Judges","id":"\/law\/judicial_title\/judges","expected_type":"\/law\/judicial_tenure","description":"Judges who have filled this role or held this position."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

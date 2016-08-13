@@ -1,0 +1,15 @@
+{
+    "name": "Travellar",
+    "description": "Travellar API",
+    "minimum-stability": "alpha",
+    "require": {
+        "slim/slim": "2.*",
+        "twig/twig": "1.*",
+        "swiftmailer/swiftmailer": "5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Travellar":        "src/"
+        }
+    }
+}

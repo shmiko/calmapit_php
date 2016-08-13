@@ -1,0 +1,1 @@
+{"name":"Film critic","id":"\/film\/film_critic","type":"\/type\/type","group":"type","_id":"I8hpeUph","relation":"\/film","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

@@ -1,0 +1,1 @@
+{"name":"Super bowl","id":"\/american_football\/super_bowl","type":"\/type\/type","group":"type","_id":"xr0prXCq","relation":"\/american_football","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1286 @@
+/*** Hour to Hour slider - Current day**/
+#sliderH2Hcur {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hcur .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hcur .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hcur .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hcur .disable {
+	visibility:hidden;
+}
+#sliderH2Hcur .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hcur .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hcur .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hcur .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hcur .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hcur .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hcur .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hcur .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hcur .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hcur .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hcur .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hcur .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hcur .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+
+/*** Hour to Hour slider - Forecast day 1 **/
+#sliderH2Hfor_1 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_1 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_1 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_1 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_1 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_1 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_1 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_1 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_1 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_1 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_1 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_1 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_1 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_1 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_1 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_1 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_1 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_1 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+/*** Hour to Hour slider - forecast day 2**/
+#sliderH2Hfor_2 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_2 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_2 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_2 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_2 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_2 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_2 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_2 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_2 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_2 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_2 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_2 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_2 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_2 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_2 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_2 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_2 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_2 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 3**/
+#sliderH2Hfor_3 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_3 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_3 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_3 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_3 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_3 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_3 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_3 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_3 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_3 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_3 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_3 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_3 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_3 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_3 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_3 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_3 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_3 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 4**/
+#sliderH2Hfor_4 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_4 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_4 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_4 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_4 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_4 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_4 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_4 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_4 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_4 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_4 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_4 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_4 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_4 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_4 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_4 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_4 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_4 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 5**/
+#sliderH2Hfor_5 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_5 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_5 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_5 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_5 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_5 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_5 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_5 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_5 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_5 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_5 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_5 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_5 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_5 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_5 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_5 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_5 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_5 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+
+/*** Hour to Hour slider - forecast day 6**/
+#sliderH2Hfor_6 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_6 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_6 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_6 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_6 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_6 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_6 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_6 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_6 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_6 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_6 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_6 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_6 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_6 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_6 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_6 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_6 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_6 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 7**/
+#sliderH2Hfor_7 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_7 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_7 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_7 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_7 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_7 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_7 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_7 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_7 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_7 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_7 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_7 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_7 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_7 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_7 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_7 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_7 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_7 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 8**/
+#sliderH2Hfor_8 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_8 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_8 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_8 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_8 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_8 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_8 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_8 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_8 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_8 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_8 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_8 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_8 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_8 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_8 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_8 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_8 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_8 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 9**/
+#sliderH2Hfor_9 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_9 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_9 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_9 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_9 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_9 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_9 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_9 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_9 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_9 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_9 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_9 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_9 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_9 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_9 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_9 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_9 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_9 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}
+
+
+/*** Hour to Hour slider - forecast day 10**/
+#sliderH2Hfor_10 {
+	height:210px;
+	overflow:hidden;
+	margin-top:-20px;
+	text-shadow:0 0;	
+}
+#sliderH2Hfor_10 .viewport {
+	float:left;
+	width:630px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+#sliderH2Hfor_10 .buttons {
+	display:block;
+	margin:0 0 0 0;
+	float:right;
+	position:relative;
+	width:30px;
+}
+#sliderH2Hfor_10 .next {
+	margin:0 0 0 0;
+	margin-right:20px;
+}
+#sliderH2Hfor_10 .disable {
+	visibility:hidden;
+}
+#sliderH2Hfor_10 .overview {
+	list-style:none;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	top:0;
+}
+#sliderH2Hfor_10 .overview li {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	height:170px;
+	border:1px solid #dcdcdc;
+	width: 300px;
+}
+#sliderH2Hfor_10 .buttons {
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:1000px;
+	background-color:#ccc;
+	border:1px solid #cfcece;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 2px #dfdfdf;
+	-webkit-box-shadow:0px 0px 0px #dfdfdf;
+	box-shadow:0px 0px 2px #dfdfdf;
+}
+#sliderH2Hfor_10 .prev {
+	background-image:url(../images/arrow_slider_prev.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_10 .next {
+	background-image:url(../images/arrow_slider_next.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	padding-right:4px;
+}
+#sliderH2Hfor_10 .prev:hover {
+	background-color:#f7f7f7;
+}
+#sliderH2Hfor_10 .prev:hover {
+	background-image:url(../images/arrow_slider_prev_hover.png);
+}
+#sliderH2Hfor_10 .next:hover {
+	background-image:url(../images/arrow_slider_next_hover.png);
+}
+#sliderH2Hfor_10 .pager {
+	float:left;
+	list-style:none;
+	margin:0 auto;
+}
+#sliderH2Hfor_10 .pager li {
+	float:left;
+	margin:1px;
+}
+#sliderH2Hfor_10 .pagenum {
+	background-color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding:2px;
+	padding-left:5px;
+	padding-right:6px;
+	color:#555555;
+	font-size:10px;
+	font-weight:400;
+	display:block;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #cfcece;
+}
+#sliderH2Hfor_10 .active {
+	color:#fff;
+	background-color:#555555;
+	border:1px solid #fff;
+}
+#sliderH2Hfor_10 .pagenum:hover {
+	color:#fff;
+	background-color:#555555;
+	border: 1px solid #fff;
+}

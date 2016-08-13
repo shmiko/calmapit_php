@@ -1,0 +1,1 @@
+{"name":"Rocket Manufacturer","id":"\/spaceflight\/rocket_manufacturer","type":"\/type\/type","group":"type","_id":"SPp5c64n","relation":"\/spaceflight","properties":[{"name":"Rockets Manufactured","id":"\/spaceflight\/rocket_manufacturer\/rockets_manufactured","expected_type":"\/spaceflight\/rocket","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

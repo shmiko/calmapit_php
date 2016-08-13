@@ -1,0 +1,1 @@
+{"name":"Italian comune","id":"\/location\/it_comune","type":"\/type\/type","group":"type","_id":"dHx2oq93","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"City\/Town\/Village","id":"\/location\/citytown"}]}

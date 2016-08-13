@@ -1,0 +1,1 @@
+{"name":"Airport operator","id":"\/aviation\/airport_operator","type":"\/type\/type","group":"type","_id":"VY7bMy8k","relation":"\/aviation","properties":[{"name":"Airports operated","id":"\/aviation\/airport_operator\/airports_operated","expected_type":"\/aviation\/airport","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

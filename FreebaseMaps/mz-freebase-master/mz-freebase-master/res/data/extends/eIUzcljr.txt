@@ -1,0 +1,1 @@
+{"name":"Waypoint type","id":"\/aviation\/waypoint_type","type":"\/type\/type","group":"type","_id":"eIUzcljr","relation":"\/aviation","properties":[{"name":"Waypoints of this type","id":"\/aviation\/waypoint_type\/waypoints_of_this_type","expected_type":"\/aviation\/aviation_waypoint","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

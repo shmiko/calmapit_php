@@ -1,0 +1,125 @@
+body {
+	background-color: #2b2d2d;
+	margin: 0;
+	font: 14px/1 'Open Sans', Arial, Tahoma, sans-serif;
+}
+#frame {
+	margin: 3% auto 0;
+	position: relative;
+	box-shadow: 0 0 256px -75px white;
+	-webkit-box-shadow: 0 0 256px -75px white;;
+	-moz-box-shadow: 0 0 256px -75px white;;
+}
+#frame > div {
+	position: absolute;
+}
+#loud_speaker_v {
+	width: 9px;
+	height: 63px;
+	display: block;
+	background: transparent url(../img/phone/loud_speaker_v.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	right: 27px;
+	margin-top: -31px;
+}
+#loud_speaker_h {
+	width: 63px;
+	height: 9px;
+	display: block;
+	background: transparent url(../img/phone/loud_speaker_h.png) no-repeat;
+	margin: 27px auto 0;
+}
+#frame_mm {
+	margin:0;
+	padding: 0;
+	background-color: #fff;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	max-width:322px;
+	height:482px;
+}
+#frame_mm .inside {width:322px;height:482px;overflow-y: scroll;overflow-x: hidden;border-bottom:1px solid #000;}
+#frame_viewport {
+	background-color: #737373;
+	width: 100%;
+	height: 100%;
+}
+#frame.mobile {
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+}
+#frame.mobile.portrait {
+	width: 356px; 
+	height: 586px;
+}
+#frame.mobile.portrait #frame_lt {
+	left: 0;
+	top: 0;
+	width: 35px;
+	height: 51px;
+	background: transparent url(../img/phone/frame_mobile_p_lt.png) no-repeat;
+}
+#frame.mobile.portrait #frame_mt {
+	left: 35px;
+	top: 0;
+	right: 35px;
+	height: 51px;
+	background: transparent url(../img/phone/frame_mobile_p_mt.png) repeat-x;
+}
+#frame.mobile.portrait #loud_speaker_h {
+	display: block;
+}
+#frame.mobile.portrait #frame_rt {
+	right: 0;
+	top: 0;
+	width: 35px;
+	height: 51px;
+	background: transparent url(../img/phone/frame_mobile_p_rt.png) no-repeat;
+}
+#frame.mobile.portrait #frame_lm {
+	left: 0;
+	top: 51px;
+	bottom: 53px;
+	width: 17px;
+	background: transparent url(../img/phone/frame_mobile_p_lm.png) repeat-y;
+}
+#frame.mobile.portrait #frame_mm {
+	top: 51px;
+	right: 17px;
+	bottom: 53px;
+	left: 17px;
+}
+#frame.mobile.portrait #frame_rm {
+	right: 0;
+	top: 51px;
+	bottom: 53px;
+	width: 17px;
+	background: transparent url(../img/phone/frame_mobile_p_rm.png) repeat-y;
+}
+#frame.mobile.portrait #loud_speaker_v {
+	display: none;
+}
+#frame.mobile.portrait #frame_lb {
+	left: 0;
+	bottom: 0;
+	width: 35px;
+	height: 53px;
+	background: transparent url(../img/phone/frame_mobile_p_lb.png) no-repeat;
+}
+#frame.mobile.portrait #frame_mb {
+	left: 35px;
+	bottom: 0;
+	right: 35px;
+	height: 53px;
+	background: transparent url(../img/phone/frame_mobile_p_mb.png) repeat-x;
+}
+#frame.mobile.portrait #frame_rb {
+	right: 0;
+	bottom: 0;
+	width: 35px;
+	height: 53px;
+	background: transparent url(../img/phone/frame_mobile_p_rb.png) no-repeat;
+}

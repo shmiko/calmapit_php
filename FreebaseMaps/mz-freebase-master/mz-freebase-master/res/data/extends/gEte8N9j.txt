@@ -1,0 +1,1 @@
+{"name":"Type of dish","id":"\/food\/type_of_dish","type":"\/type\/type","group":"type","_id":"gEte8N9j","relation":"\/food","properties":[{"name":"Dishes","id":"\/food\/type_of_dish\/dishes","expected_type":"\/food\/dish","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

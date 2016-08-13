@@ -1,0 +1,1 @@
+{"name":"Top Level Domain Status","id":"\/internet\/top_level_domain_status","type":"\/type\/type","group":"type","_id":"BH2SF9dq","relation":"\/internet","properties":[{"name":"Domains","id":"\/internet\/top_level_domain_status\/domains","expected_type":"\/internet\/top_level_domain","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Wine color","id":"\/wine\/wine_color","type":"\/type\/type","group":"type","_id":"kBZ7Hx6y","relation":"\/food","properties":[{"name":"Wines","id":"\/wine\/wine_color\/wines","expected_type":"\/wine\/wine","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

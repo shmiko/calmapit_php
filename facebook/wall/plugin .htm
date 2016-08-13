@@ -1,0 +1,235 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="en-US"> <!--<![endif]-->
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>jQuery Facebook Wall Plugin | Iron Lasso</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Add CSS3 Rules here for IE 7-9
+================================================== -->
+
+<!--[if IE]>
+<style type="text/css">
+html.ie #navigation,
+html.ie a.button,
+html.ie .cta,
+html.ie .wp-caption,
+html.ie #breadcrumbs,
+html.ie a.more-link,
+html.ie .gallery .gallery-item img,
+html.ie .gallery .gallery-item img.thumbnail,
+html.ie .widget-container,
+html.ie #author-info {behavior: url("http://ironlasso.com/wp-content/themes/skeleton/PIE.php");position: relative;}</style>
+<![endif]-->
+
+
+<!-- Mobile Specific Metas
+================================================== -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+<!-- Favicons
+================================================== -->
+
+<link rel="shortcut icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/favicon.ico">
+
+<link rel="apple-touch-icon" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon.png">
+
+<link rel="apple-touch-icon" sizes="72x72" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-72x72.png" />
+
+<link rel="apple-touch-icon" sizes="114x114" href="http://ironlasso.com/wp-content/themes/skeleton/images/apple-touch-icon-114x114.png" />
+
+<link rel="pingback" href="http://ironlasso.com/xmlrpc.php" />
+<link rel="stylesheet" id="custom" href="http://ironlasso.com/?get_styles=css" type="text/css" media="all" />
+<link rel="stylesheet" href="/jQueryFacebookWall/css/jQueryFacebookWall.min.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Feed" href="http://ironlasso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Iron Lasso &raquo; Comments Feed" href="http://ironlasso.com/comments/feed/" />
+<link rel='stylesheet' id='skeleton-css'  href='http://ironlasso.com/wp-content/themes/skeleton/skeleton.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='theme-css'  href='http://ironlasso.com/wp-content/themes/skeleton/style.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='layout-css'  href='http://ironlasso.com/wp-content/themes/skeleton/layout.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='formalize-css'  href='http://ironlasso.com/wp-content/themes/skeleton/formalize.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='superfish-css'  href='http://ironlasso.com/wp-content/themes/skeleton/superfish.css?ver=1.6' type='text/css' media='screen, projection' />
+<link rel='stylesheet' id='jfw-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/css/jQueryFacebookWall.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jfw-light-style-css'  href='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/css/jQueryFacebookWallLight.min.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://ironlasso.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ironlasso.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ironlasso.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Blog' href='http://ironlasso.com/blog/' />
+<link rel='next' title='Research' href='http://ironlasso.com/contact/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='canonical' href='http://ironlasso.com/jqueryfacebookwall-plugin/' />
+<link rel='shortlink' href='http://ironlasso.com/?p=10' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body class="page page-id-10 page-template page-template-page-jQueryFacebookWall-php">
+	<div id="wrap" class="container">
+	<div class="resize"></div>
+	<div id="header" class="sixteen columns">
+<div class="inner">
+<div id="site-title" class="text"><a href="http://ironlasso.com/" title="Iron Lasso">Iron Lasso</a></div>
+<span class="site-desc text">Changing the Internet one website at a time.</span>
+</div></div><!--/#header-->	<div id="navigation" class="row sixteen columns"><div class="menu-header"><ul id="menu-main-menu" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a title="Lorenzo Gangi Web Development" href="http://ironlasso.com/">Home</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://ironlasso.com/blog/">Blog</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-has-children menu-item-18"><a title="jQuery Facebook Wall Plugin" href="http://ironlasso.com/jqueryfacebookwall-plugin/">jQueryFacebookWall</a>
+<ul class="sub-menu">
+	<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a title="jQuery Facebook Wall Plugin Timline Style Example" href="http://ironlasso.com/jqueryfacebookwall-timeline/">Timeline Style</a></li>
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a title="jQueryFacebookWall Wall Style Feed" href="http://ironlasso.com/jqueryfacebookwall-wall/">Wall Style</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://ironlasso.com/jquery-facebook-wall-faq/">jQuery Facebook Wall FAQ</a></li>
+	<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="http://ironlasso.com/upgrading/">Upgrading</a></li>
+	<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a title="jQueryFacebookWall Documentation" href="http://ironlasso.com/jqueryfacebookwall-documentation/">Documentation</a></li>
+	<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a title="jQueryFacebookWall Plugin Options" href="http://ironlasso.com/jqueryfacebookwall-plugin-options/">Plugin Options</a></li>
+	<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396"><a href="http://ironlasso.com/install-instruction-video/">Install Instruction video</a></li>
+</ul>
+</li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-235"><a title="jQueryFacebookWall Wordpress Plugin" href="http://ironlasso.com/jqueryfacebookwall-wordpress-plugin/">jQueryFacebookWall WordPress</a>
+<ul class="sub-menu">
+	<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="http://ironlasso.com/jqueryfacebookwallwp-documentation/">jQueryFacebookWallWP Documentation</a></li>
+	<li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a href="http://ironlasso.com/jqueryfacebookwallwp-faq/">jQueryFacebookWallWP FAQ</a></li>
+	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a href="http://ironlasso.com/jqueryfacebookwallwplight/">jQueryFacebookWallWPLight</a></li>
+</ul>
+</li>
+<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a title="Page Background Plugin" href="http://ironlasso.com/jquery-page-background-pro/">jQueryPageBackground</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://ironlasso.com/contact-2/">Contact</a></li>
+</ul></div></div><!--/#navigation-->		<a name="top" id="top"></a><div id="content" class="sixteen columns"><div class="entry-content">
+<h2 class="entry-title">jQuery Facebook Wall Plugin</h2>
+<p><strong>Put your Facebook page&#8217;s wall or timeline on your website.</strong> You always wanted to&#8230; Now you can! jQueryFacebookWall is a jQuery plugin that lets you add a Facebook wall feed to any page on your website. It&#8217;s easy! The jQuery Facebook wall plugin provides you all the tools you&#8217;ll need to add a <em>wall </em>or <em>timeline</em> style Facebook feed in minutes.</p>
+<h3><strong>VERSION 2.0 Released</strong></h3>
+<p>Now you can put multiple feeds on the same page! Or split up the feed, photos, albums, likes and events components and place them in different parts of your page.</p>
+<h3><strong>Pull multiple page feeds all with one plugin!</strong></h3>
+<p><div class="one_third"> <div id='jQueryFacebookWall1' class='jQueryFacebookWall'></div> </div> <div class="one_third"> <div id='jQueryFacebookWall2' class='jQueryFacebookWall'></div> </div> <div class="one_third last"> <div id='jQueryFacebookWall3' class='jQueryFacebookWall'></div> </div><div class="clear"></div></p>
+<h3><strong>Divided components</strong></h3>
+<p><div class="one_third"> Events <div id='jQueryFacebookWallufcEvents' class='jQueryFacebookWall'></div> </div> <div class="one_third"> Feed <div id='jQueryFacebookWallufcPosts' class='jQueryFacebookWall'></div> </div> <div class="one_third last"> Posts <div id='jQueryFacebookWallufcAlbums' class='jQueryFacebookWall'></div> </div><div class="clear"></div></p>
+<h3>Timeline style with integrated photos albums events and likes</h3>
+<p><div id='jQueryFacebookWallufc' class='jQueryFacebookWall'></div></p>
+<h3><strong>What People are Saying</strong></h3>
+<p><div class="two_thirds"></p>
+<p><img class="alignnone size-full wp-image-499" src="http://ironlasso.com/wp-content/uploads/2013/05/reviews1.png" alt="reviews" width="100%" /></p>
+<p></div></p>
+<p><div class="one_third last"></p>
+<p><div class="cta" ></p>
+<h3>Download</h3>
+<p><a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus"><img class="size-full wp-image-75 alignleft" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" alt="arrow" width="45" height="48" /></a>Get your very own copy of jQueryFacebookWall WordPress Plugin today!<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall-wordpress/5574064?ref=ludicrisMaximus">Download WordPress Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> <div class="cta" ></p>
+<h3>Download</h3>
+<p><a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus"><img class="size-full wp-image-75 alignleft" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" alt="arrow" width="45" height="48" /></a>Get started by getting your very own copy of jQueryFacebookWall jQuery Plugin.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus">Download jQuery Plugin</a></div><div class="clear"></div> </div><div class="clear"></div></p>
+<p></div><div class="clear"></div></p>
+<p><div class="one_half"></p>
+<h3><strong>Features</strong></h3>
+<ul class="square">
+<li>*<strong>NEW CSS3 Loading Transitions</strong></li>
+<li><strong>*NEW Language Support ( Dansk, Deutsch, Dutch, English, Italiano, Francais, Espanol, Polski, Svenska, Turk ) <a href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html">try it now &gt;&gt;</a></strong></li>
+<li><strong>*NEW Single Column style <strong><a href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html">try it now &gt;&gt;</a></strong></strong></li>
+<li><strong>*NEW Customize display order (posts, photos, ablums, events, likes) <strong><a href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html">try it now &gt;&gt;</a></strong></strong></li>
+<li><strong>*NEW Loading posts is optional <strong><a href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html">try it now &gt;&gt;</a></strong></strong></li>
+<li><span style="line-height: 16px;">Customizable css</span></li>
+<li>Timeline or Wall style feed</li>
+<li>Options for Posts, Albums, Photos, Likes, and Events</li>
+<li>Documentation for configuring your Facebook app</li>
+<li>Php script to retrieve your Facebook access token</li>
+</ul>
+<p></div></p>
+<p><div class="one_half last"></p>
+<h3><strong>Documentation</strong></h3>
+<ul class="square">
+<li>
+<h6><a title="jQueryFacebookWall Documentation" href="http://ironlasso.com/jqueryfacebookwall-documentation/">Getting Started</a></h6>
+</li>
+<li>
+<h6><a title="jQueryFacebookWall Plugin Options" href="http://ironlasso.com/jqueryfacebookwall-plugin-options/">Plugin Options</a></h6>
+</li>
+<li>
+<h6><a href="http://ironlasso.com/category/jqueryfacebookwall/">Questions &amp; Answers</a></h6>
+</li>
+<li>
+<h6><a href="/jQueryFacebookWall/index.html">Bare Bones Timeline example</a></h6>
+</li>
+<li>
+<h6><a href="/jQueryFacebookWall/wall.html">Bare Bones Wall example</a></h6>
+</li>
+<li>
+<h6><a href="/jQueryFacebookWall/single-column.html">Bare Bones Single Column example</a></h6>
+</li>
+<li>
+<h6><a href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html">Example with controls (configure the plugin right here and now)</a></h6>
+</li>
+</ul>
+<p></div><div class="clear"></div></p>
+<p><strong>Version 2 Changes</strong></p>
+<ol>
+<li><em>Multiple Plugin instances on the same page.</em> This allows for multiple feeds from different Facebook pages on the same page of your website.</li>
+<li><em>Dividable the plugin components</em> (photos, albumns, feed, likes, events). You can divide the plugin components into different plugin instances and place them in different parts of your webstie page</li>
+<li><em>Past events display options</em>.</li>
+<li><em>Display Animation</em></li>
+<li><em>Facebook Graph API</em> calls and Login<em> updated</em> to API version <em>2.1</em></li>
+<li><em>Facebook profiles and groups are no longer supported.</em> With the upgrade to Graph API 2.1 permission to personal profiles data via apps has been severely restricted. Please see these links for info on the <a title="Facebook Pages vs Profiles" href="https://www.facebook.com/help/217671661585622">difference between Facebook pages and Facebook profiles</a> and how to <a title="Convert Profile to Page" href="https://www.facebook.com/help/116067818477568">convert your profile to a page</a>.</li>
+</ol>
+<p><div class="one_third"><div class="cta" ></p>
+<h3>Timeline Style Feed</h3>
+<p><a href="http://ironlasso.com/jqueryfacebookwall-timeline/"><img class="scale-with-grid" src="http://ironlasso.com/wp-content/uploads/2013/05/jqfbw-example.jpg" alt="jQuery Facebook Wall Plugin Timeline style" /></a></div><div class="clear"></div> </div> <div class="one_third"><div class="cta" ></p>
+<h3>Wall Style Feed</h3>
+<p><a href="http://ironlasso.com/jqueryfacebookwall-wall/"><img class="scale-with-grid" src="http://ironlasso.com/wp-content/uploads/2013/05/jqfbw-wall-example.jpg" alt="jqfbw-wall-example" /></a></div><div class="clear"></div> </div> <div class="one_third last"> <div class="cta" ></p>
+<h3>Download</h3>
+<p><a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus"><img class="size-full wp-image-75 alignleft" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" alt="arrow" width="45" height="48" /></a>Get your very own copy of jQueryFacebookWall WordPress Plugin today!<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall-wordpress/5574064?ref=ludicrisMaximus">Download WordPress Plugin</a></div><div class="clear"></div> </div><div class="clear"></div> <div class="cta" ></p>
+<h3>Download</h3>
+<p><a href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus"><img class="size-full wp-image-75 alignleft" src="http://ironlasso.com/wp-content/uploads/2013/05/arrow.png" alt="arrow" width="45" height="48" /></a>Get started by getting your very own copy of jQueryFacebookWall jQuery Plugin.<div class="clear"></div> <div class="button small right"><a target="_self" class="button white" href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus">Download jQuery Plugin</a></div><div class="clear"></div> </div><div class="clear"></div></div><div class="clear"></div></p>
+<div style="margin-top: 35px;"><script>// <![CDATA[
+google_ad_client = "ca-pub-5596827964697060"; /* plugin home wide */ google_ad_slot = "2054567153"; google_ad_width = 945; google_ad_height = 90;
+// ]]></script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">// <![CDATA[</p>
+<p>// ]]></script></div>
+</div>
+
+<!-- You can start editing here. -->
+<div id="comments">
+
+	
+
+</div>
+		</div><!-- /.columns (#content) -->
+<div class="clear"></div><div id="footer" class="noborder sixteen columns">
+
+<div id="credits"><br /><a class="themeauthor" href="http://www.simplethemes.com" title="Simple WordPress Themes">WordPress Themes</a></div><script type='text/javascript' src='http://ironlasso.com/jQueryFacebookWall/js/jQueryFacebookWall.min.js?ver=1'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/app.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/superfish.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/themes/skeleton/javascripts/jquery.formalize.min.js?ver=1.2.3'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWall.min.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var scriptParamsjQueryFacebookWall1 = {"id":"jQueryFacebookWall1","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"natgeo","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"true","comments_limit":"50","posts_limit":"2","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"false","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"false","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWall2 = {"id":"jQueryFacebookWall2","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"foodandwine","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"true","comments_limit":"50","posts_limit":"3","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"false","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"false","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWall3 = {"id":"jQueryFacebookWall3","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"gourmet.magazine","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"true","comments_limit":"50","posts_limit":"3","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"false","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"false","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWallufcEvents = {"id":"jQueryFacebookWallufcEvents","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"ufc","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"false","comments_limit":"50","posts_limit":"5","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"true","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"false","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWallufcPosts = {"id":"jQueryFacebookWallufcPosts","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"ufc","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"true","comments_limit":"50","posts_limit":"2","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"false","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"false","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWallufcAlbums = {"id":"jQueryFacebookWallufcAlbums","domain":"http:\/\/ironlasso.com","display":"single-column","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"ufc","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"false","comments_limit":"50","posts_limit":"5","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"false","events_show":"false","likes_limit":"5","events_limit":"10","likes_use_cover_photos":"true","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"false","albums_show":"true","photos_limit":"25","albums_limit":"12","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+var scriptParamsjQueryFacebookWallufc = {"id":"jQueryFacebookWallufc","domain":"http:\/\/ironlasso.com","display":"timeline","install_directory":"http:\/\/ironlasso.com\/wp-content\/plugins\/jQueryFacebookWallWP\/","use_minified":"true","facebook_user":"ufc","debug":"false","app_id":"245065858862722","language":"english","display_animation":"true","display_animation_delay":"200","posts_show":"true","comments_limit":"50","posts_limit":"5","comments_show_at_start":"2","posts_order":"5","comments_show_more_num":"10","posts_feed_type":"feed","likes_show":"true","events_show":"true","likes_limit":"5","events_limit":"5","likes_use_cover_photos":"false","events_order":"1","likes_order":"4","events_show_ticket_link":"false","likes_min":"0","photos_show":"true","albums_show":"true","photos_limit":"25","albums_limit":"2","photos_type":"uploaded","albums_order":"3","photos_num_columns":"4","photos_show_at_start":"12","photos_order":"2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWP/js/jQueryFacebookWallInline.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://ironlasso.com/wp-content/plugins/jQueryFacebookWallWPLight/js/jQueryFacebookWallLight.min.js?ver=1.0.0'></script>
+
+</div><!--/#footer-->
+</div><!--/#wrap.container-->
+<script type="text/javascript">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41228315-1', 'ironlasso.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

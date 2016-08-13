@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>Multi View Example</title>
+	 </head>
+	<body>
+		<article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-mapsedjs" class="anchor" href="#mapsedjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>mapsed.js</h1>
+
+<p>On <strong><a href="http://toepoke.co.uk/">my website</a></strong> I needed to be able to select places on a map.  </p>
+
+<p>I couldn't find anything that fully did what I was after so I built mapsed (besides I need the JavaScript practice!).</p>
+
+<p>In short it provides the following:</p>
+
+<ul class="task-list">
+<li>UI for users to "select" a place (you get a callback detailing what they picked)</li>
+<li>UI for adding "custom" places</li>
+<li>Support for firing a map up full-window (without having to create a DIV on the page)</li>
+<li>Add searching to the map</li>
+<li>Add/Edit and update your own "custom places" 
+(i.e. not those in the <strong><a href="https://developers.google.com/places/documentation/">Google Places API</a></strong> doesn't know about, but you do)</li>
+<li>Works with multiple maps on the same page</li>
+</ul>
+
+<h2>
+<a name="user-content-demos" class="anchor" href="#demos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demos</h2>
+
+<p>Demos at <a href="http://mapsed.apphb.com">http://mapsed.apphb.com</a></p>
+
+<h2>
+<a name="user-content-settings" class="anchor" href="#settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Settings</h2>
+
+<h3>
+<a name="user-content-showonload-array" class="anchor" href="#showonload-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>showOnLoad <em>(array)</em>
+</h3>
+
+<p>An array of JSON objects that define a set of markers to display when the map is first loaded.</p>
+
+<p>Each element of the array details a place that should be loaded.  An element can either be a <strong>Custom</strong> place or a <strong>Google</strong> place.</p>
+
+<p>Note that <strong>showOnLoad</strong> will also accept just one place object, rather than an array (useful if you only want to show one place on your map).</p>
+
+<h4>
+<a name="user-content-custom-place" class="anchor" href="#custom-place" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Place</h4>
+
+<p>A <strong>custom</strong> place is a place only your system knows about.  You know the address details, lat/lng coordinates, etc.  So you have to tell <strong>mapsed.js</strong> what they are.  The following is a <strong>custom</strong> example:</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="c1">// Random made up CUSTOM place</span>
+<span class="p">{</span>
+  <span class="nx">userData</span><span class="o">:</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="nx">lat</span><span class="o">:</span> <span class="mf">53.79</span><span class="p">,</span>
+  <span class="nx">lng</span><span class="o">:-</span><span class="mf">1.5426760000000286</span><span class="p">,</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">"Somewhere"</span><span class="p">,</span>
+  <span class="nx">street</span><span class="o">:</span> <span class="s2">"Over the rainbow, Up high way"</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4>
+<a name="user-content-google-place" class="anchor" href="#google-place" aria-hidden="true"><span class="octicon octicon-link"></span></a>Google Place</h4>
+
+<p>A <strong><em>Google</em></strong> place is one derived from the Google Places database.  Google returns (and mapsed.js in turn tells you) <a href="https://developers.google.com/places/documentation/search#PlaceSearchResults">a unique <strong>reference</strong> for a place</a>.  The following is a <strong>Google</strong> place example:</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="p">{</span>
+  <span class="nx">lat</span><span class="o">:</span> <span class="mf">53.798823</span><span class="p">,</span>
+  <span class="nx">lng</span><span class="o">:-</span><span class="mf">1.5426760000000286</span><span class="p">,</span>
+  <span class="nx">reference</span><span class="o">:</span> <span class="s2">"CoQBfAAAAPw-5BTCS53grSLDwX8rwo5BnWnEWnA72lmOjxdgWg2ODGfC5lLjGyoz428IEaln1vJ6rq1jI96Npzlm-N-wmPH2jdJMGfOLxno_rmgnajAnMPzNzuI8UjexIOdHVZPBPvQGloC-tRhudGeKkbdTT-IWNP5hp4DIl4XOLWuYFOVYEhBxNPxaXZdW9uhKIETXf60hGhTc9yKchnS6oO-6z5XZJkK2ekewYQ"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>mapsed.js</strong> uses the <strong>reference token</strong> to ask Google for the details (so rather than storing the full info in your database, you just store the <strong>reference</strong>).</p>
+
+<p>The lat/lng coordinates still need to be given to the plugin as it only asks Google for details when a marker is clicked upon (i.e. it queries as required) so it needs to know where the marker should be placed on the map.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/01-custom-places-example.js">See custom places example</a></p>
+
+<h3>
+<a name="user-content-getmarkerimage-function" class="anchor" href="#getmarkerimage-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>getMarkerImage <em>(function)</em>
+</h3>
+
+<p>The <em>getMarkerImage</em> callback is fired when a marker is added to the map.  It expects a Google Icon object to be returned (see <a href="https://developers.google.com/maps/documentation/javascript/reference#Icon">https://developers.google.com/maps/documentation/javascript/reference#Icon</a>).</p>
+
+<p>The method signature for the callback is <em>getMarkerImage(mapsed, markerType, title)</em>, where:</p>
+
+<table>
+  <tr>
+    <th>Parameter</th>
+<th>Description</th>
+  </tr>
+  <tr>
+    <td>
+<strong>mapsed</strong> (object)</td>
+    <td>The plug-in calling the method</td>
+  </tr>
+  <tr>
+    <td>
+<strong>markerType</strong> (string)</td>
+    <td>
+        The type of marker being added to the map, this can be:<br>
+        *new* - New marker is being added by user (via the "+" button - see allowAdd)<br>
+        *google* - Marker being added was derived from the Google Places API<br>
+        *custom* - Marker being added was derived from the application database, i.e. derived from the showOnLoad array.
+    </td>
+  </tr>
+  <tr>
+    <td>
+<strong>mapsed</strong> (bool)</td>
+    <td>title attribute of the marker (useful for tracking which marker in an showOnLoad is being drawn).</td>
+  </tr>
+</table>
+ 
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h3>
+<a name="user-content-mapoptions-object" class="anchor" href="#mapoptions-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>mapOptions <em>(object)</em>
+</h3>
+
+<p>This object is passed onto the Google Maps initialisation, thereby allowing the map to be initialised with further parameters.</p>
+
+<h3>
+<a name="user-content-disablepoi-bool" class="anchor" href="#disablepoi-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>disablePoi <em>(bool)</em>
+</h3>
+
+<p>On a map, Google adds places of interest hotspots that can be clicked.  These might point to a local park or a cinema and bring up details about that <em>place</em>.</p>
+
+<p>Ordinarily this is quite useful, however if it's outside the concern of your audience you may not wish to distract them.  For instance <a href="http://toepoke.co.uk/">our audience</a> is concerned with football venues, so cinemas aren't of interest to them at that time.</p>
+
+<p>The <strong>disablePoi</strong> setting turns off these point of interest hotspots.  However POI cannot be turned off with <a href="https://developers.google.com/maps/documentation/javascript/styling">styled maps</a>.</p>
+
+<h3>
+<a name="user-content-allowadd-bool" class="anchor" href="#allowadd-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>allowAdd <em>(bool)</em>
+</h3>
+
+<p>Places an "add place" icon (+) in the top-right of the map which allows the user to add additional places to your map.</p>
+
+<p>The <em>onSave</em> callback (see below) must be implemented to capture the place being added so it can be saved.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/03-add-places-example.js">See add places example</a></p>
+
+<h3>
+<a name="user-content-searchoptions-object" class="anchor" href="#searchoptions-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>searchOptions <em>(object)</em>
+</h3>
+
+<p><em>searchOptions</em> is a JavaScript object (i.e. a child object) for defining how search functionality should be added to the map:</p>
+
+<h4>
+<a name="user-content-enabled-bool" class="anchor" href="#enabled-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>enabled <em>(bool)</em>
+</h4>
+
+<p>Must be true to <em>turn on</em> searching - this adds a search textbox onto the map.</p>
+
+<h4>
+<a name="user-content-placeholder-string" class="anchor" href="#placeholder-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>placeholder <em>(string)</em>
+</h4>
+
+<p>Placeholder text to be added to the search textbox.</p>
+
+<h4>
+<a name="user-content-initsearch-string" class="anchor" href="#initsearch-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>initSearch <em>(string)</em>
+</h4>
+
+<p>A search string to pre-populate the search textbox with.  This is executed when the map is loaded and shows the results straight away.</p>
+
+<h3>
+<a name="user-content-geosearch-string" class="anchor" href="#geosearch-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>geoSearch <em>(string)</em>
+</h3>
+
+<p>Specifies a search to be made when location is based on geo-location position.  This can be when the map is first loaded (#findGeoOnLoad-bool) or when the geo-location button is clicked (#allowgeo-bool).</p>
+
+<p>This search is executed instead of the (#initsearch-string).  Rational being the geo-search needs to be relative to the lat/lng co-ordinates.  For example setting the <em>geoSearch</em> string to "Business near {POSITION}" the {POSITION} wildcard is replaced with the lat/lng co-ordinates of the user.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/05-search-for-places-example.js">See search places example</a></p>
+
+<h3>
+<a name="user-content-allowgeo-bool" class="anchor" href="#allowgeo-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>allowGeo <em>(bool)</em>
+</h3>
+
+<p>Adds a <i>find geo position</i> button to the top left of the map, which when clicked moves the location of the map to the GEO position of the device.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h3>
+<a name="user-content-findgeoonload-bool" class="anchor" href="#findgeoonload-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>findGeoOnLoad <em>(bool)</em>
+</h3>
+
+<p>When the map is first loaded the centre of the map is set to the GEO location position of the device.</p>
+
+<p><i>
+If <a href="#showonload-array">showOnLoad</a> is populated with places, the <strong>findGeoOnLoad</strong> settings is ignored.
+This is because the GEO position may be different to where the <a href="#showonload-array">showOnLoad</a> places are located and the user wouldn't see them.
+</i></p>
+
+<h3>
+<a name="user-content-showhelponload-bool" class="anchor" href="#showhelponload-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>showHelpOnLoad <em>(bool)</em>
+</h3>
+
+<p>Displays the help instructions when the map is first opened (see <a href="#gethelpwindow-string">getHelpWindowString</a> to discover how to set the content).</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h3>
+<a name="user-content-confirmdelete-bool" class="anchor" href="#confirmdelete-bool" aria-hidden="true"><span class="octicon octicon-link"></span></a>confirmDelete <em>(bool)</em>
+</h3>
+
+<p>Flags that when a user <em>deletes</em> a place (activated by the <a href="#ondelete">onDelete</a> callback) they are asked to confirm the action <em>before</em> the <a href="#ondelete">onDelete</a> callback is issued.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/04-delete-places-example.js">See delete places example</a></p>
+
+<h2>
+<a name="user-content-place-model" class="anchor" href="#place-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Place Model</h2>
+
+<p>When a given <em>action</em> occurs (when a place is <a href="#onselect">selected</a> for example) a <a href="#events--callbacks">callback</a> is fired so your application can deal with the event.  </p>
+
+<p>As part of the callback <em>mapsed</em> typically passes the data for the place the event was fired for.  For convenience we'll call this the <em>model</em> and it will look like this:</p>
+
+<table>
+  <tr>
+    <th>Property</th>
+<th>Description</th>
+  </tr>
+  <tr>
+<td>canEdit</td>
+<td>Flags this an <strong>editable</strong> place, i.e. when it's clicked on the map it has an <strong>edit</strong> button.</td>
+</tr>
+  <tr>
+<td>lat</td>
+<td>Latitude position of the place.</td>
+</tr>
+  <tr>
+<td>lng</td>
+<td>Longitude position of the place.</td>
+</tr>
+  <tr>
+<td>reference</td>
+<td>Unique reference to a place in the Google Places database (this is provided by Google), see also <a href="#google-place">Google Place</a>
+</td>
+</tr>
+  <tr>
+<td>userData</td>
+<td>
+    Some unique identifier to link a marker on the map with a database entity (e.g. primary key).<br>
+    For <strong>new</strong> places this will be empty and should be populated by the <a href="#onsave">onSave callback</a>.<br><br>
+
+    <i>A place may have both the <strong>userData</strong> property and the <strong>reference</strong> property populated.  Typically this would be because you're using the <strong>userData</strong> field to lookup the <a href="#google-place"><strong>google place</strong></a> <strong>reference</strong> from your database.</i>
+    
+  </td>
+</tr>
+  <tr>
+  <td>markerType</td>
+  <td>
+  Specifies what mode the marker for the place is in.  Can be:
+  <table>
+    <tr>
+<td><strong>new</strong></td>
+<td>
+      Place has just been created via the [+] icon.  Once saved, this is changed to <strong>custom.
+    </strong>
+</td>
+</tr>
+    <tr>
+<td><strong>custom</strong></td>
+<td>
+      Place is derived from <i>your</i> database, not Google.
+    </td>
+</tr>
+    <tr>
+<td><strong>google</strong></td>
+<td>
+      Place is dervied from the Google Places API (has a <a href="#google-place">reference</a> property).
+    </td>
+</tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+<td>name</td>
+<td>Name of the place (e.g. City Varieties).</td>
+</tr>
+  <tr>
+<td>street</td>
+<td>Street the place is on.</td>
+</tr>
+  <tr>
+<td>town</td>
+<td>Town the place is in, e.g. Leeds.</td>
+</tr>
+  <tr>
+<td>area</td>
+<td>Area the place is in, e.g. West Yorkshire.</td>
+</tr>
+  <tr>
+<td>postCode</td>
+<td>Postcode/zipcode of the place, e.g. LS1 6LW</td>
+</tr>
+  <tr>
+<td>telNo</td>
+<td>Telephone number of the place.</td>
+</tr>
+  <tr>
+<td>website</td>
+<td>Website address of the place.</td>
+</tr>
+  <tr>
+<td>url</td>
+<td>Google+ page url</td>
+</tr>
+</table>
+
+<h2>
+<a name="user-content-events--callbacks" class="anchor" href="#events--callbacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events / Callbacks</h2>
+
+<h3>
+<a name="user-content-onselect" class="anchor" href="#onselect" aria-hidden="true"><span class="octicon octicon-link"></span></a>onSelect</h3>
+
+<p>Fired when the <strong>Select</strong> button is clicked in a place window.</p>
+
+<p>Callback method signature:</p>
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>mapsed</td>
+<td>Reference to the <strong>mapsed</strong> object so you can call into the plug-in, e.g. <strong>mapsed.showMsg("title", "some message")</strong> will show a modal message on the map</td>
+</tr>
+<tr>
+<td>details</td>
+<td>Place details, see <a href="#place-model">Place Model</a> for full details</td>
+</tr>
+</table>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/02-place-picker-example.js">See place picker example</a></p>
+
+<h3>
+<a name="user-content-onsave" class="anchor" href="#onsave" aria-hidden="true"><span class="octicon octicon-link"></span></a>onSave</h3>
+
+<p>Fired when the <strong>Save</strong> button is clicked in a place window (after adding or editing a place).</p>
+
+<p>Callback method signature:</p>
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>mapsed</td>
+<td>Reference to the <strong>mapsed</strong> object so you can call into the plug-in, e.g. <strong>mapsed.showMsg("title", "some message")</strong> will show a modal message on the map</td>
+</tr>
+<tr>
+<td>details</td>
+<td>Place details, see <a href="#place-model">Place Model</a> for full details</td>
+</tr>
+</table>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/03-add-places-example.js">See add places example</a></p>
+
+<h3>
+<a name="user-content-ondelete" class="anchor" href="#ondelete" aria-hidden="true"><span class="octicon octicon-link"></span></a>onDelete</h3>
+
+<p>Fired when the <strong>Delete</strong> button is clicked in a place window.  If <a href="#confirmdelete-bool">confirmDelete</a> is enabled the user is prompted for confirmation first.</p>
+
+<p>Callback method signature:</p>
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>mapsed</td>
+<td>Reference to the <strong>mapsed</strong> object so you can call into the plug-in, e.g. <strong>mapsed.showMsg("title", "some message")</strong> will show a modal message on the map</td>
+</tr>
+<tr>
+<td>details</td>
+<td>Place details, see <a href="#place-model">Place Model</a> for full details</td>
+</tr>
+<tr>
+<td>Return (bool)</td>
+<td>
+The <strong>onDelete</strong> callback expects a <strong>boolean</strong> value to be returned.  If <i>your</i> delete operation is successful return <strong>true</strong>, otherwise return <strong>false</strong>.
+<br><br>
+If <i>your</i> callback returns <strong>false</strong> the map marker remains on the map -  which is what you want :-)
+</td>
+</tr>
+</table>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/04-delete-places-example.js">See delete places example</a></p>
+
+<h3>
+<a name="user-content-onadd" class="anchor" href="#onadd" aria-hidden="true"><span class="octicon octicon-link"></span></a>onAdd</h3>
+
+<p>Custom method called when the user clicks the "add place" icon (+).  Allows the place details to be populated if required.</p>
+
+<p>Once your code has resolved the place details the <em>showAddDialog</em> method must be called for the dialog to be shown on the map (this is necessary as you'll need to do an ajax lookup to find your address details, this allows execution to continue in <em>mapsed</em>).</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h3>
+<a name="user-content-showadddialog-method" class="anchor" href="#showadddialog-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>showAddDialog <em>(method)</em>
+</h3>
+
+<p>Once a new place has been resolved, use <em>showAddDialog</em> to have <em>mapsed</em> show the resulting dialog.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h3>
+<a name="user-content-gethelpwindow-string" class="anchor" href="#gethelpwindow-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>getHelpWindow <em>(string)</em>
+</h3>
+
+<p>If the <em>getHelpWindow</em> method is specified, it should return a string of HTML with the help content to display.</p>
+
+<p>The act of coding the method will add the help icon (?) to the controls buttons in the top-right of the map.</p>
+
+<p><a href="/toepoke/mapsed/blob/master/examples/06-full-example.js">See full-window example</a></p>
+
+<h2>
+<a name="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>jQuery (10.2 used in development)
+Google Maps library (v3)
+Google Places library (v3)</p>
+
+<h2>
+<a name="user-content-source-code" class="anchor" href="#source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source code</h2>
+
+<p>The source code is knocked up to satisfy a need.  I'm not advertising it as best practice, but if you think it will benefit you, please feel free to use it.
+mapsed.js is released under a ''do what you like with it'' license :-)</p>
+
+<h2>
+<a name="user-content-change-log" class="anchor" href="#change-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change Log</h2>
+
+<ul class="task-list">
+<li><p><strong>0.0.2 (Planned)</strong>
+Nothing planned.</p></li>
+<li><p><strong>0.0.1</strong>
+Initial release </p></li>
+</ul>
+</article>
+</body>
+<script>
+			try {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-54288087-1', 'shmik.com');
+				ga('send', 'pageview');
+			}
+			catch (e) {
+			}
+		</script>
+</html>	

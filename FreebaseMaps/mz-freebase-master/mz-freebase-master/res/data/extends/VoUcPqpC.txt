@@ -1,0 +1,1 @@
+{"name":"Amusement Ride Designer","id":"\/amusement_parks\/ride_designer","type":"\/type\/type","group":"type","_id":"VoUcPqpC","relation":"\/amusement_parks","properties":[{"name":"Rides Designed","id":"\/amusement_parks\/ride_designer\/rides","expected_type":"\/amusement_parks\/ride","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

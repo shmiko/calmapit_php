@@ -1,0 +1,1 @@
+{"name":"Camera Sensor Manufacturer","id":"\/digicams\/camera_sensor_manufacturer","type":"\/type\/type","group":"type","_id":"VvcaxAWK","relation":"\/digicams","properties":[{"name":"Cameras","id":"\/digicams\/camera_sensor_manufacturer\/cameras","expected_type":"\/digicams\/digital_camera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

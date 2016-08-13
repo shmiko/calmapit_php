@@ -1,0 +1,1 @@
+{"name":"Means of propulsion","id":"\/boats\/means_of_propulsion","type":"\/type\/type","group":"type","_id":"Mmorto9f","relation":"\/boats","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

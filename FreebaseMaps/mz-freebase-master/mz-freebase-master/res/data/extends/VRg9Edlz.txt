@@ -1,0 +1,1 @@
+{"name":"Symbols","id":"\/symbols","type":"\/type\/domain","group":"zone","_id":"VRg9Edlz","relation":"root","properties":[],"included_types":[]}

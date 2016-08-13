@@ -1,0 +1,1 @@
+{"name":"Olympics","id":"\/olympics","type":"\/type\/domain","group":"zone","_id":"oiWjIa3V","relation":"root","properties":[],"included_types":[]}

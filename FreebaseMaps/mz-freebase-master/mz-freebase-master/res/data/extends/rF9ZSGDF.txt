@@ -1,0 +1,1 @@
+{"name":"Disease cause","id":"\/medicine\/disease_cause","type":"\/type\/type","group":"type","_id":"rF9ZSGDF","relation":"\/medicine","properties":[{"name":"Diseases or conditions caused","id":"\/medicine\/disease_cause\/diseases","expected_type":"\/medicine\/disease","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

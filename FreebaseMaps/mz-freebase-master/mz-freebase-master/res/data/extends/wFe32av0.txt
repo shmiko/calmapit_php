@@ -1,0 +1,1 @@
+{"name":"Theater","id":"\/theater","type":"\/type\/domain","group":"zone","_id":"wFe32av0","relation":"root","properties":[],"included_types":[]}

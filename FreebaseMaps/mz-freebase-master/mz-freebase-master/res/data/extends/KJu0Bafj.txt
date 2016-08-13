@@ -1,0 +1,1 @@
+{"name":"Automotive","id":"\/automotive","type":"\/type\/domain","group":"zone","_id":"KJu0Bafj","relation":"root","properties":[],"included_types":[]}

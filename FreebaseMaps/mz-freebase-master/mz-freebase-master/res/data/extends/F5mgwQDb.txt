@@ -1,0 +1,1 @@
+{"name":"American football","id":"\/american_football","type":"\/type\/domain","group":"zone","_id":"F5mgwQDb","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Game designer","id":"\/games\/game_designer","type":"\/type\/type","group":"type","_id":"oY1R4K8v","relation":"\/games","properties":[{"name":"Games designed","id":"\/games\/game_designer\/games_designed","expected_type":"\/games\/game","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

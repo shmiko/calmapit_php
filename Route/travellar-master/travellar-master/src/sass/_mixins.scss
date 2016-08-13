@@ -1,0 +1,49 @@
+@mixin centerOnPage {
+  width: $width;
+  margin: 0 auto;
+}
+
+@mixin defaultTransition {
+  @include transition(all 0.2s ease-in-out);
+}
+
+@mixin transitionWithTime($time: 1s) {
+  @include transition(all $time ease-in-out);
+}
+
+@mixin selection($color, $textshadow, $background) {
+  *::selection {
+    color: $color;
+    @include text-shadow($textshadow);
+    background: $background;
+  }
+
+  *::-moz-selection {
+    color: $color;
+    @include text-shadow($textshadow);
+    background: $background;
+  }
+}
+
+@mixin setFontFace($fontLoc, $fontName) {
+  @font-face {
+      font-family: $fontName;
+      src: url($fontLoc + '.eot');
+      src: url($fontLoc + '.eot?#iefix') format('embedded-opentype'),
+           url($fontLoc + '.woff') format('woff'),
+           url($fontLoc + '.ttf') format('truetype'),
+           url($fontLoc + '.svg#' + $fontLoc) format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+}
+
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+  background-image: image_url($image_name + $extention);
+  $x2img : $image_name + '@2x' + $extention;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: image_url($x2img);
+    background-size: $w $h;
+  }  
+}

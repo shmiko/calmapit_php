@@ -1,0 +1,1 @@
+{"name":"Rawstring property","id":"\/common\/rawstring_property","type":"\/type\/type","group":"type","_id":"HfHdUGzX","relation":"\/common","properties":[{"name":"URI template","id":"\/common\/rawstring_property\/uri_template","expected_type":"\/common\/uri_template","description":"The URI template associated with this property."}],"included_types":[]}

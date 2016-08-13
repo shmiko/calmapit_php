@@ -1,0 +1,1 @@
+{"name":"Website Category","id":"\/internet\/website_category","type":"\/type\/type","group":"type","_id":"hLUIxsM5","relation":"\/internet","properties":[{"name":"Websites of this genre","id":"\/internet\/website_category\/sites","expected_type":"\/internet\/website","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Boxing decision","id":"\/boxing\/boxing_decision","type":"\/type\/type","group":"type","_id":"8N5BQ3vc","relation":"\/boxing","properties":[{"name":"Matches ended with this decision","id":"\/boxing\/boxing_decision\/matches_ended_with_this_decision","expected_type":"\/boxing\/boxing_match","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

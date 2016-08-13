@@ -1,0 +1,1 @@
+{"name":"Exhibit","id":"\/exhibitions\/exhibit","type":"\/type\/type","group":"type","_id":"UAlAJNtQ","relation":"\/exhibitions","properties":[{"name":"Exhibitions displayed in","id":"\/exhibitions\/exhibit\/exhibitions_displayed_in","expected_type":"\/exhibitions\/exhibition","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

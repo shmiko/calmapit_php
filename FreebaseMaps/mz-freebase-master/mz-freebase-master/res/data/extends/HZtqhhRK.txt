@@ -1,0 +1,1 @@
+{"name":"Protocol","id":"\/internet\/protocol","type":"\/type\/type","group":"type","_id":"HZtqhhRK","relation":"\/internet","properties":[{"name":"API","id":"\/internet\/protocol\/api","expected_type":"\/internet\/api","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

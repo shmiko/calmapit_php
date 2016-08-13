@@ -1,0 +1,1 @@
+{"name":"Foreign API Provider","id":"\/freebase\/foreign_api_provider","type":"\/type\/type","group":"type","_id":"6WCtFiom","relation":"\/freebase","properties":[{"name":"APIs","id":"\/freebase\/foreign_api_provider\/api","expected_type":"\/freebase\/foreign_api","description":""}],"included_types":[]}

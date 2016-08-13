@@ -1,0 +1,1 @@
+{"name":"Aircraft designer","id":"\/aviation\/aircraft_designer","type":"\/type\/type","group":"type","_id":"KGJPLQ4C","relation":"\/aviation","properties":[{"name":"Aircraft models designed","id":"\/aviation\/aircraft_designer\/aircraft_models_designed","expected_type":"\/aviation\/aircraft_model","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

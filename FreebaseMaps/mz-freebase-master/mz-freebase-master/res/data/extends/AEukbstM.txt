@@ -1,0 +1,1 @@
+{"name":"Recipe collection","id":"\/food\/recipe_collection","type":"\/type\/type","group":"type","_id":"AEukbstM","relation":"\/food","properties":[{"name":"Recipes","id":"\/food\/recipe_collection\/recipes","expected_type":"\/food\/recipe","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

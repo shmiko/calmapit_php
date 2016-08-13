@@ -1,0 +1,1 @@
+{"name":"Tennis Match Type","id":"\/tennis\/tennis_match_type","type":"\/type\/type","group":"type","_id":"FrIWtw5I","relation":"\/tennis","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

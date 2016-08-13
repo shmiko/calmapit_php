@@ -1,0 +1,743 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "mixins";
+
+$color_red: #EA3128;
+$color_gray: #999A9F;
+$color_green: #4AC45F;
+$font_default_family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+$font_default_color: #444;
+
+@include selection(#fff, none, $color_red);
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: $font_default_family;
+	color: $font_default_color;
+}
+
+strong {
+	font-weight: 600;
+}
+
+#app {
+	font-size: 1.6em;
+	margin: 0 auto;
+
+	form {
+		&.sideways {
+			> div {
+				display: inline-block;
+				margin-right: 25px;
+
+				+ div {
+					margin-top: 0;
+				}
+
+				&.spacer {
+					height: 25px;
+					width: 100%;
+				}
+			}
+		}
+
+		> div {
+			overflow: hidden;
+
+			label {
+				display: block;
+				color: $color_red * 0.7;
+				font-size: 1.1em;
+				margin-bottom: 10px;
+				font-weight: 300;
+			}
+
+			input, select {
+				outline: 0;
+				border: 1px solid #CCC;
+				@include border-radius(5px);
+				min-width: 400px;
+				font-size: 1em;
+				color: #777;
+				padding: 10px;
+				font-family: $font_default_family;
+				@include transition(0.2s all ease-in-out);
+    			-webkit-appearance: none;
+
+				&:hover, &:focus {
+					border-color: #aaa;
+				}
+
+				&[readonly="readonly"] {
+					background: #f5f5f5;
+					border-color: #ddd;
+				}
+
+				&[type="button"], &[type="submit"] {
+					min-width: 0;
+					background: $color_red;
+					color: #fff;
+					cursor: pointer;
+					border: 0;
+					padding-left: 15px;
+					padding-right: 15px;
+
+					+ input {
+						margin-left: 15px;
+					}
+
+					&:hover {
+						background: $color_red * 0.8;
+					}
+				}
+
+				&[type="password"] {
+					font: small-caption;
+					font-size: 1.2em;
+				}
+			}
+
+			+ div {
+				margin-top: 25px;
+			}
+
+			select {
+				min-width: 420px;
+				@include at2x("icons/arrow", 30px, 30px);
+				background-position: right 10px center;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+		}
+	}
+
+	div.response, div.info {
+		display: block;
+
+		p {
+			margin-bottom: 15px;
+			padding: 5px 10px !important;
+			padding-left: 45px !important;
+			display: block;
+			color: #fff;
+			@include border-radius(3px);
+			@include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.1));
+
+			&.error {
+				background: $color_red;
+				@include at2x("icons/error", 24px, 24px);
+				background-position: 10px center;
+				background-repeat: no-repeat;
+			}
+
+			&.success {
+				background: $color_green;
+				@include at2x("icons/success", 24px, 24px);
+				background-position: 10px center;
+				background-repeat: no-repeat;
+			}
+
+			&.info {
+				background: $color_gray;
+				@include at2x("icons/info", 24px, 24px);
+				background-position: 10px center;
+				background-repeat: no-repeat;
+			}
+
+		}
+	}
+
+	#top {
+		background: $color_red;
+		color: #fff;
+		width: 100%;
+
+		> div {
+			overflow: hidden;
+			padding: 25px 0 30px 0;
+		}
+
+		h1 {
+			font-size: 2em;
+			display: inline-block;
+			float: left;
+
+			a {		
+				text-indent: -10000px;
+				display: inline-block;
+				@include at2x("header_logo", 289px, 71px);
+				background-position: left top;
+				background-repeat: no-repeat;
+				height: 71px;
+				width: 289px;
+			}
+		}
+
+		.sticky-wrapper {
+			height: auto !important; 
+		}
+
+		.is-sticky #mainNavigation {
+			padding-bottom: 8px;
+		}
+
+		#mainNavigation {
+			display: inline-block;
+			text-align: right;
+			float: right;
+			margin-top: 20px;
+			background-repeat: repeat-x;
+			background-position: top left;
+			position: relative;
+
+			a.toggleNav {
+				@include at2x('icons/list', 34px, 29px);
+				background-position: center center;
+				background-repeat: no-repeat;
+				width: 40px;
+				height: 40px;
+				display: none;
+				text-indent: -1000px;
+				@include border-radius(3px);
+				margin: -1px 0 0 5px;
+			}
+
+			a.title {
+				width: 122px;
+				height: 30px;
+				display: none;
+				margin: 0 auto;
+				margin-top: -35px;
+				top: 12px;
+				left: 0;
+				text-indent: -1000px;
+
+				color: #fff;
+				text-decoration: none;
+				@include at2x("header_logo", 122, 30px);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: auto 100%;
+			}
+
+			ul {
+				$active_hover_background_fallback: #DA2C1B;
+				$active_hover_background: rgba(0, 0, 0, 0.1);
+
+				li {
+					display: inline-block;
+					@include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.25));
+					@include transition(0.3s all ease-in-out);
+					@include border-radius(5px);
+
+					a {
+						color: #fff;
+						text-decoration: none;
+						display: inline-block;
+						padding: 13px 20px;
+					}
+
+					&:hover, &.active {
+						background: $active_hover_background_fallback;
+						background: $active_hover_background;
+					}
+
+					&.heading {
+						display: none;
+					}
+
+					+ li {
+						margin-left: 5px;
+					}
+				}
+
+				&:hover {
+					li.active {
+						background: transparent;
+
+						&:hover {
+							background: $active_hover_background_fallback;
+							background: $active_hover_background;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> div[role="main"] {
+		min-height: 400px;
+		background: #fff;
+
+		#content {
+			padding: 65px 0;
+
+			#pytWrapper {
+				position: relative;
+
+				#mapPlaceHolder {
+					height: 450px;
+					margin-top: 20px;
+					margin-bottom: 25px;
+				}
+
+				div.buttons {
+					margin-top: 35px;
+				}
+
+				div.days_overview {
+					text-align: center;
+
+					> a {
+						background: #EEE;
+						height: 90px;
+						width: 120px;
+						@include box-sizing(border-box);
+						text-align: center;
+						text-decoration: none;
+						padding: 15px 0;
+						margin: 5px;
+						display: inline-block;
+						text-transform: uppercase;
+						@include transition(0.3s background ease-in-out);
+
+						&.done {
+							background: #E1EDDA;
+						}
+
+						span {
+							display: block;
+							@include transition(0.2s all ease-in-out);
+
+							&.day {
+								font-size: 2em;
+								font-weight: 600;
+								color: #41484F;
+							}
+
+							&.date {
+								padding-top: 10px;
+								color: #E0A6A6;
+							}
+						}
+
+						&:hover {
+							background: $color_red;
+
+							span {
+								&.day {
+									color: $color_red * 0.7;
+								}
+
+								&.date {
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+
+				div.companions {
+					border: 1px solid #ccc;
+					@include border-radius(5px);
+					background: #fafafa;
+					padding: 5px;
+					@include box-sizing(border-box);
+					min-height: 75px;
+					width: 100%;
+					display: block;
+
+					a {
+						background-color: $color_gray;
+						border: 1px solid $color_gray * 0.8;
+						padding: 5px;
+						color: #fff;
+						text-decoration: none;
+						@include border-radius(3px);
+						font-size: 0.9em;
+						display: inline-block;
+						margin: 5px;
+						padding-right: 25px;
+						@include at2x("icons/delete", 16px, 16px);
+						background-size: 12px 12px;
+						background-position: right 5px center;
+						background-repeat: no-repeat;
+						@include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.1));
+
+						&:hover {
+							background-color: $color_gray * 0.9;
+							border-color: $color_gray * 0.7;
+						}
+					}
+				}
+			}
+			
+			@include selection($color_red, none, #E5E5E5);
+
+			h1 {
+				font-size: 2.4em;
+				font-weight: 300;
+				padding-bottom: 35px;
+				line-height: 1.3em;
+			}
+
+			p {
+				line-height: 1.8em;
+
+				+ p {
+					padding-top: 25px;
+				}
+			}
+
+			a {
+				color: $color_red;
+				text-decoration: none;
+				@include transition(0.2s all ease-in-out);
+
+				&:hover {
+					color: #000;
+				}
+
+				&.button {
+					background: $color_red;
+					color: #fff !important;
+					font-weight: 300;
+					padding: 12px 35px;
+					display: inline-block;
+					@include border-radius(5px);
+
+					+ a.button {
+						margin-left: 25px;
+					}
+
+					&:hover, &.active {
+						background: $color_red * 0.8;
+					}
+				}
+			}
+
+			.left {
+				width: 400px;
+			}
+
+			.right {
+				width: 475px;
+				text-align: right;
+				padding-top: 135px;
+
+				div.buttons {
+					text-align: center;
+					margin-top: 75px;
+				}
+			}
+
+			#myaccount {
+				header {
+					@include clearfix;
+
+					h1 {
+						float: left;
+					}
+
+					div.buttons {
+						float: right;
+						display: inline-block;
+						padding-top: 5px;
+
+						&:hover {
+							a.active {
+								background: $color_red;
+
+								&:hover {
+									background: $color_red * 0.8;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding-bottom: 15px;
+				}
+
+				table {
+					width: 100%;
+
+					a.action {
+						background-position: left center;
+						background-repeat: no-repeat;
+						display: inline-block;
+						text-indent: -10000px;
+						width: 20px;
+						height: 20px;
+						@include opacity(0.7);
+						@include transition(0.3s opacity ease-in-out);
+
+						&.edit {
+							@include at2x("icons/edit", 20px, 20px);
+						}
+						
+						&.delete {
+							margin-left: 15px;
+							@include at2x("icons/delete", 20px, 20px);
+						}
+
+						&:hover {
+							@include opacity(1);
+						}
+					}
+
+					td, th {
+						padding: 10px;
+
+						&.empty {
+							@include border-radius(0 0 5px 5px !important);
+							width: 100% !important;
+							display: table-cell;
+						}
+					}
+
+					tr {
+						@include transition(0.3s background ease-in-out);
+						background: #E6ECF2;
+
+						&:nth-child(odd) {
+							background: #DCE2E8;
+						}
+
+						&:first-child {
+							@include border-radius(5px 5px 0 0);
+							background: $color_red !important;
+							color: #fff;
+
+							th {
+								font-weight: 300;
+
+								&:first-child {
+									@include border-radius(5px 0 0 0);
+								}
+
+								&:last-child {
+									@include border-radius(0 5px 0 0);
+								}
+							}
+						}
+
+						&:last-child {
+							td {
+								&:first-child {
+									@include border-radius(0 0 0 5px);
+								}
+
+								&:last-child {
+									@include border-radius(0 0 5px 0);
+								}
+							}
+						}
+
+						&:hover {
+							background: #FFFDD6;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> footer {
+		background: #42484F;
+		padding: 75px 0;
+		text-align: center;
+		line-height: 1.4em;
+
+		 ul.inner {
+			text-align: justify;
+
+			&:before{
+			    content: '';
+			    display: block;
+			    width: 100%;
+			    margin-bottom: -1.2em; /* your line-height */
+			}
+
+			&:after {
+			    content: '';
+			    display: inline-block;
+			    width: 100%;
+			}
+
+			 > li {
+				display: inline-block;
+				text-shadow: 1px 1px 0 #000;
+				color: #CCC;
+				vertical-align: top;
+
+				h3 {
+					text-transform: uppercase;
+					font-weight: 600;
+					font-size: 1.4em;
+				}
+
+				a {
+					font-weight: 300;
+					color: #999;
+					text-decoration: none;
+					display: inline-block;
+					vertical-align: top;
+					padding-top: 5px;
+					@include transition(0.3s all ease-in-out);
+
+					&:hover {
+						color: #fff;
+					}
+				}
+
+				&.social {
+					ul {
+						margin-top: 35px;
+
+						li {
+							padding: 10px 0;
+
+							&:nth-child(2) {
+								a {
+									span {
+										background-position: left -44px;
+									}
+
+									&:hover {
+										span {
+											background-position: -43px -44px;
+										}
+									}
+								}
+							}
+						}
+
+						a {
+							span {
+								height: 44px;
+								width: 43px;
+								margin-right: 10px;
+								display: inline-block;
+								margin-top: -12px;
+								@include at2x("social_sprite", 87px, 87px);
+								background-position: left top;
+								background-repeat: no-repeat;
+								@include transition(0.2s all ease-in-out);
+							}
+
+							&:hover {
+								span {
+									background-position: -43px top;
+								}
+							}
+						}
+					}
+				}
+
+				&.findushere {
+					h3 {
+						margin-bottom: 35px;
+					}
+
+					img {
+						background: rgba(0, 0, 0, 0.2);
+						width: 600px;
+					}
+				}
+
+				&.pages {
+					ul {
+						margin-top: 25px;
+
+						li {
+							line-height: 1.6em;
+						}
+					}
+				}
+			}
+		}
+
+		> p {
+			color: #111;
+			text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+			font-size: 0.75em;
+			border-top: 1px solid #333;
+			border-top: 1px solid rgba(255, 255, 255, 0.05);
+			box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+			padding-top: 75px;
+			margin-top: 50px;
+
+			a {
+				color: #000;
+				text-decoration: none;
+				@include transition(0.3s all ease-in-out);
+
+				&:hover {
+					color: #CCC;
+					text-shadow: 1px 1px #222;
+				}
+			}
+		}
+	}
+
+	> div.banner {
+		background: #222;
+		height: 125px;
+		text-align: right;
+		color: #fff;
+		font-weight: 300;
+		font-size: 1.8em;
+		padding-top: 175px;
+		line-height: 1.4em;
+
+		&.about {
+			background-image: url('../images/banner_image.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+		}
+	}
+
+	div.center {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	.left {
+		float: left;
+	}
+
+	.right {
+		float: right;
+	}
+
+	.clearfix {
+		@include clearfix;
+	}
+}
+
+noscript {
+	text-align: center;
+	padding: 50px 0;
+	font-size: 2.4em;
+	line-height: 1.8em;
+	font-weight: 300;
+	background: $color_red;
+	color: #fff;
+	position: absolute;
+	top: 250px;
+	width: 100%;
+	display: block;
+	z-index: -1000;
+}
+
+@import "responsive";
+@import "nsProgress";

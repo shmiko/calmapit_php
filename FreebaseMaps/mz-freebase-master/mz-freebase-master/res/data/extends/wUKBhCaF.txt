@@ -1,0 +1,1 @@
+{"name":"Amusement Parks","id":"\/amusement_parks","type":"\/type\/domain","group":"zone","_id":"wUKBhCaF","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Digital Camera Brand","id":"\/digicams\/digital_camera_manufacturer","type":"\/type\/type","group":"type","_id":"Ki3aXcF0","relation":"\/digicams","properties":[{"name":"Cameras","id":"\/digicams\/digital_camera_manufacturer\/cameras","expected_type":"\/digicams\/digital_camera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

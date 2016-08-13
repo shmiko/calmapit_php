@@ -1,0 +1,431 @@
+* { padding: 0; margin: 0; outline: 0; }
+html {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+body {
+    line-height: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #000000;
+/*    color like youtube  */
+    background-color: #eaeaec;
+/*    color like trippiece*/
+/*    background-color: #e6dfc4;*/
+    width: 100%;
+    height: 100%;
+    /*    background-color: #4181b7;*/
+    /*    background-color: #222438;*/
+    /*    background-image: url(../image/texture.png);*/
+
+
+    background-position: 50% 10%;
+
+    text-align: center;
+}
+
+.container-fluid{
+  margin-left: 30px;
+}
+
+#right{
+    float: right;
+}
+.clearRight{
+    cliar:right;
+}
+
+#topbar {
+    position: fixed;
+    background-color: #2C2C2C;
+    /*    background-image: url(../image/texture.png);*/
+    height: 40px;
+    width: 100%;
+    min-width: 690px;
+
+    z-index: 1000;
+    /*border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #66cc00;*/
+    border-bottom-style: solid;
+    border-bottom-color: #2C2C2C;
+    border-bottom-width: 5px;
+}
+
+#topbar ul{
+    list-style-type: none;
+    margin:0px;
+    padding-right: 10px;
+}
+
+#topbar ul li{
+    float: right;
+
+}
+
+#topbar{
+    _height:0px;
+    min-height: 0px;
+}
+
+#topbar:after{
+    height: 0px;
+    visibility: hidden;
+    content: ".";
+    display: block;
+    clear: both;
+}
+
+#topbar ul li a{
+    margin-top: 5px;
+    text-decoration: none;
+    display:block;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    padding-top: 10px;
+    color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+
+
+}
+
+#topbar ul li.logout a{
+
+    border-bottom-color: red;
+}
+#topbar ul li.setting a{
+
+    border-bottom-color: #ffcc00;
+    
+}
+#topbar ul li.notification a{
+
+    border-bottom-color: #54a954;
+    
+}
+#topbar ul li.quickSearch a{
+
+    border-bottom-color: #0F5C9F;
+}
+
+
+#topbar ul li.logout a:hover{
+    background-color: #BF5445;
+    border-bottom-color: #BF5445;
+}
+#topbar ul li.setting a:hover{
+    background-color: #DD960F;
+    border-bottom-color: #DD960F;
+}
+#topbar ul li.notification a:hover{
+    background-color: #54a954;
+    border-bottom-color: #54a954;
+}
+#topbar ul li.quickSearch a:hover{
+    background-color: #4C63A0;
+    border-bottom-color: #4C63A0;
+}
+
+#version{
+    margin-top: 0px;
+    float: left;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 5px;
+    color: #999999;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+#logo a{
+    margin-top: 0px;
+    text-decoration: none;
+    float: left;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+#logo a:hover{
+    background-color: #333333;
+}
+
+
+/*
+#plane {
+
+    position: absolute;
+    left:20%;
+    z-index: 2000;
+}
+
+#rainbow {
+
+    background: url(../image/airplane.png),url(../image/rainbow.png);
+    background-attachment: fixed;
+    background-position: 20%;
+    background-repeat: no-repeat;
+
+}
+*/
+
+
+
+#shadowPattern{
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+
+
+}
+
+
+.circle {
+    background-color: #660000;
+    /*    background-image: url(../image/texture.png);*/
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em
+
+
+}
+
+
+.gradation_cloud {
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, top , bottom , from(#ffffff), to( #ededed));
+    background-image: -webkit-linear-gradient(top, #ffffff, #ededed);
+    background-image: -moz-linear-gradient(#A1C727, #81BF26);
+    background-image: -o-linear-gradient(top, #A1C727, #81BF26);
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#A1C727), to(#81BF26));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A1C727', endColorstr='#81BF26', GradientType=0); /* IE8 and down */
+
+
+    position: relative;
+}
+
+.gradation_sky {
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, left , right , from(#d0d4e4),color-stop(0.9, #4181b7), to( #d0d4e4));
+    background-image: -webkit-linear-gradient(left, #d0d4e4,#4181b7, #d0d4e4);
+    background-image: -moz-linear-gradient(#A1C727, #81BF26);
+    background-image: -o-linear-gradient(top, #A1C727, #81BF26);
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#A1C727), to(#81BF26));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A1C727', endColorstr='#81BF26', GradientType=0); /* IE8 and down */
+
+
+    position: relative;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.textshadow{
+
+    text-shadow:1px  1px  3px  #000000;
+
+
+}
+
+
+#profilePhoto{
+    float: left;
+    position: absolute;
+    top:80px;
+    left:30px;
+    width: 200px;
+    height: 150px;
+}
+#profileInfo{
+    float: left;
+    position: absolute;
+    top:60px;
+    left:170px;
+    
+    font-style: normal;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.buttons{
+    float: left;
+    position: absolute;
+    top:180px;
+    left:30px;
+
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.buttons ul li{
+
+    float: left;
+}
+
+.buttons button{
+    border-top: 1px solid #ccc;  
+    border-right: 1px solid #999;  
+    border-bottom: 1px solid #999;  
+    border-left: 1px solid #ccc;  
+    padding: 5px 20px;  
+    font-weight: bold;  
+    cursor: pointer;  
+    color: #666; 
+}
+
+
+/* タブバーを所有するコンテナ */
+
+#container{
+    position: relative;
+
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+    min-height: 700px;
+
+
+    /*    top:200px;
+        left: 20px;
+        right: 20px;
+        bottom: 10px;*/
+
+}
+
+.tabberlive .tabbertabhide {
+    display:none;
+}
+.tabber {
+}
+.tabberlive {
+    margin-top:1em;
+    height: 100%;
+    /*    bottom: 30px;*/
+}
+
+/* CSS for タブバー */
+ul.tabbernav
+{
+    margin:0;
+    padding: 1px 0;
+    border-bottom: 1px solid #778;
+    font: bold 12px Verdana, sans-serif;
+}
+
+ul.tabbernav li
+{
+
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+
+ul.tabbernav li a
+{
+    padding: 3px 0.5em;
+    margin-left: 3px;
+    border: 1px solid #778;
+    border-bottom: none;
+    background: #DDE;
+    text-decoration: none;
+}
+
+ul.tabbernav li a:link { color: #448; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+    color: #000;
+    background: #AAE;
+    border-color: #227;
+}
+/* 選択中のタブ */
+ul.tabbernav li.tabberactive a
+{
+    background-color: #eaeaec;
+    border-bottom: 1px solid #eaeaec;
+}
+
+ul.tabbernav li.tabberactive a:hover
+{
+    color: #000;
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+    padding:5px;
+    border:1px solid #aaa;
+    border-top:0;
+
+    /* If you don't want the tab size changing whenever a tab is changed
+       you can set a fixed height */
+
+    height:100%;
+
+    /* If you set a fix height set overflow to auto and you will get a
+       scrollbar when necessary */
+
+    overflow:auto; 
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+    display:none;
+}
+.tabberlive .tabbertab h3 {
+    display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+    height:200px;
+    overflow:auto;
+}
+/*
+[class^="icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: text-top;
+  background-image: url(../image/glyphicons-halflings.png);
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+*/

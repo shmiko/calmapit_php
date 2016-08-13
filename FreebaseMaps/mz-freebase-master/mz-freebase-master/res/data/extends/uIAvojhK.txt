@@ -1,0 +1,1 @@
+{"name":"Prayer","id":"\/religion\/prayer","type":"\/type\/type","group":"type","_id":"uIAvojhK","relation":"\/religion","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

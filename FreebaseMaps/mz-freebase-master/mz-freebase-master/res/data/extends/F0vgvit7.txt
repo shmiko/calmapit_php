@@ -1,0 +1,1 @@
+{"name":"Comment","id":"\/freebase\/comment","type":"\/type\/type","group":"type","_id":"F0vgvit7","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

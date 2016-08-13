@@ -1,0 +1,1 @@
+{"name":"Film series","id":"\/film\/film_series","type":"\/type\/type","group":"type","_id":"YJXX1m8I","relation":"\/film","properties":[{"name":"Films In Series","id":"\/film\/film_series\/films_in_series","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

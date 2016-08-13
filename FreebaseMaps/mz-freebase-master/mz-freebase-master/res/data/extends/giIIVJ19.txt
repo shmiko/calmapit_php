@@ -1,0 +1,1 @@
+{"name":"Games","id":"\/games","type":"\/type\/domain","group":"zone","_id":"giIIVJ19","relation":"root","properties":[],"included_types":[]}

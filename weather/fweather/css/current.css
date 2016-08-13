@@ -1,0 +1,306 @@
+/*** Current.css file **/
+/*** General classes **/
+
+.weaCurWrap {
+	border:1px solid #92bbf6;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:0;
+	margin:0;
+	font-family:Verdana,Arial;
+	font-size:11px;
+	color:#000;
+}
+.weaCurContent {
+	border:3px solid #fff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:10px;
+	font-family:Arial,Verdana;
+	font-size:12px;
+	color:#000;
+	text-shadow:1px 1px #e8f1ff;
+	background-color:#cce1ff;
+	background-image:url(../images/wea-bg.png);
+	background-repeat:repeat-x;
+}
+.weaCurLeft {
+	position:relative;
+	float:left;
+	width:58%;
+text-align:left;
+}
+.weaCurRight {
+	position:relative;
+	float:right;
+	width:40%;
+}
+.curTitleDiv {
+	position:relative;
+	float:left;
+	width:85%;
+}
+.degButtonDiv {
+	position:relative;
+	float:right;
+	width:45px;
+	text-align:right;
+	padding-top:5px;
+}
+.weaCurText {
+	font-size:16px;
+	font-family:Arial,Verdana;
+	font-weight:bold;
+	color:#000;
+	text-align:left;
+	padding:0;
+	padding-bottom:3px;
+	margin:0;
+}
+.weaCurConLeft {
+	position:relative;
+	float:left;
+	width:43%;
+}
+.weaCurConRight {
+	position:relative;
+	float:right;
+	width:54%;
+}
+.dirIcon {
+	position:relative;
+	float:left;
+	width:22px;
+}
+.windDir {
+	position:relative;
+	float:left;
+	padding-top:2px;
+}
+.weaCurBgIcon {
+	background-image:url(../images/current-bg.png);
+	background-repeat:no-repeat;
+	height:130px;
+}
+.weaCurIcon {
+	position:relative;
+	float:left;
+	width:165px;
+}
+.weaCurIcon img {
+	max-height:160px;
+}
+.weaCurTempFor {
+	position:relative;
+	float:left;
+	padding-top:57px;
+}
+.weaCurTemp {
+	color:#fff;
+	font-size:24px;
+	font-family:Arial,Verdana;
+	text-shadow:1px 1px #000;
+	background-repeat:no-repeat;
+	background-position:100% 4px;
+	padding-right:13px;
+}
+.weaCurFor {
+	color:#fff;
+	font-size:12px;
+	font-family:Arial,Verdana;
+	text-shadow:1px 1px #000;
+}
+.weaCurUpdate {
+	text-align:center;
+	color:#666;
+}
+.weaCurCopyright {
+	text-align:center;
+	color:#666;
+	padding-top:5px;
+}
+.weaCurCopyright img {
+	max-width:200px;
+}
+.uvMeter {
+	font-size:11px;
+	font-family:Verdana;
+	font-weight:bold;
+	color:#000000;
+	background-image:url(../images/uv-image.png);
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	width:128px;
+	height:24px;
+	padding:0;
+}
+.uvMeterNum {
+	width:16px;
+	height:17px;
+	text-align:center;
+	background-image:url(../images/uv-arrow.png);
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+}
+
+#cityMap{
+	padding-left:14px;
+	font-size: 13px;
+	background-image:url(../images/icon_cityMap.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
+
+/*** Hour by Hour classes **/
+.hour2hourDiv {
+	width:630px;
+}
+.hour2hour {
+	height:135px;
+	padding:5px;
+	border:1px solid #fff;
+	background-color:#cce1ff;
+	background-image:url(../images/wea-bg.png);
+	background-repeat:repeat-x;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	text-shadow:0px 0px #fff;
+}
+.h2hTime {
+	font-size:14px;
+	font-family:Arial;
+	font-weight:700;
+	color:#0063c6;
+	text-shadow:1px 0px #999;
+	padding:2px;
+	background-color:#fff;
+	border:1px solid #629bf2;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	width:60%;
+	margin:0 auto;
+	text-align:center;
+}
+.h2hIcon {
+	position:relative;
+	float:left;
+	width:75px;
+}
+.h2hRight {
+	position:relative;
+	float:left;
+	width:200px;
+	margin-left:10px;
+}
+.h2hTemp {
+	font-size:18px;
+	font-family:Arial;
+	font-weight:700;
+	color:#0063c6;
+	text-shadow:1px 1px #e8f1ff;
+	text-align:center;
+}
+.h2hText {
+	font-size:14px;
+	font-family:Arial;
+	font-weight:700;
+	color:#ae5700;
+	text-shadow:1px 1px #d1e2fc;
+	padding-bottom:4px;
+}
+.h2hDetails {
+	font-size:11px;
+	font-family:Verdana,Arial;
+	font-weight:400;
+	color:#000;
+	text-shadow:1px 1px #e8f1ff;
+	padding-bottom:3px;
+}
+
+.h2hWindBg {
+	padding-left:27px;
+	background-repeat : no-repeat;
+	background-position : 4px 0;
+	min-height:16px;
+	position:relative;
+	float:left;
+	display:block-inline;
+}
+.hour2hourNote {
+	font-size:11px;
+	color:#666;
+}
+.hour2hourNoFor {
+	color:#ff0000;
+	padding:5px;
+	width:100%;
+}
+.loadH2H {
+	background:#fff;
+	background-image:url(../images/preloader.png);
+	background-repeat:no-repeat;
+	width:120px;
+	padding:20px;
+	position:fixed;
+	left:40%;
+	top:40%;
+	z-index:9999;
+	text-align:center;
+	background-position:50% 50%;
+	border:4px solid #cae4ff;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+}
+.loaderTrans {
+	height:10px;
+	width:300px;
+	padding:3px;
+	background-image:url(../images/preloader.png);
+	background-repeat:no-repeat;
+}
+.hoursUpdateNote {
+	font-size:11px;
+	font-family:Verdana,Arial;
+	color:#666;
+}
+#h2hShowHideCur {
+	cursor:pointer;
+	padding-left:20px;
+}
+.h2hShow {
+	background-image:url(../images/slider_show.png);
+	background-repeat:no-repeat;
+	background-position:0 2px;
+}
+.h2hHide {
+	background-image:url(../images/slider_hide.png);
+	background-repeat:no-repeat;
+	background-position: 0 2px;
+}
+
+/*** alert classes new in version 1.4**/
+.alertWea{
+	width:80%;
+	padding:5px;
+	padding-left:23px;	
+	background:#ffffdd url(../images/alert.png);
+	background-repeat:no-repeat;
+	background-position: 5px 50%;
+	border:1px solid #e1e100;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	font-weight:700;
+	color:#cc0000;
+	margin-top:5px;
+}
+
+.alertWea span a{
+	font-style:italic;
+	font-weight:400;
+}

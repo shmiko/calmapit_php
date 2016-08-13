@@ -1,0 +1,1 @@
+{"name":"Culinary Technique","id":"\/food\/culinary_technique","type":"\/type\/type","group":"type","_id":"qSfmgQ2B","relation":"\/food","properties":[{"name":"Recipes","id":"\/food\/culinary_technique\/recipes","expected_type":"\/food\/recipe","description":"Recipes that use this culinary technique"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

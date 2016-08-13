@@ -1,0 +1,7 @@
+body { font: normal 62.5% Arial, Helvetica, sans-serif; }
+#calendarEvents { width: 50.0em; }
+.entry { padding: 5px 4px 5px 6px; }
+.entry:nth-child(even) { background-color: #F6F2EB; }
+.entry h2 { font-size: 1.7em; margin-bottom: 0px; }
+.entry .desc { font-size: 14px; }
+.entry .desc img { width: 433px; }

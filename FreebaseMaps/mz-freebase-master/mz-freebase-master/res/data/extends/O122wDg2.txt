@@ -1,0 +1,1 @@
+{"name":"Adapted Work","id":"\/media_common\/adapted_work","type":"\/type\/type","group":"type","_id":"O122wDg2","relation":"\/media_common","properties":[{"name":"Adaptations","id":"\/media_common\/adapted_work\/adaptations","expected_type":"\/media_common\/adaptation","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Celebrities","id":"\/celebrities","type":"\/type\/domain","group":"zone","_id":"ZiE93Jzp","relation":"root","properties":[],"included_types":[]}

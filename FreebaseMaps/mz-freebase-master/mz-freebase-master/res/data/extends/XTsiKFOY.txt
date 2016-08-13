@@ -1,0 +1,1 @@
+{"name":"Web browser extension","id":"\/computer\/web_browser_extension","type":"\/type\/type","group":"type","_id":"XTsiKFOY","relation":"\/computer","properties":[{"name":"Works on web browser","id":"\/computer\/web_browser_extension\/works_on_web_browser","expected_type":"\/computer\/web_browser","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

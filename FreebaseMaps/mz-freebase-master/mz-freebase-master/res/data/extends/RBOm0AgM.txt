@@ -1,0 +1,1 @@
+{"name":"Marriage\/union type","id":"\/people\/marriage_union_type","type":"\/type\/type","group":"type","_id":"RBOm0AgM","relation":"\/people","properties":[{"name":"Unions of this type","id":"\/people\/marriage_union_type\/unions_of_this_type","expected_type":"\/people\/marriage","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

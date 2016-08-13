@@ -1,0 +1,1 @@
+{"name":"Olympic medal","id":"\/olympics\/olympic_medal","type":"\/type\/type","group":"type","_id":"ParKvDEA","relation":"\/olympics","properties":[{"name":"Medal winners","id":"\/olympics\/olympic_medal\/medal_winners","expected_type":"\/olympics\/olympic_medal_honor","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Park System","id":"\/protected_sites\/park_system","type":"\/type\/type","group":"type","_id":"osjjsZdO","relation":"\/protected_sites","properties":[{"name":"Member Parks","id":"\/protected_sites\/park_system\/member_parks","expected_type":"\/protected_sites\/protected_site","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

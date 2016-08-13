@@ -1,0 +1,1 @@
+{"name":"Blogger","id":"\/internet\/blogger","type":"\/type\/type","group":"type","_id":"MMk4J7ZR","relation":"\/internet","properties":[{"name":"Blog","id":"\/internet\/blogger\/blog","expected_type":"\/internet\/blog","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

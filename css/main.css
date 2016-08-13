@@ -1,0 +1,418 @@
+/*** The Essential Code ***/
+* /* For CSS Reset */ 
+{ 
+	padding: 0; 
+	margin: 0; 
+} 
+
+html {
+	min-height: 100%;
+}
+
+body {
+	min-width: 630px;         /* 2 x (LC fullwidth + CC padding) + RC fullwidth */
+	
+	
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	background: #26C9FF;
+}
+
+ .goog-slider-horizontal {
+      border: solid 1px #CCCCCC;
+      background-color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .goog-slider-thumb {
+      position: absolute;
+      background-color: #3399CC;
+      overflow: hidden;
+      width: 10px;
+      height: 100%;
+      top: 0;
+    }
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by an Apache 2.0 License.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Standard styling for goog.ui.Dialog.
+ *
+ * @author ssaviano@google.com (Steven Saviano)
+ * @author attila@google.com (Attila Bodis)
+ */
+
+
+.modal-dialog {
+  background: #c1d9ff;
+  border: 1px solid #3a5774;
+  color: #000;
+  padding: 4px;
+  position: absolute;
+}
+
+.modal-dialog a,
+.modal-dialog a:link,
+.modal-dialog a:visited  {
+  color: #06c;
+  cursor: pointer;
+}
+
+.modal-dialog-bg {
+  background: #666;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.modal-dialog-title {
+  background: #e0edfe;
+  color: #000;
+  cursor: pointer;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 8px 15px 8px 8px;
+  position: relative;
+  _zoom: 1; /* Ensures proper width in IE6 RTL. */
+}
+
+.modal-dialog-title-close {
+  /* Client apps may override the URL at which they serve the sprite. */
+  cursor: default;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 15px;
+  vertical-align: middle;
+}
+
+.modal-dialog-buttons,
+.modal-dialog-content {
+  background-color: #fff;
+  padding: 8px;
+}
+
+.goog-buttonset-default {
+  font-weight: bold;
+}
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by an Apache 2.0 License.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Cross-browser implementation of the "display: inline-block" CSS property.
+ * See http://www.w3.org/TR/CSS21/visuren.html#propdef-display for details.
+ * Tested on IE 6 & 7, FF 1.5 & 2.0, Safari 2 & 3, Webkit, and Opera 9.
+ *
+ * @author attila@google.com (Attila Bodis)
+ */
+
+/*
+ * Default rule; only Safari, Webkit, and Opera handle it without hacks.
+ */
+.goog-inline-block {
+  position: relative;
+  display: -moz-inline-box; /* Ignored by FF3 and later. */
+  display: inline-block;
+}
+
+
+
+/*
+ * Pre-IE7 IE hack.  On IE, "display: inline-block" only gives the element
+ * layout, but doesn't give it inline behavior.  Subsequently setting display
+ * to inline does the trick.
+ */
+* html .goog-inline-block {
+  display: inline;
+}
+
+/*
+ * IE7-only hack.  On IE, "display: inline-block" only gives the element
+ * layout, but doesn't give it inline behavior.  Subsequently setting display
+ * to inline does the trick.
+ */
+*:first-child+html .goog-inline-block {
+  display: inline;
+}
+
+#container
+{
+	display:table;
+	width: 100%;
+	height: 70%;
+	margin: -30px 0 -100px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-bottom:50px; /* Height of the footer element */
+	padding-top:100px;   /* Height of the header element */
+	
+}
+
+#container .column {
+	display: table-cell;
+}
+
+#left {
+	width: 20%;              /* LC width */
+	left: 10px;
+}
+
+#center {
+	margin-left: 280px; 
+	margin-top: 118px; 
+	padding: 10px 20px;       /* CC padding */
+	background: #FF0000;
+	height: 100%;
+	float: left;
+}
+
+#right {
+	width: 15%;
+	right: 10px;
+	height: 100%;
+	position: absolute;
+	top: 72px;
+	float: left;
+}
+
+#Header
+{
+	height: 180px;  
+	width: 100%;
+	font-size: large;
+	text-align: center;
+	padding: 0.3em 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #222222;
+	Top: 118px;
+	color: #FF00FF;
+	
+}
+#Footer {
+	height: 50px;
+	width: 100%;
+	font-size: large;
+	text-align: center;
+	padding: 0.3em 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #26C9FF;
+	
+}
+
+/*** IE Fix ***/
+* html #left {
+	left: 150px;              /* RC fullwidth */
+}
+
+/*** Just for Looks ***/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #26C9FF;
+}
+
+
+#container .column {
+	padding-top: 1em;
+	text-align: justify;
+}
+
+
+#time_right { 
+	position:relative;
+	float: right;
+	top: -15px;
+	}
+	
+#time_right2{ 
+	position:relative;
+	float: right;
+	top: -15px;
+	right: 5px;
+	}
+	
+#time_right3{ 
+	position:relative;
+	float: right;
+	top: -15px;
+	right: 10px;
+	}
+
+#countdown_dashboard {
+	height: 45px;
+	margin-left: 40px;
+	float: left;
+}
+
+.dash {
+	width: 59px;
+	height: 45px;
+	/*background: transparent url('../images/dash.png') 0 0 no-repeat;*/
+	float: left;
+	top: -5px;
+	margin-left: 20px;
+	position: relative;
+	background-color: #26C9FF;
+	
+}
+
+.dash .digit {
+	font-size: 15pt;
+	font-weight: bold;
+	float: left;
+	width: 25px;
+	text-align: center;
+	font-family: Times;
+	color: #7F00FF;
+	position: relative;
+	top: -2px;
+}
+
+.dash_title {
+	position: absolute;
+	display: block;
+	top: 22px;
+	bottom: 0px;
+	right: 7px;
+	font-size: 9pt;
+	color: #7F00FF;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+#calendar {
+	width: 100%;
+	margin-left: -1px;
+	margin-right: 10px;
+}
+
+#map_canvas_new {
+	height: 90%;
+	margin-right: 5px;
+	width: 60%;
+	position:relative;
+	width: 80%;
+	left: 20px;
+	padding-right: 10px;
+	border: 3px solid #000000;
+}
+
+
+#directions-panel {
+	display: block;
+	width: 20%;
+	float: left;
+	margin-left: 39px;
+	margin-right: 10px;
+	position: relative;
+	background: #FFFFFF;
+	height: 90%;
+	overflow: scroll;
+	padding-right: 1px;
+	border: 3px solid #000000;
+	top: -10px;
+	
+}
+#Search { font-size: 14px;
+				text-align:center;
+				color: #900;
+				background-color: #fff;
+}
+
+h2 {text-align:left}
+h4 {text-align:left;color: #900;
+				}
+
+#control {
+	background: #fff;
+	top: 15px;
+	margin-top: 25px;
+	font-size: 14px;
+	font-family: Arial;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+	display: none;
+	height: 35px;
+	/*z-index: 110;*/
+}
+
+#pac-input {
+	background-color: #fff;
+	width: 400px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 300;
+	text-overflow: ellipsis;
+	/*z-index: 115;*/
+	left: 12px;
+}
+
+#pac-input:focus {
+	border-color: #4d90fe;
+	margin-left: -1px;
+	padding-left: 14px;  /* Regular padding-left + 1. */
+	width: 401px;
+}
+
+.pac-container {
+	font-family: Roboto;
+}
+
+.controls {
+	margin-top: 16px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	position:relative;
+	top: 15px;
+	display: block;
+	z-index: 1;
+	position: absolute;
+	top: 10px;
+	left: 480px;
+}
+
+#fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+
+#fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+
+#iwContainer {
+  position: absolute;
+  display: none;
+  background-color: white;
+  color: #900;
+  font-size: 10px;
+  padding: 5px;
+  width: 90px;
+  border: 1px solid #900;
+  border-radius: 5px;
+  /*z-index: 100;*/
+  opacity: 0.85;
+}

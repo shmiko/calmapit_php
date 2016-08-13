@@ -1,0 +1,1 @@
+{"name":"Ice Hockey","id":"\/ice_hockey","type":"\/type\/domain","group":"zone","_id":"umSg5TAY","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Places [PROTOTYPE]</title>
+		<link href="css/main.css" rel="stylesheet">
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+		<script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header><h1>Places</h1></header>
+			<div class="map-container">
+				<section id="map">
+					<!-- <iframe width='100%' height='100%' frameborder='0' src='http://andoru.cartodb.com/viz/87b4beda-64b8-11e3-ae12-0e49973114de/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=false&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=&zoom=1&center_lat=52.2681573737682&center_lon=22.67578125'></iframe> -->
+				</section>
+				<section class="search-button"></section>
+				<div class="search-menu-viewport-container">
+					<div class="search-menu-viewport">
+						<div id="countries" class="search-menu-container">
+							<div class="search-menu-input">
+								<input class="search" placeholder="Search" />
+							</div>
+							<section id="scroll-search" class="search-menu"></section>
+						</div>
+					</div>
+				</div>
+				<div class="info-panel-container">
+					<section class="info-panel">
+						<h3 class="country"></h3>
+						<img class="flag" />
+						<ul class="country-data">
+							<li title="Population"><section class="population"></section></li>
+							<li title="Capital City"><section class="capital"></section></li>
+							<li title="Currency"><section class="currency"></section></li>
+							<li title="Web Top Level Domain"><section class="tld"></section></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/jquery-ui-1.10.3.custom.js"></script>
+		<script src="js/lib/jquery.kinetic.js"></script>
+		<script src="js/lib/jquery.mousewheel.js"></script>
+		<script src="js/lib/jquery.nicescroll.min.js"></script>
+		<script src="js/lib/jquery.smoothDivScroll-V.js"></script>
+		<script src="js/lib/list.min.js"></script>
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+		<script src="js/core.js"></script>		
+	</body>
+</html>

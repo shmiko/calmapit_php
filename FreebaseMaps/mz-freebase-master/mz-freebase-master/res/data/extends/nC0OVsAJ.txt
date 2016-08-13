@@ -1,0 +1,1 @@
+{"name":"Olympic bidding city","id":"\/olympics\/olympic_bidding_city","type":"\/type\/type","group":"type","_id":"nC0OVsAJ","relation":"\/olympics","properties":[{"name":"Olympics bid on","id":"\/olympics\/olympic_bidding_city\/olympics_bid_on","expected_type":"\/olympics\/olympic_city_bid","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

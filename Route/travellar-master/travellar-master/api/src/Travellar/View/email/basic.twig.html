@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		html, body {
+			padding: 0;
+			margin: 0;
+		}
+		
+		body {
+			font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+			color: #444;
+			font-size: 14px;
+			background: #41484F;
+			min-width: 100%;
+		}
+
+		a {
+			color: #EA3128;
+		}
+
+		a:hover {
+			color: #BB2720;
+		}
+
+		a.button {
+			background: #ea3128;
+			color: #fff !important;
+			font-weight: 300;
+			padding: 5px 35px;
+			display: inline-block;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-o-border-radius: 5px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+
+		a.button:hover {
+			background: #BB2720;
+			color: #fff !important;
+		}
+
+		div.center {
+			max-width: 580px;
+			padding: 0 20px;
+			margin: 0 auto;
+		}
+	
+		#header {
+			background: #F33120;
+		}
+
+		#header div.center a {
+			display: block;
+			padding: 50px 0;
+		}
+		
+		#content {
+			background: #fff;
+			padding: 50px 0;
+			line-height: 1.8em;
+			min-height: 300px;
+		}
+		
+		#content h1 {
+			font-weight: 300;
+			padding-bottom: 10px; 
+		}
+
+		#footer {
+			padding: 50px 0;
+			text-align: center;
+			color: #111;
+			text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+			font-size: 12px;
+			border-top: 1px solid #333;
+			border-top: 1px solid rgba(255, 255, 255, 0.05);
+			box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+			padding-top: 75px;
+		}
+
+		#footer a {
+			color: #000;
+		}
+
+		#footer a:hover {
+			color: #eee;
+			text-decoration: none;
+			text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+		}
+	</style>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="header">
+		<div class="center">		
+			<a href="http://student.howest.be/wouter.de.schuyter/20122013/RMD2/TRIPIT"><img src="http://student.howest.be/wouter.de.schuyter/20122013/RMD2/TRIPIT/layout/images/header_logo@2x.png" alt="Travellar" width="289" height="71" /></a>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="center">
+			<h1>{{ title }}</h1>
+			<p>{{ message|raw }}</p>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>&copy; All rights reserved to Travellar.<br>Created by <a href="http://wouterds.be/">Wouter De Schuyter</a></p>
+	</div>
+</body>
+</html>

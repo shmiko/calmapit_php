@@ -1,0 +1,1 @@
+{"name":"Type Projects","id":"\/dataworld\/type_projects","type":"\/type\/type","group":"type","_id":"tULr19ev","relation":"\/dataworld","properties":[{"name":"Type Needing Work","id":"\/dataworld\/type_projects\/type_needing_work","expected_type":"\/freebase\/type_profile","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Vein","id":"\/medicine\/vein","type":"\/type\/type","group":"type","_id":"wSuYUjkL","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

@@ -1,0 +1,1 @@
+{"name":"Beer country \/ region","id":"\/food\/beer_country_region","type":"\/type\/type","group":"type","_id":"8UB4bAql","relation":"\/food","properties":[{"name":"Beers from here","id":"\/food\/beer_country_region\/beers_from_here","expected_type":"\/food\/beer","description":"Beers brewed in this region"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

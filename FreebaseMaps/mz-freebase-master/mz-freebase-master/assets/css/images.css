@@ -1,0 +1,9 @@
+.service-opts{width:410px;float:left;}
+.service-opts label{float:left;margin-right:10px;}
+#result{width:100%;min-height:300px;margin-top:10px;}
+#result .sv{width:100%;height:120px;clear:both;margin-top:15px;padding-top:15px;display:none;}
+#result .sv label{font:700 15px arial;}
+#result .sv label a{font:500 13px arial;color:#00f;text-decoration:underline;}
+.sv ul{list-style-type:none;}
+.sv ul li {float:left;width:160px;position:relative;background-color:#000;list-style-type:none !important;margin:0px;padding:0px;}
+.sv ul li img{position:absolute;}

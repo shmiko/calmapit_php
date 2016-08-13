@@ -1,0 +1,1 @@
+{"name":"Synthesizer","id":"\/music\/synthesizer","type":"\/type\/type","group":"type","_id":"zUEjOU6n","relation":"\/music","properties":[{"name":"Brand","id":"\/music\/synthesizer\/brand","expected_type":"\/music\/musical_instrument_company","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

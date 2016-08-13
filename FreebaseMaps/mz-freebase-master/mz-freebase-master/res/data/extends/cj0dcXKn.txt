@@ -1,0 +1,1 @@
+{"name":"Supernova","id":"\/astronomy\/supernova","type":"\/type\/type","group":"type","_id":"cj0dcXKn","relation":"\/astronomy","properties":[],"included_types":[{"name":"Celestial Object","id":"\/astronomy\/celestial_object"},{"name":"Topic","id":"\/common\/topic"}]}

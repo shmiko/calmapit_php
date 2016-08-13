@@ -1,0 +1,1 @@
+{"name":"Film job","id":"\/film\/film_job","type":"\/type\/type","group":"type","_id":"a6QhZMcR","relation":"\/film","properties":[{"name":"Films with this crew job","id":"\/film\/film_job\/films_with_this_crew_job","expected_type":"\/film\/film_crew_gig","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

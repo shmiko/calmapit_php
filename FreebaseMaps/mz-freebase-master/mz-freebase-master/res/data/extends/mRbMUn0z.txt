@@ -1,0 +1,1 @@
+{"name":"Award Judge","id":"\/award\/award_judge","type":"\/type\/type","group":"type","_id":"mRbMUn0z","relation":"\/award","properties":[{"name":"Awards Judged","id":"\/award\/award_judge\/awards_judged","expected_type":"\/award\/award_judging_term","description":""}],"included_types":[{"name":"Person","id":"\/people\/person"},{"name":"Topic","id":"\/common\/topic"}]}

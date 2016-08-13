@@ -1,0 +1,1 @@
+{"name":"Freebase Tip Category","id":"\/freebase\/freebase_tip_category","type":"\/type\/type","group":"type","_id":"Gbc8gU0T","relation":"\/freebase","properties":[{"name":"Tips in this category","id":"\/freebase\/freebase_tip_category\/tips_in_this_category","expected_type":"\/freebase\/freebase_tip","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

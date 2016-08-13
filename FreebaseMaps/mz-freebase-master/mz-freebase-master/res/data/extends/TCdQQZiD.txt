@@ -1,0 +1,1 @@
+{"name":"Visual Art Medium","id":"\/visual_art\/visual_art_medium","type":"\/type\/type","group":"type","_id":"TCdQQZiD","relation":"\/visual_art","properties":[{"name":"Artworks","id":"\/visual_art\/visual_art_medium\/artworks","expected_type":"\/visual_art\/artwork","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

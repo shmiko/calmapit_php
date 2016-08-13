@@ -1,0 +1,1 @@
+{"name":"Awards","id":"\/award","type":"\/type\/domain","group":"zone","_id":"CCsjYRs9","relation":"root","properties":[],"included_types":[]}

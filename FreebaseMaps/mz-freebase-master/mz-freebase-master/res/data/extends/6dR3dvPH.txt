@@ -1,0 +1,1 @@
+{"name":"Medical device","id":"\/medicine\/medical_device","type":"\/type\/type","group":"type","_id":"6dR3dvPH","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

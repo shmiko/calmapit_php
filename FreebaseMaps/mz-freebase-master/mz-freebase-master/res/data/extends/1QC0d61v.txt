@@ -1,0 +1,1 @@
+{"name":"Cricket League","id":"\/cricket\/cricket_league","type":"\/type\/type","group":"type","_id":"1QC0d61v","relation":"\/cricket","properties":[],"included_types":[{"name":"Organization","id":"\/organization\/organization"},{"name":"Employer","id":"\/business\/employer"},{"name":"Topic","id":"\/common\/topic"},{"name":"Sports Association","id":"\/sports\/sports_league"}]}

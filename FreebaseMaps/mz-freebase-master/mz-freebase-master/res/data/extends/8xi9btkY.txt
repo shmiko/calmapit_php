@@ -1,0 +1,1 @@
+{"name":"Publication","id":"\/book\/publication","type":"\/type\/type","group":"type","_id":"8xi9btkY","relation":"\/media_common","properties":[{"name":"Contents","id":"\/book\/publication\/contents","expected_type":"\/book\/contents","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

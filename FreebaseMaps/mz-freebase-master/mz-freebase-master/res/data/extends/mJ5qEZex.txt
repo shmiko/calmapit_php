@@ -1,0 +1,1 @@
+{"name":"Color","id":"\/visual_art\/color","type":"\/type\/type","group":"type","_id":"mJ5qEZex","relation":"\/visual_art","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

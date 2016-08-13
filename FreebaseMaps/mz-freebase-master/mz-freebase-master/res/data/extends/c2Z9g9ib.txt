@@ -1,0 +1,1 @@
+{"name":"Gene Ontology Group Membership Evidence Type","id":"\/biology\/gene_ontology_group_membership_evidence_type","type":"\/type\/type","group":"type","_id":"c2Z9g9ib","relation":"\/biology","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Librettist","id":"\/opera\/librettist","type":"\/type\/type","group":"type","_id":"oUEwVQOS","relation":"\/opera","properties":[{"name":"Opera libretti written","id":"\/opera\/librettist\/libretti","expected_type":"\/opera\/opera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Animal","id":"\/biology\/animal","type":"\/type\/type","group":"type","_id":"yfmk1YZh","relation":"\/biology","properties":[],"included_types":[{"name":"Organism Classification","id":"\/biology\/organism_classification"},{"name":"Topic","id":"\/common\/topic"}]}

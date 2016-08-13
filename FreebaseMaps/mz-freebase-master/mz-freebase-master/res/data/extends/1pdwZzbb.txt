@@ -1,0 +1,1 @@
+{"name":"Religious Practice","id":"\/religion\/religious_practice","type":"\/type\/type","group":"type","_id":"1pdwZzbb","relation":"\/religion","properties":[{"name":"Religious practice of","id":"\/religion\/religious_practice\/practice_of","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

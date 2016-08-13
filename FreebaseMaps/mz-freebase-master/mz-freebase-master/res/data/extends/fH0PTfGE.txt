@@ -1,0 +1,1 @@
+{"name":"UK overseas territory","id":"\/location\/uk_overseas_territory","type":"\/type\/type","group":"type","_id":"fH0PTfGE","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

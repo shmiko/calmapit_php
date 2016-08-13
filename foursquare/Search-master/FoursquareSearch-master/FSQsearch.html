@@ -1,0 +1,47 @@
+<html lang="ja">
+  <head>
+    <title>CalMapIt FourSquare Search</title>
+		<!-- Description, Keywords and Author -->
+		<link rel="shortcut icon" href="http://calmapit.com/favicon.ico" type="image/vnd.microsoft.icon" />
+		<meta name="description" content="Calendar Map Itinerary" />
+		<meta name="keywords" content="Google Maps, calendar, itinerary, travel,travel planning, printable travel book" />
+		<meta name="author" content="Paul Jones - shmik.com" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/FSQsearch.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/tiles.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.wookmark.min.js"></script>
+   
+  </head>
+  <body>
+	<h1><a href="http://calmapit.com"><img src="img/calmapit_color_55x_icon.png" alt="calmapit"/><img src="img/calmapit_logo1.png" alt="calmapit" /></a></h1>
+								
+    <script type="text/javascript">$('#myContent li').wookmark();</script>
+    <div class="container-fluid">
+      <div class="row">
+        <input type="text" id="inputLocation" class="control-input" placeholder="Enter City then click a type below"/>
+      </div>
+      <div class="row">
+        <div class="category">
+			<ul class="nav nav-pills">
+				<li><a href="javascript:search(''4deefb944765f83613cdba6e,4fceea171983d5d06c3e9823,4bf58dd8d48988d182941735'');">Attractions</a></li>
+				<li><a href="javascript:search('4d4b7105d754a06374d81259');">Dietary</a></li>
+				<li><a href="javascript:search('4bf58dd8d48988d1fa931735')">Accommodation</a></li>
+				<li><a href="javascript:search('4bf58dd8d48988d1ed931735,4bf58dd8d48988d1fd931735,4bf58dd8d48988d129951735')">Public facility</a></li>
+				<li><a href="javascript:search('4d4b7105d754a06378d81259')">Shopping</a></li>
+			</ul>
+        </div>
+      </div>
+      <br/>
+      <div class="row">               
+            <ul id="tiles">
+            </ul>          
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/FSQsearch.js"></script>
+   
+  </body>
+</html>

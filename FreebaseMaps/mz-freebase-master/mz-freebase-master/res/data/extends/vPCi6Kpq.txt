@@ -1,0 +1,1 @@
+{"name":"Mountaineer","id":"\/geography\/mountaineer","type":"\/type\/type","group":"type","_id":"vPCi6Kpq","relation":"\/geography","properties":[{"name":"First ascents","id":"\/geography\/mountaineer\/first_ascents","expected_type":"\/geography\/mountain","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

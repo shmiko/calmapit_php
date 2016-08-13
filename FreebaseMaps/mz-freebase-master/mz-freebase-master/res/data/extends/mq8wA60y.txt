@@ -1,0 +1,1 @@
+{"name":"Religion","id":"\/religion","type":"\/type\/domain","group":"zone","_id":"mq8wA60y","relation":"root","properties":[],"included_types":[]}

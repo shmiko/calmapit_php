@@ -1,0 +1,108 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Developers</title>
+    
+      <link rel="stylesheet" type="text/css" href="css/screen-docs.css" />
+      <link rel="stylesheet" href="css/default.css" type="text/css" />
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400" type="text/css">
+      <script src="js/prettify-bundle.js"></script>
+    
+    <script src="js/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" defer async></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="js/framebox.js"></script>
+  </head>
+  <body class="docs slim framebox_body">
+    
+
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+
+google.load('visualization', '1', {packages: ['table', 'corechart', 'map']});
+google.setOnLoadCallback(initialize);
+  function initialize() {
+
+    var query = new google.visualization.Query(
+        'https://spreadsheets.google.com/pub?key=pCQbetd-CptF0r8qmCOlZGg');
+    query.send(draw);
+  }
+
+  function draw(response) {
+
+    if (response.isError()) {
+      alert('Error in query');
+    }
+
+    var ticketsData = response.getDataTable();
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+    chart.draw(ticketsData, {'isStacked': true, 'legend': 'bottom',
+        'vAxis': {'title': 'Number of tickets'}});
+
+    var geoData = google.visualization.arrayToDataTable([
+      ['Lat', 'Lon', 'Name', 'Food?'],
+      [51.5072, -0.1275, 'Cinematics London', true],
+      [48.8567, 2.3508, 'Cinematics Paris', true],
+      [55.7500, 37.6167, 'Cinematics Moscow', false]]);
+
+    var geoView = new google.visualization.DataView(geoData);
+    geoView.setColumns([0, 1]);
+
+    var table =
+        new google.visualization.Table(document.getElementById('table2_div'));
+
+    table.draw(geoData, {showRowNumber: false});
+
+    var map =
+        new google.visualization.Map(document.getElementById('map_div'));
+    map.draw(geoView, {showTip: true});
+
+    google.visualization.events.addListener(table, 'select',
+        function() {
+          map.setSelection(table.getSelection());
+        });
+
+    google.visualization.events.addListener(map, 'select',
+        function() {
+          table.setSelection(map.getSelection());
+        });
+  }
+</script>
+
+<div style="border: 1px solid black;">
+      <table align="center" style="border: 0; margin: 0;">
+        <tr valign="top">
+          <td style="width: 50%; border: 0; margin: 0;">
+            <div id="map_div" style="width: 400px; height: 300px;"></div>
+          </td>
+          <td style="width: 50%; border: 0; margin: 0;">
+            <div id="table2_div" style="width: 400px; height: 300px;"></div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 0; margin: 0;">
+            <div id="chart_div" style="align: center; width: 700px; height: 300px;"></div>
+          </td>
+        </tr>
+      </table>
+</div>
+
+
+    <script>
+      
+      devsite.github.Link.convertAnchors();
+      
+        window.prettyPrint();
+      
+      
+    </script>
+  </body>
+</html>

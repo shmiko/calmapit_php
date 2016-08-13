@@ -1,0 +1,1 @@
+{"name":"Sibling Relationship","id":"\/people\/sibling_relationship","type":"\/type\/type","group":"type","_id":"0THxD7Kf","relation":"\/people","properties":[{"name":"Sibling","id":"\/people\/sibling_relationship\/sibling","expected_type":"\/people\/person","description":""}],"included_types":[]}

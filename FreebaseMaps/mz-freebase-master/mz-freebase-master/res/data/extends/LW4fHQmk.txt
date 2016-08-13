@@ -1,0 +1,1 @@
+{"name":"Product Endorsee","id":"\/business\/product_endorsee","type":"\/type\/type","group":"type","_id":"LW4fHQmk","relation":"\/business","properties":[{"name":"Endorsements","id":"\/business\/product_endorsee\/endorsements","expected_type":"\/business\/product_endorsement","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

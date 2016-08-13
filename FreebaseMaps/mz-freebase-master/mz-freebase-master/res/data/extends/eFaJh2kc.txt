@@ -1,0 +1,1 @@
+{"name":"Venue","id":"\/architecture\/venue","type":"\/type\/type","group":"type","_id":"eFaJh2kc","relation":"\/architecture","properties":[{"name":"Seating capacity","id":"\/architecture\/venue\/capacity","expected_type":"\/type\/int","description":"The current maximum number of people that this venue can seat."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>CalMapIt Map Widget</title>
+<link href="map_widget.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4&sensor=true&libraries=panoramio,weather,places,geocoder"></script>
+	
+<style>
+	
+    body {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    #map_canvas {
+        height: 130px;
+        width: 240px;
+        margin-top: 0.6em;
+    }
+</style>
+<script>
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(40.7142700,-74.0059700), // New York
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var input = document.getElementById('searchTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+            map: map
+        });
+        google.maps.event.addListener(autocomplete, 'place_changed',
+            function() {
+                infowindow.close();
+                var place = autocomplete.getPlace();
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(17);
+                }
+                var image = new google.maps.MarkerImage(place.icon,
+                    new google.maps.Size(50, 50), new google.maps.Point(0, 0),
+                    new google.maps.Point(17, 34),
+                    new google.maps.Size(35, 35));
+                marker.setIcon(image);
+                marker.setPosition(place.geometry.location);
+                var address = '';
+                if (place.address_components) {
+                    address = [(place.address_components[0] && place.address_components[0].short_name || ''), (place.address_components[1] && place.address_components[1].short_name || ''), (place.address_components[2] && place.address_components[2].short_name || '')].join(' ');
+                }
+                infowindow.setContent('<div>' + place.name + '<br>' + address);
+                infowindow.open(map);
+            });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<link href="map_widget.css" rel="stylesheet"/>
+<style>
+    #box {
+        width: 96%;
+        margin: 0 auto
+    }
+    .sf {
+        text-align: left;
+        padding: 2px;
+        width: 90%;
+        height: 20px;
+    }
+</style>
+<!--<div id="outer">
+    <div id="cover">-->
+        <div id="box">
+            <div>
+                <input id="searchTextField" type="text">
+            </div>
+            <div id="map_canvas"></div>
+            <a class="link" href="MUID/advancerouteplanner.html" target="_blank">Get Directions</a>
+        </div>
+    <!--</div>
+</div>-->

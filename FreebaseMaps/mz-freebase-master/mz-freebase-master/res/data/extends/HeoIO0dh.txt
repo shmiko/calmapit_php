@@ -1,0 +1,1 @@
+{"name":"Professional field","id":"\/people\/professional_field","type":"\/type\/type","group":"type","_id":"HeoIO0dh","relation":"\/people","properties":[{"name":"Professions in this field","id":"\/people\/professional_field\/professions_in_this_field","expected_type":"\/people\/profession","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

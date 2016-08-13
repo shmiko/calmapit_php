@@ -1,0 +1,1 @@
+{"name":"Exhibitions","id":"\/exhibitions","type":"\/type\/domain","group":"zone","_id":"mcOItqLC","relation":"root","properties":[],"included_types":[]}

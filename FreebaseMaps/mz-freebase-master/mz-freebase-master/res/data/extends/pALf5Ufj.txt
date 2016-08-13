@@ -1,0 +1,1 @@
+{"name":"Fuel Delivery Method","id":"\/automotive\/fuel_delivery_method","type":"\/type\/type","group":"type","_id":"pALf5Ufj","relation":"\/automotive","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

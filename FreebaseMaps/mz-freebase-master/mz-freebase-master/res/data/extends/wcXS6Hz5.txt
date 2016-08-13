@@ -1,0 +1,1 @@
+{"name":"Government","id":"\/government","type":"\/type\/domain","group":"zone","_id":"wcXS6Hz5","relation":"root","properties":[],"included_types":[]}

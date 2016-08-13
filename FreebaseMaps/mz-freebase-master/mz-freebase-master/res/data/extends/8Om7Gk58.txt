@@ -1,0 +1,1 @@
+{"name":"Physics","id":"\/physics","type":"\/type\/domain","group":"zone","_id":"8Om7Gk58","relation":"root","properties":[],"included_types":[]}

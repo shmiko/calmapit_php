@@ -1,0 +1,1 @@
+{"name":"Radio format","id":"\/broadcast\/radio_format","type":"\/type\/type","group":"type","_id":"npimknV0","relation":"\/broadcast","properties":[{"name":"Stations","id":"\/broadcast\/radio_format\/stations","expected_type":"\/broadcast\/radio_station","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

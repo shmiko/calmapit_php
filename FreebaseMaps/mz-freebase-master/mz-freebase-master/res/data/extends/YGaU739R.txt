@@ -1,0 +1,1 @@
+{"name":"Amusement Ride Theme","id":"\/amusement_parks\/ride_theme","type":"\/type\/type","group":"type","_id":"YGaU739R","relation":"\/amusement_parks","properties":[{"name":"Rides","id":"\/amusement_parks\/ride_theme\/rides","expected_type":"\/amusement_parks\/ride","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

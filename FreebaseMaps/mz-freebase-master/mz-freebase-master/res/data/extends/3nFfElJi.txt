@@ -1,0 +1,1 @@
+{"name":"Boxing Stance","id":"\/sports\/boxing_stance","type":"\/type\/type","group":"type","_id":"3nFfElJi","relation":"\/boxing","properties":[{"name":"Boxers with this stance","id":"\/sports\/boxing_stance\/boxers_with_this_stance","expected_type":"\/sports\/boxer","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

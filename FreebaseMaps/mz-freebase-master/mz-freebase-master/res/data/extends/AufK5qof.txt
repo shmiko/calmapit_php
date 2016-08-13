@@ -1,0 +1,1 @@
+{"name":"Locomotive owner","id":"\/rail\/locomotive_owner","type":"\/type\/type","group":"type","_id":"AufK5qof","relation":"\/rail","properties":[{"name":"Locomotives owned","id":"\/rail\/locomotive_owner\/locomotives_owned","expected_type":"\/rail\/locomotive_ownership","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

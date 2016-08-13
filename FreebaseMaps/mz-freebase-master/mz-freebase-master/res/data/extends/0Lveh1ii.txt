@@ -1,0 +1,1 @@
+{"name":"Vineyard","id":"\/wine\/vineyard","type":"\/type\/type","group":"type","_id":"0Lveh1ii","relation":"\/food","properties":[{"name":"Wines","id":"\/wine\/vineyard\/wines","expected_type":"\/wine\/wine","description":""}],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"}]}

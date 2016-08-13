@@ -1,0 +1,1 @@
+{"name":"Video Game Series","id":"\/cvg\/game_series","type":"\/type\/type","group":"type","_id":"UShMcxlK","relation":"\/cvg","properties":[{"name":"Games In Series","id":"\/cvg\/game_series\/games_in_series","expected_type":"\/cvg\/computer_videogame","description":"Computer games that are part of this series."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

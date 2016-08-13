@@ -1,0 +1,1 @@
+{"name":"Wedding venue","id":"\/people\/wedding_venue","type":"\/type\/type","group":"type","_id":"HkMMKawW","relation":"\/people","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

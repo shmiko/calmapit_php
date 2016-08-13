@@ -1,0 +1,1 @@
+{"name":"Hull Configuration","id":"\/boats\/hull_configuration","type":"\/type\/type","group":"type","_id":"ig3LDfMB","relation":"\/boats","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Facebook Wall</title>
+
+	<!--style sheets-->
+        <link rel="stylesheet" href="css/jQueryFacebookWall.min.css" type="text/css" media="screen" />	<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" media="screen" />    
+        <link rel="stylesheet" href="css/jqfm-example.css" type="text/css" media="screen" />
+
+</head>
+
+<body style="background:#fcfcfc url(img/background.jpg) repeat top center fixed;">
+	<!--test facebook like widget -->
+      
+    
+    <div class="wall-wrapper">
+   		<div class="wall-inner-wrapper" style="margin: 0 220px 0 auto">
+			
+<script type="text/javascript">
+	window.fbAsyncInit = function() {
+		FB.init({ appId:'556026297862136', status:true, cookie:true, xfbml:true, oauth:true }); 
+	};
+</script>
+<script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=556026297862136";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="fb-root"></div>
+	
+<div class="jqfbw-example-nav" >    
+    <a class="jqfbw-example-nav-link" href="index.html" >Timeline Example</a>
+    <a class="jqfbw-example-nav-link" href="wall.html" >Wall Example</a>
+    <a class="jqfbw-example-nav-link" href="single-column.html" >Single Column Example</a>
+    <a class="jqfbw-example-nav-link" href="example-with-controls.html" >Example With Controls</a>
+    <a class="jqfbw-example-nav-link" href="options.html">Option Descriptions</a>
+</div>    
+<div class="fb-like-wrapper">
+	<div class="fb-like" data-href=""   data-show-faces="false" data-send="true"></div>
+</div>
+<!-- plugin home wide
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-5596827964697060"
+     data-ad-slot="2054567153"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+-->
+        	<div class="facebook-wall"></div>
+        </div>
+	</div>
+    <div id="plugin-controls-wrapper" class="jfw-settings-wrap">
+    	<form id="plugin-controls" >
+        	
+            <h3>PLUGIN OPTIONS</h3>
+            
+            <h4>ACCOUNT</h4>
+            <div class="input-wrapper">
+            	<label for="facebook-user">Facebook User:</label>
+            	<input type="text" id="facebook-user" value="ufc" class="validate[required]"/>
+  			</div>          
+            
+            <h4>STYLE</h4>
+            <div class="input-wrapper">
+                <label for="display">Display:</label>
+                <select id="display" >
+                    <option value="timeline">timeline</option>
+                    <option value="wall">wall</option>
+                    <option value="single-column">single-column</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="english">English</option>
+                    <option value="dansk">Dansk</option>
+                    <option value="deutsch">Deutsch</option>
+                    <option value="dutch">Dutch</option>
+                    <option value="espanol">Espanol</option>
+                    <option value="francais">Francais</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="polski">Polski</option>
+                    <option value="svenska">Svenska</option>
+                    <option value="turk">Turk</option>
+                </select>
+            </div>
+            
+            <h4>POSTS</h4>
+            <div class="input-wrapper">
+                <label for="posts-show">Show Posts:</label>
+                <select id="posts-show">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label for="feed-type">Feed Type:</label>
+                <select id="feed-type">
+                    <option value="feed">feed</option>
+                    <option value="posts">posts</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+            	<label for="posts-limit">Posts Limit:</label>
+            	<input id="posts-limit" type="text" value="10" class="input-box validate[required],custom[integer],min[1],max[20]" />*1-20
+            </div>
+            <div class="input-wrapper">
+            	<label for="posts-order">Posts Order:</label>
+                <select id="posts-order">
+                	<option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected="selected" >5</option>
+                </select>
+            </div>
+            
+            <h4>COMMENTS</h4>
+            <div class="input-wrapper">
+            	<label for="comments-limit">Comments Limit:</label>
+            	<input id="comments-limit" type="text" value="20" class="input-box validate[required],custom[integer],min[1],max[40]" />*1-40
+            </div>
+            <div class="input-wrapper">
+            	<label for="comments-showAtStart">Comments Show at Start:</label>
+            	<input id="comments-showAtStart" type="text" value="2" class="input-box validate[required],custom[integer],min[1],max[10]" />*1-10
+            </div>
+            <div class="input-wrapper">
+            	<label for="comments-showMoreNum">Comments Show More Num:</label>
+            	<input id="comments-showMoreNum" type="text" value="5" class="input-box validate[required],custom[integer],min[1],max[10]" />*1-10
+            </div>
+            
+            <h4>LIKES</h4>
+            <div class="input-wrapper">
+                <label for="likes-show">Show Likes:</label>
+                <select id="likes-show">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label for="likes-useCoverPhotos">Use Cover Pic:</label>
+                <select id="likes-useCoverPhotos">
+                    <option value="false">false</option>
+                    <option value="true">true</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+            	<label for="likes-limit">Likes Limit:</label>
+            	<input id="likes-limit" type="text" value="5" class="input-box validate[required],custom[integer],min[1],max[20]" />*1-20
+            </div>
+             <div class="input-wrapper">
+            	<label for="likes-order">Likes Order:</label>
+                <select id="likes-order">
+                	<option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected="selected">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        	
+            <h4>ALBUMS</h4>
+            <div class="input-wrapper">
+                <label for="albums-show">Albums Show:</label>
+                <select id="albums-show">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+            	<label for="albums-order">Albums Order:</label>
+                <select id="albums-order">
+                	<option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected="selected">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <h4>PHOTOS</h4>
+        	<div class="input-wrapper">
+                <label for="photos-show">Photos Show:</label>
+                <select id="photos-show">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+			</div>
+            <div class="input-wrapper">
+            	<label for="photos-order">Photos Order:</label>
+                <select id="photos-order">
+                	<option value="1">1</option>
+                    <option value="2" selected="selected">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+                      
+            <h4>EVENTS</h4>            
+        	<div class="input-wrapper">
+                <label for="events-show">Events Show:</label>
+                <select id="events-show">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+			</div>
+            <div class="input-wrapper">
+                <label for="events-showTicketLink">Events Show Ticket Link:</label>
+                <select id="events-showTicketLink">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+			</div>
+             <div class="input-wrapper">
+                <label for="events-showPastEvents">Show past events:</label>
+                <select id="events-showPastEvents">
+                    <option value="false">show only this month forward</option>
+                    <option value=0>show past from the start</option>
+                    <option value="6/1/13">show starting at 6/1/13</option>
+                    <option value="1/1/14">show starting at 1/1/14</option>
+                    <option value="7/1/14">show starting at 7/1/14</option>
+                </select>
+			</div>
+            <div class="input-wrapper">
+            	<label for="events-order">Events Order:</label>
+                <select id="events-order">
+                	<option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+            	<label for="events-limit">Events Limit:</label>
+            	<input id="events-limit" type="text" value="5" class="input-box validate[required],custom[integer],min[1],max[20]" />*1-20
+            </div>            
+            
+            <input type="button" class="update-plugin" value="Rebuild Plugin" />
+        </form>
+        * Limits are restricted here to reduce the facebook request size. Limits are not restricted in the plugin.
+    </div>
+    
+    <div class=" fb_reset" id="fb-root"></div>
+   </body>
+	
+	<!--load jQuery from google, else get a local copy-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="library/js/libs/jquery-1.7.min.js"><\/script>')</script>
+  
+                 
+	
+	    <script src="js/jQueryFacebookWall.min.js"></script>  
+		    
+    
+	<script>
+	$(document).ready(function(){
+		
+		var options  = {
+			appId: '556026297862136',
+			facebookUser: 'wendy',
+			domain: 'calmapit.com',
+			display: 'timeline',
+			language: 'english',
+			
+			posts:{
+				limit: 10,
+				feedType: 'feed'
+			},
+			comments:{
+				showAtStart: 2,
+				showMoreNum: 5,
+				limit: 20
+			},
+			likes:{
+				show: true,
+				useCoverPhotos: false,
+				limit: 5	
+			},
+			photos:{
+				show: true	
+			},
+			albums:{
+				show: true,
+				limit: 6
+			},
+			events:{
+				show: true,
+				showPastEvents:false,
+				limit: 5,
+				showTicketLink: true
+			},
+			debug: true
+		}
+		
+		
+		// Calling our plugin with a fb account username and an access token, from 
+		var facebookWall = $('.facebook-wall').jQueryFacebookWall(options);
+		$("#plugin-controls").validationEngine();
+		 
+		$('.update-plugin').click(function(){
+			var validate = $("#plugin-controls").validationEngine('validate');
+			
+			if(validate){
+				//get and set the new option values
+				var facebookUser = $('#facebook-user').val();
+				options.facebookUser = facebookUser;
+				
+				
+				
+				var display = $('#display').val();
+				options.display = display;	
+				var language = $('#language').val();
+				options.language = language
+				
+				//POSTS-----------------------------------------------
+				var posts = $('#posts-limit').val();
+				options.posts.limit = posts;
+				
+				var postsShow = $('#posts-show').val();
+				options.posts.show = postsShow.bool();
+				
+				var postsOrder = $('#posts-order').val();
+				options.posts.order = postsOrder;
+				
+				var feedType = $('#feed-type').val();
+				options.posts.feedType = feedType;
+				
+				//COMMENTS
+				var commentsLimit = $('#comments-limit').val();
+				options.comments.limit = commentsLimit;
+				
+				var commentsShowAtStart = $('#comments-showAtStart').val();
+				options.comments.showAtStart = commentsShowAtStart;
+				
+				var commentsShowMoreNum = $('#comments-showMoreNum').val();
+				options.comments.showMoreNum = commentsShowMoreNum;
+				
+				//LIKES------------------------------------------------
+				var likesShow = $('#likes-show').val();
+				options.likes.show = likesShow.bool();
+				
+				var likesLimit = $('#likes-limit').val();
+				options.likes.limit = likesLimit;
+				
+				var likesUseCoverPhotos = $('#likes-useCoverPhotos').val();
+				options.likes.useCoverPhotos = likesUseCoverPhotos.bool();
+				
+				var likesOrder = $('#likes-order').val();
+				options.likes.order = likesOrder;
+				
+				//PHOTOS-----------------------------------------------
+				var photosShow = $('#photos-show').val();
+				options.photos.show = photosShow.bool();
+				
+				var photosOrder = $('#photos-order').val();
+				options.photos.order = photosOrder;
+				
+				//Albums-----------------------------------------------
+				var albumsShow = $('#albums-show').val();
+				options.albums.show = albumsShow.bool();
+				
+				var albumsOrder = $('#albums-order').val();
+				options.albums.order = albumsOrder;
+				
+				//Events-----------------------------------------------
+				var eventsShow = $('#events-show').val();
+				options.events.show = eventsShow.bool();
+			
+				var eventsOrder = $('#events-order').val();
+				options.events.order = eventsOrder;
+				
+				var showTicketLink = $('#events-showTicketLink').val();
+				options.events.showTicketLink = showTicketLink.bool();
+				
+				var showPastEvents = $('#events-showPastEvents').val();
+				options.events.showPastEvents = (showPastEvents==="false")?showPastEvents.bool(): showPastEvents;
+				
+				
+				var eventsLimit = $('#events-limit').val();
+				options.events.limit = eventsLimit;
+			
+				//update the plugin
+				//Then get the plugin object from the jQuery element.        
+				var jqfbw = facebookWall.data('plugin_jQueryFacebookWall');
+				
+				//Then you can make api calls.        
+				jqfbw.destroy();
+				
+				//var facebookWall = $('.facebook-wall').jQueryFacebookWall(options);
+				$('.facebook-wall').remove();
+				$('.wall-inner-wrapper').append('<div class="facebook-wall"></div>')
+				facebookWall = $('.facebook-wall').jQueryFacebookWall(options);
+			}
+		});
+		
+		
+	})//end document ready
+	String.prototype.bool = function() {
+    	return (/^true$/i).test(this);
+	};
+	</script>
+	
+</html>

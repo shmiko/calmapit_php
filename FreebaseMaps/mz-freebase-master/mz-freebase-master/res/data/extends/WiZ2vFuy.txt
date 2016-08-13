@@ -1,0 +1,1 @@
+{"name":"Advertising slogan","id":"\/business\/advertising_slogan","type":"\/type\/type","group":"type","_id":"WiZ2vFuy","relation":"\/business","properties":[{"name":"Brand","id":"\/business\/advertising_slogan\/brand","expected_type":"\/business\/brand_slogan","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

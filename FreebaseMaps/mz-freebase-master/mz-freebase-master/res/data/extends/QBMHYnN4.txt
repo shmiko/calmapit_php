@@ -1,0 +1,1 @@
+{"name":"Rocket Fuel","id":"\/spaceflight\/rocket_fuel","type":"\/type\/type","group":"type","_id":"QBMHYnN4","relation":"\/spaceflight","properties":[{"name":"Rockets","id":"\/spaceflight\/rocket_fuel\/rocket_stages","expected_type":"\/spaceflight\/rocket_stage","description":"Rockets that have used this fuel."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"People","id":"\/people","type":"\/type\/domain","group":"zone","_id":"SVvUEV6S","relation":"root","properties":[],"included_types":[]}

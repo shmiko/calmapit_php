@@ -1,0 +1,1 @@
+{"name":"Film collection","id":"\/film\/film_collection","type":"\/type\/type","group":"type","_id":"aE50MyCF","relation":"\/film","properties":[{"name":"Films In Collection","id":"\/film\/film_collection\/films_in_collection","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

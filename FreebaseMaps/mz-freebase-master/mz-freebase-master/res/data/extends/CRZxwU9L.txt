@@ -1,0 +1,1 @@
+{"name":"Rocket Status","id":"\/spaceflight\/rocket_status","type":"\/type\/type","group":"type","_id":"CRZxwU9L","relation":"\/spaceflight","properties":[{"name":"Rockets","id":"\/spaceflight\/rocket_status\/rockets","expected_type":"\/spaceflight\/rocket","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

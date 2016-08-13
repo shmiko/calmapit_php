@@ -1,0 +1,1 @@
+{"name":"Domesticated animal","id":"\/biology\/domesticated_animal","type":"\/type\/type","group":"type","_id":"vmUNyVHI","relation":"\/biology","properties":[{"name":"Breeds","id":"\/biology\/domesticated_animal\/breeds","expected_type":"\/biology\/animal_breed","description":"Breeds of this species."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

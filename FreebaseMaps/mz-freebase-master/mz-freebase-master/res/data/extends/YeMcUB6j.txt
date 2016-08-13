@@ -1,0 +1,1 @@
+{"name":"Scattered Disc Object","id":"\/astronomy\/scattered_disc_object","type":"\/type\/type","group":"type","_id":"YeMcUB6j","relation":"\/astronomy","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

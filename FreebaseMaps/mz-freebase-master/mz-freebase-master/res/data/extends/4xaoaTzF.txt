@@ -1,0 +1,1 @@
+{"name":"Broadcast station class","id":"\/broadcast\/broadcast_station_class","type":"\/type\/type","group":"type","_id":"4xaoaTzF","relation":"\/broadcast","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

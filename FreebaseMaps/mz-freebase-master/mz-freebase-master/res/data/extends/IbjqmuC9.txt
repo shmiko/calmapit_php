@@ -1,0 +1,1 @@
+{"name":"Film cut type","id":"\/film\/film_cut_type","type":"\/type\/type","group":"type","_id":"IbjqmuC9","relation":"\/film","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

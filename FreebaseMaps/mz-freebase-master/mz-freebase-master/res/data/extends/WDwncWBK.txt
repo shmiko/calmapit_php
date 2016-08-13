@@ -1,0 +1,1 @@
+{"name":"Congregation","id":"\/religion\/congregation","type":"\/type\/type","group":"type","_id":"WDwncWBK","relation":"\/religion","properties":[{"name":"Number In Congregation","id":"\/religion\/congregation\/number_in_congregation","expected_type":"\/measurement_unit\/dated_integer","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

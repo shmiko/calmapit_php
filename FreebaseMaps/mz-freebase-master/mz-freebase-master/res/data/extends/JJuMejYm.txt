@@ -1,0 +1,1 @@
+{"name":"Broadcast Advisory","id":"\/broadcast\/advisory","type":"\/type\/type","group":"type","_id":"JJuMejYm","relation":"\/broadcast","properties":[{"name":"Content","id":"\/broadcast\/advisory\/content","expected_type":"\/broadcast\/content","description":"Broadcast Content with this advisory."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

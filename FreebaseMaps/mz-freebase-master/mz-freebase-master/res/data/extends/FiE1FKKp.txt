@@ -1,0 +1,1 @@
+{"name":"written_by","id":"\/freebase\/written_by","type":"\/type\/type","group":"type","_id":"FiE1FKKp","relation":"\/freebase","properties":[{"name":"application","id":"\/freebase\/written_by\/application","expected_type":"\/freebase\/apps\/application","description":"Attributed Application"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

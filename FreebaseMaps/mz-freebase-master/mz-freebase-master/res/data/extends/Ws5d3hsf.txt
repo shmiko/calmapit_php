@@ -1,0 +1,1 @@
+{"name":"Periodicals","id":"\/periodicals","type":"\/type\/domain","group":"zone","_id":"Ws5d3hsf","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Electric system","id":"\/rail\/electric_system","type":"\/type\/type","group":"type","_id":"H8t3w6A4","relation":"\/rail","properties":[{"name":"Locomotive class","id":"\/rail\/electric_system\/locomotive_class","expected_type":"\/rail\/electric_locomotive_class","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

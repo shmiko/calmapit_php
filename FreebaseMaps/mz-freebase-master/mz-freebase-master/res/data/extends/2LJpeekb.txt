@@ -1,0 +1,1 @@
+{"name":"Continent","id":"\/location\/continent","type":"\/type\/type","group":"type","_id":"2LJpeekb","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"}]}

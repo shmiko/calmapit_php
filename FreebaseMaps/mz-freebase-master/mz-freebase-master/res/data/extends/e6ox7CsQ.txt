@@ -1,0 +1,1 @@
+{"name":"Transportation mode","id":"\/travel\/transportation_mode","type":"\/type\/type","group":"type","_id":"e6ox7CsQ","relation":"\/travel","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

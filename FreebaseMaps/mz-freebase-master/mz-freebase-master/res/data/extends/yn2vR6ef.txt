@@ -1,0 +1,1 @@
+{"name":"Hong Kong district","id":"\/location\/hk_district","type":"\/type\/type","group":"type","_id":"yn2vR6ef","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

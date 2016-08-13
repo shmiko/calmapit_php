@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>ParkWhiz Parking Widgets</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/>
+
+	<!-- demo.css for examples -->
+	<link rel="stylesheet" type="text/css" href="examples.css">
+
+	<!-- jquery.parkingmap.css -->
+	<link rel="stylesheet" type="text/css" href="../source/css/jquery.parkingmap.css">
+
+	<!-- jQuery & Google Maps -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+
+	<!-- Dependencies
+	<script type="text/javascript" src="../source/dependencies/gmap3.min.js"></script>
+	<script type="text/javascript" src="../source/dependencies/moment.min.js"></script>
+	<script type="text/javascript" src="../source/dependencies/underscore.min.js"></script>
+	<script type="text/javascript" src="../source/dependencies/timepicker.min.js"></script>
+	<script type="text/javascript" src="../source/dependencies/datepicker.min.js"></script>-->
+
+	<!-- jquery.parkingmap.js -->
+	<script type="text/javascript" src="../source/jquery.parkingmap-dependencies.js"></script>
+	<script type="text/javascript" src="../jquery.parkingmap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(function() {
+
+			// Single address (results)
+			$("#parkwhiz-widget-single-address").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					destination: [
+						'208 S. Jefferson, Chicago, IL',
+					],
+				},
+				mapHeight: '275px',
+				modules: ['map', 'time_picker', 'parking_locations']
+			});
+
+			// Multiple addresses
+			$("#parkwhiz-widget-multi-addresses").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					destination: [
+						'208 S. Jefferson, Chicago, IL',
+						{lat: '41.884499', lng: '-87.640461'},
+						{destination: 'anchorage, alaska'},
+					],
+				},
+				mapHeight: '275px',
+				modules: ['map', 'time_picker', 'parking_locations']
+			});
+
+			// Single address (no results)
+			$("#parkwhiz-widget-single-no-results").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					destination: [
+						{destination: 'anchorage, alaska'},
+					],
+				},
+				mapHeight: '275px',
+				modules: ['map', 'time_picker', 'parking_locations']
+			});
+
+			// Single address (results) - Zoom override, special center
+			$("#parkwhiz-widget-single-address-overrides").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					destination: [
+						'208 S. Jefferson, Chicago, IL',
+					],
+					center: {
+						destination: '1 World Way Los Angeles, CA 90045',
+					}
+				},
+				mapOptions: {
+					zoom: 20
+				},
+				mapHeight: '275px',
+				modules: ['map', 'parking_locations']
+			});
+
+			// Monthly parking
+			$("#parkwhiz-widget-monthly").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				mapHeight: '250px',
+				modules: ['map', 'parking_locations'],
+				monthly: true,
+				location: {
+					destination: [
+						'208 S. Jefferson, Chicago, IL',
+					]
+				},
+			});
+
+			// Single venue
+			$("#parkwhiz-widget-venue").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					venue: 'madison-square-garden-parking',
+					defaultEvent: '234037',
+				},
+				mapHeight: '300px',
+				modules: ['map', 'event_list', 'parking_locations']
+			});
+
+			// Multiple venues (with default event)
+			$("#parkwhiz-widget-venue-multiple").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					venue: [
+						'madison-square-garden-parking',
+						'united-center-parking',
+					],
+					defaultEvent: '266678',
+				},
+				mapOptions: {
+					zoom: 20
+				},
+				mapHeight: '300px',
+				modules: ['map', 'event_list', 'parking_locations']
+			});
+
+			// Single event
+			$("#parkwhiz-widget-event").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					event: 'madison-square-garden-parking/detroit-pistons-at-new-york-knicks-266678/',
+				},
+				mapHeight: '300px',
+				modules: ['map', 'time_picker', 'parking_locations']
+			});
+
+			// Custom Google overrides
+			$("#parkwhiz-widget-custom-overrides").pwMap_parkingMap({
+				parkwhizKey: 'b4e1ef8c69fc9c5d79c25a317ad288f2',
+				location: {
+					destination: [
+						'208 S. Jefferson, Chicago, IL',
+					],
+				},
+				mapOptions: {
+					styles: [
+						{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}
+					]
+				},
+				mapHeight: '275px',
+				modules: ['map', 'time_picker', 'parking_locations'],
+				defaultTime: {
+					start: moment().add('d', 1).unix(), // + 1 day
+					end: moment().add('d', 8).unix() // + 8 days
+				},
+				overrideOptions: {
+					circle:{
+						options:{
+							center: [41.880649155074, -87.69],
+							radius : 250,
+							fillColor : "#008BB2",
+							strokeColor : "#005BB7"
+						}
+					}
+				}
+			});
+
+		});
+	</script>
+	<h1>Single address (results)</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-single-address"></div></div>
+	<h1>Multiple addresses</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-multi-addresses"></div></div>
+	<h1>Single address (no results)</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-single-no-results"></div></div>
+	<h1>Single address (results) - Zoom override, special center</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-single-address-overrides"></div></div>
+	<h1>Monthly parking</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-monthly"></div></div>
+	<h1>Single venue</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-venue"></div></div>
+	<h1>Multiple venues (with a default event)</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-venue-multiple"></div></div>
+	<h1>Single event</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-event"></div></div>
+	<h1>Custom Google overrides</h1>
+	<div class="widget-example"><div id="parkwhiz-widget-custom-overrides"></div></div>
+</body>
+</html>

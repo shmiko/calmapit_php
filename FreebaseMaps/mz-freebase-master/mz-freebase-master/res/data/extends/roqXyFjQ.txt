@@ -1,0 +1,1 @@
+{"name":"Chinese county-level city","id":"\/location\/cn_county_level_city","type":"\/type\/type","group":"type","_id":"roqXyFjQ","relation":"\/location","properties":[],"included_types":[{"name":"Location","id":"\/location\/location"},{"name":"Topic","id":"\/common\/topic"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiple Distance & Direction Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Print Stylesheet -->
+    <style type="text/css" type="text/css" media="print">
+        .btn-container, #myForm{
+            display:none !important;
+        }
+		 #map_canvas{
+            width:100%; height:200px; margin-bottom: 0px;margin-top: 0px;
+        }
+    </style>
+
+    <!-- Custom Styles -->
+    <style type="text/css">
+        #map_canvas{
+            width:100%; height:400px; margin-bottom: 10px;
+        }
+        .adp-placemark td{
+            padding:5px 10px;
+        }
+        .adp-placemark .adp-text{
+            padding-left:20px;
+        }
+        .modal{
+            width:700px;
+        }
+    </style>
+
+    <!-- Import Google Map API V3 javascript file -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+        <h2>Multiple Distance &amp; Direction Calculator</h2>
+
+        <div class="row">
+			<div class="col-lg-12 text-center">
+
+			<a href="http://calmapit.com/" target="_blank"><img src="images/logo.png" width="350" height="90"  alt=""/></a>
+
+			</div>
+            <div class="span12">
+                
+                <!-- Distance Calculator Form -->
+                <form id="myForm" name="myForm" class="form-horizontal well">
+                    <div class="control-group source-container">
+                        <label class="control-label" for="inputEmail">Journey Start From :</label>
+                        <div class="controls">
+                            <input type="text" id="fromAddress" name="from" class="input-xlarge" value="Greenford, Greater London UB6, UK">
+                            &nbsp;<a href="#" onclick="return add_waypoint();">Add Waypoints</a>
+                        </div>
+                    </div>
+                    <div class="control-group destination-container">
+                        <label class="control-label" for="inputPassword">Journey End To :</label>
+                        <div class="controls">
+                            <input type="text" id="toAddress" name="to" class="input-xlarge" value="Heathrow, Hounslow, Greater London TW6, UK">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i> Get Route Details</button>
+                            <span id="loader"></span>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="locations"></div><!-- To Display list of locations entered -->
+                <div id="summary"></div><!-- To Display general summary (Distance & Duration) -->
+
+                <!-- Modal -->
+                <div id="mapModal" class="well">
+                    <div id="map_area">
+                        <div id="map_canvas"></div><!-- To Display Map -->
+                        <div id="directions"></div><!-- To Display all directions with Waypoints -->
+                    </div>
+                </div>
+                
+            </div><!-- /.span12 -->
+        </div><!-- /.row -->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/waypoints.js"></script>
+
+  </body>
+</html>

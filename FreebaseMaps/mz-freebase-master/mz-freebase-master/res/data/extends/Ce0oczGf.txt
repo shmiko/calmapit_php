@@ -1,0 +1,1 @@
+{"name":"Editor title","id":"\/book\/editor_title","type":"\/type\/type","group":"type","_id":"Ce0oczGf","relation":"\/periodicals","properties":[{"name":"Editors","id":"\/book\/editor_title\/editors","expected_type":"\/book\/editorial_tenure","description":"Editors who have held this title at any periodical."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

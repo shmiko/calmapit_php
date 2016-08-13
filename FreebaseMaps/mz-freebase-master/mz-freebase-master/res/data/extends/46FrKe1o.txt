@@ -1,0 +1,1 @@
+{"name":"Chemistry","id":"\/chemistry","type":"\/type\/domain","group":"zone","_id":"46FrKe1o","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Language Writing Type","id":"\/language\/language_writing_type","type":"\/type\/type","group":"type","_id":"g0cBB4sg","relation":"\/language","properties":[{"name":"Writing systems","id":"\/language\/language_writing_type\/writing_systems","expected_type":"\/language\/language_writing_system","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Film format","id":"\/film\/film_format","type":"\/type\/type","group":"type","_id":"O92xCDci","relation":"\/film","properties":[{"name":"Film Format","id":"\/film\/film_format\/film_format","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

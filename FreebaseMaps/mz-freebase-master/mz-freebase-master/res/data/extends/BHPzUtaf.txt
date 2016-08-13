@@ -1,0 +1,1 @@
+{"name":"Digicams","id":"\/digicams","type":"\/type\/domain","group":"zone","_id":"BHPzUtaf","relation":"root","properties":[],"included_types":[]}

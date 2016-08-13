@@ -1,0 +1,1 @@
+{"name":"Beverage","id":"\/food\/beverage","type":"\/type\/type","group":"type","_id":"nONGGVIk","relation":"\/food","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

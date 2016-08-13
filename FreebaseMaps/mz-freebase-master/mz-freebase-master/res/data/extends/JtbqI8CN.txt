@@ -1,0 +1,1 @@
+{"name":"Ship type","id":"\/boats\/ship_type","type":"\/type\/type","group":"type","_id":"JtbqI8CN","relation":"\/boats","properties":[{"name":"Ship class","id":"\/boats\/ship_type\/ship_class","expected_type":"\/boats\/ship_class","description":"Ship class of this type of ship."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

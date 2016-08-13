@@ -1,0 +1,1 @@
+{"name":"South Korean special city","id":"\/location\/kp_special_city","type":"\/type\/type","group":"type","_id":"bukjBYoF","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

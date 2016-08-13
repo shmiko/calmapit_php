@@ -1,0 +1,1 @@
+{"name":"Award-Nominated Work","id":"\/award\/award_nominated_work","type":"\/type\/type","group":"type","_id":"PGonoFxk","relation":"\/award","properties":[{"name":"Award Nominations","id":"\/award\/award_nominated_work\/award_nominations","expected_type":"\/award\/award_nomination","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

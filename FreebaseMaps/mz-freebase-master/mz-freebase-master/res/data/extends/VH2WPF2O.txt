@@ -1,0 +1,1 @@
+{"name":"Military Theater","id":"\/military\/military_theater","type":"\/type\/type","group":"type","_id":"VH2WPF2O","relation":"\/military","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

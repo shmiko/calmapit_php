@@ -1,0 +1,1 @@
+{"name":"Software Product Milestone","id":"\/freebase\/software_product_milestone","type":"\/type\/type","group":"type","_id":"2vJndXVE","relation":"\/freebase","properties":[{"name":"Tickets","id":"\/freebase\/software_product_milestone\/tickets","expected_type":"\/freebase\/software_ticket","description":""}],"included_types":[]}

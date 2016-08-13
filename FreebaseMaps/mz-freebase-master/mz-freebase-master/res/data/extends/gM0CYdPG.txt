@@ -1,0 +1,1 @@
+{"name":"Help Topic Relationship","id":"\/freebase\/help_topic_relationship","type":"\/type\/type","group":"type","_id":"gM0CYdPG","relation":"\/freebase","properties":[{"name":"Related Topic","id":"\/freebase\/help_topic_relationship\/related_topic","expected_type":"\/freebase\/freebase_help_topic","description":""}],"included_types":[]}

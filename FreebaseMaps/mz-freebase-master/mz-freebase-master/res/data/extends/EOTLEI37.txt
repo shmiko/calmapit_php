@@ -1,0 +1,1 @@
+{"name":"Composer","id":"\/music\/composer","type":"\/type\/type","group":"type","_id":"EOTLEI37","relation":"\/music","properties":[{"name":"Works Composed","id":"\/music\/composer\/compositions","expected_type":"\/music\/composition","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

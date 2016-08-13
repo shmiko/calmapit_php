@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+	
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,geometry"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20130526/json2.min.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/scores.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    
+    <script type="text/javascript">
+
+      google.maps.event.addDomListener(window, 'load', r2r.initialize);
+
+    </script>
+  </head>
+  <body>
+	
+    <div id="intro">
+      <div style="float: left; padding-right: 32px;">	
+	 
+	  <a href="http://calmapit.com">
+	  <img src="images/calmapit_color_55x_icon.png" alt="calmapit"/>
+	  <img src="images/calmapit_logo1.png" alt="calmapit" /></a></div>
+	 <img src="images/rome2rio_logo.jpg" Style="float:right;top: -6px;">
+      <div style="float: left;" id="intro-text">
+        <div style="float: left;">
+          <p>
+            <span style='color: #00B3B3; font-size: 18pt;'> Can you find the longest travel route in the world?</span>
+            <br><strong>How to play:</strong> Enter two destinations, and see how you fare!
+          </p>
+        </div>
+        <div style="float: right; padding-left: 64px;">
+            <br><span style='color: red;'>One point per 100km.</span>
+            <br><span style='color: green;'>One point per 1 hour travel.</span>
+            <br><span style='color: blue;'> Ten points per hop (plane, bus, train, ferry, etc.).</span>
+        </div>
+      </div>
+      <div style="float: left;" id="searching-message">
+        <p>Calculating your score, please wait...</p>
+      </div>
+      <div style="float: left;" id="play-score-top">
+        <p style="line-height: 0.5;">
+        <span id="play-score-text">You scored 12 points! Your rank is 21st.</span>
+        <span id="play-summary"><br></span>
+        </p>
+      </div>
+    </div>
+	
+    <div id="tips">
+      <p>Insider Tip: Travel between local addresses to earn extra points for buses and taxis.</p>
+    </div>
+
+    <div id="github">
+      <p>Source code: <a href="http://bit.ly/rome2riogame">bit.ly/rome2riogame</a></p>
+    </div>
+
+    <div id="play-map"></div>
+
+    <div id="play-text">
+      <input id="play-from-input" class="play-text play-input" type="text" placeholder="From" />
+      <input id="play-to-input" class="play-text play-input" type="text" placeholder="To" />
+      <div id="play-leaders" class="play-text play-leaders"></div>
+    </div>
+
+    <div id="play-congrats" class="play-text play-congrats">
+      <p>Congratulations, you are ranked 1st!</p>
+      <p>Please enter your Twitter or short name for the leader board.</p>
+      <input id="play-congrats-name" class="play-text" type="text" /><br />
+      <input class="play-text play-button" type="button" value="Save" onclick="r2r.saveHighScore();" />
+      <input class="play-text play-button" type="button" value="Skip" onclick="r2r.skipHighScore();" />
+    </div>
+
+  </body>
+</html>

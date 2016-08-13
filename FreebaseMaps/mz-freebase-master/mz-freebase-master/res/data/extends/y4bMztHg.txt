@@ -1,0 +1,1 @@
+{"name":"Organization legal structure","id":"\/business\/company_type","type":"\/type\/type","group":"type","_id":"y4bMztHg","relation":"\/organization","properties":[{"name":"Organizations","id":"\/business\/company_type\/companies_of_this_type","expected_type":"\/organization\/organization","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

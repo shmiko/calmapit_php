@@ -1,0 +1,1 @@
+{"name":"Radio network","id":"\/broadcast\/radio_network","type":"\/type\/type","group":"type","_id":"EHrOeH7e","relation":"\/broadcast","properties":[{"name":"Affiliates","id":"\/broadcast\/radio_network\/affiliates","expected_type":"\/broadcast\/radio_affiliation_duration","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

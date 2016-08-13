@@ -1,0 +1,1 @@
+{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure","type":"\/type\/type","group":"type","_id":"DipPPWRQ","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

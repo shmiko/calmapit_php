@@ -1,0 +1,1 @@
+{"name":"Patent office","id":"\/law\/patent_office","type":"\/type\/type","group":"type","_id":"3myw7Rl3","relation":"\/law","properties":[{"name":"Patents","id":"\/law\/patent_office\/patents","expected_type":"\/law\/us_patent","description":"Patent applications filed with this patent office."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

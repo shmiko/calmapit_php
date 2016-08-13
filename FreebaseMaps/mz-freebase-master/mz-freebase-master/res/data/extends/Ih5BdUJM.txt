@@ -1,0 +1,1 @@
+{"name":"Sexual orientation","id":"\/celebrities\/sexual_orientation","type":"\/type\/type","group":"type","_id":"Ih5BdUJM","relation":"\/celebrities","properties":[{"name":"Celebrities","id":"\/celebrities\/sexual_orientation\/celebrities","expected_type":"\/celebrities\/sexual_orientation_phase","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

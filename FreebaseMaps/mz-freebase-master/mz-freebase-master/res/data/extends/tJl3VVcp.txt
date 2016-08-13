@@ -1,0 +1,1 @@
+{"name":"Type of museum","id":"\/architecture\/type_of_museum","type":"\/type\/type","group":"type","_id":"tJl3VVcp","relation":"\/architecture","properties":[{"name":"Museums","id":"\/architecture\/type_of_museum\/museums","expected_type":"\/architecture\/museum","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

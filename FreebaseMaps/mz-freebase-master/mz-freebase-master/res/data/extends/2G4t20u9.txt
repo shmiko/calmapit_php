@@ -1,0 +1,1 @@
+{"name":"Software Category","id":"\/freebase\/software_category","type":"\/type\/type","group":"type","_id":"2G4t20u9","relation":"\/freebase","properties":[{"name":"Tickets","id":"\/freebase\/software_category\/tickets","expected_type":"\/freebase\/software_ticket","description":""}],"included_types":[]}

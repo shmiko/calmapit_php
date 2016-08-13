@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>jQuery Facebook Wall</title>
+
+	<!--style sheets-->
+		<link rel="stylesheet" href="css/jQueryFacebookWall.min.css" type="text/css" media="screen" />    <link rel="stylesheet" href="../includes/jqfm-example.css" type="text/css" media="screen" />
+
+</head>
+
+<body style="background:#fcfcfc url(http://ironlasso.com/wp-content/uploads/2013/05/background.jpg) repeat top center fixed;">
+	
+<script type="text/javascript">
+	window.fbAsyncInit = function() {
+		FB.init({ appId:'245065858862722', status:true, cookie:true, xfbml:true, oauth:true }); 
+	};
+</script>
+<script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=245065858862722";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="fb-root"></div>
+	
+<div class="jqfbw-example-nav" >    
+    <a class="jqfbw-example-nav-link" href="http://codecanyon.net/item/jqueryfacebookwall/4882012?ref=ludicrisMaximus">Download Source</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jqueryfacebookwall-plugin/" >jQueryFacebookWall Home</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jQueryFacebookWall/index.html" >Timeline Example</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jQueryFacebookWall/wall.html" >Wall Example</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jQueryFacebookWall/single-column.html" >Single Column Example</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jQueryFacebookWall/example-with-controls.html" >Example With Controls</a>
+    <a class="jqfbw-example-nav-link" href="http://ironlasso.com/jqueryfacebookwall-plugin-options/">Option Descriptions</a>
+</div>    
+<div class="fb-like-wrapper">
+	<div class="fb-like" data-href="http://ironlasso.com/jQueryFacebookWall/"   data-show-faces="false" data-send="true"></div>
+</div>
+<!-- plugin home wide
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-5596827964697060"
+     data-ad-slot="2054567153"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+-->
+    <div class="example-wrapper">
+   		<div class="facebook-wall"></div>
+	</div>
+    <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41228315-1', 'ironlasso.com');
+  ga('send', 'pageview');
+
+</script></body>
+	
+	<!--load jQuery from google, else get a local copy-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="library/js/libs/jquery-1.7.min.js"><\/script>')</script>
+    
+	             
+	    <script src="js/jQueryFacebookWall.min.js"></script>  
+	    
+    <script>
+	$(document).ready(function(){
+		// Calling our plugin with a fb account username and an access token, from 
+		$('.facebook-wall').jQueryFacebookWall({
+			'appId': '245065858862722',
+			'facebookUser':'InternationalSurfingAssociation',
+			'domain': 'ironlasso.com',
+			'display':'wall',
+			'posts':{
+				'feedType': 'feed',
+				'limit': 12	
+			},
+			'comments':{
+				'showAtStart': 3,
+				'showMoreNum': 10,
+				'limit': 50
+			},
+			'albums':{
+				'limit': 6
+			},
+			'events':{
+				'show':false
+			},
+			'debug': false
+		});
+	})//end document ready
+	</script>
+
+</html>

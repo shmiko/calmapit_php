@@ -1,0 +1,1 @@
+{"name":"Closed Bug \/ Feature Request","id":"\/freebase\/closed_bug_feature_request","type":"\/type\/type","group":"type","_id":"PCpyxoyS","relation":"\/freebase","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

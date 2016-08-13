@@ -1,0 +1,1 @@
+{"name":"Poetic Meter","id":"\/book\/poetic_meter","type":"\/type\/type","group":"type","_id":"xJOVEjFo","relation":"\/book","properties":[{"name":"Poems With This Meter","id":"\/book\/poetic_meter\/poems_with_this_meter","expected_type":"\/book\/poem","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

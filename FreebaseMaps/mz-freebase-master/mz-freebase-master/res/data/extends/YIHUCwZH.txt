@@ -1,0 +1,1 @@
+{"name":"IATA airline designator","id":"\/aviation\/iata_airline_designator","type":"\/type\/type","group":"type","_id":"YIHUCwZH","relation":"\/aviation","properties":[{"name":"Airline","id":"\/aviation\/iata_airline_designator\/airline","expected_type":"\/aviation\/airline","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

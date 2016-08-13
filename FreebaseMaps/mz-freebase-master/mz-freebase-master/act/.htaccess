@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+ErrorDocument 404 /errors/404.php
+RewriteRule ^geticon?f=(.*)$ geticon.php?f=$1 [L]

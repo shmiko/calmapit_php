@@ -1,0 +1,1 @@
+{"name":"Adherents","id":"\/religion\/adherents","type":"\/type\/type","group":"type","_id":"qlqtAWoA","relation":"\/religion","properties":[{"name":"Religion","id":"\/religion\/adherents\/religion","expected_type":"\/religion\/religion","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

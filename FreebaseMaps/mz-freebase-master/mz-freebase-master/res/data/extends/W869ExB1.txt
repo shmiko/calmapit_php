@@ -1,0 +1,1 @@
+{"name":"Glacier type","id":"\/geography\/glacier_type","type":"\/type\/type","group":"type","_id":"W869ExB1","relation":"\/geography","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

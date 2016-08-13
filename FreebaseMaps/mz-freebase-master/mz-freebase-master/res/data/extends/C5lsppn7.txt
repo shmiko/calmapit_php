@@ -1,0 +1,1 @@
+{"name":"Abused substance","id":"\/celebrities\/abused_substance","type":"\/type\/type","group":"type","_id":"C5lsppn7","relation":"\/celebrities","properties":[{"name":"Abused by","id":"\/celebrities\/abused_substance\/abused_by","expected_type":"\/celebrities\/substance_abuse_problem","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

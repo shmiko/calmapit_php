@@ -1,0 +1,1 @@
+{"name":"Film theorist","id":"\/film\/film_theorist","type":"\/type\/type","group":"type","_id":"xZradifX","relation":"\/film","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

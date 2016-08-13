@@ -1,0 +1,1 @@
+{"name":"Rehab facility","id":"\/celebrities\/rehab_facility","type":"\/type\/type","group":"type","_id":"giq8oVaH","relation":"\/celebrities","properties":[{"name":"Celebrity patients","id":"\/celebrities\/rehab_facility\/celebrity_patients","expected_type":"\/celebrities\/rehab","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

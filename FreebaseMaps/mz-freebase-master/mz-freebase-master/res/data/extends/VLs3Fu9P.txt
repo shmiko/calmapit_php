@@ -1,0 +1,1 @@
+{"name":"Geology","id":"\/geology","type":"\/type\/domain","group":"zone","_id":"VLs3Fu9P","relation":"root","properties":[],"included_types":[]}

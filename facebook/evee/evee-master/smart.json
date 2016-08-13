@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "moment": {},
+    "page-js": {},
+    "router": {},
+    "mocha-web": {},
+    "modernizr-meteor": {}
+  }
+}

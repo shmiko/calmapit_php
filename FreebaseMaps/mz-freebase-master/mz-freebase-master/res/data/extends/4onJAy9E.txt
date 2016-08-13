@@ -1,0 +1,1 @@
+{"name":"Issuer","id":"\/business\/issuer","type":"\/type\/type","group":"type","_id":"4onJAy9E","relation":"\/business","properties":[{"name":"Issue","id":"\/business\/issuer\/issue","expected_type":"\/business\/issue","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

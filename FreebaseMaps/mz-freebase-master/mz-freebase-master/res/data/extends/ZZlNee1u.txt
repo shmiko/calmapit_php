@@ -1,0 +1,1 @@
+{"name":"Theater Genre","id":"\/theater\/theater_genre","type":"\/type\/type","group":"type","_id":"ZZlNee1u","relation":"\/theater","properties":[{"name":"Plays In This Genre","id":"\/theater\/theater_genre\/plays_in_this_genre","expected_type":"\/theater\/play","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

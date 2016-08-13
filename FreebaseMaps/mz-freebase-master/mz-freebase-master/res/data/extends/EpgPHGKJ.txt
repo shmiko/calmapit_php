@@ -1,0 +1,1 @@
+{"name":"Sport Medal","id":"\/sports\/sport_medal","type":"\/type\/type","group":"type","_id":"EpgPHGKJ","relation":"\/sports","properties":[{"name":"Medal winners","id":"\/sports\/sport_medal\/medal_winners","expected_type":"\/sports\/competitor_competition_relationship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

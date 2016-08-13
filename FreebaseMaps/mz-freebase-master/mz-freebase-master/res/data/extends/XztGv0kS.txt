@@ -1,0 +1,1 @@
+{"name":"Project focus","id":"\/projects\/project_focus","type":"\/type\/type","group":"type","_id":"XztGv0kS","relation":"\/projects","properties":[{"name":"Projects","id":"\/projects\/project_focus\/projects","expected_type":"\/projects\/project","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

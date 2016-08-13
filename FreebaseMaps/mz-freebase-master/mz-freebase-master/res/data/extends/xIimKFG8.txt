@@ -1,0 +1,1 @@
+{"name":"Risk Factor","id":"\/medicine\/risk_factor","type":"\/type\/type","group":"type","_id":"xIimKFG8","relation":"\/medicine","properties":[{"name":"Diseases with this Risk Factor","id":"\/medicine\/risk_factor\/diseases","expected_type":"\/medicine\/disease","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

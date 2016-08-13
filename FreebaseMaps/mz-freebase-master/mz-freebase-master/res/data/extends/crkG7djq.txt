@@ -1,0 +1,1 @@
+{"name":"Aircraft type","id":"\/aviation\/aircraft_type","type":"\/type\/type","group":"type","_id":"crkG7djq","relation":"\/aviation","properties":[{"name":"Aircraft of this type","id":"\/aviation\/aircraft_type\/aircraft_of_this_type","expected_type":"\/aviation\/aircraft_model","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

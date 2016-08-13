@@ -1,0 +1,1 @@
+{"name":"Bone","id":"\/medicine\/bone","type":"\/type\/type","group":"type","_id":"ViFL40QF","relation":"\/medicine","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Anatomical structure","id":"\/medicine\/anatomical_structure"}]}

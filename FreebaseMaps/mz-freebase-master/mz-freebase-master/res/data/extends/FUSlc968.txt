@@ -1,0 +1,1 @@
+{"name":"TV Program Creator","id":"\/tv\/tv_program_creator","type":"\/type\/type","group":"type","_id":"FUSlc968","relation":"\/tv","properties":[{"name":"TV programs Created","id":"\/tv\/tv_program_creator\/programs_created","expected_type":"\/tv\/tv_program","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

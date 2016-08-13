@@ -1,0 +1,1 @@
+{"name":"Owned animal","id":"\/biology\/owned_animal","type":"\/type\/type","group":"type","_id":"twjvdu8f","relation":"\/biology","properties":[{"name":"Owners","id":"\/biology\/owned_animal\/owners","expected_type":"\/biology\/animal_ownership","description":""}],"included_types":[{"name":"Organism","id":"\/biology\/organism"},{"name":"Topic","id":"\/common\/topic"}]}

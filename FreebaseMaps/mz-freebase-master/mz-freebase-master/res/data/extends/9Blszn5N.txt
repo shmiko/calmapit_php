@@ -1,0 +1,1 @@
+{"name":"Soundtrack","id":"\/music\/soundtrack","type":"\/type\/type","group":"type","_id":"9Blszn5N","relation":"\/music","properties":[{"name":"Film","id":"\/music\/soundtrack\/film","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Musical Album","id":"\/music\/album"}]}

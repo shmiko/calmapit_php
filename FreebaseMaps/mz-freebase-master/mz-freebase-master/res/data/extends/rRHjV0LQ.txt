@@ -1,0 +1,1 @@
+{"name":"Film distributor","id":"\/film\/film_distributor","type":"\/type\/type","group":"type","_id":"rRHjV0LQ","relation":"\/film","properties":[{"name":"Films distributed","id":"\/film\/film_distributor\/films_distributed","expected_type":"\/film\/film_film_distributor_relationship","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

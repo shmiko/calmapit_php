@@ -1,0 +1,1 @@
+{"name":"Football Competition","id":"\/soccer\/football_award","type":"\/type\/type","group":"type","_id":"lT5zT8Sx","relation":"\/soccer","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

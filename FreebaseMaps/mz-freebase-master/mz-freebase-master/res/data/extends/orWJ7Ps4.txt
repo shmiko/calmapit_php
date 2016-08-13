@@ -1,0 +1,1 @@
+{"name":"Camera Storage Type","id":"\/digicams\/camera_storage_type","type":"\/type\/type","group":"type","_id":"orWJ7Ps4","relation":"\/digicams","properties":[{"name":"Compatible cameras","id":"\/digicams\/camera_storage_type\/compatible_cameras","expected_type":"\/digicams\/digital_camera","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

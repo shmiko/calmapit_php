@@ -1,0 +1,1 @@
+{"name":"Type Role","id":"\/freebase\/type_role","type":"\/type\/type","group":"type","_id":"QsNmtMNk","relation":"\/freebase","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Fiber","id":"\/fashion\/fiber","type":"\/type\/type","group":"type","_id":"e9denVBW","relation":"\/fashion","properties":[{"name":"Textiles made from this fiber","id":"\/fashion\/fiber\/textiles_made_from_this_fiber","expected_type":"\/fashion\/textile","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

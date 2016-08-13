@@ -1,0 +1,1 @@
+{"name":"Exhibition curator","id":"\/exhibitions\/exhibition_curator","type":"\/type\/type","group":"type","_id":"MDb0KaNH","relation":"\/exhibitions","properties":[{"name":"Exhibitions curated","id":"\/exhibitions\/exhibition_curator\/exhibitions_curated","expected_type":"\/exhibitions\/exhibition","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

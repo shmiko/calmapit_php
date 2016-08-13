@@ -1,0 +1,1 @@
+{"name":"Film writer","id":"\/film\/writer","type":"\/type\/type","group":"type","_id":"px3U0oZm","relation":"\/film","properties":[{"name":"Film writing credits","id":"\/film\/writer\/film","expected_type":"\/film\/film","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Person","id":"\/people\/person"}]}

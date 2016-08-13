@@ -1,0 +1,242 @@
+html
+{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+#container
+{
+	min-height:100%;
+	position:relative;
+}
+
+BODY
+{
+	background-image:url(main-bg.png);
+	background-repeat:repeat;
+	height:100%;
+	font-size:13px;
+	font-family:Arial,Verdana;
+	font-weight:400;
+	color:#000;
+	margin:0 auto;
+	padding:0;
+}
+
+a:link,a:active,a:visited
+{
+	color:#0078f0;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:#ff8000;
+	text-decoration:none;
+}
+
+a,img
+{
+	border:0;
+	outline:0;
+}
+#version
+{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:999;
+	width:120px;
+	height:120px;
+}
+.top
+{
+	font-size:11px;
+	font-family:Verdana,Arial;
+	font-weight:400;
+	color:#fff;
+	padding-top:10px;
+	padding-bottom:10px;
+	height:56px;
+	text-align:center;
+	background-image:url(bg..png);
+	background-repeat:repeat-x;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+.intop
+{
+	width:960px;
+	text-align:left;
+	margin:0 auto;
+}
+
+.main
+{
+	color:#1a1a1a;
+	background-image:url(content-bg.png);
+	background-repeat:repeat;
+	padding-top:76px;
+	width:960px;
+	padding-bottom:60px;
+	margin:0 auto;
+}
+
+.footer
+{
+	font-size:11px;
+	font-family:Verdana,Arial;
+	font-weight:400;
+	color:#fff;
+	padding-top:15px;
+	padding-bottom:10px;
+	height:20px;
+	text-align:center;
+	background-image:url(bg-footer.png);
+	background-repeat:repeat-x;
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.infooter
+{
+	width:940px;
+	text-align:left;
+	margin:0 auto;
+	padding:right:10px;
+}
+
+.clear
+{
+	clear:both;
+	margin:0;
+	padding:0;
+}
+
+.content
+{
+	padding:0 20px 20px;
+}
+
+
+
+.left
+{
+	position:relative;
+	float:left;
+	padding-right:5px;
+	margin-right:20px;
+	width:245px;
+	height:100%;
+	color:#43646f;
+}
+
+.right
+{
+	position:relative;
+	float:left;
+	width:650px;
+}
+
+.space
+{
+	height:5px;
+}
+
+
+
+.leftop
+{
+	float:left;
+	position:relative;
+}
+
+.rightop
+{
+	float:right;
+	position:relative;
+	margin-right:20px;
+	margin-top:5px;
+}
+
+#button-home
+{
+	width:150px;
+	height:56px;
+	background-image:url(button-home.png);
+	background-repeat:no-repeat;
+	padding:0;
+}
+
+#button-home:hover
+{
+	background-image:url(button-home-hover.png);
+	background-repeat:no-repeat;
+}
+
+#button-demos
+{
+	width:150px;
+	height:56px;
+	background-image:url(button-demos.png);
+	background-repeat:no-repeat;
+	padding:0;
+}
+
+#button-demos:hover
+{
+	background-image:url(button-demos-hover.png);
+	background-repeat:no-repeat;
+}
+
+#button-purchase
+{
+	width:150px;
+	height:56px;
+	background-image:url(button-purchase.png);
+	background-repeat:no-repeat;
+	padding:0;
+}
+
+#button-purchase:hover
+{
+	background-image:url(button-purchase-hover.png);
+	background-repeat:no-repeat;
+}
+
+.left-box
+{
+	float:left;
+	position:relative;
+	width:48%;
+	margin-right:20px;
+}
+
+.right-box
+{
+	float:right;
+	position:relative;
+	width:48%;
+}
+
+.left-main
+{
+	position:relative;
+	float:left;
+	width:262px;
+	height:341px;
+	margin-right:20px;
+}
+
+.right-main
+{
+	position:relative;
+	float:right;
+	width:415px;
+	height:341px;
+}

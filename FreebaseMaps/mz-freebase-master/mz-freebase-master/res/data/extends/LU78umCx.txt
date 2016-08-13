@@ -1,0 +1,1 @@
+{"name":"Newspaper Owner","id":"\/book\/newspaper_owner","type":"\/type\/type","group":"type","_id":"LU78umCx","relation":"\/periodicals","properties":[{"name":"Newspapers Owned","id":"\/book\/newspaper_owner\/newspapers_owned","expected_type":"\/book\/newspaper","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,24 @@
+/* Nav Links */
+.fb-like-wrapper { width:95px; margin: 10px auto; overflow:hidden}
+.jqfbw-example-nav{ width:100%; margin: 15px 0; text-align: center;}
+.jqfbw-example-nav-link { color: #333333; text-decoration: none; border-right: 1px solid #333333; padding: 0px 10px;}
+.jqfbw-example-nav-link:last-child { border-right: none; }
+
+/* Plugin Controls Example */
+.wall-wrapper { float: left; width: 100%; }
+.wall-wrapper .facebook-wall { max-width: 1000px; margin: 0 auto;}
+#plugin-controls-wrapper{ height: auto; padding:10px; width: 196px; margin-left: -220px; float: right; background-color:#ffffff; border: 1px solid #d1d1d1; font-size: 12px;}
+#plugin-controls-wrapper h3{ margin: 0 0 0 -11px; width: 197px; padding: 5px 10px 10px; border-bottom: 1px solid #d1d1d1;}
+#plugin-controls-wrapper h4{ margin: 12px 0 5px 0; padding: 0 ; width: 100%; border-bottom: 1px solid #d1d1d1; }
+#plugin-controls .input-box{ width: 20px;}
+#plugin-controls label{  display: inline-block; width: 100px;}
+#plugin-controls select{ }
+#plugin-controls #display{ width: 84px;}
+
+.example-wrapper{ width:70%; margin: 0 auto; }
+
+
+@media screen and (max-width: 600px) {
+		.example-wrapper{ width:100%; margin: 0 auto; }
+		.jqfbw-example-nav-link { display: block; border-right: none; padding: 10px 0px; }
+}

@@ -1,0 +1,1 @@
+{"name":"Guidebook series","id":"\/travel\/guidebook_series","type":"\/type\/type","group":"type","_id":"wZIR73M5","relation":"\/travel","properties":[{"name":"Guidebooks","id":"\/travel\/guidebook_series\/guidebooks","expected_type":"\/travel\/guidebook","description":"Individual guidebooks in this series"}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

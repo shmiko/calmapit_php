@@ -1,0 +1,1 @@
+{"name":"Fuel","id":"\/automotive\/fuel","type":"\/type\/type","group":"type","_id":"OmBWuEzt","relation":"\/automotive","properties":[{"name":"Engines Using This Fuel","id":"\/automotive\/fuel\/engines","expected_type":"\/automotive\/engine","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

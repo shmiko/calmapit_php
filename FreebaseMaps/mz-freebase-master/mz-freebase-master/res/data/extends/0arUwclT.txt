@@ -1,0 +1,1 @@
+{"name":"Rail network","id":"\/rail\/rail_network","type":"\/type\/type","group":"type","_id":"0arUwclT","relation":"\/rail","properties":[{"name":"Railways in this network","id":"\/rail\/rail_network\/railways","expected_type":"\/rail\/railway","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

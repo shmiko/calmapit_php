@@ -1,0 +1,1 @@
+{"name":"Romantic involvement","id":"\/fictional_universe\/romantic_involvement","type":"\/type\/type","group":"type","_id":"4Snc3VB0","relation":"\/fictional_universe","properties":[{"name":"Partner","id":"\/fictional_universe\/romantic_involvement\/partner","expected_type":"\/fictional_universe\/fictional_character","description":""}],"included_types":[]}

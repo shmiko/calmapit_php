@@ -1,0 +1,1 @@
+{"name":"Travel","id":"\/travel","type":"\/type\/domain","group":"zone","_id":"qmOdFyiA","relation":"root","properties":[],"included_types":[]}

@@ -1,0 +1,1 @@
+{"name":"Amusement Ride Type","id":"\/amusement_parks\/ride_type","type":"\/type\/type","group":"type","_id":"tnaBXHSv","relation":"\/amusement_parks","properties":[{"name":"Rides","id":"\/amusement_parks\/ride_type\/rides","expected_type":"\/amusement_parks\/ride","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

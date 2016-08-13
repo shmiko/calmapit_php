@@ -1,0 +1,1 @@
+{"name":"Spanish place of sovereignty","id":"\/location\/es_place_of_sovereignty","type":"\/type\/type","group":"type","_id":"MgMjzg6e","relation":"\/location","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"},{"name":"Location","id":"\/location\/location"},{"name":"Administrative Division","id":"\/location\/administrative_division"}]}

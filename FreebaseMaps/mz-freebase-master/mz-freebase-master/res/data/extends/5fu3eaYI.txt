@@ -1,0 +1,1 @@
+{"name":"Computer Scientist","id":"\/computer\/computer_scientist","type":"\/type\/type","group":"type","_id":"5fu3eaYI","relation":"\/computer","properties":[],"included_types":[{"name":"Person","id":"\/people\/person"},{"name":"Topic","id":"\/common\/topic"}]}

@@ -1,0 +1,1 @@
+{"name":"Ranked item","id":"\/award\/ranked_item","type":"\/type\/type","group":"type","_id":"jJISiTdc","relation":"\/award","properties":[{"name":"Appears in ranked lists","id":"\/award\/ranked_item\/appears_in_ranked_lists","expected_type":"\/award\/ranking","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

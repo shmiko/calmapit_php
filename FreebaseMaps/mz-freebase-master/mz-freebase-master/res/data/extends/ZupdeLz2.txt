@@ -1,0 +1,1 @@
+{"name":"Film festival focus","id":"\/film\/film_festival_focus","type":"\/type\/type","group":"type","_id":"ZupdeLz2","relation":"\/film","properties":[{"name":"Festivals with this focus","id":"\/film\/film_festival_focus\/festivals_with_this_focus","expected_type":"\/film\/film_festival","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

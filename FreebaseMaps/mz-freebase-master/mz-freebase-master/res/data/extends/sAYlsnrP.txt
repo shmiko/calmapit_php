@@ -1,0 +1,1 @@
+{"name":"Sports League Award Type","id":"\/sports\/sports_award_type","type":"\/type\/type","group":"type","_id":"sAYlsnrP","relation":"\/sports","properties":[{"name":"Winners","id":"\/sports\/sports_award_type\/winners","expected_type":"\/sports\/sports_award","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

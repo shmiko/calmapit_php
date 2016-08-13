@@ -1,0 +1,47 @@
+body{
+  overflow: initial;
+  font-family:sans-serif;
+}
+.davinci{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.PanoContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.descContainer {
+  width: 100%;
+  padding:20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.reel{
+  cursor: pointer !important;
+}
+.reel-panning *{
+  cursor: pointer !important;
+}
+a{
+  text-decoration: none;
+}
+.marker-label {
+  font-family: 'Century Gothic', 'URW Gothic L', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #f5622d;
+  text-shadow: 1px 1px 1px #000000;
+}
+.name-tag {
+  color: #f5622d;
+  font-weight: bold;
+  font-size: 1em;
+}
+.role-tag {
+  font-size: 0.8em;
+}

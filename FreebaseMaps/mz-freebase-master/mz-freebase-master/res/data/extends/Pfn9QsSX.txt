@@ -1,0 +1,1 @@
+{"name":"Venture Investor","id":"\/venture_capital\/venture_investor","type":"\/type\/type","group":"type","_id":"Pfn9QsSX","relation":"\/business","properties":[{"name":"Venture Investments","id":"\/venture_capital\/venture_investor\/investments","expected_type":"\/venture_capital\/venture_investment","description":""}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

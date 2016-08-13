@@ -1,0 +1,1 @@
+{"name":"Film screening venue","id":"\/film\/film_screening_venue","type":"\/type\/type","group":"type","_id":"ME9nYHxa","relation":"\/film","properties":[],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

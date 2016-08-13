@@ -1,0 +1,4 @@
+Bing Spatial Data Services, 1.0, FourthCoffeeShops
+EntityID(Edm.String,primaryKey),AddressLine(Edm.String),Locality(Edm.String),AdminDistrict(Edm.String),PostalCode(Edm.String),CountryRegion(Edm.String),Phone(Edm.String),Manager(Edm.String),Latitude(Edm.Double),Longitude(Edm.Double)
+1000,1 Microsoft Way,Redmond,WA,98052,,303-555-0188,Alan Steiner,,
+1001,,,,,,425-555-0111,Phil Spencer,47.639767,-122.129959

@@ -1,0 +1,1 @@
+{"name":"TV crew role","id":"\/tv\/tv_crew_role","type":"\/type\/type","group":"type","_id":"6tgGVnLm","relation":"\/tv","properties":[{"name":"TV episodes with this job","id":"\/tv\/tv_crew_role\/tv_episodes","expected_type":"\/tv\/tv_crew_gig","description":"TV episodes on which someone has filled this role."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

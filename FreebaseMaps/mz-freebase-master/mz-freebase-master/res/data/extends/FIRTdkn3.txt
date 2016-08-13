@@ -1,0 +1,1 @@
+{"name":"Tea type","id":"\/food\/tea_type","type":"\/type\/type","group":"type","_id":"FIRTdkn3","relation":"\/food","properties":[{"name":"Representative teas","id":"\/food\/tea_type\/tea","expected_type":"\/food\/tea","description":"Enter specific varieties of tea that are of this type."}],"included_types":[{"name":"Topic","id":"\/common\/topic"}]}

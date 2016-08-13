@@ -1,0 +1,1 @@
+{"name":"Coronation","id":"\/royalty\/coronation","type":"\/type\/type","group":"type","_id":"9EyqziLU","relation":"\/royalty","properties":[{"name":"Monarch","id":"\/royalty\/coronation\/monarch","expected_type":"\/royalty\/monarch","description":""}],"included_types":[{"name":"Event","id":"\/time\/event"},{"name":"Topic","id":"\/common\/topic"}]}

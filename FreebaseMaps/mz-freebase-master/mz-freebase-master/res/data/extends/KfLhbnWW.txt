@@ -1,0 +1,1 @@
+{"name":"Diesel locomotive class","id":"\/rail\/diesel_locomotive_class","type":"\/type\/type","group":"type","_id":"KfLhbnWW","relation":"\/rail","properties":[],"included_types":[{"name":"Locomotive class","id":"\/rail\/locomotive_class"},{"name":"Topic","id":"\/common\/topic"}]}
