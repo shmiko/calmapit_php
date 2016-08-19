@@ -118,7 +118,7 @@
           infowindow.marker = marker;
           infowindow.setContent("");
           // infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div>');
-          infowindow.open(map, marker);
+          // infowindow.open(map, marker);
           // Make sure the marker property is cleared if the infowindow is closed.
           infowindow.addListener('closeclick', function() {
             infowindow.marker = null;
@@ -133,8 +133,25 @@
               var nearStreetViewLocation = data.location.latlng;
               var heading = google.maps.geometry.spherical.computeHeading(
                   nearStreetViewLocation, marker.position);
-              infowindow.setContent('<div>' + )
+                infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div><div id="pano"></div>');
+                var panoramaOptions = {
+                  position: nearStreetViewLocation,
+                  pov: {
+                    heading: heading,
+                    pitch: 30
+                  }
+                };
+              var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('pano'), panoramaOptions);
+            } else {
+              infowindow.setContent('<div>' + marker.position + '-' + marker.title + '</div>' +
+                '<div>No Street View Found</div>');
             }
+            //use streetview service to get the closest streetview image within
+            // 50 meters of the marker position
+            streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
+            //open the infowindow on the correct marker
+            infowindow.open(map,marker);
           }
         }
       }
