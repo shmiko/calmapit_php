@@ -64,10 +64,10 @@
 		    anchor: new google.maps.Point(0, 32)
 		  };
 		 // Style the markers a bit. This will be our listing marker icon.
-        var defaultIcon = image2;//makeMarkerIcon('0091ff');
+        var defaultIcon = makeMarkerIcon(image2);
         // Create a "highlighted location" marker color for when the user
         // mouses over the marker.
-        var highlightedIcon = image3;//makeMarkerIcon('FFFF24');
+        var highlightedIcon = makeMarkerIcon(image3);
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
         for (var i = 0; i < locations.length; i++) {
@@ -141,9 +141,9 @@
       // icon of that color. The icon will be 21 px wide by 34 high, have an origin
       // of 0, 0 and be anchored at 10, 34).
       function makeMarkerIcon(markerColor) {
-        var markerImage = new google.maps.MarkerImage(
-          'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
-          '|40|_|%E2%80%A2',
+        var markerImage = new google.maps.MarkerImage(markerColor,
+          //'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
+          //'|40|_|%E2%80%A2',
           new google.maps.Size(21, 34),
           new google.maps.Point(0, 0),
           new google.maps.Point(10, 34),
