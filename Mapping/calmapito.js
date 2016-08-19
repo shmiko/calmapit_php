@@ -38,6 +38,7 @@
           // Get the position from the location array.
           var position = locations[i].location;
           var title = locations[i].title;
+          var image = locations[i].imge;
           // Create a marker per location, and put into markers array.
            var marker = new google.maps.Marker({
             position: position,
