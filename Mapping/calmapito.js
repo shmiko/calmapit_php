@@ -6,12 +6,25 @@
 
 	var map;
 	var markers = [];
-
+	var featureOpts = 	[{"featureType":"administrative","stylers":[{"visibility":"on"}]}
+			,{"featureType":"poi","stylers":[{"visibility":"simplified"}]}
+			,{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]}
+			,{"featureType":"water","stylers":[{"visibility":"simplified"}]}
+			,{"featureType":"transit","stylers":[{"visibility":"simplified"}]}
+			,{"featureType":"landscape","stylers":[{"visibility":"simplified"}]}
+			,{"featureType":"road.highway","stylers":[{"visibility":"on"}]}
+			,{"featureType":"road.local","stylers":[{"visibility":"on"}]}
+			,{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]}
+			,{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]}
+			,{"stylers":[{"saturation":-17},{"gamma":0.36}]}
+			,{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#3f518c"}]}
+			];	
 	function initMap() {
         // Constructor creates a new map - only center and zoom are required.
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -33.856159, lng: 151.215256},
           zoom: 13,
+          styles: featureOpts,
           mapTypeControl: false
         });
         // var opera_house = {lat: -33.856159, lng: 151.215256};
@@ -30,8 +43,10 @@
         	{title: 'Glebe', location: {lat: -33.8798,lng: 151.1854},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
         	{title: 'Balmain', location: {lat: -33.8589,lng: 151.1791}, image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
         ];
+
+			
         var image2 = {
-		    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+		    url: 'beachflag.png',
 		    // This marker is 20 pixels wide by 32 pixels high.
 		    size: new google.maps.Size(20, 32),
 		    // The origin for this image is (0, 0).
@@ -39,6 +54,20 @@
 		    // The anchor for this image is the base of the flagpole at (0, 32).
 		    anchor: new google.maps.Point(0, 32)
 		  };
+		var image3 = {
+		    url: 'redflag.png',
+		    // This marker is 20 pixels wide by 32 pixels high.
+		    size: new google.maps.Size(20, 32),
+		    // The origin for this image is (0, 0).
+		    origin: new google.maps.Point(0, 0),
+		    // The anchor for this image is the base of the flagpole at (0, 32).
+		    anchor: new google.maps.Point(0, 32)
+		  };
+		 // Style the markers a bit. This will be our listing marker icon.
+        var defaultIcon = image2;//makeMarkerIcon('0091ff');
+        // Create a "highlighted location" marker color for when the user
+        // mouses over the marker.
+        var highlightedIcon = image3;//makeMarkerIcon('FFFF24');
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
         for (var i = 0; i < locations.length; i++) {
@@ -67,6 +96,14 @@
             populateInfoWindow(this, largeInfowindow);
           });
         }
+        // Two event listeners - one for mouseover, one for mouseout,
+		// to change the colors back and forth.
+		marker.addListener('mouseover', function() {
+		this.setIcon(highlightedIcon);
+		});
+		marker.addListener('mouseout', function() {
+		this.setIcon(defaultIcon);
+		});
         document.getElementById('show-listings').addEventListener('click', showListings);
         document.getElementById('hide-listings').addEventListener('click', hideListings);
       }
@@ -101,5 +138,18 @@
           markers[i].setMap(null);
         }
       }
+      // icon of that color. The icon will be 21 px wide by 34 high, have an origin
+      // of 0, 0 and be anchored at 10, 34).
+      function makeMarkerIcon(markerColor) {
+        var markerImage = new google.maps.MarkerImage(
+          'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
+          '|40|_|%E2%80%A2',
+          new google.maps.Size(21, 34),
+          new google.maps.Point(0, 0),
+          new google.maps.Point(10, 34),
+          new google.maps.Size(21,34));
+        return markerImage;
+      }
+
 
 // }())
