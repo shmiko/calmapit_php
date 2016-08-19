@@ -23,15 +23,22 @@
 
         //locations array - usually these would be served up via a database
         var locations = [
-        	{title: 'Sydney Opera House', location: {lat: -33.856159, lng: 151.215256},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
-        	{title: 'Sydney Harbour Bridge', location: {lat: -33.8523,lng: 151.2108},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
-        	{title: 'Botanic Gardens', location: {lat: -33.8642,lng: 151.2166},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'Sydney Opera House', location: {lat: -33.856159, lng: 151.215256},image: 'beachflag.png'},
+        	{title: 'Sydney Harbour Bridge', location: {lat: -33.8523,lng: 151.2108},image: 'beachflag.png'},
+        	{title: 'Botanic Gardens', location: {lat: -33.8642,lng: 151.2166},image: 'beachflag.png'},
         	{title: 'The Rocks', location: {lat: -33.8599,lng: 151.2090},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
         	{title: 'Glebe', location: {lat: -33.8798,lng: 151.1854},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
         	{title: 'Balmain', location: {lat: -33.8589,lng: 151.1791}, image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
         ];
-        //var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-  
+        var image2 = {
+		    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+		    // This marker is 20 pixels wide by 32 pixels high.
+		    size: new google.maps.Size(20, 32),
+		    // The origin for this image is (0, 0).
+		    origin: new google.maps.Point(0, 0),
+		    // The anchor for this image is the base of the flagpole at (0, 32).
+		    anchor: new google.maps.Point(0, 32)
+		  };
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
         for (var i = 0; i < locations.length; i++) {
@@ -44,9 +51,14 @@
             position: position,
             title: title,
             animation: google.maps.Animation.DROP,
-            id: i,
-            icon: image
+            icon: image2,
+            shape: shape,
+            id: i
           });
+           var shape = {
+			    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+			    type: 'poly'
+			  };
           // Push the marker to our array of markers.
           markers.push(marker);
           // Create an onclick event to open an infowindow at each marker.
@@ -64,7 +76,7 @@
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
           infowindow.marker = marker;
-          infowindow.setContent('<div>' + marker.position + '</div>');
+          infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div>');
           infowindow.open(map, marker);
           // Make sure the marker property is cleared if the infowindow is closed.
           infowindow.addListener('closeclick', function() {
