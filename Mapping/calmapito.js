@@ -53,7 +53,8 @@
             animation: google.maps.Animation.DROP,
             icon: image2,
             shape: shape,
-            id: i
+            draggable:true,
+    		id: i
           });
            var shape = {
 			    coords: [1, 1, 1, 20, 18, 20, 18, 1],
