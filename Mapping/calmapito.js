@@ -64,10 +64,10 @@
 		    anchor: new google.maps.Point(0, 32)
 		  };
 		 // Style the markers a bit. This will be our listing marker icon.
-        var defaultIcon = makeMarkerIcon(image2);
+        var defaultIcon = makeMarkerIcon('redflag.png');
         // Create a "highlighted location" marker color for when the user
         // mouses over the marker.
-        var highlightedIcon = makeMarkerIcon(image3);
+        var highlightedIcon = makeMarkerIcon('beachflag.png');
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
         for (var i = 0; i < locations.length; i++) {
@@ -83,7 +83,7 @@
             icon: defaultIcon,
             shape: shape,
             draggable:true,
-    		id: i
+    		    id: i
           });
            var shape = {
 			    coords: [1, 1, 1, 20, 18, 20, 18, 1],
@@ -95,15 +95,17 @@
           marker.addListener('click', function() {
             populateInfoWindow(this, largeInfowindow);
           });
+
+           // Two event listeners - one for mouseover, one for mouseout,
+          // to change the colors back and forth.
+          marker.addListener('mouseover', function() {
+            this.setIcon(highlightedIcon);
+          });
+          marker.addListener('mouseout', function() {
+            this.setIcon(defaultIcon);
+          });
         }
-        // Two event listeners - one for mouseover, one for mouseout,
-  		// to change the colors back and forth.
-  		marker.addListener('mouseover', function() {
-  		  this.setIcon(highlightedIcon);
-  		});
-  		marker.addListener('mouseout', function() {
-  		  this.setIcon(defaultIcon);
-  		});
+       
         document.getElementById('show-listings').addEventListener('click', showListings);
         document.getElementById('hide-listings').addEventListener('click', hideListings);
       }
