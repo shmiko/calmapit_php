@@ -30,7 +30,8 @@
         	{title: 'Glebe', location: {lat: -33.8798,lng: 151.1854}},
         	{title: 'Balmain', location: {lat: -33.8589,lng: 151.1791}}
         ];
-
+        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+  
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
         for (var i = 0; i < locations.length; i++) {
@@ -42,7 +43,8 @@
             position: position,
             title: title,
             animation: google.maps.Animation.DROP,
-            id: i
+            id: i,
+            icon: image
           });
           // Push the marker to our array of markers.
           markers.push(marker);
@@ -61,7 +63,7 @@
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
           infowindow.marker = marker;
-          infowindow.setContent('<div>' + marker.title + '</div>');
+          infowindow.setContent('<div>' + marker.position + '</div>');
           infowindow.open(map, marker);
           // Make sure the marker property is cleared if the infowindow is closed.
           infowindow.addListener('closeclick', function() {
