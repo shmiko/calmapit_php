@@ -97,13 +97,13 @@
           });
         }
         // Two event listeners - one for mouseover, one for mouseout,
-		// to change the colors back and forth.
-		marker.addListener('mouseover', function() {
-		this.setIcon(highlightedIcon);
-		});
-		marker.addListener('mouseout', function() {
-		this.setIcon(defaultIcon);
-		});
+  		// to change the colors back and forth.
+  		marker.addListener('mouseover', function() {
+  		  this.setIcon(highlightedIcon);
+  		});
+  		marker.addListener('mouseout', function() {
+  		  this.setIcon(defaultIcon);
+  		});
         document.getElementById('show-listings').addEventListener('click', showListings);
         document.getElementById('hide-listings').addEventListener('click', hideListings);
       }
