@@ -122,6 +122,19 @@
           infowindow.addListener('closeclick', function() {
             infowindow.marker = null;
           });
+          var streetViewService = new.google.maps.streetViewService();
+          var radius = 50;
+          //In case the status is OK, which means the pano was found, compute
+          // the position of the streetview image, then calculate the heading,
+          // then get a panorama from that and set the options
+          function getStreetView(data, status){
+            if (status == google.maps.StreetViewStatus.OK){
+              var nearStreetViewLocation = data.location.latlng;
+              var heading = google.maps.geometry.spherical.computeHeading(
+                  nearStreetViewLocation, marker.position);
+              infowindow.setContent('<div>' + )
+            }
+          }
         }
       }
       // This function will loop through the markers array and display them all.
