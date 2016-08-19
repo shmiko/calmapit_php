@@ -23,14 +23,14 @@
 
         //locations array - usually these would be served up via a database
         var locations = [
-        	{title: 'Sydney Opera House', location: {lat: -33.856159, lng: 151.215256}},
-        	{title: 'Sydney Harbour Bridge', location: {lat: -33.8523,lng: 151.2108}},
-        	{title: 'Botanic Gardens', location: {lat: -33.8642,lng: 151.2166}},
-        	{title: 'The Rocks', location: {lat: -33.8599,lng: 151.2090}},
-        	{title: 'Glebe', location: {lat: -33.8798,lng: 151.1854}},
-        	{title: 'Balmain', location: {lat: -33.8589,lng: 151.1791}}
+        	{title: 'Sydney Opera House', location: {lat: -33.856159, lng: 151.215256},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'Sydney Harbour Bridge', location: {lat: -33.8523,lng: 151.2108},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'Botanic Gardens', location: {lat: -33.8642,lng: 151.2166},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'The Rocks', location: {lat: -33.8599,lng: 151.2090},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'Glebe', location: {lat: -33.8798,lng: 151.1854},image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        	{title: 'Balmain', location: {lat: -33.8589,lng: 151.1791}, image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
         ];
-        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        //var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
   
         var largeInfowindow = new google.maps.InfoWindow();
         // The following group uses the location array to create an array of markers on initialize.
