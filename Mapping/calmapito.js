@@ -80,7 +80,7 @@
             position: position,
             title: title,
             animation: google.maps.Animation.DROP,
-            icon: image2,
+            icon: defaultIcon,
             shape: shape,
             draggable:true,
     		id: i
