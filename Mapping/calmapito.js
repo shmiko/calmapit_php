@@ -75,7 +75,7 @@
     var largeInfowindow = new google.maps.InfoWindow();
 
     //initialise the drawing manager
-    var drawingMnager = new google.mps.drawing.DrawingManager({
+    var drawingManager = new google.mps.drawing.DrawingManager({
       drawingMode: google.maps.drawing.OverlayType.POLYGON,
       drawingControl: true,
       drawingControlOptions: {
