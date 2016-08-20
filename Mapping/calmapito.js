@@ -129,6 +129,28 @@
     document.getElementById('toggle-drawing').addEventListener('click',function(){
       toggleDrawing(drawingManager);
     });
+
+    //add an event listener so that the polygon is captured, call the 
+    // serachWithinPolygon function. This will show the markers in the polygon, 
+    //and hide any outside of it.
+    drawingManager.addListener('overlaycomplete', function(event){
+      //first check if there is an existing polygon.
+      // if there is, get rid of it and remove the markers
+      if (polygon) {
+        polygon.setMap(null);
+        hideListings(markers);
+      }
+      // Switching the drawing mode to the HAND
+      drawingManager.setDrawingMode(null);
+      // creating a new editable polygon from the overlay
+      polygon = event.overlay;
+      polygon.setEditable(true);
+      // searching within the polygon
+      searchWithinPolygon();
+      // Make sure the search is re-done if the polygon is changed
+      polygon.getPath().addListener('set_at', searchWithinPolygon);
+      polygon.getPath().addListener('insert_at', searchWithinPolygon);
+    });
   }
 
   // This function populates the infowindow when the marker is clicked. We'll only allow
@@ -211,8 +233,25 @@
   function toggleDrawing(drawingManager){
     if (drawingManager.map){
       drawingManager.setMap(null);
+      // in case the user drew anything, get rid of the polygon
+      if (polygon !== null){
+        polygon.setMap(null);
+      }
     } else {
       drawingManager.setMap(map);
+    }
+  }
+
+  // this funtion hides all markers outside of the polygon,
+  // and shows only the ones within it. This is so that the
+  // user can specify an exact area of search
+  funtion searchWithinPolygon(){
+    for (var i = 0; i < markers.length; i++){
+      if (google.maps.geometry.poly.containesLocation(markers[i].position, polygon)){
+        markers[i].setMap(map);
+      } else {
+        markers[i].setMap(null);
+      }
     }
   }
 
