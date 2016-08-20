@@ -6,6 +6,11 @@
 
 	var map;
 	var markers = [];
+
+  //global polgon variable is to ensure only one polygon is rendered
+  var polygon = null;
+
+  //map styes
 	var featureOpts = 	[{"featureType":"administrative","stylers":[{"visibility":"on"}]}
 			,{"featureType":"poi","stylers":[{"visibility":"simplified"}]}
 			,{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]}
@@ -74,7 +79,7 @@
 
     var largeInfowindow = new google.maps.InfoWindow();
 
-    //initialise the drawing manager
+    // Initialize the drawing manager.
     var drawingManager = new google.maps.drawing.DrawingManager({
       drawingMode: google.maps.drawing.OverlayType.POLYGON,
       drawingControl: true,
@@ -126,28 +131,28 @@
     document.getElementById('show-listings').addEventListener('click', showListings);
     document.getElementById('hide-listings').addEventListener('click', hideListings);
 
-    document.getElementById('toggle-drawing').addEventListener('click',function(){
+    
+    document.getElementById('toggle-drawing').addEventListener('click', function() {
       toggleDrawing(drawingManager);
     });
-
-    //add an event listener so that the polygon is captured, call the 
-    // serachWithinPolygon function. This will show the markers in the polygon, 
-    //and hide any outside of it.
-    drawingManager.addListener('overlaycomplete', function(event){
-      //first check if there is an existing polygon.
-      // if there is, get rid of it and remove the markers
+    // Add an event listener so that the polygon is captured,  call the
+    // searchWithinPolygon function. This will show the markers in the polygon,
+    // and hide any outside of it.
+    drawingManager.addListener('overlaycomplete', function(event) {
+      // First, check if there is an existing polygon.
+      // If there is, get rid of it and remove the markers
       if (polygon) {
         polygon.setMap(null);
         hideListings(markers);
       }
-      // Switching the drawing mode to the HAND
+      // Switching the drawing mode to the HAND (i.e., no longer drawing).
       drawingManager.setDrawingMode(null);
-      // creating a new editable polygon from the overlay
+      // Creating a new editable polygon from the overlay.
       polygon = event.overlay;
       polygon.setEditable(true);
-      // searching within the polygon
+      // Searching within the polygon.
       searchWithinPolygon();
-      // Make sure the search is re-done if the polygon is changed
+      // Make sure the search is re-done if the poly is changed.
       polygon.getPath().addListener('set_at', searchWithinPolygon);
       polygon.getPath().addListener('insert_at', searchWithinPolygon);
     });
@@ -217,6 +222,7 @@
     }
   }
 
+  // this function takes and image or color and then creates a new marler
   // icon of that color. The icon will be 21 px wide by 34 high, have an origin
   // of 0, 0 and be anchored at 10, 34).
   function makeMarkerIcon(markerColor) {
@@ -230,24 +236,25 @@
     return markerImage;
   }
 
-  function toggleDrawing(drawingManager){
-    if (drawingManager.map){
+  
+  // This shows and hides (respectively) the drawing options.
+  function toggleDrawing(drawingManager) {
+    if (drawingManager.map) {
       drawingManager.setMap(null);
-      // in case the user drew anything, get rid of the polygon
-      if (polygon !== null){
+      // In case the user drew anything, get rid of the polygon
+      if (polygon !== null) {
         polygon.setMap(null);
       }
     } else {
       drawingManager.setMap(map);
     }
   }
-
-  // this funtion hides all markers outside of the polygon,
+  // This function hides all markers outside the polygon,
   // and shows only the ones within it. This is so that the
-  // user can specify an exact area of search
-  funtion searchWithinPolygon(){
-    for (var i = 0; i < markers.length; i++){
-      if (google.maps.geometry.poly.containesLocation(markers[i].position, polygon)){
+  // user can specify an exact area of search.
+  function searchWithinPolygon() {
+    for (var i = 0; i < markers.length; i++) {
+      if (google.maps.geometry.poly.containsLocation(markers[i].position, polygon)) {
         markers[i].setMap(map);
       } else {
         markers[i].setMap(null);
