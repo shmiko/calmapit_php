@@ -116,8 +116,9 @@
   function populateInfoWindow(marker, infowindow) {
     // Check to make sure the infowindow is not already opened on this marker.
     if (infowindow.marker != marker) {
+      //clear the infowindow content to give the streetview time to load
+      infowindow.setContent('');
       infowindow.marker = marker;
-      infowindow.setContent("");
       // infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div>');
       // infowindow.open(map, marker);
       // Make sure the marker property is cleared if the infowindow is closed.
@@ -132,8 +133,7 @@
       function getStreetView(data, status){
         if (status == google.maps.StreetViewStatus.OK){
           var nearStreetViewLocation = data.location.latlng;
-          var heading = google.maps.geometry.spherical.computeHeading(
-            nearStreetViewLocation, marker.position);
+          var heading = google.maps.geometry.spherical.computeHeading(nearStreetViewLocation, marker.position);
             infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div><div id="pano"></div>');
             var panoramaOptions = {
               position: nearStreetViewLocation,
@@ -148,12 +148,12 @@
           infowindow.setContent('<div>' + marker.position + '-' + marker.title + '</div>' +
             '<div>No Street View Found</div>');
         }
-        //use streetview service to get the closest streetview image within
-        // 50 meters of the marker position
-        streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
-        //open the infowindow on the correct marker
-        infowindow.open(map,marker);
       }
+      //use streetview service to get the closest streetview image within
+      // 50 meters of the marker position
+      streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
+      //open the infowindow on the correct marker
+      infowindow.open(map,marker);
     }
   }
   // This function will loop through the markers array and display them all.
