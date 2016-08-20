@@ -81,7 +81,7 @@
       drawingControlOptions: {
         position: google.maps.ControlPosition.TOP_LEFT,
         drawingModes: [
-          google.maps.drawing.OverlayTypes.POLYGON
+          google.maps.drawing.OverlayType.POLYGON
         ]
       }
     });
