@@ -64,12 +64,28 @@
 	    // The anchor for this image is the base of the flagpole at (0, 32).
 	    anchor: new google.maps.Point(0, 32)
 	  };
+
     // Style the markers a bit. This will be our listing marker icon.
     var defaultIcon = makeMarkerIcon('redflag.png');
+
     // Create a "highlighted location" marker color for when the user
     // mouses over the marker.
     var highlightedIcon = makeMarkerIcon('beachflag.png');
+
     var largeInfowindow = new google.maps.InfoWindow();
+
+    //initialise the drawing manager
+    var drawingMnager = new google.mps.drawing.DrawingManager({
+      drawingMode: google.maps.drawing.OverlayType.POLYGON,
+      drawingControl: true,
+      drawingControlOptions: {
+        position: google.maps.ControlPosition.TOP_LEFT,
+        drawingModes: [
+          google.maps.drawing.OverlayTypes.POLYGON
+        ]
+      }
+    });
+
     // The following group uses the location array to create an array of markers on initialize.
     for (var i = 0; i < locations.length; i++) {
       // Get the position from the location array.
@@ -110,6 +126,7 @@
     document.getElementById('show-listings').addEventListener('click', showListings);
     document.getElementById('hide-listings').addEventListener('click', hideListings);
   }
+
   // This function populates the infowindow when the marker is clicked. We'll only allow
   // one infowindow which will open at the marker that is clicked, and populate based
   // on that markers position.
@@ -155,6 +172,7 @@
       infowindow.open(map, marker);
     }
   }
+
   // This function will loop through the markers array and display them all.
   function showListings() {
     var bounds = new google.maps.LatLngBounds();
@@ -165,12 +183,14 @@
     }
     map.fitBounds(bounds);
   }
+
   // This function will loop through the listings and hide them all.
   function hideListings() {
     for (var i = 0; i < markers.length; i++) {
       markers[i].setMap(null);
     }
   }
+
   // icon of that color. The icon will be 21 px wide by 34 high, have an origin
   // of 0, 0 and be anchored at 10, 34).
   function makeMarkerIcon(markerColor) {
