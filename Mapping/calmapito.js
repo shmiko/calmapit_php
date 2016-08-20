@@ -208,5 +208,12 @@
     return markerImage;
   }
 
+  function toggleDrawing(drawingManager){
+    if (drawingManager.map){
+      drawingManager.setMap(null);
+    } else {
+      drawingManager.setMap(map);
+    }
+  }
 
 // }())
