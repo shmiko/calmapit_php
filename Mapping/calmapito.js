@@ -125,6 +125,10 @@
    
     document.getElementById('show-listings').addEventListener('click', showListings);
     document.getElementById('hide-listings').addEventListener('click', hideListings);
+
+    document.getElementById('toggle-drawing').addEventListener('click',function(){
+      toggleDrawing(drawingManager);
+    });
   }
 
   // This function populates the infowindow when the marker is clicked. We'll only allow

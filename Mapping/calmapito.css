@@ -47,3 +47,11 @@ html,
       .text{
         font-size: 12px;
       }
+
+      #toggle-drwing{
+        width: 27%;
+        position: relative;
+        margin-left: 10px;
+      }
+
+
