@@ -132,7 +132,7 @@
       // then get a panorama from that and set the options
       function getStreetView(data, status){
         if (status == google.maps.StreetViewStatus.OK){
-          var nearStreetViewLocation = data.location.latlng;
+          var nearStreetViewLocation = data.location.latLng;
           var heading = google.maps.geometry.spherical.computeHeading(nearStreetViewLocation, marker.position);
             infowindow.setContent('<div>' + marker.position + '-' + marker.title +'</div><div id="pano"></div>');
             var panoramaOptions = {
