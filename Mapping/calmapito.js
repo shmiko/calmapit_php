@@ -135,6 +135,7 @@
     document.getElementById('toggle-drawing').addEventListener('click', function() {
       toggleDrawing(drawingManager);
     });
+    
     // Add an event listener so that the polygon is captured,  call the
     // searchWithinPolygon function. This will show the markers in the polygon,
     // and hide any outside of it.
@@ -152,6 +153,10 @@
       polygon.setEditable(true);
       // Searching within the polygon.
       searchWithinPolygon();
+      var setArea = document.getElementById("area");
+      var z = google.maps.geometry.spherical.computeArea(polygon.getPath());
+      setArea.innetText = z;
+      alert(z);
       // Make sure the search is re-done if the poly is changed.
       polygon.getPath().addListener('set_at', searchWithinPolygon);
       polygon.getPath().addListener('insert_at', searchWithinPolygon);
@@ -256,6 +261,7 @@
     for (var i = 0; i < markers.length; i++) {
       if (google.maps.geometry.poly.containsLocation(markers[i].position, polygon)) {
         markers[i].setMap(map);
+       
       } else {
         markers[i].setMap(null);
       }

@@ -48,10 +48,15 @@ html,
         font-size: 12px;
       }
 
-      #toggle-drwing{
+      #toggle-drawing{
         width: 27%;
         position: relative;
         margin-left: 10px;
+      }
+
+      .area{
+        width: 60px;
+        height: 20px;
       }
 
 
