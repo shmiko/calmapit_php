@@ -37,7 +37,7 @@
     // var oldMarker = new google.maps.Marker({
     //   position: opera_house,
     //   map: map,
-    //   title: 'Sydney Opera House'
+    //   title: 'Sydney Opera House.
     // });
 
     //locations array - usually these would be served up via a database
